@@ -2,6 +2,7 @@
 
 python3 -m tasks.T2.logprobs --base-url https://<pod>-8000.proxy.runpod.net/v1 --model Qwen/Qwen3.5-27B --version 3.5
   [--prompts tasks/T2/prompts_full.json]   (default prompts.json = the pilot set; prompts_full.json = pre-registered full run)
+  [--prompts tasks/T2/prompts_tests.json --tag tests3.5]   (follow-up tests; summary: tasks/T2/summarize_tests.py)
 Writes results/T2_logprobs/<version>.jsonl (one row per cell) and prints the framing x version table.
 Two measures per cell:
   nexttok : top-20 next-token distribution after the raw prefix; P(pref) = p(pref word) / (p(pref)+p(dispref)); also the mass covered.
@@ -51,7 +52,7 @@ def run(base, model, version, cells, tag):
     for c in cells:
         if c["id"] in done: continue
         r = {"id": c["id"], "version": version, "model": model, "framing": c["framing"], "variant": c["variant"], "mapping": c["mapping"], "preferred_outcome": c["preferred_outcome"],
-             "arm": c.get("arm", "main"), "word": c.get("word", c["mapping"]), "order": c.get("order", infer_order(c)), "first_stated": c.get("first_stated", "heads")}
+             "arm": c.get("arm", "main"), "word": c.get("word", c["mapping"]), "order": c.get("order", infer_order(c)), "first_stated": c.get("first_stated", "heads"), "stated": c.get("stated")}
         try:
             r["nexttok"] = nexttok(base, model, c["raw"])
         except Exception as e:
@@ -101,7 +102,7 @@ def table(files, how="nexttok"):
         print("".ljust(30) + "".join(v.rjust(12) for v in vs))
         for k in rowkeys:
             print(str(k).ljust(30) + "".join((f"{sum(agg[(k,v)])/len(agg[(k,v)]):.2f}(n{len(agg[(k,v)])})" if agg.get((k, v)) else "-").rjust(12) for v in vs))
-    arms = [a for a in ("main", "control") if any(r["arm"] == a for r in rows)]
+    arms = [a for a in ("main", "control") if any(r["arm"] == a for r in rows)] + sorted({r["arm"] for r in rows} - {"main", "control"})
     frs = sorted({r["framing"] for r in rows})
     for arm in arms:
         sub = [r for r in rows if r["arm"] == arm]

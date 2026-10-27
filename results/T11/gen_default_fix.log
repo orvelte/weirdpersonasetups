@@ -1,0 +1,33 @@
+default_fix -> /Users/oliviavelte/weirdpersonasetups/results/T11/default_fix.jsonl: 6 done, 1194 to run; T11_fix spend $0.004, T11 $15.085, total $33.652
+  T11_fix_def: 50/150 done, T11 spend $15.11, total $33.67
+  T11_fix_def: 100/150 done, T11 spend $15.14, total $33.71
+  T11_fix_def: 150/150 done, T11 spend $15.19, total $33.76
+batch 1: 150 written (0 errors); 55s; T11_fix $0.108; total $33.756
+  T11_fix_def: 50/150 done, T11 spend $15.23, total $33.80
+  T11_fix_def: 100/150 done, T11 spend $15.26, total $33.83
+  T11_fix_def: 150/150 done, T11 spend $15.31, total $33.88
+batch 2: 150 written (0 errors); 123s; T11_fix $0.227; total $33.875
+  T11_fix_def: 50/150 done, T11 spend $15.36, total $33.93
+  T11_fix_def: 100/150 done, T11 spend $15.42, total $33.98
+  T11_fix_def: 150/150 done, T11 spend $15.44, total $34.00
+batch 3: 150 written (0 errors); 220s; T11_fix $0.356; total $34.004
+  T11_fix_def: 50/150 done, T11 spend $15.46, total $34.03
+  T11_fix_def: 100/150 done, T11 spend $15.49, total $34.06
+  T11_fix_def: 150/150 done, T11 spend $15.53, total $34.13
+batch 4: 150 written (0 errors); 351s; T11_fix $0.444; total $34.131
+  T11_fix_def: 50/150 done, T11 spend $15.55, total $34.16
+  T11_fix_def: 100/150 done, T11 spend $15.59, total $34.19
+  T11_fix_def: 150/150 done, T11 spend $15.63, total $34.24
+batch 5: 150 written (0 errors); 401s; T11_fix $0.551; total $34.240
+  T11_fix_def: 50/150 done, T11 spend $15.68, total $34.29
+  T11_fix_def: 100/150 done, T11 spend $15.70, total $34.33
+  T11_fix_def: 150/150 done, T11 spend $15.75, total $34.40
+batch 6: 150 written (0 errors); 447s; T11_fix $0.665; total $34.402
+  T11_fix_def: 50/150 done, T11 spend $15.80, total $34.49
+  T11_fix_def: 100/150 done, T11 spend $15.85, total $34.57
+  T11_fix_def: 150/150 done, T11 spend $15.87, total $34.80
+batch 7: 150 written (0 errors); 635s; T11_fix $0.793; total $34.796
+  T11_fix_def: 50/144 done, T11 spend $15.90, total $34.85
+  T11_fix_def: 100/144 done, T11 spend $15.93, total $34.94
+batch 8: 144 written (0 errors); 743s; T11_fix $0.879; total $35.006
+done; T11_fix spend $0.879; total $35.006

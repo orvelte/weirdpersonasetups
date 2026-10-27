@@ -257,6 +257,7 @@ def main():
     L.append("| scenario | corner opt | P(P) chat/ag | P(C) chat/ag | " + " | ".join(V) + " |"); L.append("|---|---|---|---|" + "---|" * len(V))
     pr = {(p["id"], p["frame"]): p for p in preds["predictions"]}
     for s in P.SPEC["scenarios"]:
+        if (s["id"], "chat") not in pr: continue  # D6-D10 (honesty extension) have no frozen predictions and live in parsed_D6-D10.csv
         cells = []
         for v in V:
             parts = []
@@ -271,6 +272,7 @@ def main():
     L.append("Choice mix per scenario (all labels, counts per version, chat / agentic):\n")
     L.append("| scenario | " + " | ".join(V) + " |"); L.append("|---|" + "---|" * len(V))
     for s in P.SPEC["scenarios"]:
+        if not sel(rows, scenario_id=s["id"]): continue
         cells = []
         for v in V:
             parts = []

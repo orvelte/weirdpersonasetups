@@ -1,0 +1,3713 @@
+{
+ "lib35": {
+  "confidence_floor": 0.6514448154909563,
+  "cap_words": 293,
+  "C": 16.0,
+  "cells": {
+   "3.5|minsys": {
+    "n": 200,
+    "mean_max_conf": 0.7254338505453397,
+    "median_max_conf": 0.8026676390992049,
+    "mean_entropy_bits": 1.6295121654866258,
+    "frac_below_floor": 0.28,
+    "control_share": 0.965,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.955
+     ],
+     [
+      "standup_comic",
+      0.01
+     ],
+     [
+      "textbook",
+      0.005
+     ],
+     [
+      "er_nurse",
+      0.005
+     ],
+     [
+      "therapist",
+      0.005
+     ]
+    ],
+    "win_counts": {
+     "helpful_ai_assistant": 191,
+     "textbook": 1,
+     "standup_comic": 2,
+     "er_nurse": 1,
+     "therapist": 1,
+     "bureaucrat": 1,
+     "farmer": 1,
+     "librarian": 1,
+     "corporate_faq": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.606745502675267,
+      "median_max_conf": 0.6390384218206497,
+      "mean_entropy_bits": 2.1471570776545503,
+      "frac_below_floor": 0.51,
+      "control_share": 0.93,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.91
+       ],
+       [
+        "standup_comic",
+        0.02
+       ],
+       [
+        "textbook",
+        0.01
+       ],
+       [
+        "er_nurse",
+        0.01
+       ],
+       [
+        "therapist",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 91,
+       "textbook": 1,
+       "standup_comic": 2,
+       "er_nurse": 1,
+       "therapist": 1,
+       "bureaucrat": 1,
+       "farmer": 1,
+       "librarian": 1,
+       "corporate_faq": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.8441221984154125,
+      "median_max_conf": 0.8692557296393212,
+      "mean_entropy_bits": 1.1118672533187017,
+      "frac_below_floor": 0.05,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        1.0
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 100
+      }
+     }
+    }
+   },
+   "3.5|nosys": {
+    "n": 200,
+    "mean_max_conf": 0.7181581218950004,
+    "median_max_conf": 0.7922383105363748,
+    "mean_entropy_bits": 1.6608596140825005,
+    "frac_below_floor": 0.33,
+    "control_share": 0.94,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.925
+     ],
+     [
+      "textbook",
+      0.01
+     ],
+     [
+      "flight_attendant",
+      0.01
+     ],
+     [
+      "librarian",
+      0.01
+     ],
+     [
+      "standup_comic",
+      0.01
+     ]
+    ],
+    "win_counts": {
+     "helpful_ai_assistant": 185,
+     "textbook": 2,
+     "flight_attendant": 2,
+     "librarian": 2,
+     "standup_comic": 2,
+     "conspiracy_blogger": 1,
+     "startup_founder": 1,
+     "er_nurse": 2,
+     "bureaucrat": 1,
+     "farmer": 1,
+     "corporate_faq": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.6233558764077416,
+      "median_max_conf": 0.6163460161144952,
+      "mean_entropy_bits": 2.060269249095889,
+      "frac_below_floor": 0.53,
+      "control_share": 0.88,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.85
+       ],
+       [
+        "textbook",
+        0.02
+       ],
+       [
+        "flight_attendant",
+        0.02
+       ],
+       [
+        "librarian",
+        0.02
+       ],
+       [
+        "standup_comic",
+        0.02
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 85,
+       "textbook": 2,
+       "flight_attendant": 2,
+       "librarian": 2,
+       "standup_comic": 2,
+       "conspiracy_blogger": 1,
+       "startup_founder": 1,
+       "er_nurse": 2,
+       "bureaucrat": 1,
+       "farmer": 1,
+       "corporate_faq": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.8129603673822591,
+      "median_max_conf": 0.852878546780074,
+      "mean_entropy_bits": 1.261449979069112,
+      "frac_below_floor": 0.13,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        1.0
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 100
+      }
+     }
+    }
+   },
+   "3.5|orig_trunc": {
+    "n": 200,
+    "mean_max_conf": 0.7870881479359084,
+    "median_max_conf": 0.8826797028077791,
+    "mean_entropy_bits": 1.315309514750451,
+    "frac_below_floor": 0.22,
+    "control_share": 0.965,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.96
+     ],
+     [
+      "er_nurse",
+      0.015
+     ],
+     [
+      "standup_comic",
+      0.005
+     ],
+     [
+      "startup_founder",
+      0.005
+     ],
+     [
+      "textbook",
+      0.005
+     ]
+    ],
+    "win_counts": {
+     "helpful_ai_assistant": 192,
+     "er_nurse": 3,
+     "standup_comic": 1,
+     "startup_founder": 1,
+     "textbook": 1,
+     "military_strategist": 1,
+     "farmer": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.6682586427659671,
+      "median_max_conf": 0.6944482076043337,
+      "mean_entropy_bits": 1.846672034633048,
+      "frac_below_floor": 0.43,
+      "control_share": 0.93,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.92
+       ],
+       [
+        "er_nurse",
+        0.03
+       ],
+       [
+        "standup_comic",
+        0.01
+       ],
+       [
+        "startup_founder",
+        0.01
+       ],
+       [
+        "textbook",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 92,
+       "er_nurse": 3,
+       "standup_comic": 1,
+       "startup_founder": 1,
+       "textbook": 1,
+       "military_strategist": 1,
+       "farmer": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.9059176531058496,
+      "median_max_conf": 0.9307483474553293,
+      "mean_entropy_bits": 0.7839469948678541,
+      "frac_below_floor": 0.01,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        1.0
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 100
+      }
+     }
+    }
+   },
+   "3.6|minsys": {
+    "n": 200,
+    "mean_max_conf": 0.7425870193886707,
+    "median_max_conf": 0.8235573290294875,
+    "mean_entropy_bits": 1.5000171693933324,
+    "frac_below_floor": 0.29,
+    "control_share": 0.945,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.93
+     ],
+     [
+      "textbook",
+      0.015
+     ],
+     [
+      "flight_attendant",
+      0.01
+     ],
+     [
+      "librarian",
+      0.01
+     ],
+     [
+      "conspiracy_blogger",
+      0.005
+     ]
+    ],
+    "win_counts": {
+     "helpful_ai_assistant": 186,
+     "flight_attendant": 2,
+     "textbook": 3,
+     "conspiracy_blogger": 1,
+     "kindergarten_teacher": 1,
+     "investigative_journalist": 1,
+     "therapist": 1,
+     "bureaucrat": 1,
+     "farmer": 1,
+     "librarian": 2,
+     "standup_comic": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.6503876946076074,
+      "median_max_conf": 0.6716328198272552,
+      "mean_entropy_bits": 1.9597039433438497,
+      "frac_below_floor": 0.47,
+      "control_share": 0.89,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.87
+       ],
+       [
+        "flight_attendant",
+        0.02
+       ],
+       [
+        "textbook",
+        0.02
+       ],
+       [
+        "librarian",
+        0.02
+       ],
+       [
+        "conspiracy_blogger",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 87,
+       "flight_attendant": 2,
+       "textbook": 2,
+       "conspiracy_blogger": 1,
+       "kindergarten_teacher": 1,
+       "investigative_journalist": 1,
+       "therapist": 1,
+       "bureaucrat": 1,
+       "farmer": 1,
+       "librarian": 2,
+       "standup_comic": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.834786344169734,
+      "median_max_conf": 0.8768319871987955,
+      "mean_entropy_bits": 1.0403303954428156,
+      "frac_below_floor": 0.11,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.99
+       ],
+       [
+        "textbook",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 99,
+       "textbook": 1
+      }
+     }
+    }
+   },
+   "3.6|nosys": {
+    "n": 200,
+    "mean_max_conf": 0.751050660998578,
+    "median_max_conf": 0.8085126856825988,
+    "mean_entropy_bits": 1.4377876254456816,
+    "frac_below_floor": 0.26,
+    "control_share": 0.955,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.92
+     ],
+     [
+      "textbook",
+      0.035
+     ],
+     [
+      "flight_attendant",
+      0.01
+     ],
+     [
+      "er_nurse",
+      0.01
+     ],
+     [
+      "standup_comic",
+      0.005
+     ]
+    ],
+    "win_counts": {
+     "helpful_ai_assistant": 184,
+     "textbook": 7,
+     "flight_attendant": 2,
+     "standup_comic": 1,
+     "startup_founder": 1,
+     "er_nurse": 2,
+     "therapist": 1,
+     "bureaucrat": 1,
+     "farmer": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.6712340231831297,
+      "median_max_conf": 0.7154676416696103,
+      "mean_entropy_bits": 1.8359296367421054,
+      "frac_below_floor": 0.43,
+      "control_share": 0.91,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.86
+       ],
+       [
+        "textbook",
+        0.05
+       ],
+       [
+        "flight_attendant",
+        0.02
+       ],
+       [
+        "er_nurse",
+        0.02
+       ],
+       [
+        "standup_comic",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 86,
+       "textbook": 5,
+       "flight_attendant": 2,
+       "standup_comic": 1,
+       "startup_founder": 1,
+       "er_nurse": 2,
+       "therapist": 1,
+       "bureaucrat": 1,
+       "farmer": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.830867298814026,
+      "median_max_conf": 0.8609995355552169,
+      "mean_entropy_bits": 1.039645614149258,
+      "frac_below_floor": 0.09,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.98
+       ],
+       [
+        "textbook",
+        0.02
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 98,
+       "textbook": 2
+      }
+     }
+    }
+   },
+   "3.6|orig_trunc": {
+    "n": 200,
+    "mean_max_conf": 0.7415257026979565,
+    "median_max_conf": 0.8249576851644436,
+    "mean_entropy_bits": 1.5399795165644807,
+    "frac_below_floor": 0.295,
+    "control_share": 0.925,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.92
+     ],
+     [
+      "er_nurse",
+      0.02
+     ],
+     [
+      "bureaucrat",
+      0.015
+     ],
+     [
+      "librarian",
+      0.01
+     ],
+     [
+      "flight_attendant",
+      0.005
+     ]
+    ],
+    "win_counts": {
+     "helpful_ai_assistant": 184,
+     "flight_attendant": 1,
+     "er_nurse": 4,
+     "sales_rep": 1,
+     "standup_comic": 1,
+     "librarian": 2,
+     "investigative_journalist": 1,
+     "corporate_faq": 1,
+     "military_strategist": 1,
+     "farmer": 1,
+     "bureaucrat": 3
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.6622430967331067,
+      "median_max_conf": 0.7062654603656415,
+      "mean_entropy_bits": 1.8959745854891108,
+      "frac_below_floor": 0.42,
+      "control_share": 0.85,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.84
+       ],
+       [
+        "er_nurse",
+        0.04
+       ],
+       [
+        "bureaucrat",
+        0.03
+       ],
+       [
+        "librarian",
+        0.02
+       ],
+       [
+        "flight_attendant",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 84,
+       "flight_attendant": 1,
+       "er_nurse": 4,
+       "sales_rep": 1,
+       "standup_comic": 1,
+       "librarian": 2,
+       "investigative_journalist": 1,
+       "corporate_faq": 1,
+       "military_strategist": 1,
+       "farmer": 1,
+       "bureaucrat": 3
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.8208083086628061,
+      "median_max_conf": 0.8619723399347472,
+      "mean_entropy_bits": 1.1839844476398507,
+      "frac_below_floor": 0.17,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        1.0
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 100
+      }
+     }
+    }
+   },
+   "3.8|minsys": {
+    "n": 200,
+    "mean_max_conf": 0.7292224868329975,
+    "median_max_conf": 0.8177248800914882,
+    "mean_entropy_bits": 1.547267178037349,
+    "frac_below_floor": 0.32,
+    "control_share": 0.955,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.94
+     ],
+     [
+      "er_nurse",
+      0.02
+     ],
+     [
+      "textbook",
+      0.015
+     ],
+     [
+      "librarian",
+      0.01
+     ],
+     [
+      "kindergarten_teacher",
+      0.005
+     ]
+    ],
+    "win_counts": {
+     "helpful_ai_assistant": 188,
+     "textbook": 3,
+     "er_nurse": 4,
+     "kindergarten_teacher": 1,
+     "bureaucrat": 1,
+     "farmer": 1,
+     "librarian": 2
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.6343103146523764,
+      "median_max_conf": 0.6247190801003115,
+      "mean_entropy_bits": 2.0184754362361783,
+      "frac_below_floor": 0.52,
+      "control_share": 0.91,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.89
+       ],
+       [
+        "er_nurse",
+        0.04
+       ],
+       [
+        "textbook",
+        0.02
+       ],
+       [
+        "librarian",
+        0.02
+       ],
+       [
+        "kindergarten_teacher",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 89,
+       "textbook": 2,
+       "er_nurse": 4,
+       "kindergarten_teacher": 1,
+       "bureaucrat": 1,
+       "farmer": 1,
+       "librarian": 2
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.8241346590136186,
+      "median_max_conf": 0.8668745993543414,
+      "mean_entropy_bits": 1.0760589198385195,
+      "frac_below_floor": 0.12,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.99
+       ],
+       [
+        "textbook",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 99,
+       "textbook": 1
+      }
+     }
+    }
+   },
+   "3.8|nosys": {
+    "n": 200,
+    "mean_max_conf": 0.7534781735080355,
+    "median_max_conf": 0.8303811283727704,
+    "mean_entropy_bits": 1.4419162818382714,
+    "frac_below_floor": 0.27,
+    "control_share": 0.965,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.945
+     ],
+     [
+      "textbook",
+      0.015
+     ],
+     [
+      "conspiracy_blogger",
+      0.01
+     ],
+     [
+      "startup_founder",
+      0.005
+     ],
+     [
+      "er_nurse",
+      0.005
+     ]
+    ],
+    "win_counts": {
+     "helpful_ai_assistant": 189,
+     "startup_founder": 1,
+     "er_nurse": 1,
+     "conspiracy_blogger": 2,
+     "librarian": 1,
+     "textbook": 3,
+     "bureaucrat": 1,
+     "farmer": 1,
+     "corporate_faq": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.6763262881648496,
+      "median_max_conf": 0.724693959979094,
+      "mean_entropy_bits": 1.8509025155702137,
+      "frac_below_floor": 0.44,
+      "control_share": 0.93,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.9
+       ],
+       [
+        "conspiracy_blogger",
+        0.02
+       ],
+       [
+        "textbook",
+        0.02
+       ],
+       [
+        "startup_founder",
+        0.01
+       ],
+       [
+        "er_nurse",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 90,
+       "startup_founder": 1,
+       "er_nurse": 1,
+       "conspiracy_blogger": 2,
+       "librarian": 1,
+       "textbook": 2,
+       "bureaucrat": 1,
+       "farmer": 1,
+       "corporate_faq": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.8306300588512212,
+      "median_max_conf": 0.8564760897438922,
+      "mean_entropy_bits": 1.0329300481063293,
+      "frac_below_floor": 0.1,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.99
+       ],
+       [
+        "textbook",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 99,
+       "textbook": 1
+      }
+     }
+    }
+   },
+   "3.8|orig_trunc": {
+    "n": 200,
+    "mean_max_conf": 0.47685055336328697,
+    "median_max_conf": 0.4463946942796554,
+    "mean_entropy_bits": 2.794211146666104,
+    "frac_below_floor": 0.765,
+    "control_share": 0.76,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.725
+     ],
+     [
+      "librarian",
+      0.05
+     ],
+     [
+      "standup_comic",
+      0.045
+     ],
+     [
+      "er_nurse",
+      0.03
+     ],
+     [
+      "textbook",
+      0.025
+     ]
+    ],
+    "win_counts": {
+     "helpful_ai_assistant": 145,
+     "flight_attendant": 3,
+     "textbook": 5,
+     "standup_comic": 9,
+     "er_nurse": 6,
+     "librarian": 10,
+     "conspiracy_blogger": 1,
+     "retired_engineer": 2,
+     "investigative_journalist": 5,
+     "poet": 1,
+     "victorian_butler": 1,
+     "corporate_faq": 2,
+     "military_strategist": 1,
+     "farmer": 5,
+     "sports_coach": 1,
+     "therapist": 2,
+     "bureaucrat": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.4448466880044736,
+      "median_max_conf": 0.41421037654502324,
+      "mean_entropy_bits": 2.922572183574451,
+      "frac_below_floor": 0.84,
+      "control_share": 0.69,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.65
+       ],
+       [
+        "librarian",
+        0.1
+       ],
+       [
+        "standup_comic",
+        0.05
+       ],
+       [
+        "er_nurse",
+        0.05
+       ],
+       [
+        "flight_attendant",
+        0.03
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 65,
+       "flight_attendant": 3,
+       "textbook": 2,
+       "standup_comic": 5,
+       "er_nurse": 5,
+       "librarian": 10,
+       "conspiracy_blogger": 1,
+       "retired_engineer": 1,
+       "investigative_journalist": 1,
+       "poet": 1,
+       "victorian_butler": 1,
+       "corporate_faq": 2,
+       "military_strategist": 1,
+       "farmer": 1,
+       "sports_coach": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.5088544187221005,
+      "median_max_conf": 0.4865527253499685,
+      "mean_entropy_bits": 2.665850109757758,
+      "frac_below_floor": 0.69,
+      "control_share": 0.83,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.8
+       ],
+       [
+        "farmer",
+        0.04
+       ],
+       [
+        "standup_comic",
+        0.04
+       ],
+       [
+        "investigative_journalist",
+        0.04
+       ],
+       [
+        "textbook",
+        0.03
+       ]
+      ],
+      "win_counts": {
+       "farmer": 4,
+       "helpful_ai_assistant": 80,
+       "standup_comic": 4,
+       "er_nurse": 1,
+       "investigative_journalist": 4,
+       "therapist": 2,
+       "textbook": 3,
+       "retired_engineer": 1,
+       "bureaucrat": 1
+      }
+     }
+    }
+   }
+  },
+  "cross_version": {
+   "3.8-3.5|orig_trunc": {
+    "max_conf": {
+     "diff": -0.31023759457262146,
+     "lo": -0.34270511414857,
+     "hi": -0.27865363786773545
+    },
+    "entropy": {
+     "diff": 1.4789016319156532,
+     "lo": 1.3378722405171137,
+     "hi": 1.6162050156532761
+    },
+    "below": {
+     "diff": 0.545,
+     "lo": 0.47,
+     "hi": 0.615
+    }
+   },
+   "3.6-3.5|orig_trunc": {
+    "max_conf": {
+     "diff": -0.045562445237952005,
+     "lo": -0.06980227066414726,
+     "hi": -0.020396406993116213
+    },
+    "entropy": {
+     "diff": 0.22467000181402966,
+     "lo": 0.10865221837287359,
+     "hi": 0.34066422106057365
+    },
+    "below": {
+     "diff": 0.075,
+     "lo": 0.015,
+     "hi": 0.14
+    }
+   },
+   "3.8-3.6|orig_trunc": {
+    "max_conf": {
+     "diff": -0.26467514933466946,
+     "lo": -0.2977887101705846,
+     "hi": -0.23056639360272066
+    },
+    "entropy": {
+     "diff": 1.2542316301016232,
+     "lo": 1.1017275907794732,
+     "hi": 1.4032187965465428
+    },
+    "below": {
+     "diff": 0.47,
+     "lo": 0.39,
+     "hi": 0.55
+    }
+   },
+   "3.8-3.5|nosys": {
+    "max_conf": {
+     "diff": 0.03532005161303509,
+     "lo": 0.010945531358975982,
+     "hi": 0.06015419200265861
+    },
+    "entropy": {
+     "diff": -0.21894333224422907,
+     "lo": -0.33085344164876584,
+     "hi": -0.1082243500248132
+    },
+    "below": {
+     "diff": -0.06,
+     "lo": -0.115,
+     "hi": -0.005
+    }
+   },
+   "3.6-3.5|nosys": {
+    "max_conf": {
+     "diff": 0.03289253910357744,
+     "lo": 0.006497742688485633,
+     "hi": 0.06150311569991693
+    },
+    "entropy": {
+     "diff": -0.22307198863681857,
+     "lo": -0.3448686921912422,
+     "hi": -0.09736420850612884
+    },
+    "below": {
+     "diff": -0.07,
+     "lo": -0.14,
+     "hi": 0.0
+    }
+   },
+   "3.8-3.6|nosys": {
+    "max_conf": {
+     "diff": 0.0024275125094576537,
+     "lo": -0.022202902190540007,
+     "hi": 0.028346917655781418
+    },
+    "entropy": {
+     "diff": 0.004128656392589527,
+     "lo": -0.10762816303531914,
+     "hi": 0.1136727214658644
+    },
+    "below": {
+     "diff": 0.01,
+     "lo": -0.055,
+     "hi": 0.075
+    }
+   },
+   "3.8-3.5|minsys": {
+    "max_conf": {
+     "diff": 0.003788636287657784,
+     "lo": -0.02223329142248061,
+     "hi": 0.030651433640657613
+    },
+    "entropy": {
+     "diff": -0.08224498744927676,
+     "lo": -0.20058096806711062,
+     "hi": 0.037295569131900234
+    },
+    "below": {
+     "diff": 0.04,
+     "lo": -0.025,
+     "hi": 0.105
+    }
+   },
+   "3.6-3.5|minsys": {
+    "max_conf": {
+     "diff": 0.01715316884333089,
+     "lo": -0.00941593260252875,
+     "hi": 0.04265019722717501
+    },
+    "entropy": {
+     "diff": -0.1294949960932933,
+     "lo": -0.24592113495695705,
+     "hi": -0.01690689418366889
+    },
+    "below": {
+     "diff": 0.01,
+     "lo": -0.05,
+     "hi": 0.075
+    }
+   },
+   "3.8-3.6|minsys": {
+    "max_conf": {
+     "diff": -0.013364532555673105,
+     "lo": -0.04228578168063302,
+     "hi": 0.01181240199167882
+    },
+    "entropy": {
+     "diff": 0.04725000864401651,
+     "lo": -0.06775562419293844,
+     "hi": 0.15113144390898403
+    },
+    "below": {
+     "diff": 0.03,
+     "lo": -0.035,
+     "hi": 0.095
+    }
+   }
+  },
+  "paraphrase": {
+   "n": 199,
+   "mean_max_conf": 0.7218408783485258,
+   "median_max_conf": 0.8077847847248251,
+   "mean_entropy_bits": 1.7421704210919837,
+   "frac_below_floor": 0.2964824120603015,
+   "control_share": 0.9447236180904522,
+   "top5": [
+    [
+     "helpful_ai_assistant",
+     0.925
+    ],
+    [
+     "er_nurse",
+     0.02
+    ],
+    [
+     "standup_comic",
+     0.015
+    ],
+    [
+     "textbook",
+     0.01
+    ],
+    [
+     "farmer",
+     0.01
+    ]
+   ],
+   "win_counts": {
+    "helpful_ai_assistant": 184,
+    "er_nurse": 4,
+    "standup_comic": 3,
+    "flight_attendant": 1,
+    "startup_founder": 1,
+    "textbook": 2,
+    "farmer": 2,
+    "corporate_faq": 2
+   },
+   "source_minus_paraphrase": {
+    "max_conf": {
+     "diff": 0.06793345827098964,
+     "lo": 0.05144482909528266,
+     "hi": 0.0849197234588311
+    },
+    "entropy": {
+     "diff": -0.4403031078604232,
+     "lo": -0.5121314847259636,
+     "hi": -0.36586030360483307
+    },
+    "below": {
+     "diff": -0.08040201005025126,
+     "lo": -0.1306532663316583,
+     "hi": -0.03015075376884422
+    }
+   }
+  }
+ },
+ "lib38": {
+  "confidence_floor": 0.33697398314537924,
+  "cap_words": 290,
+  "C": 16.0,
+  "cells": {
+   "3.5|minsys": {
+    "n": 200,
+    "mean_max_conf": 0.5394283454728682,
+    "median_max_conf": 0.5229356964412452,
+    "mean_entropy_bits": 2.454208885229475,
+    "frac_below_floor": 0.235,
+    "control_share": 0.835,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.79
+     ],
+     [
+      "librarian",
+      0.06
+     ],
+     [
+      "flight_attendant",
+      0.035
+     ],
+     [
+      "investigative_journalist",
+      0.025
+     ],
+     [
+      "textbook",
+      0.025
+     ]
+    ],
+    "win_counts": {
+     "investigative_journalist": 5,
+     "helpful_ai_assistant": 158,
+     "corporate_faq": 4,
+     "flight_attendant": 7,
+     "therapist": 1,
+     "librarian": 12,
+     "defence_lawyer": 3,
+     "standup_comic": 2,
+     "textbook": 5,
+     "victorian_butler": 1,
+     "military_strategist": 1,
+     "poet": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.3980359571405049,
+      "median_max_conf": 0.3586979535634839,
+      "mean_entropy_bits": 3.023684140337439,
+      "frac_below_floor": 0.42,
+      "control_share": 0.68,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.61
+       ],
+       [
+        "librarian",
+        0.11
+       ],
+       [
+        "flight_attendant",
+        0.07
+       ],
+       [
+        "investigative_journalist",
+        0.05
+       ],
+       [
+        "corporate_faq",
+        0.04
+       ]
+      ],
+      "win_counts": {
+       "investigative_journalist": 5,
+       "helpful_ai_assistant": 61,
+       "corporate_faq": 4,
+       "flight_attendant": 7,
+       "therapist": 1,
+       "librarian": 11,
+       "defence_lawyer": 3,
+       "standup_comic": 2,
+       "textbook": 3,
+       "victorian_butler": 1,
+       "military_strategist": 1,
+       "poet": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.6808207338052317,
+      "median_max_conf": 0.7013976984670958,
+      "mean_entropy_bits": 1.8847336301215116,
+      "frac_below_floor": 0.05,
+      "control_share": 0.99,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.97
+       ],
+       [
+        "textbook",
+        0.02
+       ],
+       [
+        "librarian",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 97,
+       "textbook": 2,
+       "librarian": 1
+      }
+     }
+    }
+   },
+   "3.5|nosys": {
+    "n": 200,
+    "mean_max_conf": 0.5313025156645195,
+    "median_max_conf": 0.5082033425136027,
+    "mean_entropy_bits": 2.4978429791194525,
+    "frac_below_floor": 0.22,
+    "control_share": 0.805,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.765
+     ],
+     [
+      "librarian",
+      0.05
+     ],
+     [
+      "flight_attendant",
+      0.04
+     ],
+     [
+      "investigative_journalist",
+      0.025
+     ],
+     [
+      "corporate_faq",
+      0.025
+     ]
+    ],
+    "win_counts": {
+     "librarian": 10,
+     "investigative_journalist": 5,
+     "flight_attendant": 8,
+     "corporate_faq": 5,
+     "helpful_ai_assistant": 153,
+     "therapist": 1,
+     "poet": 2,
+     "standup_comic": 2,
+     "monk": 1,
+     "academic_philosopher": 1,
+     "defence_lawyer": 4,
+     "er_nurse": 1,
+     "victorian_butler": 1,
+     "textbook": 3,
+     "military_strategist": 1,
+     "retired_engineer": 1,
+     "conspiracy_blogger": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.4152485360414888,
+      "median_max_conf": 0.3821358097932296,
+      "mean_entropy_bits": 2.96550922439104,
+      "frac_below_floor": 0.38,
+      "control_share": 0.65,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.58
+       ],
+       [
+        "librarian",
+        0.08
+       ],
+       [
+        "flight_attendant",
+        0.08
+       ],
+       [
+        "corporate_faq",
+        0.05
+       ],
+       [
+        "investigative_journalist",
+        0.04
+       ]
+      ],
+      "win_counts": {
+       "librarian": 8,
+       "investigative_journalist": 4,
+       "flight_attendant": 8,
+       "corporate_faq": 5,
+       "helpful_ai_assistant": 58,
+       "therapist": 1,
+       "poet": 2,
+       "standup_comic": 2,
+       "monk": 1,
+       "academic_philosopher": 1,
+       "defence_lawyer": 3,
+       "er_nurse": 1,
+       "victorian_butler": 1,
+       "textbook": 2,
+       "military_strategist": 1,
+       "retired_engineer": 1,
+       "conspiracy_blogger": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.64735649528755,
+      "median_max_conf": 0.6995431320175964,
+      "mean_entropy_bits": 2.030176733847865,
+      "frac_below_floor": 0.06,
+      "control_share": 0.96,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.95
+       ],
+       [
+        "librarian",
+        0.02
+       ],
+       [
+        "defence_lawyer",
+        0.01
+       ],
+       [
+        "textbook",
+        0.01
+       ],
+       [
+        "investigative_journalist",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 95,
+       "defence_lawyer": 1,
+       "librarian": 2,
+       "textbook": 1,
+       "investigative_journalist": 1
+      }
+     }
+    }
+   },
+   "3.5|orig_trunc": {
+    "n": 200,
+    "mean_max_conf": 0.6458046069167704,
+    "median_max_conf": 0.7206180854910404,
+    "mean_entropy_bits": 1.9826934840746997,
+    "frac_below_floor": 0.16,
+    "control_share": 0.875,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.84
+     ],
+     [
+      "librarian",
+      0.05
+     ],
+     [
+      "textbook",
+      0.02
+     ],
+     [
+      "corporate_faq",
+      0.015
+     ],
+     [
+      "er_nurse",
+      0.015
+     ]
+    ],
+    "win_counts": {
+     "librarian": 10,
+     "helpful_ai_assistant": 168,
+     "corporate_faq": 3,
+     "textbook": 4,
+     "poet": 2,
+     "flight_attendant": 2,
+     "defence_lawyer": 2,
+     "investigative_journalist": 1,
+     "military_strategist": 1,
+     "startup_founder": 1,
+     "er_nurse": 3,
+     "victorian_butler": 1,
+     "game_show_host": 1,
+     "standup_comic": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.4981322695257761,
+      "median_max_conf": 0.4368835863426729,
+      "mean_entropy_bits": 2.600141399544005,
+      "frac_below_floor": 0.32,
+      "control_share": 0.76,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.69
+       ],
+       [
+        "librarian",
+        0.09
+       ],
+       [
+        "textbook",
+        0.04
+       ],
+       [
+        "corporate_faq",
+        0.03
+       ],
+       [
+        "er_nurse",
+        0.03
+       ]
+      ],
+      "win_counts": {
+       "librarian": 9,
+       "helpful_ai_assistant": 69,
+       "corporate_faq": 3,
+       "textbook": 4,
+       "poet": 2,
+       "flight_attendant": 2,
+       "defence_lawyer": 2,
+       "investigative_journalist": 1,
+       "military_strategist": 1,
+       "startup_founder": 1,
+       "er_nurse": 3,
+       "victorian_butler": 1,
+       "game_show_host": 1,
+       "standup_comic": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.7934769443077648,
+      "median_max_conf": 0.8292195993390816,
+      "mean_entropy_bits": 1.3652455686053946,
+      "frac_below_floor": 0.0,
+      "control_share": 0.99,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.99
+       ],
+       [
+        "librarian",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 99,
+       "librarian": 1
+      }
+     }
+    }
+   },
+   "3.6|minsys": {
+    "n": 200,
+    "mean_max_conf": 0.5985042211785446,
+    "median_max_conf": 0.6482236319413706,
+    "mean_entropy_bits": 2.16891966567407,
+    "frac_below_floor": 0.185,
+    "control_share": 0.895,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.855
+     ],
+     [
+      "librarian",
+      0.035
+     ],
+     [
+      "corporate_faq",
+      0.02
+     ],
+     [
+      "textbook",
+      0.02
+     ],
+     [
+      "investigative_journalist",
+      0.015
+     ]
+    ],
+    "win_counts": {
+     "librarian": 7,
+     "helpful_ai_assistant": 171,
+     "corporate_faq": 4,
+     "defence_lawyer": 1,
+     "flight_attendant": 1,
+     "poet": 1,
+     "military_strategist": 2,
+     "textbook": 4,
+     "investigative_journalist": 3,
+     "startup_founder": 1,
+     "er_nurse": 1,
+     "academic_philosopher": 1,
+     "standup_comic": 2,
+     "pentester": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.4387672344813956,
+      "median_max_conf": 0.41515953122223376,
+      "mean_entropy_bits": 2.8408714366652172,
+      "frac_below_floor": 0.35,
+      "control_share": 0.79,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.71
+       ],
+       [
+        "librarian",
+        0.07
+       ],
+       [
+        "corporate_faq",
+        0.04
+       ],
+       [
+        "textbook",
+        0.04
+       ],
+       [
+        "investigative_journalist",
+        0.03
+       ]
+      ],
+      "win_counts": {
+       "librarian": 7,
+       "helpful_ai_assistant": 71,
+       "corporate_faq": 4,
+       "defence_lawyer": 1,
+       "flight_attendant": 1,
+       "poet": 1,
+       "military_strategist": 2,
+       "textbook": 4,
+       "investigative_journalist": 3,
+       "startup_founder": 1,
+       "er_nurse": 1,
+       "academic_philosopher": 1,
+       "standup_comic": 2,
+       "pentester": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.7582412078756937,
+      "median_max_conf": 0.8036241231226315,
+      "mean_entropy_bits": 1.4969678946829226,
+      "frac_below_floor": 0.02,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        1.0
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 100
+      }
+     }
+    }
+   },
+   "3.6|nosys": {
+    "n": 200,
+    "mean_max_conf": 0.621155868182793,
+    "median_max_conf": 0.6682031585426003,
+    "mean_entropy_bits": 2.066218811349488,
+    "frac_below_floor": 0.16,
+    "control_share": 0.915,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.87
+     ],
+     [
+      "corporate_faq",
+      0.03
+     ],
+     [
+      "librarian",
+      0.02
+     ],
+     [
+      "poet",
+      0.015
+     ],
+     [
+      "textbook",
+      0.015
+     ]
+    ],
+    "win_counts": {
+     "librarian": 4,
+     "helpful_ai_assistant": 174,
+     "poet": 3,
+     "corporate_faq": 6,
+     "defence_lawyer": 1,
+     "flight_attendant": 2,
+     "academic_philosopher": 1,
+     "victorian_butler": 1,
+     "textbook": 3,
+     "military_strategist": 1,
+     "investigative_journalist": 2,
+     "standup_comic": 1,
+     "retired_engineer": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.4767619186879602,
+      "median_max_conf": 0.4652580550749781,
+      "mean_entropy_bits": 2.694499992660322,
+      "frac_below_floor": 0.3,
+      "control_share": 0.83,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.74
+       ],
+       [
+        "corporate_faq",
+        0.06
+       ],
+       [
+        "librarian",
+        0.04
+       ],
+       [
+        "poet",
+        0.03
+       ],
+       [
+        "textbook",
+        0.03
+       ]
+      ],
+      "win_counts": {
+       "librarian": 4,
+       "helpful_ai_assistant": 74,
+       "poet": 3,
+       "corporate_faq": 6,
+       "defence_lawyer": 1,
+       "flight_attendant": 2,
+       "academic_philosopher": 1,
+       "victorian_butler": 1,
+       "textbook": 3,
+       "military_strategist": 1,
+       "investigative_journalist": 2,
+       "standup_comic": 1,
+       "retired_engineer": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.765549817677626,
+      "median_max_conf": 0.8141443343845842,
+      "mean_entropy_bits": 1.4379376300386537,
+      "frac_below_floor": 0.02,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        1.0
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 100
+      }
+     }
+    }
+   },
+   "3.6|orig_trunc": {
+    "n": 200,
+    "mean_max_conf": 0.6509830220239178,
+    "median_max_conf": 0.7620823754714728,
+    "mean_entropy_bits": 1.9043208393979327,
+    "frac_below_floor": 0.19,
+    "control_share": 0.85,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.825
+     ],
+     [
+      "librarian",
+      0.05
+     ],
+     [
+      "corporate_faq",
+      0.015
+     ],
+     [
+      "poet",
+      0.015
+     ],
+     [
+      "flight_attendant",
+      0.01
+     ]
+    ],
+    "win_counts": {
+     "librarian": 10,
+     "helpful_ai_assistant": 165,
+     "corporate_faq": 3,
+     "poet": 3,
+     "defence_lawyer": 1,
+     "retired_engineer": 1,
+     "flight_attendant": 2,
+     "pentester": 2,
+     "military_strategist": 1,
+     "standup_comic": 2,
+     "kindergarten_teacher": 1,
+     "er_nurse": 1,
+     "textbook": 2,
+     "investigative_journalist": 2,
+     "conspiracy_blogger": 1,
+     "game_show_host": 1,
+     "therapist": 1,
+     "bureaucrat": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.5082582690197085,
+      "median_max_conf": 0.4283826869635716,
+      "mean_entropy_bits": 2.5321463299163103,
+      "frac_below_floor": 0.37,
+      "control_share": 0.71,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.66
+       ],
+       [
+        "librarian",
+        0.09
+       ],
+       [
+        "corporate_faq",
+        0.03
+       ],
+       [
+        "poet",
+        0.03
+       ],
+       [
+        "flight_attendant",
+        0.02
+       ]
+      ],
+      "win_counts": {
+       "librarian": 9,
+       "helpful_ai_assistant": 66,
+       "corporate_faq": 3,
+       "poet": 3,
+       "defence_lawyer": 1,
+       "retired_engineer": 1,
+       "flight_attendant": 2,
+       "pentester": 2,
+       "military_strategist": 1,
+       "standup_comic": 2,
+       "kindergarten_teacher": 1,
+       "er_nurse": 1,
+       "textbook": 2,
+       "investigative_journalist": 2,
+       "conspiracy_blogger": 1,
+       "game_show_host": 1,
+       "therapist": 1,
+       "bureaucrat": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.793707775028127,
+      "median_max_conf": 0.8448141061927485,
+      "mean_entropy_bits": 1.276495348879555,
+      "frac_below_floor": 0.01,
+      "control_share": 0.99,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.99
+       ],
+       [
+        "librarian",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 99,
+       "librarian": 1
+      }
+     }
+    }
+   },
+   "3.8|minsys": {
+    "n": 200,
+    "mean_max_conf": 0.6226398004740248,
+    "median_max_conf": 0.6981425565634146,
+    "mean_entropy_bits": 2.075126009934186,
+    "frac_below_floor": 0.195,
+    "control_share": 0.885,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.875
+     ],
+     [
+      "librarian",
+      0.03
+     ],
+     [
+      "flight_attendant",
+      0.02
+     ],
+     [
+      "er_nurse",
+      0.01
+     ],
+     [
+      "pentester",
+      0.01
+     ]
+    ],
+    "win_counts": {
+     "librarian": 6,
+     "helpful_ai_assistant": 175,
+     "flight_attendant": 4,
+     "poet": 1,
+     "retired_engineer": 1,
+     "er_nurse": 2,
+     "pentester": 2,
+     "therapist": 1,
+     "startup_founder": 1,
+     "textbook": 2,
+     "military_strategist": 1,
+     "investigative_journalist": 2,
+     "standup_comic": 1,
+     "kindergarten_teacher": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.4616217726299562,
+      "median_max_conf": 0.4167179123606839,
+      "mean_entropy_bits": 2.7585336693408418,
+      "frac_below_floor": 0.37,
+      "control_share": 0.79,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.77
+       ],
+       [
+        "librarian",
+        0.06
+       ],
+       [
+        "flight_attendant",
+        0.04
+       ],
+       [
+        "er_nurse",
+        0.02
+       ],
+       [
+        "pentester",
+        0.02
+       ]
+      ],
+      "win_counts": {
+       "librarian": 6,
+       "helpful_ai_assistant": 77,
+       "flight_attendant": 4,
+       "poet": 1,
+       "retired_engineer": 1,
+       "er_nurse": 2,
+       "pentester": 2,
+       "therapist": 1,
+       "startup_founder": 1,
+       "textbook": 2,
+       "military_strategist": 1,
+       "investigative_journalist": 1,
+       "standup_comic": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.7836578283180934,
+      "median_max_conf": 0.8111442999426013,
+      "mean_entropy_bits": 1.3917183505275288,
+      "frac_below_floor": 0.02,
+      "control_share": 0.98,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.98
+       ],
+       [
+        "kindergarten_teacher",
+        0.01
+       ],
+       [
+        "investigative_journalist",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 98,
+       "kindergarten_teacher": 1,
+       "investigative_journalist": 1
+      }
+     }
+    }
+   },
+   "3.8|nosys": {
+    "n": 200,
+    "mean_max_conf": 0.6258956524893756,
+    "median_max_conf": 0.6585079942476298,
+    "mean_entropy_bits": 2.054919286025787,
+    "frac_below_floor": 0.16,
+    "control_share": 0.905,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.86
+     ],
+     [
+      "librarian",
+      0.025
+     ],
+     [
+      "corporate_faq",
+      0.025
+     ],
+     [
+      "textbook",
+      0.02
+     ],
+     [
+      "investigative_journalist",
+      0.015
+     ]
+    ],
+    "win_counts": {
+     "defence_lawyer": 1,
+     "helpful_ai_assistant": 172,
+     "librarian": 5,
+     "corporate_faq": 5,
+     "investigative_journalist": 3,
+     "academic_philosopher": 1,
+     "pentester": 1,
+     "monk": 1,
+     "er_nurse": 3,
+     "textbook": 4,
+     "military_strategist": 1,
+     "standup_comic": 1,
+     "flight_attendant": 1,
+     "startup_founder": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.4841680902813969,
+      "median_max_conf": 0.4431240518892445,
+      "mean_entropy_bits": 2.6716142376422436,
+      "frac_below_floor": 0.3,
+      "control_share": 0.81,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.73
+       ],
+       [
+        "librarian",
+        0.05
+       ],
+       [
+        "corporate_faq",
+        0.05
+       ],
+       [
+        "investigative_journalist",
+        0.03
+       ],
+       [
+        "er_nurse",
+        0.03
+       ]
+      ],
+      "win_counts": {
+       "defence_lawyer": 1,
+       "helpful_ai_assistant": 73,
+       "librarian": 5,
+       "corporate_faq": 5,
+       "investigative_journalist": 3,
+       "academic_philosopher": 1,
+       "pentester": 1,
+       "monk": 1,
+       "er_nurse": 3,
+       "textbook": 3,
+       "military_strategist": 1,
+       "standup_comic": 1,
+       "flight_attendant": 1,
+       "startup_founder": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.7676232146973544,
+      "median_max_conf": 0.8091870408476605,
+      "mean_entropy_bits": 1.4382243344093308,
+      "frac_below_floor": 0.02,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.99
+       ],
+       [
+        "textbook",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 99,
+       "textbook": 1
+      }
+     }
+    }
+   },
+   "3.8|orig_trunc": {
+    "n": 200,
+    "mean_max_conf": 0.43508698825247577,
+    "median_max_conf": 0.39175789345460876,
+    "mean_entropy_bits": 2.9021325327677596,
+    "frac_below_floor": 0.405,
+    "control_share": 0.645,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.62
+     ],
+     [
+      "librarian",
+      0.115
+     ],
+     [
+      "therapist",
+      0.04
+     ],
+     [
+      "farmer",
+      0.03
+     ],
+     [
+      "investigative_journalist",
+      0.025
+     ]
+    ],
+    "win_counts": {
+     "investigative_journalist": 5,
+     "farmer": 6,
+     "helpful_ai_assistant": 124,
+     "librarian": 23,
+     "corporate_faq": 3,
+     "poet": 5,
+     "academic_philosopher": 4,
+     "pentester": 3,
+     "flight_attendant": 1,
+     "retired_engineer": 4,
+     "standup_comic": 3,
+     "er_nurse": 5,
+     "military_strategist": 1,
+     "textbook": 2,
+     "therapist": 8,
+     "conspiracy_blogger": 1,
+     "defence_lawyer": 1,
+     "victorian_butler": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.33747687810678534,
+      "median_max_conf": 0.28210064777486954,
+      "mean_entropy_bits": 3.3348162977282074,
+      "frac_below_floor": 0.59,
+      "control_share": 0.45,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.4
+       ],
+       [
+        "librarian",
+        0.18
+       ],
+       [
+        "poet",
+        0.05
+       ],
+       [
+        "er_nurse",
+        0.05
+       ],
+       [
+        "investigative_journalist",
+        0.04
+       ]
+      ],
+      "win_counts": {
+       "investigative_journalist": 4,
+       "farmer": 4,
+       "helpful_ai_assistant": 40,
+       "librarian": 18,
+       "corporate_faq": 3,
+       "poet": 5,
+       "academic_philosopher": 3,
+       "pentester": 3,
+       "flight_attendant": 1,
+       "retired_engineer": 4,
+       "standup_comic": 2,
+       "er_nurse": 5,
+       "military_strategist": 1,
+       "textbook": 2,
+       "therapist": 2,
+       "conspiracy_blogger": 1,
+       "defence_lawyer": 1,
+       "victorian_butler": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.532697098398166,
+      "median_max_conf": 0.5172058944195141,
+      "mean_entropy_bits": 2.4694487678073114,
+      "frac_below_floor": 0.22,
+      "control_share": 0.84,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.84
+       ],
+       [
+        "therapist",
+        0.06
+       ],
+       [
+        "librarian",
+        0.05
+       ],
+       [
+        "farmer",
+        0.02
+       ],
+       [
+        "standup_comic",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "therapist": 6,
+       "farmer": 2,
+       "helpful_ai_assistant": 84,
+       "standup_comic": 1,
+       "librarian": 5,
+       "academic_philosopher": 1,
+       "investigative_journalist": 1
+      }
+     }
+    }
+   }
+  },
+  "cross_version": {
+   "3.8-3.5|orig_trunc": {
+    "max_conf": {
+     "diff": -0.2107176186642947,
+     "lo": -0.24368544069489864,
+     "hi": -0.17736858618967943
+    },
+    "entropy": {
+     "diff": 0.9194390486930593,
+     "lo": 0.784771813435424,
+     "hi": 1.060476902724887
+    },
+    "below": {
+     "diff": 0.245,
+     "lo": 0.17,
+     "hi": 0.32
+    }
+   },
+   "3.6-3.5|orig_trunc": {
+    "max_conf": {
+     "diff": 0.005178415107147354,
+     "lo": -0.0218477539821128,
+     "hi": 0.03160501146608557
+    },
+    "entropy": {
+     "diff": -0.0783726446767673,
+     "lo": -0.20029125722059063,
+     "hi": 0.039860317842505974
+    },
+    "below": {
+     "diff": 0.03,
+     "lo": -0.025,
+     "hi": 0.08
+    }
+   },
+   "3.8-3.6|orig_trunc": {
+    "max_conf": {
+     "diff": -0.21589603377144204,
+     "lo": -0.24930692797581547,
+     "hi": -0.18142671959166126
+    },
+    "entropy": {
+     "diff": 0.9978116933698266,
+     "lo": 0.8427299211772373,
+     "hi": 1.1484922030496743
+    },
+    "below": {
+     "diff": 0.215,
+     "lo": 0.145,
+     "hi": 0.29
+    }
+   },
+   "3.8-3.5|nosys": {
+    "max_conf": {
+     "diff": 0.09459313682485622,
+     "lo": 0.06676071621150356,
+     "hi": 0.12267013833512
+    },
+    "entropy": {
+     "diff": -0.44292369309366547,
+     "lo": -0.5596061781470602,
+     "hi": -0.32081674216881667
+    },
+    "below": {
+     "diff": -0.06,
+     "lo": -0.11512499999999999,
+     "hi": 0.0
+    }
+   },
+   "3.6-3.5|nosys": {
+    "max_conf": {
+     "diff": 0.08985335251827369,
+     "lo": 0.060688821955036484,
+     "hi": 0.11736032669213893
+    },
+    "entropy": {
+     "diff": -0.43162416776996454,
+     "lo": -0.5633431771047431,
+     "hi": -0.3037182603441437
+    },
+    "below": {
+     "diff": -0.06,
+     "lo": -0.12,
+     "hi": 0.0
+    }
+   },
+   "3.8-3.6|nosys": {
+    "max_conf": {
+     "diff": 0.004739784306582517,
+     "lo": -0.020926413752047558,
+     "hi": 0.031098961152839645
+    },
+    "entropy": {
+     "diff": -0.011299525323700932,
+     "lo": -0.124303101479319,
+     "hi": 0.10904337828053126
+    },
+    "below": {
+     "diff": 0.0,
+     "lo": -0.06,
+     "hi": 0.065
+    }
+   },
+   "3.8-3.5|minsys": {
+    "max_conf": {
+     "diff": 0.08321145500115662,
+     "lo": 0.0552417594479152,
+     "hi": 0.11034701828017093
+    },
+    "entropy": {
+     "diff": -0.37908287529528983,
+     "lo": -0.49971458374467653,
+     "hi": -0.256175477124785
+    },
+    "below": {
+     "diff": -0.04,
+     "lo": -0.105,
+     "hi": 0.03
+    }
+   },
+   "3.6-3.5|minsys": {
+    "max_conf": {
+     "diff": 0.05907587570567641,
+     "lo": 0.03159455239761179,
+     "hi": 0.08444248671103065
+    },
+    "entropy": {
+     "diff": -0.2852892195554052,
+     "lo": -0.398150876405568,
+     "hi": -0.17051620686013533
+    },
+    "below": {
+     "diff": -0.05,
+     "lo": -0.105,
+     "hi": 0.01
+    }
+   },
+   "3.8-3.6|minsys": {
+    "max_conf": {
+     "diff": 0.0241355792954802,
+     "lo": -0.0013369664913084817,
+     "hi": 0.05217228094729097
+    },
+    "entropy": {
+     "diff": -0.09379365573988466,
+     "lo": -0.19973958102588238,
+     "hi": 0.017557626714805704
+    },
+    "below": {
+     "diff": 0.01,
+     "lo": -0.05,
+     "hi": 0.07
+    }
+   }
+  },
+  "paraphrase": {
+   "n": 199,
+   "mean_max_conf": 0.5979452076820532,
+   "median_max_conf": 0.6843817177320082,
+   "mean_entropy_bits": 2.2470965038592707,
+   "frac_below_floor": 0.24120603015075376,
+   "control_share": 0.8542713567839196,
+   "top5": [
+    [
+     "helpful_ai_assistant",
+     0.799
+    ],
+    [
+     "librarian",
+     0.03
+    ],
+    [
+     "er_nurse",
+     0.03
+    ],
+    [
+     "corporate_faq",
+     0.03
+    ],
+    [
+     "textbook",
+     0.025
+    ]
+   ],
+   "win_counts": {
+    "librarian": 6,
+    "er_nurse": 6,
+    "helpful_ai_assistant": 159,
+    "corporate_faq": 6,
+    "poet": 4,
+    "flight_attendant": 3,
+    "military_strategist": 1,
+    "kindergarten_teacher": 1,
+    "textbook": 5,
+    "standup_comic": 1,
+    "farmer": 4,
+    "startup_founder": 1,
+    "investigative_journalist": 2
+   },
+   "source_minus_paraphrase": {
+    "max_conf": {
+     "diff": 0.05013780341405676,
+     "lo": 0.03478843157477479,
+     "hi": 0.06628580488680522
+    },
+    "entropy": {
+     "diff": -0.27604146769405624,
+     "lo": -0.3417972150585564,
+     "hi": -0.2128386601803383
+    },
+    "below": {
+     "diff": -0.08542713567839195,
+     "lo": -0.135678391959799,
+     "hi": -0.035175879396984924
+    }
+   }
+  }
+ },
+ "pooled": {
+  "confidence_floor": 0.5086441236924334,
+  "cap_words": 291,
+  "C": 16.0,
+  "cells": {
+   "3.5|minsys": {
+    "n": 200,
+    "mean_max_conf": 0.7193257934933243,
+    "median_max_conf": 0.7824543154493664,
+    "mean_entropy_bits": 1.6156967770232784,
+    "frac_below_floor": 0.2,
+    "control_share": 0.91,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.91
+     ],
+     [
+      "librarian",
+      0.025
+     ],
+     [
+      "investigative_journalist",
+      0.02
+     ],
+     [
+      "flight_attendant",
+      0.02
+     ],
+     [
+      "therapist",
+      0.01
+     ]
+    ],
+    "win_counts": {
+     "helpful_ai_assistant": 182,
+     "investigative_journalist": 4,
+     "therapist": 2,
+     "flight_attendant": 4,
+     "librarian": 5,
+     "defence_lawyer": 1,
+     "er_nurse": 2
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.5758336439049699,
+      "median_max_conf": 0.6492089131597905,
+      "mean_entropy_bits": 2.2821273614818,
+      "frac_below_floor": 0.38,
+      "control_share": 0.82,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.82
+       ],
+       [
+        "librarian",
+        0.05
+       ],
+       [
+        "investigative_journalist",
+        0.04
+       ],
+       [
+        "flight_attendant",
+        0.04
+       ],
+       [
+        "therapist",
+        0.02
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 82,
+       "investigative_journalist": 4,
+       "therapist": 2,
+       "flight_attendant": 4,
+       "librarian": 5,
+       "defence_lawyer": 1,
+       "er_nurse": 2
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.8628179430816786,
+      "median_max_conf": 0.8931961379487616,
+      "mean_entropy_bits": 0.9492661925647569,
+      "frac_below_floor": 0.02,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        1.0
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 100
+      }
+     }
+    }
+   },
+   "3.5|nosys": {
+    "n": 200,
+    "mean_max_conf": 0.7123138687398799,
+    "median_max_conf": 0.7758888955471657,
+    "mean_entropy_bits": 1.640976657598393,
+    "frac_below_floor": 0.205,
+    "control_share": 0.91,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.9
+     ],
+     [
+      "flight_attendant",
+      0.025
+     ],
+     [
+      "librarian",
+      0.02
+     ],
+     [
+      "standup_comic",
+      0.01
+     ],
+     [
+      "defence_lawyer",
+      0.01
+     ]
+    ],
+    "win_counts": {
+     "helpful_ai_assistant": 180,
+     "textbook": 1,
+     "flight_attendant": 5,
+     "librarian": 4,
+     "corporate_faq": 1,
+     "standup_comic": 2,
+     "monk": 1,
+     "defence_lawyer": 2,
+     "er_nurse": 2,
+     "investigative_journalist": 2
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.5886566096990148,
+      "median_max_conf": 0.6128761425938218,
+      "mean_entropy_bits": 2.204530482386535,
+      "frac_below_floor": 0.38,
+      "control_share": 0.82,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.8
+       ],
+       [
+        "flight_attendant",
+        0.05
+       ],
+       [
+        "librarian",
+        0.04
+       ],
+       [
+        "standup_comic",
+        0.02
+       ],
+       [
+        "defence_lawyer",
+        0.02
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 80,
+       "textbook": 1,
+       "flight_attendant": 5,
+       "librarian": 4,
+       "corporate_faq": 1,
+       "standup_comic": 2,
+       "monk": 1,
+       "defence_lawyer": 2,
+       "er_nurse": 2,
+       "investigative_journalist": 2
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.8359711277807452,
+      "median_max_conf": 0.8771118085933638,
+      "mean_entropy_bits": 1.0774228328102518,
+      "frac_below_floor": 0.03,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        1.0
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 100
+      }
+     }
+    }
+   },
+   "3.5|orig_trunc": {
+    "n": 200,
+    "mean_max_conf": 0.771139557284055,
+    "median_max_conf": 0.8874742732457214,
+    "mean_entropy_bits": 1.3200074976959288,
+    "frac_below_floor": 0.2,
+    "control_share": 0.935,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.925
+     ],
+     [
+      "librarian",
+      0.02
+     ],
+     [
+      "defence_lawyer",
+      0.01
+     ],
+     [
+      "textbook",
+      0.01
+     ],
+     [
+      "startup_founder",
+      0.01
+     ]
+    ],
+    "win_counts": {
+     "librarian": 4,
+     "helpful_ai_assistant": 185,
+     "flight_attendant": 1,
+     "defence_lawyer": 2,
+     "textbook": 2,
+     "startup_founder": 2,
+     "poet": 1,
+     "military_strategist": 1,
+     "er_nurse": 2
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.6189512176376731,
+      "median_max_conf": 0.6387367482156059,
+      "mean_entropy_bits": 2.018973855280276,
+      "frac_below_floor": 0.4,
+      "control_share": 0.87,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.85
+       ],
+       [
+        "librarian",
+        0.04
+       ],
+       [
+        "defence_lawyer",
+        0.02
+       ],
+       [
+        "textbook",
+        0.02
+       ],
+       [
+        "startup_founder",
+        0.02
+       ]
+      ],
+      "win_counts": {
+       "librarian": 4,
+       "helpful_ai_assistant": 85,
+       "flight_attendant": 1,
+       "defence_lawyer": 2,
+       "textbook": 2,
+       "startup_founder": 2,
+       "poet": 1,
+       "military_strategist": 1,
+       "er_nurse": 2
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.9233278969304369,
+      "median_max_conf": 0.9463844144676536,
+      "mean_entropy_bits": 0.6210411401115816,
+      "frac_below_floor": 0.0,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        1.0
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 100
+      }
+     }
+    }
+   },
+   "3.6|minsys": {
+    "n": 200,
+    "mean_max_conf": 0.7222961997853359,
+    "median_max_conf": 0.814601372138115,
+    "mean_entropy_bits": 1.5824104948515731,
+    "frac_below_floor": 0.21,
+    "control_share": 0.92,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.905
+     ],
+     [
+      "librarian",
+      0.035
+     ],
+     [
+      "corporate_faq",
+      0.01
+     ],
+     [
+      "er_nurse",
+      0.01
+     ],
+     [
+      "flight_attendant",
+      0.005
+     ]
+    ],
+    "win_counts": {
+     "librarian": 7,
+     "helpful_ai_assistant": 181,
+     "flight_attendant": 1,
+     "defence_lawyer": 1,
+     "textbook": 1,
+     "corporate_faq": 2,
+     "conspiracy_blogger": 1,
+     "startup_founder": 1,
+     "er_nurse": 2,
+     "poet": 1,
+     "pentester": 1,
+     "standup_comic": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.5776724474642624,
+      "median_max_conf": 0.6059368122427218,
+      "mean_entropy_bits": 2.2562253989167735,
+      "frac_below_floor": 0.4,
+      "control_share": 0.84,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.81
+       ],
+       [
+        "librarian",
+        0.07
+       ],
+       [
+        "corporate_faq",
+        0.02
+       ],
+       [
+        "er_nurse",
+        0.02
+       ],
+       [
+        "flight_attendant",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "librarian": 7,
+       "helpful_ai_assistant": 81,
+       "flight_attendant": 1,
+       "defence_lawyer": 1,
+       "textbook": 1,
+       "corporate_faq": 2,
+       "conspiracy_blogger": 1,
+       "startup_founder": 1,
+       "er_nurse": 2,
+       "poet": 1,
+       "pentester": 1,
+       "standup_comic": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.8669199521064094,
+      "median_max_conf": 0.9000596117990971,
+      "mean_entropy_bits": 0.9085955907863723,
+      "frac_below_floor": 0.02,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        1.0
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 100
+      }
+     }
+    }
+   },
+   "3.6|nosys": {
+    "n": 200,
+    "mean_max_conf": 0.7384511717418948,
+    "median_max_conf": 0.841040758571947,
+    "mean_entropy_bits": 1.4898390403544912,
+    "frac_below_floor": 0.205,
+    "control_share": 0.94,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.925
+     ],
+     [
+      "librarian",
+      0.025
+     ],
+     [
+      "flight_attendant",
+      0.015
+     ],
+     [
+      "er_nurse",
+      0.01
+     ],
+     [
+      "textbook",
+      0.01
+     ]
+    ],
+    "win_counts": {
+     "librarian": 5,
+     "helpful_ai_assistant": 185,
+     "flight_attendant": 3,
+     "er_nurse": 2,
+     "textbook": 2,
+     "poet": 1,
+     "corporate_faq": 1,
+     "investigative_journalist": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.6099043187832804,
+      "median_max_conf": 0.6370079258510541,
+      "mean_entropy_bits": 2.0981180468316922,
+      "frac_below_floor": 0.39,
+      "control_share": 0.88,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.85
+       ],
+       [
+        "librarian",
+        0.05
+       ],
+       [
+        "flight_attendant",
+        0.03
+       ],
+       [
+        "er_nurse",
+        0.02
+       ],
+       [
+        "textbook",
+        0.02
+       ]
+      ],
+      "win_counts": {
+       "librarian": 5,
+       "helpful_ai_assistant": 85,
+       "flight_attendant": 3,
+       "er_nurse": 2,
+       "textbook": 2,
+       "poet": 1,
+       "corporate_faq": 1,
+       "investigative_journalist": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.8669980247005096,
+      "median_max_conf": 0.8998642697296392,
+      "mean_entropy_bits": 0.88156003387729,
+      "frac_below_floor": 0.02,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        1.0
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 100
+      }
+     }
+    }
+   },
+   "3.6|orig_trunc": {
+    "n": 200,
+    "mean_max_conf": 0.7535989921853414,
+    "median_max_conf": 0.8793224692723351,
+    "mean_entropy_bits": 1.3818175160184938,
+    "frac_below_floor": 0.21,
+    "control_share": 0.895,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.89
+     ],
+     [
+      "librarian",
+      0.025
+     ],
+     [
+      "retired_engineer",
+      0.01
+     ],
+     [
+      "investigative_journalist",
+      0.01
+     ],
+     [
+      "flight_attendant",
+      0.005
+     ]
+    ],
+    "win_counts": {
+     "helpful_ai_assistant": 178,
+     "librarian": 5,
+     "flight_attendant": 1,
+     "poet": 1,
+     "defence_lawyer": 1,
+     "retired_engineer": 2,
+     "sales_rep": 1,
+     "pentester": 1,
+     "standup_comic": 1,
+     "monk": 1,
+     "textbook": 1,
+     "investigative_journalist": 2,
+     "conspiracy_blogger": 1,
+     "academic_philosopher": 1,
+     "military_strategist": 1,
+     "er_nurse": 1,
+     "bureaucrat": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.6133225410569876,
+      "median_max_conf": 0.5947709918226762,
+      "mean_entropy_bits": 2.022421518959352,
+      "frac_below_floor": 0.4,
+      "control_share": 0.79,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.78
+       ],
+       [
+        "librarian",
+        0.05
+       ],
+       [
+        "retired_engineer",
+        0.02
+       ],
+       [
+        "investigative_journalist",
+        0.02
+       ],
+       [
+        "flight_attendant",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 78,
+       "librarian": 5,
+       "flight_attendant": 1,
+       "poet": 1,
+       "defence_lawyer": 1,
+       "retired_engineer": 2,
+       "sales_rep": 1,
+       "pentester": 1,
+       "standup_comic": 1,
+       "monk": 1,
+       "textbook": 1,
+       "investigative_journalist": 2,
+       "conspiracy_blogger": 1,
+       "academic_philosopher": 1,
+       "military_strategist": 1,
+       "er_nurse": 1,
+       "bureaucrat": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.893875443313695,
+      "median_max_conf": 0.9360055127313197,
+      "mean_entropy_bits": 0.7412135130776362,
+      "frac_below_floor": 0.02,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        1.0
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 100
+      }
+     }
+    }
+   },
+   "3.8|minsys": {
+    "n": 200,
+    "mean_max_conf": 0.7321391139909746,
+    "median_max_conf": 0.8342769034111883,
+    "mean_entropy_bits": 1.552681322594998,
+    "frac_below_floor": 0.215,
+    "control_share": 0.92,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.92
+     ],
+     [
+      "librarian",
+      0.025
+     ],
+     [
+      "flight_attendant",
+      0.015
+     ],
+     [
+      "er_nurse",
+      0.015
+     ],
+     [
+      "investigative_journalist",
+      0.01
+     ]
+    ],
+    "win_counts": {
+     "librarian": 5,
+     "helpful_ai_assistant": 184,
+     "flight_attendant": 3,
+     "retired_engineer": 1,
+     "er_nurse": 3,
+     "pentester": 1,
+     "startup_founder": 1,
+     "investigative_journalist": 2
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.5904222674094267,
+      "median_max_conf": 0.5776642570004756,
+      "mean_entropy_bits": 2.2263350202347354,
+      "frac_below_floor": 0.41,
+      "control_share": 0.85,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.85
+       ],
+       [
+        "librarian",
+        0.05
+       ],
+       [
+        "flight_attendant",
+        0.03
+       ],
+       [
+        "er_nurse",
+        0.03
+       ],
+       [
+        "retired_engineer",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "librarian": 5,
+       "helpful_ai_assistant": 85,
+       "flight_attendant": 3,
+       "retired_engineer": 1,
+       "er_nurse": 3,
+       "pentester": 1,
+       "startup_founder": 1,
+       "investigative_journalist": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.8738559605725229,
+      "median_max_conf": 0.9069289876554337,
+      "mean_entropy_bits": 0.8790276249552599,
+      "frac_below_floor": 0.02,
+      "control_share": 0.99,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.99
+       ],
+       [
+        "investigative_journalist",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 99,
+       "investigative_journalist": 1
+      }
+     }
+    }
+   },
+   "3.8|nosys": {
+    "n": 200,
+    "mean_max_conf": 0.7404533319671387,
+    "median_max_conf": 0.8103425328825866,
+    "mean_entropy_bits": 1.4960333438969267,
+    "frac_below_floor": 0.18,
+    "control_share": 0.925,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.905
+     ],
+     [
+      "flight_attendant",
+      0.015
+     ],
+     [
+      "investigative_journalist",
+      0.01
+     ],
+     [
+      "corporate_faq",
+      0.01
+     ],
+     [
+      "librarian",
+      0.01
+     ]
+    ],
+    "win_counts": {
+     "defence_lawyer": 1,
+     "helpful_ai_assistant": 181,
+     "flight_attendant": 3,
+     "investigative_journalist": 2,
+     "academic_philosopher": 1,
+     "pentester": 1,
+     "corporate_faq": 2,
+     "conspiracy_blogger": 1,
+     "librarian": 2,
+     "startup_founder": 1,
+     "textbook": 2,
+     "er_nurse": 2,
+     "retired_engineer": 1
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.6242141692566592,
+      "median_max_conf": 0.6643140390724676,
+      "mean_entropy_bits": 2.053200318209846,
+      "frac_below_floor": 0.33,
+      "control_share": 0.85,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.82
+       ],
+       [
+        "flight_attendant",
+        0.03
+       ],
+       [
+        "investigative_journalist",
+        0.02
+       ],
+       [
+        "corporate_faq",
+        0.02
+       ],
+       [
+        "librarian",
+        0.02
+       ]
+      ],
+      "win_counts": {
+       "defence_lawyer": 1,
+       "helpful_ai_assistant": 82,
+       "flight_attendant": 3,
+       "investigative_journalist": 2,
+       "academic_philosopher": 1,
+       "pentester": 1,
+       "corporate_faq": 2,
+       "conspiracy_blogger": 1,
+       "librarian": 2,
+       "startup_founder": 1,
+       "textbook": 1,
+       "er_nurse": 2,
+       "retired_engineer": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.8566924946776182,
+      "median_max_conf": 0.893246399852152,
+      "mean_entropy_bits": 0.9388663695840072,
+      "frac_below_floor": 0.03,
+      "control_share": 1.0,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.99
+       ],
+       [
+        "textbook",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "helpful_ai_assistant": 99,
+       "textbook": 1
+      }
+     }
+    }
+   },
+   "3.8|orig_trunc": {
+    "n": 200,
+    "mean_max_conf": 0.5057812453265379,
+    "median_max_conf": 0.47013833181856224,
+    "mean_entropy_bits": 2.573082816289723,
+    "frac_below_floor": 0.535,
+    "control_share": 0.695,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.68
+     ],
+     [
+      "librarian",
+      0.06
+     ],
+     [
+      "standup_comic",
+      0.05
+     ],
+     [
+      "investigative_journalist",
+      0.035
+     ],
+     [
+      "retired_engineer",
+      0.035
+     ]
+    ],
+    "win_counts": {
+     "investigative_journalist": 7,
+     "er_nurse": 6,
+     "helpful_ai_assistant": 136,
+     "librarian": 12,
+     "poet": 3,
+     "flight_attendant": 1,
+     "standup_comic": 10,
+     "retired_engineer": 7,
+     "pentester": 2,
+     "military_strategist": 1,
+     "victorian_butler": 1,
+     "therapist": 6,
+     "conspiracy_blogger": 1,
+     "academic_philosopher": 1,
+     "corporate_faq": 1,
+     "textbook": 2,
+     "defence_lawyer": 1,
+     "farmer": 2
+    },
+    "by_kind": {
+     "scenario": {
+      "n": 100,
+      "mean_max_conf": 0.4055756493648955,
+      "median_max_conf": 0.36245419708096993,
+      "mean_entropy_bits": 3.02340890790365,
+      "frac_below_floor": 0.7,
+      "control_share": 0.56,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.53
+       ],
+       [
+        "librarian",
+        0.11
+       ],
+       [
+        "retired_engineer",
+        0.06
+       ],
+       [
+        "er_nurse",
+        0.05
+       ],
+       [
+        "standup_comic",
+        0.05
+       ]
+      ],
+      "win_counts": {
+       "investigative_journalist": 4,
+       "er_nurse": 5,
+       "helpful_ai_assistant": 53,
+       "librarian": 11,
+       "poet": 3,
+       "flight_attendant": 1,
+       "standup_comic": 5,
+       "retired_engineer": 6,
+       "pentester": 2,
+       "military_strategist": 1,
+       "victorian_butler": 1,
+       "therapist": 1,
+       "conspiracy_blogger": 1,
+       "academic_philosopher": 1,
+       "corporate_faq": 1,
+       "textbook": 2,
+       "defence_lawyer": 1,
+       "farmer": 1
+      }
+     },
+     "generic": {
+      "n": 100,
+      "mean_max_conf": 0.6059868412881804,
+      "median_max_conf": 0.5861314459594416,
+      "mean_entropy_bits": 2.122756724675795,
+      "frac_below_floor": 0.37,
+      "control_share": 0.83,
+      "top5": [
+       [
+        "helpful_ai_assistant",
+        0.83
+       ],
+       [
+        "therapist",
+        0.05
+       ],
+       [
+        "standup_comic",
+        0.05
+       ],
+       [
+        "investigative_journalist",
+        0.03
+       ],
+       [
+        "farmer",
+        0.01
+       ]
+      ],
+      "win_counts": {
+       "therapist": 5,
+       "farmer": 1,
+       "helpful_ai_assistant": 83,
+       "standup_comic": 5,
+       "er_nurse": 1,
+       "retired_engineer": 1,
+       "investigative_journalist": 3,
+       "librarian": 1
+      }
+     }
+    }
+   }
+  },
+  "cross_version": {
+   "3.8-3.5|orig_trunc": {
+    "max_conf": {
+     "diff": -0.26535831195751697,
+     "lo": -0.29980433941632334,
+     "hi": -0.23226756081643737
+    },
+    "entropy": {
+     "diff": 1.2530753185937933,
+     "lo": 1.113577638549088,
+     "hi": 1.3939021833751777
+    },
+    "below": {
+     "diff": 0.335,
+     "lo": 0.26,
+     "hi": 0.41
+    }
+   },
+   "3.6-3.5|orig_trunc": {
+    "max_conf": {
+     "diff": -0.017540565098713625,
+     "lo": -0.04081109060839374,
+     "hi": 0.005450422854051521
+    },
+    "entropy": {
+     "diff": 0.0618100183225652,
+     "lo": -0.04418232365000179,
+     "hi": 0.16516598148582542
+    },
+    "below": {
+     "diff": 0.01,
+     "lo": -0.04,
+     "hi": 0.055
+    }
+   },
+   "3.8-3.6|orig_trunc": {
+    "max_conf": {
+     "diff": -0.2478177468588033,
+     "lo": -0.28145260655884263,
+     "hi": -0.21102098687793816
+    },
+    "entropy": {
+     "diff": 1.1912653002712283,
+     "lo": 1.0329059060805132,
+     "hi": 1.3435086972676087
+    },
+    "below": {
+     "diff": 0.325,
+     "lo": 0.25,
+     "hi": 0.405
+    }
+   },
+   "3.8-3.5|nosys": {
+    "max_conf": {
+     "diff": 0.028139463227258635,
+     "lo": 0.0015914759063447098,
+     "hi": 0.05528206585722169
+    },
+    "entropy": {
+     "diff": -0.1449433137014664,
+     "lo": -0.26868086828957377,
+     "hi": -0.02782685056503746
+    },
+    "below": {
+     "diff": -0.025,
+     "lo": -0.075,
+     "hi": 0.03
+    }
+   },
+   "3.6-3.5|nosys": {
+    "max_conf": {
+     "diff": 0.026137303002014917,
+     "lo": -0.001432627992997584,
+     "hi": 0.0548893811234714
+    },
+    "entropy": {
+     "diff": -0.15113761724390198,
+     "lo": -0.2832362249661872,
+     "hi": -0.025644974042972814
+    },
+    "below": {
+     "diff": 0.0,
+     "lo": -0.06,
+     "hi": 0.06
+    }
+   },
+   "3.8-3.6|nosys": {
+    "max_conf": {
+     "diff": 0.0020021602252437154,
+     "lo": -0.026614100827045545,
+     "hi": 0.03021678921843754
+    },
+    "entropy": {
+     "diff": 0.006194303542435562,
+     "lo": -0.12471176991009002,
+     "hi": 0.13248162962363474
+    },
+    "below": {
+     "diff": -0.025,
+     "lo": -0.09,
+     "hi": 0.035
+    }
+   },
+   "3.8-3.5|minsys": {
+    "max_conf": {
+     "diff": 0.012813320497650462,
+     "lo": -0.012875316165310438,
+     "hi": 0.03756796672566192
+    },
+    "entropy": {
+     "diff": -0.06301545442828083,
+     "lo": -0.18145997192822116,
+     "hi": 0.050938504193356854
+    },
+    "below": {
+     "diff": 0.015,
+     "lo": -0.04,
+     "hi": 0.075
+    }
+   },
+   "3.6-3.5|minsys": {
+    "max_conf": {
+     "diff": 0.0029704062920117204,
+     "lo": -0.023674738100834723,
+     "hi": 0.03032548583923825
+    },
+    "entropy": {
+     "diff": -0.03328628217170559,
+     "lo": -0.14136394993541976,
+     "hi": 0.07965733885163774
+    },
+    "below": {
+     "diff": 0.01,
+     "lo": -0.045,
+     "hi": 0.065
+    }
+   },
+   "3.8-3.6|minsys": {
+    "max_conf": {
+     "diff": 0.009842914205638742,
+     "lo": -0.015187532551828534,
+     "hi": 0.03487389587573612
+    },
+    "entropy": {
+     "diff": -0.029729172256575228,
+     "lo": -0.14706578760077396,
+     "hi": 0.08778721744095913
+    },
+    "below": {
+     "diff": 0.005,
+     "lo": -0.055,
+     "hi": 0.06
+    }
+   }
+  },
+  "paraphrase": {
+   "n": 199,
+   "mean_max_conf": 0.715034847829077,
+   "median_max_conf": 0.8468134335803699,
+   "mean_entropy_bits": 1.6592518991425873,
+   "frac_below_floor": 0.2613065326633166,
+   "control_share": 0.9095477386934674,
+   "top5": [
+    [
+     "helpful_ai_assistant",
+     0.889
+    ],
+    [
+     "er_nurse",
+     0.02
+    ],
+    [
+     "poet",
+     0.015
+    ],
+    [
+     "corporate_faq",
+     0.015
+    ],
+    [
+     "flight_attendant",
+     0.01
+    ]
+   ],
+   "win_counts": {
+    "helpful_ai_assistant": 177,
+    "er_nurse": 4,
+    "poet": 3,
+    "flight_attendant": 2,
+    "standup_comic": 2,
+    "corporate_faq": 3,
+    "librarian": 2,
+    "farmer": 2,
+    "startup_founder": 2,
+    "textbook": 1,
+    "retired_engineer": 1
+   },
+   "source_minus_paraphrase": {
+    "max_conf": {
+     "diff": 0.059086748737785924,
+     "lo": 0.041142602211038146,
+     "hi": 0.07733898259881143
+    },
+    "entropy": {
+     "diff": -0.35419821661880696,
+     "lo": -0.4284236325764205,
+     "hi": -0.2839845509742108
+    },
+    "below": {
+     "diff": -0.06532663316582915,
+     "lo": -0.11055276381909548,
+     "hi": -0.020100502512562814
+    }
+   }
+  }
+ }
+}

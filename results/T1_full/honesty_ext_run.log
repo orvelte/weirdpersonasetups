@@ -1,0 +1,18 @@
+300 episodes to run (0 already in /Users/oliviavelte/weirdpersonasetups/results/T1_full/raw_D6-D10.jsonl); spend before $35.027
+  chat: 150 cells
+    50/150 calls done, spend $35.23
+    100/150 calls done, spend $35.47
+    150/150 calls done, spend $35.89
+  agentic turn 1: 150 cells
+    50/150 calls done, spend $36.05
+    100/150 calls done, spend $36.24
+    150/150 calls done, spend $36.77
+  agentic turn 2: 134 cells
+    50/134 calls done, spend $36.93
+    100/134 calls done, spend $37.13
+  agentic turn 3: 15 cells
+  agentic turn 4: 1 cells
+second pass: retrying 2 failed episodes
+    failed: ('D6_train_arrival', '3.5', 'chat', 1): RuntimeError: chat failed after 6 retries: 429: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"qwen/qwen3.5-27b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate lim
+    failed: ('D7_invoice_vat', '3.5', 'chat', 9): RuntimeError: chat failed after 6 retries: 429: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"qwen/qwen3.5-27b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate lim
+  chat: 2 cells

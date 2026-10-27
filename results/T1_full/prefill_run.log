@@ -1,0 +1,19 @@
+mode=prefill smoke=False: 250 episodes; spend before $34.269
+  agentic turn 1: 250 cells
+    50/250 calls done, spend $34.33
+    100/250 calls done, spend $34.39
+    150/250 calls done, spend $34.45
+    200/250 calls done, spend $34.57
+    250/250 calls done, spend $34.62
+  agentic turn 2: 232 cells
+    50/232 calls done, spend $34.68
+    100/232 calls done, spend $34.73
+    150/232 calls done, spend $34.75
+    200/232 calls done, spend $34.79
+  agentic turn 3: 129 cells
+    50/129 calls done, spend $34.93
+    100/129 calls done, spend $34.97
+  agentic turn 4: 18 cells
+  agentic turn 5: 1 cells
+completed 250, failed 0; empty reasoning: 26/630 turns (4%), later turns 25/380 (7%); turns with empty content and no tool call: 0; think split out of content: 0; think never closed (reply inside reasoning): 50; spend +$0.757; 360s
+250 episodes in /Users/oliviavelte/weirdpersonasetups/results/T1_full/raw_35_agentic_prefill.jsonl; parsed -> /Users/oliviavelte/weirdpersonasetups/results/T1_full/parsed_35_agentic_prefill.csv

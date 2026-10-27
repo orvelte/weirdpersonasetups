@@ -1,0 +1,54 @@
+default cells: {'3.5|minsys': 200, '3.5|nosys': 200, '3.5|orig': 200, '3.5|orig_trunc': 200, '3.6|minsys': 200, '3.6|nosys': 200, '3.6|orig': 200, '3.6|orig_trunc': 200, '3.8|minsys': 200, '3.8|nosys': 200, '3.8|orig': 200, '3.8|orig_trunc': 200}
+libraries: {'3.5': 6000, '3.8': 6000} paraphrases: 199
+embed: 1108 new texts in 18 batches (13245 cached)
+embed: done, 326491 tokens, 10s; cache 14353
+embedded 14599 texts (0 zero rows); 11s
+  [lib35] C=1.0: held-out accuracy 0.867  (47s)
+  [lib35] C=10.0: held-out accuracy 0.892  (103s)
+  [lib35] C=100.0: held-out accuracy 0.889  (167s)
+    [lib35] 3.5 minsys: n=200 conf 0.608 ent 2.23 below 0.18 top [('helpful_ai_assistant', 0.96), ('librarian', 0.01), ('er_nurse', 0.01)]
+    [lib35] 3.5 nosys: n=200 conf 0.604 ent 2.25 below 0.18 top [('helpful_ai_assistant', 0.935), ('er_nurse', 0.02), ('investigative_journalist', 0.015)]
+    [lib35] 3.5 orig: n=200 conf 0.593 ent 2.34 below 0.21 top [('helpful_ai_assistant', 0.945), ('librarian', 0.025), ('er_nurse', 0.015)]
+    [lib35] 3.5 orig_trunc: n=200 conf 0.609 ent 2.26 below 0.20 top [('helpful_ai_assistant', 0.94), ('er_nurse', 0.02), ('librarian', 0.02)]
+    [lib35] 3.6 minsys: n=200 conf 0.631 ent 2.10 below 0.15 top [('helpful_ai_assistant', 0.96), ('corporate_faq', 0.015), ('er_nurse', 0.01)]
+    [lib35] 3.6 nosys: n=200 conf 0.642 ent 2.05 below 0.17 top [('helpful_ai_assistant', 0.945), ('textbook', 0.02), ('corporate_faq', 0.015)]
+    [lib35] 3.6 orig: n=200 conf 0.578 ent 2.37 below 0.23 top [('helpful_ai_assistant', 0.94), ('librarian', 0.015), ('er_nurse', 0.015)]
+    [lib35] 3.6 orig_trunc: n=200 conf 0.612 ent 2.21 below 0.18 top [('helpful_ai_assistant', 0.95), ('er_nurse', 0.015), ('textbook', 0.015)]
+    [lib35] 3.8 minsys: n=200 conf 0.627 ent 2.12 below 0.18 top [('helpful_ai_assistant', 0.93), ('er_nurse', 0.02), ('librarian', 0.015)]
+    [lib35] 3.8 nosys: n=200 conf 0.620 ent 2.16 below 0.18 top [('helpful_ai_assistant', 0.93), ('corporate_faq', 0.02), ('textbook', 0.015)]
+    [lib35] 3.8 orig: n=200 conf 0.503 ent 2.65 below 0.30 top [('helpful_ai_assistant', 0.85), ('er_nurse', 0.05), ('librarian', 0.03)]
+    [lib35] 3.8 orig_trunc: n=200 conf 0.530 ent 2.52 below 0.28 top [('helpful_ai_assistant', 0.855), ('er_nurse', 0.045), ('librarian', 0.03)]
+[lib35] done: acc 0.892 floor 0.381 (183s)
+  [lib38] C=1.0: held-out accuracy 0.718  (216s)
+  [lib38] C=10.0: held-out accuracy 0.742  (275s)
+  [lib38] C=100.0: held-out accuracy 0.733  (364s)
+    [lib38] 3.5 minsys: n=200 conf 0.442 ent 2.94 below 0.28 top [('helpful_ai_assistant', 0.795), ('librarian', 0.07), ('corporate_faq', 0.035)]
+    [lib38] 3.5 nosys: n=200 conf 0.443 ent 2.94 below 0.26 top [('helpful_ai_assistant', 0.795), ('librarian', 0.065), ('corporate_faq', 0.03)]
+    [lib38] 3.5 orig: n=200 conf 0.414 ent 3.11 below 0.32 top [('helpful_ai_assistant', 0.835), ('librarian', 0.055), ('er_nurse', 0.025)]
+    [lib38] 3.5 orig_trunc: n=200 conf 0.437 ent 2.98 below 0.29 top [('helpful_ai_assistant', 0.825), ('librarian', 0.065), ('er_nurse', 0.025)]
+    [lib38] 3.6 minsys: n=200 conf 0.491 ent 2.72 below 0.20 top [('helpful_ai_assistant', 0.825), ('librarian', 0.07), ('corporate_faq', 0.035)]
+    [lib38] 3.6 nosys: n=200 conf 0.492 ent 2.71 below 0.23 top [('helpful_ai_assistant', 0.84), ('librarian', 0.045), ('corporate_faq', 0.035)]
+    [lib38] 3.6 orig: n=200 conf 0.425 ent 3.01 below 0.27 top [('helpful_ai_assistant', 0.81), ('librarian', 0.075), ('investigative_journalist', 0.015)]
+    [lib38] 3.6 orig_trunc: n=200 conf 0.470 ent 2.83 below 0.23 top [('helpful_ai_assistant', 0.84), ('librarian', 0.05), ('investigative_journalist', 0.025)]
+    [lib38] 3.8 minsys: n=200 conf 0.484 ent 2.77 below 0.23 top [('helpful_ai_assistant', 0.845), ('librarian', 0.06), ('corporate_faq', 0.025)]
+    [lib38] 3.8 nosys: n=200 conf 0.469 ent 2.82 below 0.23 top [('helpful_ai_assistant', 0.805), ('librarian', 0.075), ('corporate_faq', 0.04)]
+    [lib38] 3.8 orig: n=200 conf 0.345 ent 3.32 below 0.44 top [('helpful_ai_assistant', 0.64), ('librarian', 0.07), ('er_nurse', 0.06)]
+    [lib38] 3.8 orig_trunc: n=200 conf 0.373 ent 3.20 below 0.41 top [('helpful_ai_assistant', 0.7), ('er_nurse', 0.065), ('librarian', 0.045)]
+[lib38] done: acc 0.742 floor 0.258 (380s)
+  [pooled] C=1.0: held-out accuracy 0.800  (454s)
+  [pooled] C=10.0: held-out accuracy 0.819  (578s)
+  [pooled] C=100.0: held-out accuracy 0.812  (761s)
+    [pooled] 3.5 minsys: n=200 conf 0.584 ent 2.28 below 0.23 top [('helpful_ai_assistant', 0.9), ('librarian', 0.025), ('corporate_faq', 0.02)]
+    [pooled] 3.5 nosys: n=200 conf 0.583 ent 2.30 below 0.24 top [('helpful_ai_assistant', 0.885), ('corporate_faq', 0.025), ('flight_attendant', 0.02)]
+    [pooled] 3.5 orig: n=200 conf 0.554 ent 2.49 below 0.24 top [('helpful_ai_assistant', 0.905), ('librarian', 0.035), ('er_nurse', 0.025)]
+    [pooled] 3.5 orig_trunc: n=200 conf 0.570 ent 2.39 below 0.26 top [('helpful_ai_assistant', 0.91), ('er_nurse', 0.035), ('librarian', 0.035)]
+    [pooled] 3.6 minsys: n=200 conf 0.617 ent 2.13 below 0.20 top [('helpful_ai_assistant', 0.915), ('librarian', 0.025), ('corporate_faq', 0.015)]
+    [pooled] 3.6 nosys: n=200 conf 0.624 ent 2.10 below 0.22 top [('helpful_ai_assistant', 0.93), ('corporate_faq', 0.02), ('librarian', 0.015)]
+    [pooled] 3.6 orig: n=200 conf 0.537 ent 2.48 below 0.29 top [('helpful_ai_assistant', 0.9), ('librarian', 0.03), ('investigative_journalist', 0.01)]
+    [pooled] 3.6 orig_trunc: n=200 conf 0.582 ent 2.29 below 0.23 top [('helpful_ai_assistant', 0.92), ('librarian', 0.02), ('investigative_journalist', 0.015)]
+    [pooled] 3.8 minsys: n=200 conf 0.602 ent 2.20 below 0.21 top [('helpful_ai_assistant', 0.925), ('librarian', 0.02), ('er_nurse', 0.015)]
+    [pooled] 3.8 nosys: n=200 conf 0.595 ent 2.24 below 0.23 top [('helpful_ai_assistant', 0.9), ('corporate_faq', 0.03), ('librarian', 0.025)]
+    [pooled] 3.8 orig: n=200 conf 0.427 ent 2.93 below 0.46 top [('helpful_ai_assistant', 0.68), ('librarian', 0.09), ('er_nurse', 0.065)]
+    [pooled] 3.8 orig_trunc: n=200 conf 0.458 ent 2.80 below 0.42 top [('helpful_ai_assistant', 0.72), ('er_nurse', 0.065), ('librarian', 0.05)]
+[pooled] done: acc 0.819 floor 0.355 (796s)
+wrote fit_semantic.json and README_fixes.md; 798s

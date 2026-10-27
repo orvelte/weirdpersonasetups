@@ -35,18 +35,19 @@ def cell_record(scen, version, frame, sample):
 def record_turn(rec, r):
     rec["turns"].append({"content": r["content"], "reasoning": r["reasoning"], "tool_calls": r.get("tool_calls"),
                          "finish_reason": r["finish_reason"], "truncated": r["truncated"], "usage": r["usage"], "cost": r["cost"],
-                         "provider": r.get("provider"), "model_id_returned": r.get("model_id"), "cached": r.get("cached")})
+                         "provider": r.get("provider"), "model_id_returned": r.get("model_id"), "cached": r.get("cached"),
+                         **{k: r[k] for k in ("split_from_content", "think_unclosed") if k in r}})
     rec["n_turns"] += 1
     rec["truncated_any"] = rec["truncated_any"] or bool(r["truncated"])
     rec["cost"] += r["cost"] or 0.0
 
 
-def safe_many(jobs, workers):
+def safe_many(jobs, workers, task=TASK):
     """Like harness.client.chat_many but a failure is returned as {"error": ...} instead of raising."""
     out = [None] * len(jobs)
     def run(i, j):
         try:
-            return i, chat(j["version"], j["messages"], j.get("sample", 0), task=TASK, **{k: v for k, v in j.items() if k not in ("version", "messages", "sample")})
+            return i, chat(j["version"], j["messages"], j.get("sample", 0), task=task, **{k: v for k, v in j.items() if k not in ("version", "messages", "sample")})
         except Exception as e:  # noqa
             return i, {"error": f"{type(e).__name__}: {str(e)[:300]}"}
     with ThreadPoolExecutor(workers) as ex:
@@ -59,29 +60,38 @@ def safe_many(jobs, workers):
     return out
 
 
-def run_cells(cells, by_id, workers):
-    """Runs the given cells to completion. Returns (completed, failed)."""
+def run_cells(cells, by_id, workers, task=TASK, extra_kw=None, msg_hook=None, resp_hook=None):
+    """Runs the given cells to completion. Returns (completed, failed).
+    task: spend-log tag. extra_kw: extra keyword args for harness.client.chat (e.g. {"extra": {...}}), identical for every call.
+    msg_hook(messages) -> messages actually sent (e.g. to append a think prefill); the stored transcript is unchanged.
+    resp_hook(response) -> response, applied before the turn is recorded (e.g. to split a prefilled think block out of content).
+    The defaults reproduce the full run exactly."""
     failed = []
+    extra_kw = extra_kw or {}
+    msg_hook = msg_hook or (lambda m: m)
+    resp_hook = resp_hook or (lambda r: r)
     chat_cells = [c for c in cells if c["frame"] == "chat"]
     if chat_cells:
         print(f"  chat: {len(chat_cells)} cells", flush=True)
-        jobs = [{"version": c["version"], "messages": c["messages"], "sample": c["sample"]} for c in chat_cells]
-        for c, r in zip(chat_cells, safe_many(jobs, workers)):
+        jobs = [dict({"version": c["version"], "messages": msg_hook(c["messages"]), "sample": c["sample"]}, **extra_kw) for c in chat_cells]
+        for c, r in zip(chat_cells, safe_many(jobs, workers, task)):
             if "error" in r:
                 c["error"] = r["error"]; failed.append(c); continue
+            r = resp_hook(r)
             record_turn(c, r)
             c["messages"] = c["messages"] + [{"role": "assistant", "content": r["content"]}]
     active = [c for c in cells if c["frame"] == "agentic"]
     states = {id(c): EpisodeState(by_id[c["scenario_id"]]) for c in active}
     for turn in range(MAX_TURNS):
         if not active: break
-        jobs = [{"version": c["version"], "messages": c["messages"], "sample": c["sample"],
-                 "tools": [TOOL_DEFS[t] for t in by_id[c["scenario_id"]]["agentic"]["tools"]]} for c in active]
+        jobs = [dict({"version": c["version"], "messages": msg_hook(c["messages"]), "sample": c["sample"],
+                      "tools": [TOOL_DEFS[t] for t in by_id[c["scenario_id"]]["agentic"]["tools"]]}, **extra_kw) for c in active]
         print(f"  agentic turn {turn + 1}: {len(active)} cells", flush=True)
         nxt = []
-        for c, r in zip(active, safe_many(jobs, workers)):
+        for c, r in zip(active, safe_many(jobs, workers, task)):
             if "error" in r:
                 c["error"] = r["error"]; failed.append(c); continue
+            r = resp_hook(r)
             record_turn(c, r)
             tcs = r.get("tool_calls") or []
             asst = {"role": "assistant", "content": r["content"] or ""}
@@ -132,7 +142,7 @@ def write_csv(cells, csv_path):
         for c in sorted(cells, key=key_of):
             choice, idx, flags = P.parse(c)
             corner_opt = P.SCEN[c["scenario_id"]]["corner_option"]
-            p = preds[(c["scenario_id"], c["frame"])]
+            p = preds.get((c["scenario_id"], c["frame"]), {"p_persona": "", "p_careful": ""})
             w.writerow({"scenario_id": c["scenario_id"], "family": c["family"], "version": c["version"], "frame": c["frame"], "sample": c["sample"],
                         "choice": choice, "corner": "" if choice == "unclear" else int(choice == corner_opt), "unclear": int(choice == "unclear"),
                         "rule_idx": idx, "flags": ";".join(flags), "truncated_any": int(c["truncated_any"]), "n_turns": c["n_turns"],
@@ -164,7 +174,11 @@ def main():
     t0 = time.time()
     assert frozen["frozen_at_unix"] < t0, "predictions must be frozen before the run starts"
     only = set(a.only.split(",")) if a.only else None
-    scen_list = [s for s in SPEC["scenarios"] if only is None or s["id"] in only]
+    predicted = {p["id"] for p in frozen["predictions"]}
+    scen_list = [s for s in SPEC["scenarios"] if (only is None or s["id"] in only) and s["id"] in predicted]
+    skipped = [s["id"] for s in SPEC["scenarios"] if s["id"] not in predicted]
+    if skipped:
+        print(f"skipping scenarios without frozen predictions (run them with tasks.T1.run_honesty_ext): {skipped}", flush=True)
     by_id = {s["id"]: s for s in scen_list}
     versions, frames = a.versions.split(","), a.frames.split(",")
     done = {key_of(c) for c in load_raw(raw_path)}
