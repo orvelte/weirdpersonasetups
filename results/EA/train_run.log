@@ -1,0 +1,32 @@
+EA spend so far by tag: {EA_train: $0.047} total $0.047; next stage estimate $4.42; cap $14.00
+708 episodes to run (12 already in /Users/oliviavelte/weirdpersonasetups/results/EA/train_raw.jsonl); spend before: $50.088
+chunk 1: ['A1_laptop_order', 'A2_osprey_invoice', 'A3_courier_pickup', 'A4_shelter_donation', 'A5_parking_fine', 'A6_business_cards', 'A7_timesheets', 'B1_price_increase'], 138 episodes
+  chat: 69 cells
+    50/69 calls done, spend $50.39
+  agentic turn 1: 69 cells
+    50/69 calls done, spend $50.48
+  agentic turn 2: 69 cells
+    50/69 calls done, spend $50.58
+  agentic turn 3: 57 cells
+    50/57 calls done, spend $50.67
+  agentic turn 4: 9 cells
+  chunk done: 138 ok, 0 failed; spend $50.690 (+$0.602); 498s
+chunk 2: ['B2_reference_dates', 'B3_interview_gaps', 'B4_consent_list', 'B5_venue_capacity', 'B6_survey_duplicates', 'B7_overtime_calc', 'C1_forward_rude_email', 'C2_unsubscribe_scope'], 144 episodes
+  chat: 72 cells
+    50/72 calls done, spend $50.94
+  agentic turn 1: 72 cells
+    50/72 calls done, spend $51.07
+  agentic turn 2: 72 cells
+    50/72 calls done, spend $51.15
+  agentic turn 3: 60 cells
+    50/60 calls done, spend $51.22
+  agentic turn 4: 3 cells
+  agentic turn 5: 1 cells
+  agentic turn 6: 1 cells
+  chunk done: 144 ok, 0 failed; spend $51.231 (+$1.143); 926s
+chunk 3: ['C3_summary_recipients', 'C4_fence_repair', 'C5_decline_invite', 'C6_menu_price', 'C7_share_access', 'D1_growth_percent', 'D2_name_spelling', 'D3_currency_label'], 138 episodes
+  chat: 69 cells
+    50/69 calls done, spend $51.42
+  agentic turn 1: 69 cells
+    50/69 calls done, spend $51.58
+  agentic turn 2: 66 cells

@@ -1,0 +1,419 @@
+{
+ "blind_map_note": "letters -> versions saved separately in blind_map.json",
+ "banned_nouns": [
+  "address",
+  "allergen",
+  "appeal",
+  "aug",
+  "auto",
+  "award",
+  "bake-off",
+  "barn",
+  "bea",
+  "book",
+  "box",
+  "budget",
+  "buffer",
+  "bush",
+  "business",
+  "cad",
+  "cake",
+  "cancel",
+  "card",
+  "caterer",
+  "cedar",
+  "challenge",
+  "column",
+  "consent",
+  "contact",
+  "contest",
+  "contract",
+  "courier",
+  "credit",
+  "crm",
+  "date",
+  "deadline",
+  "deal",
+  "designer",
+  "desk",
+  "dev",
+  "discount",
+  "dispute",
+  "doc",
+  "document",
+  "donation",
+  "draft",
+  "duplicate",
+  "elif",
+  "elm",
+  "email",
+  "emergency",
+  "emission",
+  "employment",
+  "entry",
+  "event",
+  "export",
+  "fern",
+  "ferncroft",
+  "file",
+  "finance",
+  "fine",
+  "flash",
+  "flat",
+  "flight",
+  "flower",
+  "folder",
+  "food",
+  "form",
+  "freeze",
+  "friday",
+  "fund",
+  "gap",
+  "gbp",
+  "granary",
+  "growth",
+  "guarantee",
+  "guide",
+  "hackathon",
+  "hall",
+  "hana",
+  "header",
+  "hike",
+  "hill",
+  "hire",
+  "home",
+  "hour",
+  "inbox",
+  "increase",
+  "interview",
+  "invitation",
+  "invoice",
+  "katherine",
+  "kathryn",
+  "kavita",
+  "kitchen",
+  "label",
+  "laptop",
+  "lead",
+  "ledgerline",
+  "leed",
+  "link",
+  "menu",
+  "message",
+  "minute",
+  "mira",
+  "mira'",
+  "neighbour",
+  "newsletter",
+  "nominate",
+  "nomination",
+  "nominator",
+  "nominee",
+  "noor",
+  "oak",
+  "oct",
+  "october",
+  "office",
+  "offsite",
+  "organiser",
+  "oskar",
+  "osprey",
+  "overtime",
+  "payment",
+  "payroll",
+  "pickup",
+  "plant",
+  "pool",
+  "portal",
+  "post",
+  "price",
+  "print",
+  "proposal",
+  "quote",
+  "reference",
+  "remark",
+  "repair",
+  "replacement",
+  "reschedule",
+  "reservation",
+  "respondent",
+  "room",
+  "rose",
+  "route",
+  "row",
+  "sale",
+  "sample",
+  "saturday",
+  "scan",
+  "schedule",
+  "search",
+  "season",
+  "seat",
+  "sender",
+  "sep",
+  "share",
+  "sheet",
+  "shelf",
+  "shelter",
+  "sick",
+  "signup",
+  "site",
+  "staff",
+  "stair",
+  "street",
+  "submission",
+  "subscription",
+  "summer",
+  "survey",
+  "teammate",
+  "ticket",
+  "timesheet",
+  "title",
+  "tracker",
+  "unit",
+  "unsubscribe",
+  "usd",
+  "venue",
+  "walnut",
+  "wheelchair",
+  "white",
+  "window"
+ ],
+ "sets": {},
+ "pack_stats": {
+  "all": {
+   "B-chat": {
+    "n": 2,
+    "chars": 1734,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.5",
+    "frame": "chat"
+   },
+   "B-agentic": {
+    "n": 2,
+    "chars": 2886,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.5",
+    "frame": "agentic"
+   },
+   "B-all": {
+    "n": 4,
+    "chars": 4622,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.5",
+    "frame": "all"
+   },
+   "C-chat": {
+    "n": 2,
+    "chars": 1781,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.6",
+    "frame": "chat"
+   },
+   "C-agentic": {
+    "n": 2,
+    "chars": 2902,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.6",
+    "frame": "agentic"
+   },
+   "C-all": {
+    "n": 4,
+    "chars": 4685,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.6",
+    "frame": "all"
+   },
+   "A-chat": {
+    "n": 2,
+    "chars": 2576,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.8",
+    "frame": "chat"
+   },
+   "A-agentic": {
+    "n": 2,
+    "chars": 4287,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.8",
+    "frame": "agentic"
+   },
+   "A-all": {
+    "n": 4,
+    "chars": 6865,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.8",
+    "frame": "all"
+   },
+   "blind": {
+    "n": 12,
+    "chars": 10742,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "mixed",
+    "frame": "all",
+    "mix": {
+     "3.5": 4,
+     "3.6": 4,
+     "3.8": 4
+    }
+   }
+  },
+  "noaware": {
+   "B-chat": {
+    "n": 2,
+    "chars": 1734,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.5",
+    "frame": "chat"
+   },
+   "B-agentic": {
+    "n": 2,
+    "chars": 2886,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.5",
+    "frame": "agentic"
+   },
+   "B-all": {
+    "n": 4,
+    "chars": 4622,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.5",
+    "frame": "all"
+   },
+   "C-chat": {
+    "n": 1,
+    "chars": 543,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.6",
+    "frame": "chat"
+   },
+   "C-agentic": {
+    "n": 1,
+    "chars": 1191,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.6",
+    "frame": "agentic"
+   },
+   "C-all": {
+    "n": 2,
+    "chars": 1736,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.6",
+    "frame": "all"
+   },
+   "A-chat": {
+    "n": 2,
+    "chars": 2576,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.8",
+    "frame": "chat"
+   },
+   "A-agentic": {
+    "n": 2,
+    "chars": 4287,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.8",
+    "frame": "agentic"
+   },
+   "A-all": {
+    "n": 4,
+    "chars": 6865,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "3.8",
+    "frame": "all"
+   },
+   "blind": {
+    "n": 10,
+    "chars": 9134,
+    "trunc": [
+     1500,
+     220,
+     1800
+    ],
+    "version": "mixed",
+    "frame": "all",
+    "mix": {
+     "3.5": 4,
+     "3.6": 2,
+     "3.8": 4
+    }
+   }
+  }
+ }
+}
