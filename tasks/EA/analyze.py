@@ -235,8 +235,9 @@ def bss_table(T, cols):
     L = ["| version | n | Brier(base) | " + " | ".join(cols) + " | ceiling (split-half) | BSS(D-all)/ceiling |", "|---|---|---|" + "---|" * (len(cols) + 2)]
     for v in V:
         r = T[v]
+        frac = fci(r['frac']['obs'], r['frac']['boot']) if ci(r['ceiling']['boot'])[0] > 0 else "n/a (ceiling CI includes 0)"
         L.append(f"| {v} | {r['n']} | {r['base_brier']:.3f} | " + " | ".join(fci(r[c]["bss"], r[c]["boot"]) for c in cols) +
-                 f" | {fci(r['ceiling']['bss'], r['ceiling']['boot'])} | {fci(r['frac']['obs'], r['frac']['boot'])} |")
+                 f" | {fci(r['ceiling']['bss'], r['ceiling']['boot'])} | {frac} |")
     return "\n".join(L)
 
 
@@ -426,6 +427,21 @@ def main():
             cells.append(f"{rate:.2f} / {pd:.2f} / {pb:.2f}")
         L.append(f"| {it['key']} | {it['designated']} | " + " | ".join(cells) + " |")
 
+    # reading
+    T = main_R["tables"]["all held-out"]["T"]; Tc = main_R["tables"]["T1-chat"]["T"]; Ta = main_R["tables"]["T1-agentic"]["T"]
+    L.append("\n## 7b. Reading\n")
+    L.append(f"- **No pre-registered rule passes in the main analysis.** Pooled over all held-out episodes, BSS(D-all) is {f3(T['3.5']['D-all']['bss'])} for 3.5, {f3(T['3.6']['D-all']['bss'])} for 3.6 and "
+             f"{f3(T['3.8']['D-all']['bss'])} for 3.8, none with a CI excluding 0 (R1 FAIL). The compact descriptions do not beat the training base rate reliably for any version.")
+    L.append(f"- **The descriptions carry no version-specific information the predictor can use.** The version-blind description does as well as or better than D-all for 3.5 ({f3(T['3.5']['blind']['bss'])} vs {f3(T['3.5']['D-all']['bss'])}) and 3.6 "
+             f"({f3(T['3.6']['blind']['bss'])} vs {f3(T['3.6']['D-all']['bss'])}); the description-specific gain is within noise for every version. The generic 'helpful, harmless, honest' prompt is worst everywhere, so the skill that exists "
+             f"is 'Sonnet reading the pooled transcripts', not 'Sonnet reading this version'. Yet the collapse check says the descriptions ARE distinguishable (46% vs 33%, p = 0.03 pooled; marginal per source), so the describer captured something that the predictor could not turn into better forecasts.")
+    L.append(f"- **3.8 is predicted worse than its own base rate on every target frame** (BSS(D-all) T1 chat {f3(Tc['3.8']['D-all']['bss'])}, T1 agentic {f3(Ta['3.8']['D-all']['bss'])}, E-B {f3(main_R['tables']['EB-chat']['T']['3.8']['D-all']['bss'])}). "
+             "Section 7 shows why: 3.8's descriptions say it stops to ask and admits mistakes, and the predictor applies that to T1's chat frame, where 3.8 in fact acts in 90-100% of act-vs-ask episodes and smooths over the bill-split error 100% of the time. "
+             "In the E-A training chat frame (with the explicit DECISION line) 3.8 chose 'ask' in 13/21 act-vs-ask episodes; in T1's artefact-only chat frame it chose 'act' in 45/50. The training chat frame and the held-out chat frame elicit different behaviour from 3.8, so the description transfers the wrong default. This is the 'describer saw the menu' confound in section 8, and it is the single largest driver of the 3.8 result.")
+    L.append(f"- **R3 (3.8 less predictable relative to its ceiling) is borderline:** FAIL in the main analysis (3.8 minus 3.5 = {fci(*main_R['tables']['all held-out']['D']['3.8-3.5']['frac'])}) but PASS in all three eval-aware-removed variants (section 6). Given the point above, the honest reading is 'the 3.8 descriptions mispredict 3.8 on these targets', not 'RLVR made 3.8 unpredictable': its split-half ceiling ({f3(T['3.8']['ceiling']['bss'])}) is as high as the others', i.e. its choices are stable, just not the ones the description implies.")
+    L.append(f"- **R2 (split): no signature.** Transfer gaps are {f3(T['3.5']['gap']['obs'])} (3.5), {f3(T['3.6']['gap']['obs'])} (3.6), {f3(T['3.8']['gap']['obs'])} (3.8); the 3.8 minus 3.5 difference is negative, i.e. if anything 3.5's descriptions are the frame-specific ones (its D-chat predicts chat targets much better than its D-agentic does: {f3(Tc['3.5']['D-chat']['bss'])} vs {f3(Tc['3.5']['D-agentic']['bss'])} on T1 chat).")
+    L.append(f"- **Noise ceilings are far above every description** (split-half BSS {f3(T['3.5']['ceiling']['bss'])} / {f3(T['3.6']['ceiling']['bss'])} / {f3(T['3.8']['ceiling']['bss'])}): the targets are predictable from 5 samples of the same scenario, so the failure is in the description -> prediction channel, not in the targets.")
+    L.append("- **Health.** 720/720 training episodes, no parser failures, one truncation; 3.5 agentic had 31% empty-reasoning turns (prefill rerun: 3%); eval-awareness hits are concentrated in 3.5/3.6 chat (about a third of episodes), and removing them changes nothing qualitatively. One of the 20 descriptions (3.6 D-agentic, set 'noaware') kept the banned noun 'challenge' after three regenerations and is used as is.")
     # 8 alternative explanations
     L.append("\n## 8. Alternative explanations and the cheapest tests\n")
     L.append("- **Predictor prior, not description content.** Sonnet's own expectations about 'an assistant' may drive most of the skill; the generic and version-blind columns are the controls. "
@@ -436,7 +452,13 @@ def main():
     L.append("- **One describer seed, one predictor seed.** Describer noise is unmeasured here (minimal budget); the noise ceiling only covers target sampling. Cheapest test: 2 more describer seeds for D-all only (~$1.2) and the spread of BSS across seeds.")
     L.append("- **3.5 agentic empty reasoning.** 25% of 3.5's agentic turns in T1 had no reasoning; if that recurs here, the 3.5 agentic transcripts are the behaviour of a model that often skipped thinking. The prefill rerun (if run) is reported in section 1; the pre-registered descriptions use the default cell.")
     L.append("- **Small target set.** 25 + 11 scenarios: CIs are wide and R2/R3 are differences of differences. Cheapest power gain: use the 5 extra T1 honesty scenarios (D6-D10, `parsed_D6-D10.csv`, already run) as additional targets.")
-    L.append("\n## 9. Files\n")
+    L.append("\n## 9. Spend by tag\n")
+    L.append("| tag | USD |"); L.append("|---|---|")
+    for k, v in sp.items():
+        L.append(f"| {k} | {v:.3f} |")
+    L.append(f"| total | {sum(sp.values()):.3f} (cap 14.00) |")
+    L.append("\nEA_describe includes $1.00 for an aborted first pass (the describer overshot 150 words on every regeneration before the prompt asked for 110-140 words and prompt caching was added); EA_train includes the $0.24 prefill rerun.")
+    L.append("\n## 10. Files\n")
     L.append("`tasks/EA/run_train.py`, `describe.py`, `predict.py`, `collapse_check.py`, `analyze.py`, `common.py`; `results/EA/train_raw.jsonl`, `train_parsed.csv`, `train_cell_report.json`, "
              "`packs/`, `blind_map.json`, `descriptions.json`, `predictions.jsonl`, `predictions_base.json`, `collapse_check.json`, `character_pack_inputs.md`.")
     (C.OUT_DIR / "README.md").write_text("\n".join(L))
@@ -484,7 +506,7 @@ def write_character_pack(eps, pred, R, desc, blind_map, train_rows):
             own = rate[(k[0], k[1], v)][r["choice"]] / max(1, ntot[(k[0], k[1], v)])
             oth = [rate[(k[0], k[1], w)][r["choice"]] / max(1, ntot[(k[0], k[1], w)]) for w in V if w != v]
             rows.append((own - sum(oth) / len(oth), r["scenario_id"], r["frame"], int(r["sample"]), r["choice"]))
-        rows.sort(reverse=True)
+        rows.sort(key=lambda r: (-r[0], r[1], r[2], r[3]))
         seen, picks = set(), []
         for d, sid, fr, smp, ch in rows:
             if (sid, fr) in seen:

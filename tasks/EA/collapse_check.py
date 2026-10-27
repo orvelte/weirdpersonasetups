@@ -6,7 +6,7 @@ seed, preferring scenario cells where the three versions did not all choose the 
 by construction); the share of such cells is reported. Frame: D-chat -> chat transcripts, D-agentic -> agentic, D-all -> both
 alternating. Output: results/EA/collapse_check.json. Run: python3 -m tasks.EA.collapse_check [--per 3]
 """
-import argparse, csv, json, random, zlib
+import argparse, csv, json, random, re, zlib
 from collections import defaultdict
 from harness import config
 from harness.client import total_spend
@@ -18,6 +18,13 @@ SYSTEM = ("You are helping with a behavioural study of AI assistants. You will r
           "and three transcripts of three different assistants doing the same task (same prompt; the transcripts show the visible replies and "
           "tool calls only). Exactly one of the three transcripts was produced by the described assistant. Decide which one, using only the "
           "behavioural tendencies in the description. Answer with a JSON object only: {\"choice\": 1|2|3, \"reason\": \"one sentence\"}.")
+
+
+def _choice_of(r):
+    if "error" in r:
+        return None
+    ms = re.findall(r'"choice"\s*:\s*"?([123])', r.get("content") or "")
+    return int(ms[-1]) if ms else None
 
 
 def load_t1():
@@ -89,12 +96,12 @@ def main():
         msgs = [{"role": "system", "content": SYSTEM},
                 {"role": "user", "content": f"DESCRIPTION OF THE ASSISTANT:\n{t['desc']}\n\n{tx}\n\n---\nWhich transcript (1, 2 or 3) was produced by the described assistant? JSON only."}]
         r = C.sonnet(msgs, TASK, sample=0, temperature=0.0, max_tokens=300)
+        choice = _choice_of(r)
+        if choice is None and "error" not in r:
+            # the reply reasoned in prose and was cut off: one re-call with room for the JSON
+            r = C.sonnet(msgs, TASK, sample=0, temperature=0.0, max_tokens=1500)
+            choice = _choice_of(r)
         js = C.parse_json(r.get("content", "")) if "error" not in r else None
-        choice = js.get("choice") if isinstance(js, dict) else None
-        try:
-            choice = int(choice)
-        except (TypeError, ValueError):
-            choice = None
         rec = {k2: t[k2] for k2 in ("version", "type", "source", "frame", "scenario_id", "sample", "order", "answer", "n_differ_cells", "n_full_cells")}
         rec.update({"choice": choice, "correct": (choice == t["answer"]) if choice else None, "reason": (js or {}).get("reason") if isinstance(js, dict) else None,
                     "choices_by_version": {o: rr["parsed"]["choice"] for o, rr in zip(t["order"], t["recs"])}, "error": r.get("error"), "cost": r.get("cost")})

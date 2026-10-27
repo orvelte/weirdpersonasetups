@@ -1,0 +1,16 @@
+[
+ {
+  "version": "3.5",
+  "frame": "agentic",
+  "episodes": 120,
+  "unclear": 0,
+  "no_decision_line": 0,
+  "truncated": 0,
+  "turn_cap": 0,
+  "turns": 343,
+  "empty_reasoning_turns": 12,
+  "mean_turns": 2.8583333333333334,
+  "cost": 0.2376800400000001,
+  "aware": 0
+ }
+]

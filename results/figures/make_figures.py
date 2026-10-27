@@ -180,3 +180,23 @@ ax.set_title("E-C arm 2 pilot  same probe after a chat vs a coding transcript")
 ax.legend(handles=[plt.Line2D([0], [0], color="#333", lw=1.4, ls=":", label="permutation null, 95th percentile")], loc="upper right", fontsize=8.5)
 fig.tight_layout(); fig.savefig(OUT / "EC.png"); plt.close(fig)
 print("figures written:", sorted(p.name for p in OUT.glob("*.png")))
+
+# ---------- E-A ----------
+fig, ax = plt.subplots(figsize=(8, 3.8))  # results/EA/README.md, BSS vs base rate, all held-out pooled
+conds = ["D-chat", "D-agentic", "D-all", "version-blind", "generic"]
+bss = {"3.5": [.085, .074, .119, .176, -.182], "3.6": [.157, .244, .178, .194, -.127], "3.8": [-.178, -.139, -.221, -.164, -.249]}
+lo = {"3.5": [-.223, -.195, -.131, -.020, -.650], "3.6": [-.111, .014, -.025, .021, -.585], "3.8": [-.500, -.419, -.555, -.457, -.614]}
+hi = {"3.5": [.337, .283, .318, .337, .188], "3.6": [.353, .436, .341, .341, .234], "3.8": [.111, .131, .083, .085, .067]}
+ceil = {"3.5": .531, "3.6": .612, "3.8": .473}
+x = np.arange(len(conds)); w = .26
+for i, v in enumerate(V):
+    xs = x - .39 + w * (i + .5)
+    ax.bar(xs, bss[v], w * .92, color=C[v], alpha=.9, label=f"Qwen {v}")
+    ax.errorbar(xs, bss[v], yerr=[np.subtract(bss[v], lo[v]), np.subtract(hi[v], bss[v])], fmt="none", ecolor="#333", capsize=1.5, elinewidth=.8)
+    ax.hlines(ceil[v], -.5, len(conds) - .5, color=C[v], lw=1.2, ls=":")
+ax.axhline(0, color="#333", lw=1)
+ax.set_xticks(x); ax.set_xticklabels(conds); ax.set_ylim(-.7, .7); ax.set_ylabel("Brier skill vs base rate (scenario bootstrap 95%)")
+ax.set_title("E-A  blind persona descriptions predicting held-out choices; dotted = split-half noise ceiling")
+ax.legend(loc="lower left", fontsize=8.5, ncol=3)
+fig.tight_layout(); fig.savefig(OUT / "EA.png"); plt.close(fig)
+print("EA figure written")

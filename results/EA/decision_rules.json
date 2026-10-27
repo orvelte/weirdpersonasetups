@@ -1,0 +1,48 @@
+{
+ "R": {
+  "all|all": {
+   "R1": {
+    "pass": false
+   },
+   "R2": {
+    "pass": false
+   },
+   "R3": {
+    "pass": false
+   }
+  },
+  "all|noaware": {
+   "R1": {
+    "pass": false
+   },
+   "R2": {
+    "pass": false
+   },
+   "R3": {
+    "pass": true
+   }
+  },
+  "noaware|all": {
+   "R1": {
+    "pass": false
+   },
+   "R2": {
+    "pass": false
+   },
+   "R3": {
+    "pass": true
+   }
+  },
+  "noaware|noaware": {
+   "R1": {
+    "pass": false
+   },
+   "R2": {
+    "pass": false
+   },
+   "R3": {
+    "pass": true
+   }
+  }
+ }
+}

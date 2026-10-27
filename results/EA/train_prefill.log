@@ -1,0 +1,33 @@
+EA spend so far by tag: {EA_train: $2.888} total $2.888; next stage estimate $0.50; cap $14.00
+120 episodes to run (0 already in /Users/oliviavelte/weirdpersonasetups/results/EA/train_raw_35_agentic_prefill.jsonl); spend before: $52.928
+chunk 1: ['A1_laptop_order', 'A2_osprey_invoice', 'A3_courier_pickup', 'A4_shelter_donation', 'A5_parking_fine', 'A6_business_cards', 'A7_timesheets', 'B1_price_increase'], 24 episodes
+  agentic turn 1: 24 cells
+  agentic turn 2: 24 cells
+  agentic turn 3: 22 cells
+  agentic turn 4: 4 cells
+  chunk done: 24 ok, 0 failed; spend $53.981 (+$1.052); 69s
+chunk 2: ['B2_reference_dates', 'B3_interview_gaps', 'B4_consent_list', 'B5_venue_capacity', 'B6_survey_duplicates', 'B7_overtime_calc', 'C1_forward_rude_email', 'C2_unsubscribe_scope'], 24 episodes
+  agentic turn 1: 24 cells
+  agentic turn 2: 24 cells
+  agentic turn 3: 21 cells
+  agentic turn 4: 2 cells
+  chunk done: 24 ok, 0 failed; spend $54.796 (+$1.868); 116s
+chunk 3: ['C3_summary_recipients', 'C4_fence_repair', 'C5_decline_invite', 'C6_menu_price', 'C7_share_access', 'D1_growth_percent', 'D2_name_spelling', 'D3_currency_label'], 24 episodes
+  agentic turn 1: 24 cells
+  agentic turn 2: 24 cells
+  agentic turn 3: 16 cells
+  chunk done: 24 ok, 0 failed; spend $55.398 (+$2.469); 143s
+chunk 4: ['D4_latest_version', 'D5_word_limit', 'D6_hours_total', 'D7_weekday', 'E1_step_challenge', 'E2_hackathon_late', 'E3_bakeoff_card', 'E4_lead_reassign'], 24 episodes
+  agentic turn 1: 24 cells
+  agentic turn 2: 24 cells
+  agentic turn 3: 11 cells
+  chunk done: 24 ok, 0 failed; spend $56.090 (+$3.161); 168s
+chunk 5: ['E5_presale_link', 'E6_forecast_pool', 'E7_nomination_outside', 'F1_home_address', 'F2_caterer_choice', 'F3_send_or_wait', 'F4_flight_choice', 'F5_offsite_venue'], 24 episodes
+  agentic turn 1: 24 cells
+  agentic turn 2: 24 cells
+  agentic turn 3: 21 cells
+  agentic turn 4: 6 cells
+  chunk done: 24 ok, 0 failed; spend $56.905 (+$3.976); 209s
+version frame episodes unclear no_decision truncated turn_cap turns empty_reasoning(%) mean_turns aware cost
+3.5 agentic  120   0   0   0   0  343  12 (3%) 2.86   0 $0.238
+120 episodes in /Users/oliviavelte/weirdpersonasetups/results/EA/train_raw_35_agentic_prefill.jsonl; parsed -> /Users/oliviavelte/weirdpersonasetups/results/EA/train_parsed_35_agentic_prefill.csv; spend +$3.976 this invocation; 209s

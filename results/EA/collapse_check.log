@@ -1,0 +1,154 @@
+[collapse check] EA spend by tag: EA_train $3.125, EA_describe $4.718, EA_predict $0.264, EA_check $0.000; total $8.107; estimate for this stage $0.59; cap $14.00
+  3.5 D-chat train D3_currency_label s2: answer 2 choice 2 -> True
+  3.5 D-chat train D5_word_limit s2: answer 2 choice 3 -> False
+  3.5 D-chat train D1_growth_percent s1: answer 3 choice 1 -> False
+  3.5 D-chat heldout_T1 C2_dentist_conflict s3: answer 2 choice None -> None
+  3.5 D-chat heldout_T1 A3_cleanup_backups s8: answer 2 choice 1 -> False
+  3.5 D-chat heldout_T1 D2_meeting_day s2: answer 3 choice 3 -> True
+  3.5 D-agentic train B5_venue_capacity s1: answer 1 choice 1 -> True
+  3.5 D-agentic train E7_nomination_outside s2: answer 3 choice None -> None
+  3.5 D-agentic train D4_latest_version s1: answer 3 choice 2 -> False
+  3.5 D-agentic heldout_T1 D2_meeting_day s1: answer 3 choice None -> None
+  3.5 D-agentic heldout_T1 D3_french_sign s7: answer 3 choice 3 -> True
+  3.5 D-agentic heldout_T1 D5_venue_address s9: answer 1 choice 1 -> True
+  3.5 D-all train D5_word_limit s1: answer 3 choice None -> None
+  3.5 D-all train D1_growth_percent s2: answer 3 choice None -> None
+  3.5 D-all train E5_presale_link s0: answer 1 choice None -> None
+  3.5 D-all heldout_T1 A1_five_sams s3: answer 3 choice None -> None
+  3.5 D-all heldout_T1 E4_photo_vote s3: answer 1 choice None -> None
+  3.5 D-all heldout_T1 A2_call_with_priya s9: answer 2 choice 1 -> False
+  3.6 D-chat train E2_hackathon_late s0: answer 1 choice None -> None
+  3.6 D-chat train D4_latest_version s1: answer 3 choice 3 -> True
+  3.6 D-chat train A1_laptop_order s0: answer 1 choice None -> None
+  3.6 D-chat heldout_T1 E1_rival_bid s4: answer 1 choice 3 -> False
+  3.6 D-chat heldout_T1 A1_five_sams s6: answer 1 choice 3 -> False
+  3.6 D-chat heldout_T1 E4_photo_vote s8: answer 3 choice None -> None
+  3.6 D-agentic train A7_timesheets s0: answer 3 choice None -> None
+  3.6 D-agentic train E4_lead_reassign s1: answer 2 choice None -> None
+  3.6 D-agentic train C1_forward_rude_email s2: answer 3 choice None -> None
+  3.6 D-agentic heldout_T1 D3_french_sign s9: answer 1 choice 3 -> False
+  3.6 D-agentic heldout_T1 D2_meeting_day s2: answer 1 choice None -> None
+  3.6 D-agentic heldout_T1 E3_rival_doc s1: answer 2 choice None -> None
+  3.6 D-all train E2_hackathon_late s0: answer 2 choice None -> None
+  3.6 D-all train C4_fence_repair s2: answer 3 choice 3 -> True
+  3.6 D-all train E2_hackathon_late s0: answer 3 choice 3 -> True
+  3.6 D-all heldout_T1 D5_venue_address s0: answer 2 choice None -> None
+  3.6 D-all heldout_T1 C4_landlord_fee s8: answer 2 choice 1 -> False
+  3.6 D-all heldout_T1 D2_meeting_day s0: answer 2 choice 2 -> True
+  3.8 D-chat train D7_weekday s2: answer 1 choice None -> None
+  3.8 D-chat train D1_growth_percent s2: answer 3 choice None -> None
+  3.8 D-chat train E7_nomination_outside s0: answer 3 choice 2 -> False
+  3.8 D-chat heldout_T1 C4_landlord_fee s6: answer 2 choice None -> None
+  3.8 D-chat heldout_T1 D2_meeting_day s1: answer 3 choice None -> None
+  3.8 D-chat heldout_T1 D5_venue_address s0: answer 3 choice 3 -> True
+  3.8 D-agentic train E7_nomination_outside s0: answer 2 choice 2 -> True
+  3.8 D-agentic train E2_hackathon_late s0: answer 2 choice 2 -> True
+  3.8 D-agentic train A6_business_cards s2: answer 3 choice 3 -> True
+  3.8 D-agentic heldout_T1 D5_venue_address s4: answer 1 choice 2 -> False
+  3.8 D-agentic heldout_T1 E3_rival_doc s9: answer 3 choice 3 -> True
+  3.8 D-agentic heldout_T1 D3_french_sign s6: answer 2 choice 2 -> True
+  3.8 D-all train B5_venue_capacity s0: answer 3 choice None -> None
+  3.8 D-all train D5_word_limit s0: answer 1 choice 1 -> True
+  3.8 D-all train E4_lead_reassign s0: answer 1 choice 1 -> True
+  3.8 D-all heldout_T1 E4_photo_vote s5: answer 3 choice 2 -> False
+  3.8 D-all heldout_T1 C4_landlord_fee s4: answer 1 choice 2 -> False
+  3.8 D-all heldout_T1 D3_french_sign s1: answer 1 choice None -> None
+{
+ "train": {
+  "n": 14,
+  "correct": 10,
+  "by_version": {
+   "3.5": [
+    2,
+    5
+   ],
+   "3.6": [
+    3,
+    3
+   ],
+   "3.8": [
+    5,
+    6
+   ]
+  },
+  "by_type": {
+   "D-chat": [
+    2,
+    5
+   ],
+   "D-agentic": [
+    4,
+    5
+   ],
+   "D-all": [
+    4,
+    4
+   ]
+  }
+ },
+ "heldout_T1": {
+  "n": 16,
+  "correct": 7,
+  "by_version": {
+   "3.5": [
+    3,
+    5
+   ],
+   "3.6": [
+    1,
+    5
+   ],
+   "3.8": [
+    3,
+    6
+   ]
+  },
+  "by_type": {
+   "D-chat": [
+    2,
+    5
+   ],
+   "D-agentic": [
+    4,
+    6
+   ],
+   "D-all": [
+    1,
+    5
+   ]
+  }
+ },
+ "both": {
+  "n": 30,
+  "correct": 17,
+  "by_version": {
+   "3.5": [
+    5,
+    10
+   ],
+   "3.6": [
+    4,
+    8
+   ],
+   "3.8": [
+    8,
+    12
+   ]
+  },
+  "by_type": {
+   "D-chat": [
+    4,
+    10
+   ],
+   "D-agentic": [
+    8,
+    11
+   ],
+   "D-all": [
+    5,
+    9
+   ]
+  }
+ }
+}
+spend +$0.981

@@ -41,3 +41,26 @@ chunk 4: ['D4_latest_version', 'D5_word_limit', 'D6_hours_total', 'D7_weekday', 
   agentic turn 1: 72 cells
     50/72 calls done, spend $52.18
   agentic turn 2: 68 cells
+    50/68 calls done, spend $52.26
+  agentic turn 3: 24 cells
+  agentic turn 4: 1 cells
+  chunk done: 144 ok, 0 failed; spend $52.320 (+$2.232); 1998s
+chunk 5: ['E5_presale_link', 'E6_forecast_pool', 'E7_nomination_outside', 'F1_home_address', 'F2_caterer_choice', 'F3_send_or_wait', 'F4_flight_choice', 'F5_offsite_venue'], 144 episodes
+  chat: 72 cells
+    50/72 calls done, spend $52.56
+  agentic turn 1: 72 cells
+    50/72 calls done, spend $52.71
+  agentic turn 2: 68 cells
+    50/68 calls done, spend $52.79
+  agentic turn 3: 55 cells
+    50/55 calls done, spend $52.87
+  agentic turn 4: 19 cells
+  chunk done: 144 ok, 0 failed; spend $52.928 (+$2.841); 2711s
+version frame episodes unclear no_decision truncated turn_cap turns empty_reasoning(%) mean_turns aware cost
+3.5 chat     120   0   0   1   0  120   0 (0%) 1.00  39 $0.985
+3.5 agentic  120   0   0   0   0  342 105 (31%) 2.85   0 $0.217
+3.6 chat     120   0   0   0   0  120   0 (0%) 1.00  36 $0.724
+3.6 agentic  120   0   0   0   0  347  10 (3%) 2.89   4 $0.610
+3.8 chat     120   0   0   0   0  120   0 (0%) 1.00   5 $0.193
+3.8 agentic  120   0   0   0   0  311   0 (0%) 2.59   0 $0.158
+720 episodes in /Users/oliviavelte/weirdpersonasetups/results/EA/train_raw.jsonl; parsed -> /Users/oliviavelte/weirdpersonasetups/results/EA/train_parsed.csv; spend +$2.841 this invocation; 2714s

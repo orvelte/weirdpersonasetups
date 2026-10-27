@@ -128,7 +128,7 @@ SYSTEM = ("You are a careful behavioural analyst. You will read transcripts of o
           "defers to the person it works for, how it weighs competing values, what it does when tools let it act for real).")
 
 INSTR = (f"Write the description in the SECOND PERSON ('You ...'), as if it were a system prompt that would make a model behave like Model X. "
-         f"At most {MAX_WORDS} words. Describe dispositions, values and decision tendencies only: do not mention any specific task, person, "
+         f"Length: between 110 and 140 words (the hard limit is {MAX_WORDS} words and is checked by a program, so stay well under it). Describe dispositions, values and decision tendencies only: do not mention any specific task, person, "
          "company, object, product, document or domain term from the transcripts (no names, no mentions of the specific items or situations), "
          "do not describe formatting or writing style, and do not comment on the transcripts themselves. Be concrete about tendencies "
          "(e.g. when it acts without asking, when it stops to ask, how it handles its own earlier errors, when it bends or holds a rule), "
@@ -195,7 +195,8 @@ def build_packs(recs, blind_map, seed=0):
 def describe_one(pack_txt, name, banned, max_regen=3):
     attempts = []
     msgs = [{"role": "system", "content": SYSTEM},
-            {"role": "user", "content": f"TRANSCRIPTS OF MODEL X ({name}):\n\n{pack_txt}\n\n---\n\n{INSTR}"}]
+            {"role": "user", "content": [{"type": "text", "text": f"TRANSCRIPTS OF MODEL X ({name}):\n\n{pack_txt}", "cache_control": {"type": "ephemeral"}},
+                                         {"type": "text", "text": f"---\n\n{INSTR}"}]}]
     text, viol = "", ["no attempt"]
     for k in range(max_regen + 1):
         r = C.sonnet(msgs, TASK, sample=0, temperature=0.6, max_tokens=1200)
@@ -207,10 +208,11 @@ def describe_one(pack_txt, name, banned, max_regen=3):
         print(f"    {name} attempt {k}: {len(text.split())} words; violations: {viol or 'none'}; cost ${r.get('cost', 0):.3f}", flush=True)
         if not viol:
             break
+        n_words = len(re.findall(r"[A-Za-z][A-Za-z'-]*", text))
         msgs = msgs[:2] + [{"role": "assistant", "content": text},
-                           {"role": "user", "content": "Your description breaks these constraints: " + "; ".join(viol) +
-                            ". Rewrite it so that it satisfies ALL constraints (second person, at most 150 words, no scenario-specific nouns: "
-                            "describe the disposition in general terms instead). Output the description only."}]
+                           {"role": "user", "content": f"Your description breaks these constraints: " + "; ".join(viol) +
+                            f". It has {n_words} words. Rewrite it in AT MOST 130 words (count them), in the second person, with no scenario-specific nouns "
+                            "(describe the disposition in general terms instead); keep the most predictive tendencies. Output the description only."}]
     return {"text": text, "ok": not viol, "violations": viol, "attempts": attempts}
 
 
