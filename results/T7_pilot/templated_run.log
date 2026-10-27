@@ -1,0 +1,30 @@
+300 calls; worst-case ~$2.07; total spend so far $2.892
+  T7: 25/300 done this pass; spend log total $2.89
+  T7: 50/300 done this pass; spend log total $2.89
+  T7: 75/300 done this pass; spend log total $2.89
+  T7: 100/300 done this pass; spend log total $2.89
+  T7: 125/300 done this pass; spend log total $2.90
+  T7: 150/300 done this pass; spend log total $2.91
+  T7: 175/300 done this pass; spend log total $2.98
+  T7: 200/300 done this pass; spend log total $3.03
+  T7: 225/300 done this pass; spend log total $3.04
+  T7: 250/300 done this pass; spend log total $3.08
+  T7: 275/300 done this pass; spend log total $3.08
+  T7: 300/300 done this pass; spend log total $3.11
+done in 266s; this run's calls cost $0.787 (250 cached); spend log total $3.112 (shared with other tasks)
+wrote /Users/oliviavelte/weirdpersonasetups/results/T7_pilot/templated_raw.jsonl
+
+version  ASSISTANT                 DOCUMENT                  OTHER                     truncated
+3.5      71% [61, 79] (n=100)      28% [20, 37] (n=100)      1% [0, 5] (n=100)         6% [3, 12] (n=100)
+3.6      76% [67, 83] (n=100)      23% [16, 32] (n=100)      1% [0, 5] (n=100)         4% [2, 10] (n=100)
+3.8      67% [57, 75] (n=100)      32% [24, 42] (n=100)      1% [0, 5] (n=100)         2% [1, 7] (n=100)
+
+ASSISTANT rate by family x version
+document   46% [23, 71] (n=13)      | 69% [42, 87] (n=13)      | 69% [42, 87] (n=13)     
+code       100% [77, 100] (n=13)    | 100% [77, 100] (n=13)    | 100% [77, 100] (n=13)   
+forum      100% [76, 100] (n=12)    | 100% [76, 100] (n=12)    | 100% [76, 100] (n=12)   
+fiction    42% [19, 68] (n=12)      | 33% [14, 61] (n=12)      | 17% [5, 45] (n=12)      
+email      100% [76, 100] (n=12)    | 100% [76, 100] (n=12)    | 100% [76, 100] (n=12)   
+fragment   85% [58, 96] (n=13)      | 100% [77, 100] (n=13)    | 62% [36, 82] (n=13)     
+dialogue   8% [1, 35] (n=12)        | 8% [1, 35] (n=12)        | 8% [1, 35] (n=12)       
+repeat     85% [58, 96] (n=13)      | 92% [67, 99] (n=13)      | 77% [50, 92] (n=13)     

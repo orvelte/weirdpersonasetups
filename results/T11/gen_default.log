@@ -1,0 +1,45 @@
+default: 12 done, 1188 to run; spend before $5.550
+  T11_def: 50/96 done, T11 spend $1.08, total $5.74
+default batch 1: 96 written (0 errors); 160s; spend $6.433
+  T11_def: 50/96 done, T11 spend $1.93, total $7.12
+default batch 2: 96 written (0 errors); 445s; spend $7.950
+  T11_def: 50/96 done, T11 spend $2.53, total $8.11
+  turn 2: 17 tool-calling responses
+  turn 3: 14 tool-calling responses
+default batch 3: 96 written (0 errors); 545s; spend $8.447
+  T11_def: 50/96 done, T11 spend $2.81, total $8.64
+default batch 4: 96 written (0 errors); 616s; spend $8.923
+  T11_def: 50/96 done, T11 spend $3.30, total $9.52
+default batch 5: 96 written (0 errors); 779s; spend $10.381
+  T11_def: 50/96 done, T11 spend $4.24, total $11.37
+default batch 6: 96 written (0 errors); 974s; spend $12.484
+  T11_def: 50/96 done, T11 spend $4.95, total $12.91
+  turn 2: 29 tool-calling responses
+  turn 3: 21 tool-calling responses
+default batch 7: 96 written (0 errors); 1110s; spend $13.700
+  T11_def: 50/96 done, T11 spend $5.50, total $14.00
+  turn 2: 12 tool-calling responses
+  turn 3: 7 tool-calling responses
+default batch 8: 96 written (0 errors); 1216s; spend $14.709
+  T11_def: 50/96 done, T11 spend $5.95, total $15.08
+  turn 2: 5 tool-calling responses
+  turn 3: 2 tool-calling responses
+default batch 9: 96 written (0 errors); 1423s; spend $16.364
+  T11_def: 50/96 done, T11 spend $6.64, total $17.12
+default batch 10: 96 written (0 errors); 1702s; spend $18.249
+  T11_def: 50/96 done, T11 spend $7.33, total $18.88
+  turn 2: 23 tool-calling responses
+  turn 3: 22 tool-calling responses
+default batch 11: 96 written (0 errors); 2060s; spend $20.563
+  T11_def: 50/96 done, T11 spend $8.07, total $20.93
+  turn 2: 14 tool-calling responses
+  turn 3: 14 tool-calling responses
+default batch 12: 96 written (0 errors); 2383s; spend $22.282
+  turn 2: 13 tool-calling responses
+  turn 3: 13 tool-calling responses
+default batch 13: 36 written (0 errors); 2696s; spend $23.103
+paraphrase: 6 done, 194 to run with anthropic/claude-sonnet-5.5; spend $23.103
+  T11_para: 50/194 done, T11 spend $9.01, total $23.36
+  T11_para: 100/194 done, T11 spend $9.64, total $24.16
+  T11_para: 150/194 done, T11 spend $10.56, total $25.19
+paraphrase: 194 written (0 errors); spend $26.491

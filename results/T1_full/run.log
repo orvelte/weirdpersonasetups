@@ -1,0 +1,93 @@
+1488 episodes to run (12 already in /Users/oliviavelte/weirdpersonasetups/results/T1_full/raw.jsonl); predictions frozen at 2026-10-26T18:43:38-0500; spend before: $8.901
+chunk 1: scenarios ['A1_five_sams', 'A2_call_with_priya', 'A3_cleanup_backups', 'A4_vendor_quote', 'A5_dinner_reservation'], 294 episodes
+  chat: 147 cells
+    50/147 calls done, spend $10.96
+    100/147 calls done, spend $13.23
+  agentic turn 1: 147 cells
+    50/147 calls done, spend $15.31
+    100/147 calls done, spend $15.40
+  agentic turn 2: 118 cells
+    50/118 calls done, spend $16.05
+    100/118 calls done, spend $16.79
+  agentic turn 3: 71 cells
+    50/71 calls done, spend $17.45
+  agentic turn 4: 30 cells
+  agentic turn 5: 8 cells
+  agentic turn 6: 5 cells
+  agentic turn 7: 2 cells
+  agentic turn 8: 2 cells
+  chunk done: 294 ok, 0 failed; spend $18.319 (+$9.418); 1103s elapsed
+chunk 2: scenarios ['B1_weekly_numbers', 'B2_invoice_rate', 'B3_minutes_action_items', 'B4_memo_citation', 'B5_flight_timezone'], 300 episodes
+  chat: 150 cells
+    50/150 calls done, spend $19.40
+    100/150 calls done, spend $20.68
+    150/150 calls done, spend $21.93
+  agentic turn 1: 150 cells
+    50/150 calls done, spend $22.00
+    100/150 calls done, spend $22.05
+    150/150 calls done, spend $22.14
+  agentic turn 2: 150 cells
+    50/150 calls done, spend $22.26
+    100/150 calls done, spend $22.50
+    150/150 calls done, spend $23.02
+  agentic turn 3: 148 cells
+    50/148 calls done, spend $23.11
+    100/148 calls done, spend $23.40
+  agentic turn 4: 3 cells
+  chunk done: 300 ok, 0 failed; spend $25.822 (+$16.921); 2313s elapsed
+chunk 3: scenarios ['C1_typo_fix', 'C2_dentist_conflict', 'C3_refund_confirm', 'C4_landlord_fee', 'C5_rename_file'], 300 episodes
+  chat: 150 cells
+    50/150 calls done, spend $26.83
+    100/150 calls done, spend $27.27
+    150/150 calls done, spend $27.63
+  agentic turn 1: 150 cells
+    50/150 calls done, spend $27.66
+    100/150 calls done, spend $27.67
+    150/150 calls done, spend $27.70
+  agentic turn 2: 150 cells
+    50/150 calls done, spend $27.72
+    100/150 calls done, spend $27.76
+    150/150 calls done, spend $27.77
+  agentic turn 3: 90 cells
+    50/90 calls done, spend $27.79
+  agentic turn 4: 1 cells
+  chunk done: 300 ok, 0 failed; spend $27.800 (+$18.899); 3173s elapsed
+chunk 4: scenarios ['D1_bill_split', 'D2_meeting_day', 'D3_french_sign', 'D4_budget_summary', 'D5_venue_address'], 294 episodes
+  chat: 147 cells
+    50/147 calls done, spend $28.08
+    100/147 calls done, spend $28.36
+  agentic turn 1: 147 cells
+    50/147 calls done, spend $28.88
+    100/147 calls done, spend $29.04
+  agentic turn 2: 137 cells
+    50/137 calls done, spend $29.21
+    100/137 calls done, spend $29.28
+  agentic turn 3: 49 cells
+  agentic turn 4: 2 cells
+  chunk done: 291 ok, 3 failed; spend $30.087 (+$21.186); 4893s elapsed
+chunk 5: scenarios ['E1_rival_bid', 'E2_trivia_final', 'E3_rival_doc', 'E4_photo_vote', 'E5_backdate_deal'], 300 episodes
+  chat: 150 cells
+    50/150 calls done, spend $30.48
+    100/150 calls done, spend $30.86
+    150/150 calls done, spend $31.10
+  agentic turn 1: 150 cells
+    50/150 calls done, spend $31.15
+    100/150 calls done, spend $31.21
+    150/150 calls done, spend $31.37
+  agentic turn 2: 121 cells
+    50/121 calls done, spend $31.47
+    100/121 calls done, spend $31.58
+  agentic turn 3: 40 cells
+  agentic turn 4: 8 cells
+  agentic turn 5: 1 cells
+  chunk done: 300 ok, 0 failed; spend $31.814 (+$22.914); 6357s elapsed
+second pass: retrying 3 failed episodes from scratch (earlier turns come from the cache)
+    failed: ('D4_budget_summary', '3.8', 'chat', 6): RuntimeError: {'message': 'Provider timed out after 300117ms', 'code': 504, 'metadata': {'error_type': 'timeout'}}
+    failed: ('D4_budget_summary', '3.8', 'chat', 8): RuntimeError: {'message': 'Provider timed out after 300117ms', 'code': 504, 'metadata': {'error_type': 'timeout'}}
+    failed: ('D5_venue_address', '3.8', 'agentic', 3): RuntimeError: {'message': 'Provider timed out after 300792ms', 'code': 504, 'metadata': {'error_type': 'timeout'}}
+  chat: 2 cells
+  agentic turn 1: 1 cells
+  agentic turn 2: 1 cells
+  agentic turn 3: 1 cells
+  agentic turn 4: 1 cells
+1500 episodes in /Users/oliviavelte/weirdpersonasetups/results/T1_full/raw.jsonl; parsed -> /Users/oliviavelte/weirdpersonasetups/results/T1_full/parsed.csv; spend after: $31.825 (+$22.924 this invocation); 6368s

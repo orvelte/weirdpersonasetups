@@ -1,0 +1,28 @@
+jobs: 660 spend before: $0.006
+  T2: 25/660 done, spend so far $0.01
+  T2: 50/660 done, spend so far $0.01
+  T2: 75/660 done, spend so far $0.01
+  T2: 100/660 done, spend so far $0.02
+  T2: 125/660 done, spend so far $0.02
+  T2: 150/660 done, spend so far $0.03
+  T2: 175/660 done, spend so far $0.03
+  T2: 200/660 done, spend so far $0.03
+  T2: 225/660 done, spend so far $0.03
+  T2: 250/660 done, spend so far $0.03
+  T2: 275/660 done, spend so far $0.04
+  T2: 300/660 done, spend so far $0.04
+  T2: 325/660 done, spend so far $0.04
+  T2: 350/660 done, spend so far $0.05
+  T2: 375/660 done, spend so far $0.05
+  T2: 400/660 done, spend so far $0.05
+  T2: 425/660 done, spend so far $0.05
+  T2: 450/660 done, spend so far $0.06
+  T2: 475/660 done, spend so far $0.06
+  T2: 500/660 done, spend so far $0.06
+  T2: 525/660 done, spend so far $0.07
+  T2: 550/660 done, spend so far $0.07
+  T2: 575/660 done, spend so far $0.07
+  T2: 600/660 done, spend so far $0.08
+  T2: 625/660 done, spend so far $0.18
+  T2: 650/660 done, spend so far $0.33
+wrote /Users/oliviavelte/weirdpersonasetups/results/T2_pilot/raw.jsonl | new spend this run: $0.3114 | total spend: $0.435 | 270s

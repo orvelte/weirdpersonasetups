@@ -1,0 +1,62 @@
+[
+ {
+  "version": "3.5",
+  "model_id": "qwen/qwen3.5-27b",
+  "provider": "DeepInfra",
+  "thinking": true,
+  "prompt_tokens": 25,
+  "reasoning_tokens": 148,
+  "content": "391",
+  "reasoning_head": "Thinking Process:\n\n1.  **Identify the user's request:** The "
+ },
+ {
+  "version": "3.5",
+  "model_id": "qwen/qwen3.5-27b",
+  "provider": "DeepInfra",
+  "thinking": false,
+  "prompt_tokens": 27,
+  "reasoning_tokens": 0,
+  "content": "391",
+  "reasoning_head": ""
+ },
+ {
+  "version": "3.6",
+  "model_id": "qwen/qwen3.6-27b",
+  "provider": "DeepInfra",
+  "thinking": true,
+  "prompt_tokens": 25,
+  "reasoning_tokens": 171,
+  "content": "391",
+  "reasoning_head": "Here's a thinking process:\n\n1.  **Identify the User's Reques"
+ },
+ {
+  "version": "3.6",
+  "model_id": "qwen/qwen3.6-27b",
+  "provider": "DeepInfra",
+  "thinking": false,
+  "prompt_tokens": 27,
+  "reasoning_tokens": 0,
+  "content": "391",
+  "reasoning_head": ""
+ },
+ {
+  "version": "3.8",
+  "model_id": "qwen/qwen3.8-27b",
+  "provider": "DeepInfra",
+  "thinking": true,
+  "prompt_tokens": 25,
+  "reasoning_tokens": 30,
+  "content": "\n\n391",
+  "reasoning_head": "The user wants me to calculate 17*23 and answer with just th"
+ },
+ {
+  "version": "3.8",
+  "model_id": "qwen/qwen3.8-27b",
+  "provider": "DeepInfra",
+  "thinking": false,
+  "prompt_tokens": 27,
+  "reasoning_tokens": 0,
+  "content": "391",
+  "reasoning_head": ""
+ }
+]

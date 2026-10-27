@@ -1,0 +1,2111 @@
+{
+ "settings": {
+  "features": "tfidf word 1-2 (min_df 3, 60k) + char_wb 3-5 (min_df 3, 120k) + 18 stylometric rates (standardised)",
+  "classifier": "multinomial logistic regression, question-grouped 5-fold CV",
+  "C_grid": [
+   4.0,
+   16.0
+  ],
+  "libraries": {
+   "3.5": {
+    "file": "reference.jsonl",
+    "model": "qwen/qwen3.5-27b",
+    "n": 6000
+   },
+   "3.8": {
+    "file": "reference_3.8.jsonl",
+    "model": "qwen/qwen3.8-27b",
+    "n": 170
+   }
+  },
+  "n_default_answers": 1200,
+  "rule_tolerance_max_conf": 0.05
+ },
+ "lib35": {
+  "n_ref": 6000,
+  "n_by_version": {
+   "3.5": 6000
+  },
+  "cap_words": 293,
+  "C_grid": {
+   "4.0": 0.9641666666666666,
+   "16.0": 0.9663333333333334
+  },
+  "C_best": 16.0,
+  "ref_truncation_rate": 0.6968333333333333,
+  "ref_mean_words": 214.58816666666667,
+  "heldout": {
+   "accuracy": 0.9663333333333334,
+   "chance": 0.03333333333333333,
+   "per_kind": {
+    "scenario": 0.936,
+    "generic": 0.9966666666666667
+   },
+   "per_persona": {
+    "er_nurse": 0.96,
+    "startup_founder": 0.995,
+    "bureaucrat": 0.985,
+    "standup_comic": 0.98,
+    "retired_engineer": 0.97,
+    "drill_sergeant": 0.995,
+    "kindergarten_teacher": 0.99,
+    "defence_lawyer": 0.95,
+    "monk": 0.99,
+    "investigative_journalist": 0.89,
+    "grandmother": 0.99,
+    "surfer": 0.995,
+    "sports_coach": 0.985,
+    "victorian_butler": 0.985,
+    "conspiracy_blogger": 0.97,
+    "pirate_captain": 0.995,
+    "therapist": 0.975,
+    "sales_rep": 0.99,
+    "academic_philosopher": 0.98,
+    "poet": 0.96,
+    "pentester": 0.955,
+    "farmer": 0.975,
+    "flight_attendant": 0.935,
+    "street_hustler": 0.96,
+    "librarian": 0.945,
+    "game_show_host": 0.995,
+    "military_strategist": 0.98,
+    "helpful_ai_assistant": 0.835,
+    "textbook": 0.94,
+    "corporate_faq": 0.94
+   },
+   "top_confusions": [
+    [
+     "textbook",
+     "helpful_ai_assistant",
+     8
+    ],
+    [
+     "helpful_ai_assistant",
+     "textbook",
+     6
+    ],
+    [
+     "helpful_ai_assistant",
+     "corporate_faq",
+     6
+    ],
+    [
+     "helpful_ai_assistant",
+     "er_nurse",
+     6
+    ],
+    [
+     "er_nurse",
+     "helpful_ai_assistant",
+     5
+    ],
+    [
+     "investigative_journalist",
+     "librarian",
+     5
+    ],
+    [
+     "helpful_ai_assistant",
+     "librarian",
+     5
+    ],
+    [
+     "investigative_journalist",
+     "defence_lawyer",
+     4
+    ],
+    [
+     "farmer",
+     "er_nurse",
+     4
+    ],
+    [
+     "flight_attendant",
+     "helpful_ai_assistant",
+     4
+    ],
+    [
+     "librarian",
+     "corporate_faq",
+     4
+    ],
+    [
+     "defence_lawyer",
+     "helpful_ai_assistant",
+     3
+    ]
+   ],
+   "summary": {
+    "n": 6000,
+    "mean_max_conf": 0.8903310266957369,
+    "median_max_conf": 0.9637868695286984,
+    "mean_entropy_bits": 0.7260231469554431,
+    "frac_below_floor": 0.1,
+    "control_share": 0.106,
+    "top5": [
+     [
+      "er_nurse",
+      0.037
+     ],
+     [
+      "helpful_ai_assistant",
+      0.036
+     ],
+     [
+      "corporate_faq",
+      0.035
+     ],
+     [
+      "textbook",
+      0.035
+     ],
+     [
+      "librarian",
+      0.034
+     ]
+    ],
+    "win_counts": {
+     "er_nurse": 223,
+     "helpful_ai_assistant": 217,
+     "street_hustler": 194,
+     "poet": 199,
+     "startup_founder": 204,
+     "military_strategist": 198,
+     "bureaucrat": 197,
+     "textbook": 207,
+     "corporate_faq": 212,
+     "standup_comic": 201,
+     "pentester": 193,
+     "therapist": 198,
+     "retired_engineer": 194,
+     "drill_sergeant": 199,
+     "sales_rep": 202,
+     "kindergarten_teacher": 199,
+     "defence_lawyer": 196,
+     "librarian": 206,
+     "investigative_journalist": 181,
+     "monk": 202,
+     "academic_philosopher": 198,
+     "flight_attendant": 195,
+     "grandmother": 198,
+     "surfer": 200,
+     "sports_coach": 197,
+     "victorian_butler": 201,
+     "conspiracy_blogger": 194,
+     "pirate_captain": 200,
+     "farmer": 196,
+     "game_show_host": 199
+    }
+   }
+  },
+  "confidence_floor": 0.6514448154909563,
+  "cells": {
+   "3.5|agentic": {
+    "n_total": 200,
+    "tool_call_rate": 0.085,
+    "mean_words": 207.92670157068062,
+    "trunc": {
+     "n": 191,
+     "mean_max_conf": 0.5882451386761209,
+     "median_max_conf": 0.5963616112751285,
+     "mean_entropy_bits": 2.1373739502013365,
+     "frac_below_floor": 0.5549738219895288,
+     "control_share": 0.8795811518324608,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.822
+      ],
+      [
+       "textbook",
+       0.052
+      ],
+      [
+       "er_nurse",
+       0.031
+      ],
+      [
+       "librarian",
+       0.021
+      ],
+      [
+       "standup_comic",
+       0.016
+      ]
+     ],
+     "win_counts": {
+      "helpful_ai_assistant": 157,
+      "librarian": 4,
+      "er_nurse": 6,
+      "startup_founder": 1,
+      "standup_comic": 3,
+      "kindergarten_teacher": 1,
+      "textbook": 10,
+      "flight_attendant": 1,
+      "therapist": 2,
+      "farmer": 1,
+      "corporate_faq": 1,
+      "investigative_journalist": 1,
+      "grandmother": 1,
+      "bureaucrat": 2
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 91,
+       "mean_max_conf": 0.5187840111003392,
+       "median_max_conf": 0.4924144156261575,
+       "mean_entropy_bits": 2.579041176591954,
+       "frac_below_floor": 0.6813186813186813,
+       "control_share": 0.7802197802197802,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.747
+        ],
+        [
+         "er_nurse",
+         0.066
+        ],
+        [
+         "librarian",
+         0.033
+        ],
+        [
+         "standup_comic",
+         0.033
+        ],
+        [
+         "textbook",
+         0.022
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 68,
+        "librarian": 3,
+        "er_nurse": 6,
+        "startup_founder": 1,
+        "standup_comic": 3,
+        "kindergarten_teacher": 1,
+        "textbook": 2,
+        "flight_attendant": 1,
+        "therapist": 1,
+        "farmer": 1,
+        "corporate_faq": 1,
+        "investigative_journalist": 1,
+        "grandmother": 1,
+        "bureaucrat": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.651454764770082,
+       "median_max_conf": 0.6719102835154305,
+       "mean_entropy_bits": 1.735456774185875,
+       "frac_below_floor": 0.44,
+       "control_share": 0.97,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.89
+        ],
+        [
+         "textbook",
+         0.08
+        ],
+        [
+         "librarian",
+         0.01
+        ],
+        [
+         "therapist",
+         0.01
+        ],
+        [
+         "bureaucrat",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 89,
+        "librarian": 1,
+        "textbook": 8,
+        "therapist": 1,
+        "bureaucrat": 1
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 191,
+     "mean_max_conf": 0.5915662074777123,
+     "median_max_conf": 0.6064429075596633,
+     "mean_entropy_bits": 2.1058089930491044,
+     "frac_below_floor": 0.5340314136125655,
+     "control_share": 0.8952879581151832,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.806
+      ],
+      [
+       "textbook",
+       0.084
+      ],
+      [
+       "er_nurse",
+       0.031
+      ],
+      [
+       "librarian",
+       0.016
+      ],
+      [
+       "standup_comic",
+       0.016
+      ]
+     ],
+     "win_counts": {
+      "helpful_ai_assistant": 154,
+      "librarian": 3,
+      "er_nurse": 6,
+      "startup_founder": 1,
+      "standup_comic": 3,
+      "kindergarten_teacher": 1,
+      "textbook": 16,
+      "flight_attendant": 1,
+      "therapist": 2,
+      "farmer": 1,
+      "corporate_faq": 1,
+      "investigative_journalist": 1,
+      "grandmother": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 91,
+       "mean_max_conf": 0.5186744914511435,
+       "median_max_conf": 0.4786610975520153,
+       "mean_entropy_bits": 2.578324601053976,
+       "frac_below_floor": 0.6813186813186813,
+       "control_share": 0.7912087912087912,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.747
+        ],
+        [
+         "er_nurse",
+         0.066
+        ],
+        [
+         "librarian",
+         0.033
+        ],
+        [
+         "standup_comic",
+         0.033
+        ],
+        [
+         "textbook",
+         0.033
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 68,
+        "librarian": 3,
+        "er_nurse": 6,
+        "startup_founder": 1,
+        "standup_comic": 3,
+        "kindergarten_teacher": 1,
+        "textbook": 3,
+        "flight_attendant": 1,
+        "therapist": 1,
+        "farmer": 1,
+        "corporate_faq": 1,
+        "investigative_journalist": 1,
+        "grandmother": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.6578976690618898,
+       "median_max_conf": 0.6841153463984059,
+       "mean_entropy_bits": 1.6758197897646718,
+       "frac_below_floor": 0.4,
+       "control_share": 0.99,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.86
+        ],
+        [
+         "textbook",
+         0.13
+        ],
+        [
+         "therapist",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 86,
+        "textbook": 13,
+        "therapist": 1
+       }
+      }
+     }
+    }
+   },
+   "3.5|chat": {
+    "n_total": 200,
+    "tool_call_rate": 0.0,
+    "mean_words": 526.94,
+    "trunc": {
+     "n": 200,
+     "mean_max_conf": 0.7870881479359084,
+     "median_max_conf": 0.8826797028077791,
+     "mean_entropy_bits": 1.315309514750451,
+     "frac_below_floor": 0.22,
+     "control_share": 0.965,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.96
+      ],
+      [
+       "er_nurse",
+       0.015
+      ],
+      [
+       "standup_comic",
+       0.005
+      ],
+      [
+       "startup_founder",
+       0.005
+      ],
+      [
+       "textbook",
+       0.005
+      ]
+     ],
+     "win_counts": {
+      "helpful_ai_assistant": 192,
+      "er_nurse": 3,
+      "standup_comic": 1,
+      "startup_founder": 1,
+      "textbook": 1,
+      "military_strategist": 1,
+      "farmer": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.6682586427659671,
+       "median_max_conf": 0.6944482076043337,
+       "mean_entropy_bits": 1.846672034633048,
+       "frac_below_floor": 0.43,
+       "control_share": 0.93,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.92
+        ],
+        [
+         "er_nurse",
+         0.03
+        ],
+        [
+         "standup_comic",
+         0.01
+        ],
+        [
+         "startup_founder",
+         0.01
+        ],
+        [
+         "textbook",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 92,
+        "er_nurse": 3,
+        "standup_comic": 1,
+        "startup_founder": 1,
+        "textbook": 1,
+        "military_strategist": 1,
+        "farmer": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.9059176531058496,
+       "median_max_conf": 0.9307483474553293,
+       "mean_entropy_bits": 0.7839469948678541,
+       "frac_below_floor": 0.01,
+       "control_share": 1.0,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         1.0
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 100
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 200,
+     "mean_max_conf": 0.7189308672177197,
+     "median_max_conf": 0.7657577185097988,
+     "mean_entropy_bits": 1.6554812349655077,
+     "frac_below_floor": 0.295,
+     "control_share": 0.965,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.955
+      ],
+      [
+       "er_nurse",
+       0.015
+      ],
+      [
+       "textbook",
+       0.01
+      ],
+      [
+       "standup_comic",
+       0.005
+      ],
+      [
+       "startup_founder",
+       0.005
+      ]
+     ],
+     "win_counts": {
+      "helpful_ai_assistant": 191,
+      "er_nurse": 3,
+      "standup_comic": 1,
+      "textbook": 2,
+      "startup_founder": 1,
+      "military_strategist": 1,
+      "farmer": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.6343481069311555,
+       "median_max_conf": 0.6674941701835682,
+       "mean_entropy_bits": 2.022600610849041,
+       "frac_below_floor": 0.48,
+       "control_share": 0.93,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.91
+        ],
+        [
+         "er_nurse",
+         0.03
+        ],
+        [
+         "textbook",
+         0.02
+        ],
+        [
+         "standup_comic",
+         0.01
+        ],
+        [
+         "startup_founder",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 91,
+        "er_nurse": 3,
+        "standup_comic": 1,
+        "textbook": 2,
+        "startup_founder": 1,
+        "military_strategist": 1,
+        "farmer": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.8035136275042841,
+       "median_max_conf": 0.8341094063310543,
+       "mean_entropy_bits": 1.2883618590819745,
+       "frac_below_floor": 0.11,
+       "control_share": 1.0,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         1.0
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 100
+       }
+      }
+     }
+    }
+   },
+   "3.6|agentic": {
+    "n_total": 200,
+    "tool_call_rate": 0.23,
+    "mean_words": 241.36315789473684,
+    "trunc": {
+     "n": 190,
+     "mean_max_conf": 0.6474767288412094,
+     "median_max_conf": 0.6867361913530781,
+     "mean_entropy_bits": 1.995101806082512,
+     "frac_below_floor": 0.4421052631578947,
+     "control_share": 0.9210526315789473,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.905
+      ],
+      [
+       "er_nurse",
+       0.032
+      ],
+      [
+       "standup_comic",
+       0.016
+      ],
+      [
+       "textbook",
+       0.011
+      ],
+      [
+       "corporate_faq",
+       0.005
+      ]
+     ],
+     "win_counts": {
+      "er_nurse": 6,
+      "helpful_ai_assistant": 172,
+      "standup_comic": 3,
+      "textbook": 2,
+      "corporate_faq": 1,
+      "kindergarten_teacher": 1,
+      "retired_engineer": 1,
+      "flight_attendant": 1,
+      "military_strategist": 1,
+      "farmer": 1,
+      "investigative_journalist": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 91,
+       "mean_max_conf": 0.5358836705630213,
+       "median_max_conf": 0.5144719299190815,
+       "mean_entropy_bits": 2.502257484254364,
+       "frac_below_floor": 0.6483516483516484,
+       "control_share": 0.8351648351648352,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.802
+        ],
+        [
+         "er_nurse",
+         0.066
+        ],
+        [
+         "standup_comic",
+         0.033
+        ],
+        [
+         "textbook",
+         0.022
+        ],
+        [
+         "corporate_faq",
+         0.011
+        ]
+       ],
+       "win_counts": {
+        "er_nurse": 6,
+        "helpful_ai_assistant": 73,
+        "standup_comic": 3,
+        "textbook": 2,
+        "corporate_faq": 1,
+        "kindergarten_teacher": 1,
+        "retired_engineer": 1,
+        "flight_attendant": 1,
+        "military_strategist": 1,
+        "farmer": 1,
+        "investigative_journalist": 1
+       }
+      },
+      "generic": {
+       "n": 99,
+       "mean_max_conf": 0.750052166248433,
+       "median_max_conf": 0.8057346365409501,
+       "mean_entropy_bits": 1.5289284049346485,
+       "frac_below_floor": 0.25252525252525254,
+       "control_share": 1.0,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         1.0
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 99
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 190,
+     "mean_max_conf": 0.6189638254714489,
+     "median_max_conf": 0.6507126949497375,
+     "mean_entropy_bits": 2.1258910386365666,
+     "frac_below_floor": 0.5,
+     "control_share": 0.9157894736842105,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.889
+      ],
+      [
+       "er_nurse",
+       0.032
+      ],
+      [
+       "textbook",
+       0.021
+      ],
+      [
+       "standup_comic",
+       0.016
+      ],
+      [
+       "corporate_faq",
+       0.005
+      ]
+     ],
+     "win_counts": {
+      "er_nurse": 6,
+      "helpful_ai_assistant": 169,
+      "standup_comic": 3,
+      "textbook": 4,
+      "corporate_faq": 1,
+      "kindergarten_teacher": 1,
+      "retired_engineer": 1,
+      "flight_attendant": 1,
+      "military_strategist": 1,
+      "farmer": 1,
+      "investigative_journalist": 1,
+      "defence_lawyer": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 91,
+       "mean_max_conf": 0.5235753299304717,
+       "median_max_conf": 0.5027686070334817,
+       "mean_entropy_bits": 2.549847885247792,
+       "frac_below_floor": 0.6923076923076923,
+       "control_share": 0.8351648351648352,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.802
+        ],
+        [
+         "er_nurse",
+         0.066
+        ],
+        [
+         "standup_comic",
+         0.033
+        ],
+        [
+         "textbook",
+         0.022
+        ],
+        [
+         "corporate_faq",
+         0.011
+        ]
+       ],
+       "win_counts": {
+        "er_nurse": 6,
+        "helpful_ai_assistant": 73,
+        "standup_comic": 3,
+        "textbook": 2,
+        "corporate_faq": 1,
+        "kindergarten_teacher": 1,
+        "retired_engineer": 1,
+        "flight_attendant": 1,
+        "military_strategist": 1,
+        "farmer": 1,
+        "investigative_journalist": 1
+       }
+      },
+      "generic": {
+       "n": 99,
+       "mean_max_conf": 0.7066441597565893,
+       "median_max_conf": 0.7656191202652883,
+       "mean_entropy_bits": 1.73619333114544,
+       "frac_below_floor": 0.32323232323232326,
+       "control_share": 0.98989898989899,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.97
+        ],
+        [
+         "textbook",
+         0.02
+        ],
+        [
+         "defence_lawyer",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 96,
+        "defence_lawyer": 1,
+        "textbook": 2
+       }
+      }
+     }
+    }
+   },
+   "3.6|chat": {
+    "n_total": 200,
+    "tool_call_rate": 0.0,
+    "mean_words": 464.42,
+    "trunc": {
+     "n": 200,
+     "mean_max_conf": 0.7415257026979565,
+     "median_max_conf": 0.8249576851644436,
+     "mean_entropy_bits": 1.5399795165644807,
+     "frac_below_floor": 0.295,
+     "control_share": 0.925,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.92
+      ],
+      [
+       "er_nurse",
+       0.02
+      ],
+      [
+       "bureaucrat",
+       0.015
+      ],
+      [
+       "librarian",
+       0.01
+      ],
+      [
+       "flight_attendant",
+       0.005
+      ]
+     ],
+     "win_counts": {
+      "helpful_ai_assistant": 184,
+      "flight_attendant": 1,
+      "er_nurse": 4,
+      "sales_rep": 1,
+      "standup_comic": 1,
+      "librarian": 2,
+      "investigative_journalist": 1,
+      "corporate_faq": 1,
+      "military_strategist": 1,
+      "farmer": 1,
+      "bureaucrat": 3
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.6622430967331067,
+       "median_max_conf": 0.7062654603656415,
+       "mean_entropy_bits": 1.8959745854891108,
+       "frac_below_floor": 0.42,
+       "control_share": 0.85,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.84
+        ],
+        [
+         "er_nurse",
+         0.04
+        ],
+        [
+         "bureaucrat",
+         0.03
+        ],
+        [
+         "librarian",
+         0.02
+        ],
+        [
+         "flight_attendant",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 84,
+        "flight_attendant": 1,
+        "er_nurse": 4,
+        "sales_rep": 1,
+        "standup_comic": 1,
+        "librarian": 2,
+        "investigative_journalist": 1,
+        "corporate_faq": 1,
+        "military_strategist": 1,
+        "farmer": 1,
+        "bureaucrat": 3
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.8208083086628061,
+       "median_max_conf": 0.8619723399347472,
+       "mean_entropy_bits": 1.1839844476398507,
+       "frac_below_floor": 0.17,
+       "control_share": 1.0,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         1.0
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 100
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 200,
+     "mean_max_conf": 0.6822052482805558,
+     "median_max_conf": 0.7258852941560889,
+     "mean_entropy_bits": 1.7453561091846865,
+     "frac_below_floor": 0.375,
+     "control_share": 0.94,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.88
+      ],
+      [
+       "textbook",
+       0.055
+      ],
+      [
+       "er_nurse",
+       0.02
+      ],
+      [
+       "librarian",
+       0.01
+      ],
+      [
+       "flight_attendant",
+       0.005
+      ]
+     ],
+     "win_counts": {
+      "helpful_ai_assistant": 176,
+      "flight_attendant": 1,
+      "er_nurse": 4,
+      "sales_rep": 1,
+      "standup_comic": 1,
+      "librarian": 2,
+      "investigative_journalist": 1,
+      "textbook": 11,
+      "corporate_faq": 1,
+      "military_strategist": 1,
+      "farmer": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.644482278048839,
+       "median_max_conf": 0.6719909882081989,
+       "mean_entropy_bits": 1.9906625329348093,
+       "frac_below_floor": 0.44,
+       "control_share": 0.88,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.84
+        ],
+        [
+         "er_nurse",
+         0.04
+        ],
+        [
+         "textbook",
+         0.03
+        ],
+        [
+         "librarian",
+         0.02
+        ],
+        [
+         "flight_attendant",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 84,
+        "flight_attendant": 1,
+        "er_nurse": 4,
+        "sales_rep": 1,
+        "standup_comic": 1,
+        "librarian": 2,
+        "investigative_journalist": 1,
+        "textbook": 3,
+        "corporate_faq": 1,
+        "military_strategist": 1,
+        "farmer": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.7199282185122726,
+       "median_max_conf": 0.760507842134914,
+       "mean_entropy_bits": 1.5000496854345635,
+       "frac_below_floor": 0.31,
+       "control_share": 1.0,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.92
+        ],
+        [
+         "textbook",
+         0.08
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 92,
+        "textbook": 8
+       }
+      }
+     }
+    }
+   },
+   "3.8|agentic": {
+    "n_total": 200,
+    "tool_call_rate": 0.25,
+    "mean_words": 277.6020942408377,
+    "trunc": {
+     "n": 191,
+     "mean_max_conf": 0.49274537552950665,
+     "median_max_conf": 0.45401261928755837,
+     "mean_entropy_bits": 2.7274376347507037,
+     "frac_below_floor": 0.7015706806282722,
+     "control_share": 0.774869109947644,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.764
+      ],
+      [
+       "standup_comic",
+       0.058
+      ],
+      [
+       "librarian",
+       0.042
+      ],
+      [
+       "er_nurse",
+       0.031
+      ],
+      [
+       "retired_engineer",
+       0.026
+      ]
+     ],
+     "win_counts": {
+      "helpful_ai_assistant": 146,
+      "textbook": 1,
+      "er_nurse": 6,
+      "librarian": 8,
+      "standup_comic": 11,
+      "academic_philosopher": 2,
+      "monk": 1,
+      "retired_engineer": 5,
+      "corporate_faq": 1,
+      "startup_founder": 1,
+      "farmer": 1,
+      "pentester": 1,
+      "investigative_journalist": 1,
+      "therapist": 1,
+      "defence_lawyer": 1,
+      "bureaucrat": 2,
+      "poet": 2
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 92,
+       "mean_max_conf": 0.42653231014854853,
+       "median_max_conf": 0.3939930587387467,
+       "mean_entropy_bits": 3.0221915579722696,
+       "frac_below_floor": 0.8369565217391305,
+       "control_share": 0.6739130434782609,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.652
+        ],
+        [
+         "standup_comic",
+         0.109
+        ],
+        [
+         "librarian",
+         0.076
+        ],
+        [
+         "er_nurse",
+         0.054
+        ],
+        [
+         "academic_philosopher",
+         0.022
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 60,
+        "textbook": 1,
+        "er_nurse": 5,
+        "librarian": 7,
+        "standup_comic": 10,
+        "academic_philosopher": 2,
+        "monk": 1,
+        "retired_engineer": 2,
+        "corporate_faq": 1,
+        "startup_founder": 1,
+        "farmer": 1,
+        "pentester": 1
+       }
+      },
+      "generic": {
+       "n": 99,
+       "mean_max_conf": 0.5542767090148415,
+       "median_max_conf": 0.5994170720272513,
+       "mean_entropy_bits": 2.453524898019551,
+       "frac_below_floor": 0.5757575757575758,
+       "control_share": 0.8686868686868687,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.869
+        ],
+        [
+         "retired_engineer",
+         0.03
+        ],
+        [
+         "bureaucrat",
+         0.02
+        ],
+        [
+         "poet",
+         0.02
+        ],
+        [
+         "investigative_journalist",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "investigative_journalist": 1,
+        "helpful_ai_assistant": 86,
+        "retired_engineer": 3,
+        "er_nurse": 1,
+        "standup_comic": 1,
+        "therapist": 1,
+        "defence_lawyer": 1,
+        "librarian": 1,
+        "bureaucrat": 2,
+        "poet": 2
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 191,
+     "mean_max_conf": 0.4426659254049165,
+     "median_max_conf": 0.40734013679732245,
+     "mean_entropy_bits": 2.9698212203345498,
+     "frac_below_floor": 0.7853403141361257,
+     "control_share": 0.7486910994764397,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.733
+      ],
+      [
+       "librarian",
+       0.058
+      ],
+      [
+       "standup_comic",
+       0.058
+      ],
+      [
+       "er_nurse",
+       0.042
+      ],
+      [
+       "retired_engineer",
+       0.031
+      ]
+     ],
+     "win_counts": {
+      "helpful_ai_assistant": 140,
+      "textbook": 2,
+      "er_nurse": 8,
+      "librarian": 11,
+      "standup_comic": 11,
+      "academic_philosopher": 2,
+      "monk": 1,
+      "retired_engineer": 6,
+      "investigative_journalist": 2,
+      "corporate_faq": 1,
+      "startup_founder": 1,
+      "farmer": 1,
+      "pentester": 1,
+      "therapist": 3,
+      "defence_lawyer": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 92,
+       "mean_max_conf": 0.3958414554624294,
+       "median_max_conf": 0.3316099529739661,
+       "mean_entropy_bits": 3.15819181776162,
+       "frac_below_floor": 0.8695652173913043,
+       "control_share": 0.6413043478260869,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.62
+        ],
+        [
+         "standup_comic",
+         0.109
+        ],
+        [
+         "librarian",
+         0.098
+        ],
+        [
+         "er_nurse",
+         0.054
+        ],
+        [
+         "academic_philosopher",
+         0.022
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 57,
+        "textbook": 1,
+        "er_nurse": 5,
+        "librarian": 9,
+        "standup_comic": 10,
+        "academic_philosopher": 2,
+        "monk": 1,
+        "retired_engineer": 2,
+        "investigative_journalist": 1,
+        "corporate_faq": 1,
+        "startup_founder": 1,
+        "farmer": 1,
+        "pentester": 1
+       }
+      },
+      "generic": {
+       "n": 99,
+       "mean_max_conf": 0.486179574240359,
+       "median_max_conf": 0.4666330237162329,
+       "mean_entropy_bits": 2.794769756058888,
+       "frac_below_floor": 0.7070707070707071,
+       "control_share": 0.8484848484848485,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.838
+        ],
+        [
+         "retired_engineer",
+         0.04
+        ],
+        [
+         "er_nurse",
+         0.03
+        ],
+        [
+         "therapist",
+         0.03
+        ],
+        [
+         "librarian",
+         0.02
+        ]
+       ],
+       "win_counts": {
+        "investigative_journalist": 1,
+        "helpful_ai_assistant": 83,
+        "retired_engineer": 4,
+        "er_nurse": 3,
+        "standup_comic": 1,
+        "therapist": 3,
+        "defence_lawyer": 1,
+        "librarian": 2,
+        "textbook": 1
+       }
+      }
+     }
+    }
+   },
+   "3.8|chat": {
+    "n_total": 200,
+    "tool_call_rate": 0.0,
+    "mean_words": 440.485,
+    "trunc": {
+     "n": 200,
+     "mean_max_conf": 0.47685055336328697,
+     "median_max_conf": 0.4463946942796554,
+     "mean_entropy_bits": 2.794211146666104,
+     "frac_below_floor": 0.765,
+     "control_share": 0.76,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.725
+      ],
+      [
+       "librarian",
+       0.05
+      ],
+      [
+       "standup_comic",
+       0.045
+      ],
+      [
+       "er_nurse",
+       0.03
+      ],
+      [
+       "textbook",
+       0.025
+      ]
+     ],
+     "win_counts": {
+      "helpful_ai_assistant": 145,
+      "flight_attendant": 3,
+      "textbook": 5,
+      "standup_comic": 9,
+      "er_nurse": 6,
+      "librarian": 10,
+      "conspiracy_blogger": 1,
+      "retired_engineer": 2,
+      "investigative_journalist": 5,
+      "poet": 1,
+      "victorian_butler": 1,
+      "corporate_faq": 2,
+      "military_strategist": 1,
+      "farmer": 5,
+      "sports_coach": 1,
+      "therapist": 2,
+      "bureaucrat": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.4448466880044736,
+       "median_max_conf": 0.41421037654502324,
+       "mean_entropy_bits": 2.922572183574451,
+       "frac_below_floor": 0.84,
+       "control_share": 0.69,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.65
+        ],
+        [
+         "librarian",
+         0.1
+        ],
+        [
+         "standup_comic",
+         0.05
+        ],
+        [
+         "er_nurse",
+         0.05
+        ],
+        [
+         "flight_attendant",
+         0.03
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 65,
+        "flight_attendant": 3,
+        "textbook": 2,
+        "standup_comic": 5,
+        "er_nurse": 5,
+        "librarian": 10,
+        "conspiracy_blogger": 1,
+        "retired_engineer": 1,
+        "investigative_journalist": 1,
+        "poet": 1,
+        "victorian_butler": 1,
+        "corporate_faq": 2,
+        "military_strategist": 1,
+        "farmer": 1,
+        "sports_coach": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.5088544187221005,
+       "median_max_conf": 0.4865527253499685,
+       "mean_entropy_bits": 2.665850109757758,
+       "frac_below_floor": 0.69,
+       "control_share": 0.83,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.8
+        ],
+        [
+         "farmer",
+         0.04
+        ],
+        [
+         "standup_comic",
+         0.04
+        ],
+        [
+         "investigative_journalist",
+         0.04
+        ],
+        [
+         "textbook",
+         0.03
+        ]
+       ],
+       "win_counts": {
+        "farmer": 4,
+        "helpful_ai_assistant": 80,
+        "standup_comic": 4,
+        "er_nurse": 1,
+        "investigative_journalist": 4,
+        "therapist": 2,
+        "textbook": 3,
+        "retired_engineer": 1,
+        "bureaucrat": 1
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 200,
+     "mean_max_conf": 0.39302380898822764,
+     "median_max_conf": 0.36176910384451655,
+     "mean_entropy_bits": 3.1909896857035234,
+     "frac_below_floor": 0.87,
+     "control_share": 0.635,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.605
+      ],
+      [
+       "standup_comic",
+       0.08
+      ],
+      [
+       "librarian",
+       0.06
+      ],
+      [
+       "investigative_journalist",
+       0.055
+      ],
+      [
+       "er_nurse",
+       0.035
+      ]
+     ],
+     "win_counts": {
+      "helpful_ai_assistant": 121,
+      "flight_attendant": 3,
+      "textbook": 4,
+      "standup_comic": 16,
+      "er_nurse": 7,
+      "librarian": 12,
+      "conspiracy_blogger": 1,
+      "retired_engineer": 5,
+      "investigative_journalist": 11,
+      "poet": 2,
+      "victorian_butler": 1,
+      "corporate_faq": 2,
+      "military_strategist": 1,
+      "farmer": 6,
+      "sports_coach": 2,
+      "therapist": 4,
+      "academic_philosopher": 1,
+      "defence_lawyer": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.387238583330027,
+       "median_max_conf": 0.3661930586895393,
+       "mean_entropy_bits": 3.1960521744242074,
+       "frac_below_floor": 0.91,
+       "control_share": 0.6,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.56
+        ],
+        [
+         "librarian",
+         0.09
+        ],
+        [
+         "standup_comic",
+         0.08
+        ],
+        [
+         "er_nurse",
+         0.05
+        ],
+        [
+         "investigative_journalist",
+         0.05
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 56,
+        "flight_attendant": 3,
+        "textbook": 2,
+        "standup_comic": 8,
+        "er_nurse": 5,
+        "librarian": 9,
+        "conspiracy_blogger": 1,
+        "retired_engineer": 3,
+        "investigative_journalist": 5,
+        "poet": 1,
+        "victorian_butler": 1,
+        "corporate_faq": 2,
+        "military_strategist": 1,
+        "farmer": 1,
+        "sports_coach": 2
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.3988090346464284,
+       "median_max_conf": 0.3329818143173857,
+       "mean_entropy_bits": 3.1859271969828398,
+       "frac_below_floor": 0.83,
+       "control_share": 0.67,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.65
+        ],
+        [
+         "standup_comic",
+         0.08
+        ],
+        [
+         "investigative_journalist",
+         0.06
+        ],
+        [
+         "farmer",
+         0.05
+        ],
+        [
+         "therapist",
+         0.04
+        ]
+       ],
+       "win_counts": {
+        "standup_comic": 8,
+        "farmer": 5,
+        "retired_engineer": 2,
+        "helpful_ai_assistant": 65,
+        "er_nurse": 2,
+        "investigative_journalist": 6,
+        "therapist": 4,
+        "academic_philosopher": 1,
+        "defence_lawyer": 1,
+        "poet": 1,
+        "textbook": 2,
+        "librarian": 3
+       }
+      }
+     }
+    }
+   }
+  },
+  "gaps_chat_minus_agentic": {
+   "3.5|trunc": {
+    "max_conf": {
+     "diff": 0.20251642324346358,
+     "lo": 0.16941513278521392,
+     "hi": 0.23723041620850643
+    },
+    "entropy": {
+     "diff": -0.8375666311830865,
+     "lo": -0.9801022757543845,
+     "hi": -0.6948852341942536
+    },
+    "below": {
+     "diff": -0.34554973821989526,
+     "lo": -0.418848167539267,
+     "hi": -0.2670157068062827
+    }
+   },
+   "3.5|full": {
+    "max_conf": {
+     "diff": 0.12906902923330799,
+     "lo": 0.09778207333405654,
+     "hi": 0.16126087226128255
+    },
+    "entropy": {
+     "diff": -0.45547738161730084,
+     "lo": -0.5934876902967737,
+     "hi": -0.3072836370752229
+    },
+    "below": {
+     "diff": -0.24607329842931938,
+     "lo": -0.32460732984293195,
+     "hi": -0.16753926701570682
+    }
+   },
+   "3.6|trunc": {
+    "max_conf": {
+     "diff": 0.09155880072505805,
+     "lo": 0.059223814481442635,
+     "hi": 0.12550043090766602
+    },
+    "entropy": {
+     "diff": -0.44537552637950184,
+     "lo": -0.6038461362301526,
+     "hi": -0.30315958774212254
+    },
+    "below": {
+     "diff": -0.14210526315789473,
+     "lo": -0.21592105263157896,
+     "hi": -0.06842105263157895
+    }
+   },
+   "3.6|full": {
+    "max_conf": {
+     "diff": 0.058856503032553846,
+     "lo": 0.026992744815990018,
+     "hi": 0.09134584565754421
+    },
+    "entropy": {
+     "diff": -0.3645126436538826,
+     "lo": -0.4968078390006043,
+     "hi": -0.23064896250061925
+    },
+    "below": {
+     "diff": -0.12105263157894737,
+     "lo": -0.20013157894736844,
+     "hi": -0.042105263157894736
+    }
+   },
+   "3.8|trunc": {
+    "max_conf": {
+     "diff": -0.01943802767690843,
+     "lo": -0.04978127210999735,
+     "hi": 0.011082706842510769
+    },
+    "entropy": {
+     "diff": 0.07848060707852916,
+     "lo": -0.037816672435978006,
+     "hi": 0.18792216735308365
+    },
+    "below": {
+     "diff": 0.06806282722513089,
+     "lo": 0.0,
+     "hi": 0.13612565445026178
+    }
+   },
+   "3.8|full": {
+    "max_conf": {
+     "diff": -0.052935818027531965,
+     "lo": -0.0773105628602321,
+     "hi": -0.028906605018216933
+    },
+    "entropy": {
+     "diff": 0.22549172993601665,
+     "lo": 0.12012910937007643,
+     "hi": 0.33032616594872594
+    },
+    "below": {
+     "diff": 0.08376963350785341,
+     "lo": 0.03664921465968586,
+     "hi": 0.14136125654450263
+    }
+   }
+  },
+  "cross_version_raw": {
+   "3.8-3.5|chat|trunc": {
+    "max_conf": {
+     "diff": -0.31023759457262146,
+     "lo": -0.34248385510885465,
+     "hi": -0.27787712370055123
+    },
+    "entropy": {
+     "diff": 1.4789016319156532,
+     "lo": 1.3314841396226822,
+     "hi": 1.6124829505125637
+    },
+    "below": {
+     "diff": 0.545,
+     "lo": 0.47,
+     "hi": 0.615
+    }
+   },
+   "3.6-3.5|chat|trunc": {
+    "max_conf": {
+     "diff": -0.045562445237952005,
+     "lo": -0.0719847769671582,
+     "hi": -0.020722549772067812
+    },
+    "entropy": {
+     "diff": 0.22467000181402966,
+     "lo": 0.10839823199541765,
+     "hi": 0.3331726650208701
+    },
+    "below": {
+     "diff": 0.075,
+     "lo": 0.015,
+     "hi": 0.135
+    }
+   },
+   "3.8-3.6|chat|trunc": {
+    "max_conf": {
+     "diff": -0.26467514933466946,
+     "lo": -0.3003042453315353,
+     "hi": -0.23097236303419214
+    },
+    "entropy": {
+     "diff": 1.2542316301016232,
+     "lo": 1.10029669682271,
+     "hi": 1.4059228696611603
+    },
+    "below": {
+     "diff": 0.47,
+     "lo": 0.395,
+     "hi": 0.55
+    }
+   },
+   "3.8-3.5|agentic|trunc": {
+    "max_conf": {
+     "diff": -0.09419819549706687,
+     "lo": -0.13186392590288565,
+     "hi": -0.057634036870270786
+    },
+    "entropy": {
+     "diff": 0.5874384322855246,
+     "lo": 0.44162142127572773,
+     "hi": 0.7392791652539745
+    },
+    "below": {
+     "diff": 0.14130434782608695,
+     "lo": 0.059782608695652176,
+     "hi": 0.22282608695652173
+    }
+   },
+   "3.6-3.5|agentic|trunc": {
+    "max_conf": {
+     "diff": 0.060511397559727426,
+     "lo": 0.027810447995603615,
+     "hi": 0.09378575836844683
+    },
+    "entropy": {
+     "diff": -0.1440446531558932,
+     "lo": -0.2848801307532979,
+     "hi": -0.001818088389236201
+    },
+    "below": {
+     "diff": -0.11891891891891893,
+     "lo": -0.20540540540540542,
+     "hi": -0.03770270270270344
+    }
+   },
+   "3.8-3.6|agentic|trunc": {
+    "max_conf": {
+     "diff": -0.15052339859923405,
+     "lo": -0.1882854457113151,
+     "hi": -0.11438253538263182
+    },
+    "entropy": {
+     "diff": 0.7172002894124344,
+     "lo": 0.5673038157601435,
+     "hi": 0.8613635753709881
+    },
+    "below": {
+     "diff": 0.24731182795698925,
+     "lo": 0.16666666666666666,
+     "hi": 0.3279569892473118
+    }
+   },
+   "3.8-3.5|chat|full": {
+    "max_conf": {
+     "diff": -0.32590705822949206,
+     "lo": -0.3561716652337944,
+     "hi": -0.29369649060656083
+    },
+    "entropy": {
+     "diff": 1.535508450738016,
+     "lo": 1.4002214938380106,
+     "hi": 1.67236979727225
+    },
+    "below": {
+     "diff": 0.575,
+     "lo": 0.505,
+     "hi": 0.645
+    }
+   },
+   "3.6-3.5|chat|full": {
+    "max_conf": {
+     "diff": -0.036725618937163744,
+     "lo": -0.0609862034842038,
+     "hi": -0.013606374686393953
+    },
+    "entropy": {
+     "diff": 0.08987487421917864,
+     "lo": -0.010802936607646876,
+     "hi": 0.19324344342573327
+    },
+    "below": {
+     "diff": 0.08,
+     "lo": 0.015,
+     "hi": 0.145
+    }
+   },
+   "3.8-3.6|chat|full": {
+    "max_conf": {
+     "diff": -0.28918143929232826,
+     "lo": -0.3220636678370064,
+     "hi": -0.2542217022491802
+    },
+    "entropy": {
+     "diff": 1.4456335765188373,
+     "lo": 1.2925226569125405,
+     "hi": 1.6019572079413862
+    },
+    "below": {
+     "diff": 0.495,
+     "lo": 0.42,
+     "hi": 0.565
+    }
+   },
+   "3.8-3.5|agentic|full": {
+    "max_conf": {
+     "diff": -0.14704258540799847,
+     "lo": -0.18287019144706945,
+     "hi": -0.11149865936491575
+    },
+    "entropy": {
+     "diff": 0.8594176141316153,
+     "lo": 0.7150954434570422,
+     "hi": 1.010159783862633
+    },
+    "below": {
+     "diff": 0.24456521739130435,
+     "lo": 0.15760869565217392,
+     "hi": 0.32065217391304346
+    }
+   },
+   "3.6-3.5|agentic|full": {
+    "max_conf": {
+     "diff": 0.02819297269652469,
+     "lo": -0.0028795646139051787,
+     "hi": 0.059276157663199686
+    },
+    "entropy": {
+     "diff": 0.02074093029132372,
+     "lo": -0.10299576624776387,
+     "hi": 0.14778856971285936
+    },
+    "below": {
+     "diff": -0.03783783783783784,
+     "lo": -0.12432432432432433,
+     "hi": 0.04864864864864865
+    }
+   },
+   "3.8-3.6|agentic|full": {
+    "max_conf": {
+     "diff": -0.1740941523252014,
+     "lo": -0.20781365790023826,
+     "hi": -0.14087339830079001
+    },
+    "entropy": {
+     "diff": 0.8381372801778854,
+     "lo": 0.7064318532398011,
+     "hi": 0.9738198242945987
+    },
+    "below": {
+     "diff": 0.27956989247311825,
+     "lo": 0.1989247311827957,
+     "hi": 0.3602150537634409
+    }
+   }
+  },
+  "paraphrase_floor": {
+   "source": "3.5|chat",
+   "n": 199,
+   "trunc": {
+    "n": 199,
+    "mean_max_conf": 0.7218408783485258,
+    "median_max_conf": 0.8077847847248251,
+    "mean_entropy_bits": 1.7421704210919837,
+    "frac_below_floor": 0.2964824120603015,
+    "control_share": 0.9447236180904522,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.925
+     ],
+     [
+      "er_nurse",
+      0.02
+     ],
+     [
+      "standup_comic",
+      0.015
+     ],
+     [
+      "textbook",
+      0.01
+     ],
+     [
+      "farmer",
+      0.01
+     ]
+    ],
+    "win_counts": {
+     "helpful_ai_assistant": 184,
+     "er_nurse": 4,
+     "standup_comic": 3,
+     "flight_attendant": 1,
+     "startup_founder": 1,
+     "textbook": 2,
+     "farmer": 2,
+     "corporate_faq": 2
+    },
+    "winner_agreement_with_source": 0.9447236180904522,
+    "source_minus_paraphrase": {
+     "max_conf": {
+      "diff": 0.06793345827098964,
+      "lo": 0.051789890998312375,
+      "hi": 0.08501045418904861
+     },
+     "entropy": {
+      "diff": -0.4403031078604232,
+      "lo": -0.5099734796165666,
+      "hi": -0.37064608382430186
+     },
+     "below": {
+      "diff": -0.08040201005025126,
+      "lo": -0.1306532663316583,
+      "hi": -0.02512562814070352
+     }
+    }
+   },
+   "full": {
+    "n": 199,
+    "mean_max_conf": 0.6398667345967394,
+    "median_max_conf": 0.6656097706249684,
+    "mean_entropy_bits": 2.0777956682707246,
+    "frac_below_floor": 0.4824120603015075,
+    "control_share": 0.9396984924623115,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.91
+     ],
+     [
+      "er_nurse",
+      0.02
+     ],
+     [
+      "textbook",
+      0.02
+     ],
+     [
+      "standup_comic",
+      0.015
+     ],
+     [
+      "farmer",
+      0.01
+     ]
+    ],
+    "win_counts": {
+     "helpful_ai_assistant": 181,
+     "er_nurse": 4,
+     "standup_comic": 3,
+     "flight_attendant": 1,
+     "startup_founder": 1,
+     "textbook": 4,
+     "farmer": 2,
+     "corporate_faq": 2,
+     "defence_lawyer": 1
+    },
+    "winner_agreement_with_source": 0.9296482412060302,
+    "source_minus_paraphrase": {
+     "max_conf": {
+      "diff": 0.07999180387093854,
+      "lo": 0.0637753735913497,
+      "hi": 0.09693920988169125
+     },
+     "entropy": {
+      "diff": -0.42811485871289395,
+      "lo": -0.49650463721701876,
+      "hi": -0.36395680286375676
+     },
+     "below": {
+      "diff": -0.19095477386934673,
+      "lo": -0.25125628140703515,
+      "hi": -0.1306532663316583
+     }
+    }
+   }
+  }
+ },
+ "spend": {
+  "T11_total_usd": 12.208959380000179,
+  "harness_total_usd": 29.17123772499989,
+  "by_task": {
+   "T11_ref": 4.918,
+   "T11_def": 3.863,
+   "T11_para": 2.896,
+   "T11_ref38": 0.532
+  }
+ },
+ "elapsed_s": 592.6073379516602
+}

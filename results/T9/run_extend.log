@@ -1,0 +1,13 @@
+T9: 11 episodes to run (79 already complete); harness spend $27.422, T9 spend $2.378, T9 cap $10.0; settings {'temperature': 0.6, 'top_p': 0.95, 'max_tokens': 8000, 'thinking': True, 'reasoning_effort': 'medium'}; provider deepinfra
+  3.5/A/ep5: ok turns=25 trunc=0 cost=$0.020 | done 1/11 T9 spend $2.38 (6s)
+  3.5/A/ep4: ok turns=30 trunc=0 cost=$0.036 | done 2/11 T9 spend $2.40 (14s)
+  3.8/C/ep7: ok turns=25 trunc=0 cost=$0.013 | done 3/11 T9 spend $2.41 (20s)
+  3.5/C/ep7: ok turns=29 trunc=0 cost=$0.030 | done 4/11 T9 spend $2.41 (21s)
+  3.6/A/ep3: ok turns=30 trunc=0 cost=$0.037 | done 5/11 T9 spend $2.42 (22s)
+  3.5/A/ep8: ok turns=26 trunc=0 cost=$0.016 | done 6/11 T9 spend $2.42 (27s)
+  3.5/C/ep8: ok turns=25 trunc=0 cost=$0.016 | done 7/11 T9 spend $2.43 (28s)
+  3.5/A/ep0: ok turns=19 trunc=0 cost=$0.015 | done 8/11 T9 spend $2.44 (35s)
+  3.5/A/ep9: ok turns=30 trunc=0 cost=$0.021 | done 9/11 T9 spend $2.45 (41s)
+  3.5/A/ep7: ok turns=40 trunc=0 cost=$0.047 | done 10/11 T9 spend $2.45 (51s)
+  3.8/C/ep1: ok turns=32 trunc=0 cost=$0.021 | done 11/11 T9 spend $2.46 (109s)
+finished: 11 complete, 0 incomplete; T9 spend $2.461; harness total $27.667

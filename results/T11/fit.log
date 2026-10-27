@@ -1,0 +1,15 @@
+reference: 6000 answers, 30 personas, 200 questions; truncated at 350 tokens 0.697
+reference word counts: mean 215, p99 293 (default answers truncated to this for the primary analysis)
+  C=1.0: held-out accuracy 0.958  (231s)
+  C=4.0: held-out accuracy 0.964  (443s)
+  C=16.0: held-out accuracy 0.966  (697s)
+best C=16.0, held-out acc 0.966; chance 0.033; per-kind {'scenario': 0.936, 'generic': 0.9966666666666667}; floor (p10 of held-out max-conf) 0.651
+top confusions: [('textbook', 'helpful_ai_assistant', 8), ('helpful_ai_assistant', 'textbook', 6), ('helpful_ai_assistant', 'corporate_faq', 6), ('helpful_ai_assistant', 'er_nurse', 6), ('er_nurse', 'helpful_ai_assistant', 5), ('investigative_journalist', 'librarian', 5), ('helpful_ai_assistant', 'librarian', 5), ('investigative_journalist', 'defence_lawyer', 4)]
+3.5 agentic: n=191 trunc-rate 0.00 tool 0.09 words 208 | conf 0.588 ent 2.14 below 0.55 top [('helpful_ai_assistant', 0.822), ('textbook', 0.052), ('er_nurse', 0.031)]
+3.5 chat: n=200 trunc-rate 0.01 tool 0.00 words 527 | conf 0.787 ent 1.32 below 0.22 top [('helpful_ai_assistant', 0.96), ('er_nurse', 0.015), ('standup_comic', 0.005)]
+3.6 agentic: n=190 trunc-rate 0.00 tool 0.23 words 241 | conf 0.647 ent 2.00 below 0.44 top [('helpful_ai_assistant', 0.905), ('er_nurse', 0.032), ('standup_comic', 0.016)]
+3.6 chat: n=200 trunc-rate 0.01 tool 0.00 words 464 | conf 0.742 ent 1.54 below 0.29 top [('helpful_ai_assistant', 0.92), ('er_nurse', 0.02), ('bureaucrat', 0.015)]
+3.8 agentic: n=191 trunc-rate 0.00 tool 0.25 words 278 | conf 0.493 ent 2.73 below 0.70 top [('helpful_ai_assistant', 0.764), ('standup_comic', 0.058), ('librarian', 0.042)]
+3.8 chat: n=200 trunc-rate 0.01 tool 0.00 words 440 | conf 0.477 ent 2.79 below 0.77 top [('helpful_ai_assistant', 0.725), ('librarian', 0.05), ('standup_comic', 0.045)]
+paraphrase floor (3.5 chat, n=199): conf 0.722 ent 1.74 agreement 0.94
+wrote fit.json and README.md; 762s

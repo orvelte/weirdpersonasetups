@@ -1,0 +1,7 @@
+50 prompts; spend before: $2.890; settings: {'temperature': 0.6, 'top_p': 0.95, 'max_tokens': 8000, 'thinking': True, 'reasoning_effort': 'medium'}; provider=deepinfra
+  T3: 300 done, spend $2.89
+turn 1 done in 0s; spend $2.890
+26 tool-calling responses get a second turn
+  T3: 26 done, spend $2.99
+all calls done; spend $2.992
+wrote 300 rows; spend after: $2.992

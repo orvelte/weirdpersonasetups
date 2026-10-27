@@ -1,0 +1,33 @@
+1500 rows from ['raw_3.5.jsonl', 'raw_3.6.jsonl', 'raw_3.8.jsonl']
+
+arm/source           ver  ASSISTANT                DOCUMENT                 OTHER                    truncated                ASSISTANT(strong only)   chat_tok  trunc_empty
+raw/vllm             3.5  29% [25, 33] (n=500)     57% [53, 61] (n=500)     14% [11, 17] (n=500)     89% [86, 91] (n=500)     28% [24, 32] (n=500)     115/500  0/500
+raw/vllm             3.6  32% [28, 36] (n=500)     54% [50, 59] (n=500)     14% [11, 17] (n=500)     88% [85, 91] (n=500)     32% [28, 36] (n=500)     129/500  0/500
+raw/vllm             3.8  18% [15, 21] (n=500)     67% [63, 71] (n=500)     15% [12, 18] (n=500)     91% [88, 93] (n=500)     16% [13, 20] (n=500)     14/500  0/500
+(raw arm 'truncated' = hit the 200-token cap, which is expected for an open-ended continuation; trunc_empty = no visible answer)
+
+ASSISTANT fraction by family (rows: family; cols: arm/source ver)
+family     raw/vllm 3.5 | raw/vllm 3.6 | raw/vllm 3.8
+document   18% [11, 30] (n=65)      | 6% [2, 15] (n=65)        | 3% [1, 11] (n=65)       
+code       12% [6, 22] (n=65)       | 3% [1, 11] (n=65)        | 3% [1, 11] (n=65)       
+forum      68% [56, 79] (n=60)      | 77% [65, 86] (n=60)      | 35% [24, 48] (n=60)     
+fiction    2% [0, 9] (n=60)         | 13% [7, 24] (n=60)       | 5% [2, 14] (n=60)       
+email      90% [80, 95] (n=60)      | 85% [74, 92] (n=60)      | 52% [39, 64] (n=60)     
+fragment   20% [12, 31] (n=65)      | 38% [28, 51] (n=65)      | 29% [20, 41] (n=65)     
+dialogue   25% [16, 37] (n=60)      | 37% [26, 49] (n=60)      | 17% [9, 28] (n=60)      
+repeat     0% [0, 6] (n=65)         | 0% [0, 6] (n=65)         | 2% [0, 8] (n=65)        
+
+OTHER fraction by family (degenerate repetition / empty / truncated-empty)
+document   2% [0, 8] (n=65)         | 0% [0, 6] (n=65)         | 0% [0, 6] (n=65)        
+code       0% [0, 6] (n=65)         | 2% [0, 8] (n=65)         | 0% [0, 6] (n=65)        
+forum      0% [-0, 6] (n=60)        | 0% [-0, 6] (n=60)        | 0% [-0, 6] (n=60)       
+fiction    0% [-0, 6] (n=60)        | 0% [-0, 6] (n=60)        | 0% [-0, 6] (n=60)       
+email      0% [-0, 6] (n=60)        | 0% [-0, 6] (n=60)        | 0% [-0, 6] (n=60)       
+fragment   6% [2, 15] (n=65)        | 6% [2, 15] (n=65)        | 14% [7, 24] (n=65)      
+dialogue   0% [-0, 6] (n=60)        | 0% [-0, 6] (n=60)        | 2% [0, 9] (n=60)        
+repeat     100% [94, 100] (n=65)    | 100% [94, 100] (n=65)    | 98% [92, 100] (n=65)    
+
+Within-version gap: raw arm not present yet (pending vLLM server).
+
+Top firing signals per arm/source:
+  raw/vllm: chat_tokens=256, weak:second_person_introduced=228, doc:more_script_lines=179, doc:more_code=173, markdown_introduced=163, weak:code_prompt_prose_reply=49, doc:wiki_markup=48, weak:let_me_know=42, weak:heres=40, weak:numbered_list_introduced=37, heres_assist=32, heres_leadin=28

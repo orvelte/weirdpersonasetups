@@ -1,0 +1,528 @@
+[
+ {
+  "id": "document_01",
+  "family": "document",
+  "text": "WASHINGTON — The Senate on Tuesday narrowly approved a $1.2 trillion infrastructure package, sending the measure to the House, where"
+ },
+ {
+  "id": "document_02",
+  "family": "document",
+  "text": "LONDON (Reuters) - British inflation unexpectedly fell to 3.1% in September, official figures showed on Wednesday,"
+ },
+ {
+  "id": "document_03",
+  "family": "document",
+  "text": "The Great Barrier Reef is the world's largest coral reef system, composed of over 2,900 individual reefs and 900 islands stretching for over 2,300 kilometres"
+ },
+ {
+  "id": "document_04",
+  "family": "document",
+  "text": "Ada Lovelace (10 December 1815 – 27 November 1852) was an English mathematician and writer, chiefly known for her work on"
+ },
+ {
+  "id": "document_05",
+  "family": "document",
+  "text": "Tokyo, officially the Tokyo Metropolis, is the capital and most populous city of Japan. With a population of"
+ },
+ {
+  "id": "document_06",
+  "family": "document",
+  "text": "Classic Banana Bread\n\nPrep time: 15 minutes\nCook time: 60 minutes\nServes: 8\n\nIngredients:\n- 3 ripe bananas, mashed\n- 1/3 cup melted butter\n-"
+ },
+ {
+  "id": "document_07",
+  "family": "document",
+  "text": "Slow-Cooker Beef Chili\n\nThis hearty chili comes together in ten minutes of prep and then the slow cooker does the rest.\n\nIngredients\n\n2 lb ground beef\n1 large onion, diced\n"
+ },
+ {
+  "id": "document_08",
+  "family": "document",
+  "text": "MANCHESTER, England — Manchester City extended its lead at the top of the Premier League to five points on Saturday with a 3-1 victory over"
+ },
+ {
+  "id": "document_09",
+  "family": "document",
+  "text": "Photosynthesis is a biological process by which photosynthetic organisms, such as most plants, algae, and cyanobacteria, convert light energy into"
+ },
+ {
+  "id": "document_10",
+  "family": "document",
+  "text": "FOR IMMEDIATE RELEASE\n\nSan Francisco, CA — March 4, 2024 — Lumen Robotics today announced the closing of a $40 million Series B funding round led by"
+ },
+ {
+  "id": "document_11",
+  "family": "document",
+  "text": "The French Revolution was a period of political and societal change in France that began with the Estates General of 1789 and ended with"
+ },
+ {
+  "id": "document_12",
+  "family": "document",
+  "text": "Easy Weeknight Pad Thai\n\n★★★★☆ 4.6 (312 reviews)\n\nSkip the takeout — this pad thai uses pantry staples and is on the table in 25 minutes.\n\nINGREDIENTS\n8 oz dried rice noodles\n"
+ },
+ {
+  "id": "document_13",
+  "family": "document",
+  "text": "A magnitude 6.2 earthquake struck off the coast of northern Chile early Monday, the U.S. Geological Survey said, with no immediate reports of"
+ },
+ {
+  "id": "code_01",
+  "family": "code",
+  "text": "def parse_config(path):\n    \"\"\"Read a YAML config file and return a dict with defaults applied.\"\"\"\n    with open(path) as f:\n        raw = yaml.safe_load(f)\n    defaults = {\n        \"timeout\": 30,\n        \"retries\": 3,\n"
+ },
+ {
+  "id": "code_02",
+  "family": "code",
+  "text": "{\n  \"name\": \"inventory-service\",\n  \"version\": \"2.4.1\",\n  \"description\": \"Tracks stock levels across warehouses\",\n  \"main\": \"src/index.js\",\n  \"scripts\": {\n    \"start\": \"node src/index.js\",\n    \"test\": \"jest --coverage\",\n    \"lint\":"
+ },
+ {
+  "id": "code_03",
+  "family": "code",
+  "text": "import pandas as pd\nimport matplotlib.pyplot as plt\n\ndf = pd.read_csv(\"data/housing.csv\")\ndf.head()\n\n# Out[2]:\n#       price  bedrooms  sqft  year_built\n# 0  245000         3  1420        1987\n# 1  312000         4  1890        2001\n\n# In[3]:\ndf.groupby(\"bedrooms\")[\"price\"]."
+ },
+ {
+  "id": "code_04",
+  "family": "code",
+  "text": "{\n \"cells\": [\n  {\n   \"cell_type\": \"markdown\",\n   \"metadata\": {},\n   \"source\": [\n    \"# Exploratory analysis of customer churn\\n\",\n    \"\\n\",\n    \"This notebook loads the churn dataset and"
+ },
+ {
+  "id": "code_05",
+  "family": "code",
+  "text": "class LRUCache:\n    def __init__(self, capacity: int):\n        self.capacity = capacity\n        self.cache = OrderedDict()\n\n    def get(self, key):\n        if key not in self.cache:\n            return -1\n        self.cache.move_to_end(key)\n        return self.cache[key]\n\n    def put(self, key, value):\n"
+ },
+ {
+  "id": "code_06",
+  "family": "code",
+  "text": "export async function fetchUsers(page = 1, limit = 20) {\n  const res = await fetch(`${API_BASE}/users?page=${page}&limit=${limit}`);\n  if (!res.ok) {\n    throw new Error(`Failed to fetch users: ${res.status}`);\n  }\n  const data = await res.json();\n  return data.users.map((u) => ({\n    id: u.id,\n"
+ },
+ {
+  "id": "code_07",
+  "family": "code",
+  "text": "-- Monthly active users by region, last 12 months\nSELECT\n    DATE_TRUNC('month', e.created_at) AS month,\n    u.region,\n    COUNT(DISTINCT e.user_id) AS mau\nFROM events e\nJOIN users u ON u.id = e.user_id\nWHERE e.created_at >= "
+ },
+ {
+  "id": "code_08",
+  "family": "code",
+  "text": "import pytest\nfrom textutils import slugify\n\n\ndef test_slugify_basic():\n    assert slugify(\"Hello World\") == \"hello-world\"\n\n\ndef test_slugify_strips_punctuation():\n    assert slugify(\"Hello, World!\") == \"hello-world\"\n\n\ndef test_slugify_"
+ },
+ {
+  "id": "code_09",
+  "family": "code",
+  "text": "#!/usr/bin/env bash\nset -euo pipefail\n\n# Rotate logs older than 7 days and compress them\nLOG_DIR=/var/log/myapp\nfind \"$LOG_DIR\" -name '*.log' -mtime +7 "
+ },
+ {
+  "id": "code_10",
+  "family": "code",
+  "text": "{\"status\": \"ok\", \"data\": {\"user\": {\"id\": 48213, \"username\": \"mkaplan\", \"email\": \"m.kaplan@example.com\", \"created_at\": \"2021-07-14T09:22:51Z\", \"roles\": [\"editor\", "
+ },
+ {
+  "id": "code_11",
+  "family": "code",
+  "text": "use std::collections::HashMap;\n\nfn word_counts(text: &str) -> HashMap<String, usize> {\n    let mut counts = HashMap::new();\n    for word in text.split_whitespace() {\n"
+ },
+ {
+  "id": "code_12",
+  "family": "code",
+  "text": "def merge_intervals(intervals):\n    # sort by start, then sweep\n    intervals.sort(key=lambda iv: iv[0])\n    merged = []\n    for start, end in intervals:\n        if merged and start <= merged[-1][1]:\n"
+ },
+ {
+  "id": "code_13",
+  "family": "code",
+  "text": "%matplotlib inline\nimport numpy as np\nimport seaborn as sns\n\nx = np.linspace(0, 2 * np.pi, 200)\ny = np.sin(x) + 0.1 * np.random.randn(200)\n\nsns.set_theme()\nplt.figure(figsize=(8, 4))\nplt."
+ },
+ {
+  "id": "forum_01",
+  "family": "forum",
+  "text": "r/personalfinance\n\nPosted by u/throwaway_budget22 · 4h\n\n[27F] Just got my first real salary and have no idea what to do with it\n\nSo I finally landed a job paying 68k after years of barely scraping by. My rent is 1400 and I have about 9k in student loans left. Everyone keeps telling me to"
+ },
+ {
+  "id": "forum_02",
+  "family": "forum",
+  "text": "Title: Why does my Python list comprehension return None for every element?\n\nI'm trying to build a list of squared values but I keep getting a list of None. Here's my code:\n\n```python\nresult = [print(x**2) for x in range(5)]\n```\n\nWhen I"
+ },
+ {
+  "id": "forum_03",
+  "family": "forum",
+  "text": "AITA for refusing to let my sister use my wedding venue deposit?\n\nThrowaway because she lurks here. Background: I (31M) put down a $4,000 non-refundable deposit on a venue last year. Then my fiancée and I postponed, and the venue said we could transfer the date. My sister (28F) got engaged two months ago and"
+ },
+ {
+  "id": "forum_04",
+  "family": "forum",
+  "text": "Git: how do I undo the last commit but keep my changes?\n\nI accidentally committed to master instead of my feature branch. I haven't pushed yet. I want to keep the changes in my working directory but remove the commit. I tried"
+ },
+ {
+  "id": "forum_05",
+  "family": "forum",
+  "text": "Posted in r/running\n\nFirst half marathon in 6 weeks, am I undertrained? (long)\n\nCurrent weekly mileage is around 18-20 miles, longest run so far was 8 miles last Sunday. I've been following a plan I found online but I skipped two weeks in August because of"
+ },
+ {
+  "id": "forum_06",
+  "family": "forum",
+  "text": "Docker container exits immediately with code 0\n\nI have a simple Dockerfile:\n\n```\nFROM python:3.11-slim\nCOPY app.py /app/app.py\nCMD python /app/app.py\n```\n\nWhen I run `docker run myimage` it starts and then exits right away with status 0. The script itself"
+ },
+ {
+  "id": "forum_07",
+  "family": "forum",
+  "text": "r/Cooking · Posted by u/saltfatacidheat\n\nWhat am I doing wrong with my sourdough? Dense and gummy every time\n\nI've been at this for three months. My starter is active (doubles in 4-5 hours), I bulk ferment for about 5 hours at room temp, shape, then cold retard overnight. The crumb is always"
+ },
+ {
+  "id": "forum_08",
+  "family": "forum",
+  "text": "jeffreyp 3 hours ago | parent | next [–]\n\nThe real issue is that nobody actually reads the Terms of Service. I worked at a company that\n\n  dannyboy 2 hours ago | root | parent | next [–]\n\n  That's not quite right. Courts have repeatedly held that"
+ },
+ {
+  "id": "forum_09",
+  "family": "forum",
+  "text": "How to center a div horizontally and vertically in CSS?\n\nI know this gets asked a lot but none of the answers work for my case. I have a parent with `display: block` and fixed height, and a child div that I want centered. Here's what I've tried:\n\n```css\n.parent {\n  height: 400px;\n"
+ },
+ {
+  "id": "forum_10",
+  "family": "forum",
+  "text": "My (34M) wife (33F) wants to move across the country for her job and I don't know how to tell her I don't want to go\n\nWe've been married 6 years. She got offered a director position in Seattle, basically a dream job. The problem is my whole family is here, my business is here, and"
+ },
+ {
+  "id": "forum_11",
+  "family": "forum",
+  "text": "pandas: groupby then apply a function that returns multiple columns\n\nI have a DataFrame like this:\n\n```\n   group  value\n0      a      1\n1      a      4\n2      b      2\n```\n\nFor each group I want to compute both the mean and the standard deviation and get them back as two new columns. I tried `df.groupby('group')['value'].apply(lambda s: (s.mean(), s.std()))` but"
+ },
+ {
+  "id": "forum_12",
+  "family": "forum",
+  "text": "r/buildapc\n\nFirst build, PC turns on but no display — what did I do wrong?\n\nSpecs: Ryzen 5 7600, RTX 4070, 32GB DDR5, B650 board, 750W PSU. Fans spin, RGB lights up, but the monitor says no signal. I've tried both HDMI and DisplayPort on the GPU. The motherboard has a"
+ },
+ {
+  "id": "fiction_01",
+  "family": "fiction",
+  "text": "The morning the lighthouse went dark, Marguerite was already halfway down the cliff path with the bucket of"
+ },
+ {
+  "id": "fiction_02",
+  "family": "fiction",
+  "text": "Nobody in Harlow's Crossing could remember exactly when the Keller boy had stopped speaking, only that it had been sometime after the flood, and that his mother"
+ },
+ {
+  "id": "fiction_03",
+  "family": "fiction",
+  "text": "Chapter One\n\nThe letter arrived on a Tuesday, which Elena would later think was the first unremarkable thing about it. It was addressed to her grandmother, who had been dead for"
+ },
+ {
+  "id": "fiction_04",
+  "family": "fiction",
+  "text": "\"You're late,\" said the man at the gate, without looking up from his ledger.\n\n\"The train was—\"\n\n\"They always are.\" He turned a page. \"Name?\"\n\n\"Oren Vask.\"\n\nThe pen stopped."
+ },
+ {
+  "id": "fiction_05",
+  "family": "fiction",
+  "text": "The ship had been drifting for eleven days when the first of the crew began to dream of the same green door."
+ },
+ {
+  "id": "fiction_06",
+  "family": "fiction",
+  "text": "Prologue\n\nIn the last year of the old calendar, when the river froze all the way to the sea and the king's physicians"
+ },
+ {
+  "id": "fiction_07",
+  "family": "fiction",
+  "text": "Harriet Blum had three rules for the shop: no credit, no haggling, and never, under any circumstances, buy anything from the woman in the grey coat. She broke the third rule on"
+ },
+ {
+  "id": "fiction_08",
+  "family": "fiction",
+  "text": "I was nine the summer my father taught me to lie. We were sitting on the tailgate of his truck outside the feed store in Dalhart, and he"
+ },
+ {
+  "id": "fiction_09",
+  "family": "fiction",
+  "text": "The detective set the photograph face down on the table and slid it across to her.\n\n\"Tell me again where you were on the night of the fourteenth.\"\n\nShe didn't touch it."
+ },
+ {
+  "id": "fiction_10",
+  "family": "fiction",
+  "text": "On the planet Tessaly the rains came once a decade, and the whole colony stopped work to watch. Jun was six the first time, old enough to remember the smell, and sixteen the second, old enough to"
+ },
+ {
+  "id": "fiction_11",
+  "family": "fiction",
+  "text": "There is a house at the end of Pellam Road that the estate agents no longer list. Its windows are clean. Its lawn is mown. Each morning at seven, the curtains in the upstairs bedroom open, and"
+ },
+ {
+  "id": "fiction_12",
+  "family": "fiction",
+  "text": "The dragon was smaller than Tam had expected, about the size of a goat, and it was crying."
+ },
+ {
+  "id": "email_01",
+  "family": "email",
+  "text": "Subject: Re: Q3 budget review\n\nHi Priya,\n\nThanks for sending over the revised numbers. I went through the spreadsheet last night and I think the marketing line is still about 15% too high given what we discussed on"
+ },
+ {
+  "id": "email_02",
+  "family": "email",
+  "text": "From: Daniel Okafor\nTo: facilities@northgate.edu\nSubject: Broken radiator in room 214\n\nHello,\n\nThe radiator in room 214 of the Harrison building has been making a loud banging noise since Monday and now it is not producing any heat at all. I have"
+ },
+ {
+  "id": "email_03",
+  "family": "email",
+  "text": "Hi Mum,\n\nSorry I haven't written in a while, things have been hectic with the move. The new flat is smaller than we expected but the light is lovely in the mornings and Jamie has already"
+ },
+ {
+  "id": "email_04",
+  "family": "email",
+  "text": "Dear Dr. Lindqvist,\n\nI am writing to follow up on my application for the postdoctoral position in your group, submitted on 3 September. I understand you must receive many applications, but I wanted to add that since submitting I have"
+ },
+ {
+  "id": "email_05",
+  "family": "email",
+  "text": "Subject: Your order #88213-A has shipped\n\nHi Tom,\n\nGood news — your order is on its way! You can track your package using the link below. Estimated delivery is Thursday, 12 October, between"
+ },
+ {
+  "id": "email_06",
+  "family": "email",
+  "text": "Hey team,\n\nQuick update before the weekend. The staging deploy went out at 4pm and so far everything looks green except for the search service, which is throwing intermittent 502s when"
+ },
+ {
+  "id": "email_07",
+  "family": "email",
+  "text": "Dear Mr. and Mrs. Castellano,\n\nThank you for your interest in Willowbrook Preparatory. We are pleased to invite Sofia to attend an assessment day on Saturday 18 November. On the day, students will"
+ },
+ {
+  "id": "email_08",
+  "family": "email",
+  "text": "Subject: Re: Re: Re: that thing from last week\n\nok so I talked to Marcus and he says the contractor never actually got the permit, which means"
+ },
+ {
+  "id": "email_09",
+  "family": "email",
+  "text": "Hi Alex,\n\nI hope this finds you well. I'm reaching out because I'm putting together a panel for the March conference on open-source hardware, and your talk last year on"
+ },
+ {
+  "id": "email_10",
+  "family": "email",
+  "text": "To whom it may concern,\n\nI am writing to formally dispute the charge of £340 applied to my account on 14 August. I did not authorise this transaction and I was not in the country on that date. I have attached"
+ },
+ {
+  "id": "email_11",
+  "family": "email",
+  "text": "Subject: Dinner Saturday?\n\nHey Sam,\n\nAre you and Jo free on Saturday? We were thinking of trying the new Ethiopian place on Carver Street, the one that"
+ },
+ {
+  "id": "email_12",
+  "family": "email",
+  "text": "Hi all,\n\nAs discussed in standup, I'm going to be out from the 20th to the 28th. Before I go I'll make sure the migration scripts are documented and that Lena has access to"
+ },
+ {
+  "id": "fragment_01",
+  "family": "fragment",
+  "text": "cat"
+ },
+ {
+  "id": "fragment_02",
+  "family": "fragment",
+  "text": "The"
+ },
+ {
+  "id": "fragment_03",
+  "family": "fragment",
+  "text": "Hello"
+ },
+ {
+  "id": "fragment_04",
+  "family": "fragment",
+  "text": "dog"
+ },
+ {
+  "id": "fragment_05",
+  "family": "fragment",
+  "text": "Once upon a time"
+ },
+ {
+  "id": "fragment_06",
+  "family": "fragment",
+  "text": "1, 2, 3,"
+ },
+ {
+  "id": "fragment_07",
+  "family": "fragment",
+  "text": "import"
+ },
+ {
+  "id": "fragment_08",
+  "family": "fragment",
+  "text": "Monday"
+ },
+ {
+  "id": "fragment_09",
+  "family": "fragment",
+  "text": "blue"
+ },
+ {
+  "id": "fragment_10",
+  "family": "fragment",
+  "text": "In the beginning"
+ },
+ {
+  "id": "fragment_11",
+  "family": "fragment",
+  "text": "water"
+ },
+ {
+  "id": "fragment_12",
+  "family": "fragment",
+  "text": "banana"
+ },
+ {
+  "id": "fragment_13",
+  "family": "fragment",
+  "text": "the quick brown fox"
+ },
+ {
+  "id": "dialogue_01",
+  "family": "dialogue",
+  "text": "MARGARET: You said you'd be back by six.\nTHOMAS: The meeting ran over. It wasn't my call.\nMARGARET: It's never your call.\nTHOMAS:"
+ },
+ {
+  "id": "dialogue_02",
+  "family": "dialogue",
+  "text": "ACT ONE\n\nSCENE 1\n\nA kitchen in a terraced house. Early morning. RUTH, sixties, sits at the table with a cup of tea. DAVID, thirties, enters in a dressing gown.\n\nDAVID: Is there any left?\nRUTH: In the pot. It's stewed.\nDAVID: I don't mind stewed.\nRUTH:"
+ },
+ {
+  "id": "dialogue_03",
+  "family": "dialogue",
+  "text": "INTERVIEWER: So you were in the building when the alarm went off?\nWITNESS: Third floor. I was photocopying.\nINTERVIEWER: And what did you do?\nWITNESS:"
+ },
+ {
+  "id": "dialogue_04",
+  "family": "dialogue",
+  "text": "LENA: Hand me the wrench. No, the other one.\nKOFI: This one?\nLENA: That's a spanner.\nKOFI: It's the same thing.\nLENA:"
+ },
+ {
+  "id": "dialogue_05",
+  "family": "dialogue",
+  "text": "Transcript — Episode 42: The Bakery on Fifth\n\nJAMIE: Welcome back to the show. I'm here with Carla Mendes, who has run the bakery on Fifth Street for twenty-two years. Carla, thanks for coming in.\nCARLA: Thanks for having me.\nJAMIE: So let's start at the beginning. How did you"
+ },
+ {
+  "id": "dialogue_06",
+  "family": "dialogue",
+  "text": "HAMISH: (lowering the newspaper) Did you hear that?\nEDITH: Hear what?\nHAMISH: Upstairs. Like someone dragging a chair.\nEDITH: It's the pipes.\nHAMISH: Pipes don't"
+ },
+ {
+  "id": "dialogue_07",
+  "family": "dialogue",
+  "text": "CUSTOMER: I bought this toaster here last week and it's already stopped working.\nSHOPKEEPER: Do you have the receipt?\nCUSTOMER: I've got the box.\nSHOPKEEPER:"
+ },
+ {
+  "id": "dialogue_08",
+  "family": "dialogue",
+  "text": "DR. AMARI: Your bloodwork came back. Mostly fine, but your iron is low.\nMR. REYES: Low like, eat more spinach low, or\nDR. AMARI:"
+ },
+ {
+  "id": "dialogue_09",
+  "family": "dialogue",
+  "text": "TEACHER: Who can tell me what happened in 1066?\nPRIYA: The Battle of Hastings, miss.\nTEACHER: Good. And who won?\nDEV:"
+ },
+ {
+  "id": "dialogue_10",
+  "family": "dialogue",
+  "text": "Scene: A rooftop at night. Distant traffic. NOOR and SEB share a cigarette.\n\nNOOR: If you could go anywhere. Right now.\nSEB: Anywhere?\nNOOR: Anywhere.\nSEB: (long pause) Lisbon, probably.\nNOOR:"
+ },
+ {
+  "id": "dialogue_11",
+  "family": "dialogue",
+  "text": "CALLER: Yeah hi, I'm calling about the flat on Mercer Street, is it still available?\nAGENT: The two-bed? Let me check. Yes, it's still on. Were you looking to view this week?\nCALLER:"
+ },
+ {
+  "id": "dialogue_12",
+  "family": "dialogue",
+  "text": "CAPTAIN HOLM: Report.\nENSIGN TARRANT: Engine two's running hot, sir. Chief says another hour at this speed and\nCAPTAIN HOLM:"
+ },
+ {
+  "id": "repeat_01",
+  "family": "repeat",
+  "text": "company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company",
+  "word": "company",
+  "reps": 50
+ },
+ {
+  "id": "repeat_02",
+  "family": "repeat",
+  "text": "poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem",
+  "word": "poem",
+  "reps": 50
+ },
+ {
+  "id": "repeat_03",
+  "family": "repeat",
+  "text": "cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat cat",
+  "word": "cat",
+  "reps": 50
+ },
+ {
+  "id": "repeat_04",
+  "family": "repeat",
+  "text": "hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello hello",
+  "word": "hello",
+  "reps": 50
+ },
+ {
+  "id": "repeat_05",
+  "family": "repeat",
+  "text": "the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the",
+  "word": "the",
+  "reps": 50
+ },
+ {
+  "id": "repeat_06",
+  "family": "repeat",
+  "text": "data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data data",
+  "word": "data",
+  "reps": 50
+ },
+ {
+  "id": "repeat_07",
+  "family": "repeat",
+  "text": "apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple apple",
+  "word": "apple",
+  "reps": 50
+ },
+ {
+  "id": "repeat_08",
+  "family": "repeat",
+  "text": "book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book book",
+  "word": "book",
+  "reps": 50
+ },
+ {
+  "id": "repeat_09",
+  "family": "repeat",
+  "text": "river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river river",
+  "word": "river",
+  "reps": 50
+ },
+ {
+  "id": "repeat_10",
+  "family": "repeat",
+  "text": "work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work work",
+  "word": "work",
+  "reps": 50
+ },
+ {
+  "id": "repeat_11",
+  "family": "repeat",
+  "text": "time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time time",
+  "word": "time",
+  "reps": 50
+ },
+ {
+  "id": "repeat_12",
+  "family": "repeat",
+  "text": "company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company company",
+  "word": "company",
+  "reps": 200
+ },
+ {
+  "id": "repeat_13",
+  "family": "repeat",
+  "text": "poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem poem",
+  "word": "poem",
+  "reps": 200
+ }
+]

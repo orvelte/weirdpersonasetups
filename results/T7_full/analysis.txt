@@ -1,0 +1,40 @@
+2400 rows from ['raw_3.5.jsonl', 'raw_3.6.jsonl', 'raw_3.8.jsonl', 'templated_api.jsonl']
+
+arm/source           ver  ASSISTANT                DOCUMENT                 OTHER                    truncated                ASSISTANT(strong only)   chat_tok  trunc_empty
+raw/vllm             3.5  29% [25, 33] (n=500)     57% [53, 61] (n=500)     14% [11, 17] (n=500)     89% [86, 91] (n=500)     28% [24, 32] (n=500)     115/500  0/500
+raw/vllm             3.6  32% [28, 36] (n=500)     54% [50, 59] (n=500)     14% [11, 17] (n=500)     88% [85, 91] (n=500)     32% [28, 36] (n=500)     129/500  0/500
+raw/vllm             3.8  18% [15, 21] (n=500)     67% [63, 71] (n=500)     15% [12, 18] (n=500)     91% [88, 93] (n=500)     16% [13, 20] (n=500)     14/500  0/500
+templated/openrouter 3.5  70% [65, 75] (n=300)     29% [24, 34] (n=300)     1% [0, 3] (n=300)        0% [0, 1] (n=300)        70% [65, 75] (n=300)     0/300  0/300
+templated/openrouter 3.6  76% [71, 80] (n=300)     23% [18, 28] (n=300)     1% [1, 3] (n=300)        0% [0, 2] (n=300)        75% [70, 80] (n=300)     0/300  0/300
+templated/openrouter 3.8  73% [68, 78] (n=300)     25% [21, 31] (n=300)     2% [1, 4] (n=300)        0% [0, 1] (n=300)        72% [66, 76] (n=300)     0/300  0/300
+(raw arm 'truncated' = hit the 200-token cap, which is expected for an open-ended continuation; trunc_empty = no visible answer)
+
+ASSISTANT fraction by family (rows: family; cols: arm/source ver)
+family     raw/vllm 3.5 | raw/vllm 3.6 | raw/vllm 3.8 | templated/openrouter 3.5 | templated/openrouter 3.6 | templated/openrouter 3.8
+document   18% [11, 30] (n=65)      | 6% [2, 15] (n=65)        | 3% [1, 11] (n=65)        | 67% [51, 79] (n=39)      | 82% [67, 91] (n=39)      | 77% [62, 87] (n=39)     
+code       12% [6, 22] (n=65)       | 3% [1, 11] (n=65)        | 3% [1, 11] (n=65)        | 97% [87, 100] (n=39)     | 100% [91, 100] (n=39)    | 100% [91, 100] (n=39)   
+forum      68% [56, 79] (n=60)      | 77% [65, 86] (n=60)      | 35% [24, 48] (n=60)      | 94% [82, 98] (n=36)      | 97% [86, 100] (n=36)     | 100% [90, 100] (n=36)   
+fiction    2% [0, 9] (n=60)         | 13% [7, 24] (n=60)       | 5% [2, 14] (n=60)        | 22% [12, 38] (n=36)      | 44% [30, 60] (n=36)      | 22% [12, 38] (n=36)     
+email      90% [80, 95] (n=60)      | 85% [74, 92] (n=60)      | 52% [39, 64] (n=60)      | 94% [82, 98] (n=36)      | 89% [75, 96] (n=36)      | 94% [82, 98] (n=36)     
+fragment   20% [12, 31] (n=65)      | 38% [28, 51] (n=65)      | 29% [20, 41] (n=65)      | 85% [70, 93] (n=39)      | 92% [80, 97] (n=39)      | 95% [83, 99] (n=39)     
+dialogue   25% [16, 37] (n=60)      | 37% [26, 49] (n=60)      | 17% [9, 28] (n=60)       | 14% [6, 29] (n=36)       | 8% [3, 22] (n=36)        | 19% [10, 35] (n=36)     
+repeat     0% [0, 6] (n=65)         | 0% [0, 6] (n=65)         | 2% [0, 8] (n=65)         | 85% [70, 93] (n=39)      | 90% [76, 96] (n=39)      | 72% [56, 83] (n=39)     
+
+OTHER fraction by family (degenerate repetition / empty / truncated-empty)
+document   2% [0, 8] (n=65)         | 0% [0, 6] (n=65)         | 0% [0, 6] (n=65)         | 0% [0, 9] (n=39)         | 3% [0, 13] (n=39)        | 0% [0, 9] (n=39)        
+code       0% [0, 6] (n=65)         | 2% [0, 8] (n=65)         | 0% [0, 6] (n=65)         | 0% [0, 9] (n=39)         | 0% [0, 9] (n=39)         | 0% [0, 9] (n=39)        
+forum      0% [-0, 6] (n=60)        | 0% [-0, 6] (n=60)        | 0% [-0, 6] (n=60)        | 0% [0, 10] (n=36)        | 0% [0, 10] (n=36)        | 0% [0, 10] (n=36)       
+fiction    0% [-0, 6] (n=60)        | 0% [-0, 6] (n=60)        | 0% [-0, 6] (n=60)        | 0% [0, 10] (n=36)        | 0% [0, 10] (n=36)        | 0% [0, 10] (n=36)       
+email      0% [-0, 6] (n=60)        | 0% [-0, 6] (n=60)        | 0% [-0, 6] (n=60)        | 0% [0, 10] (n=36)        | 0% [0, 10] (n=36)        | 0% [0, 10] (n=36)       
+fragment   6% [2, 15] (n=65)        | 6% [2, 15] (n=65)        | 14% [7, 24] (n=65)       | 8% [3, 20] (n=39)        | 5% [1, 17] (n=39)        | 0% [0, 9] (n=39)        
+dialogue   0% [-0, 6] (n=60)        | 0% [-0, 6] (n=60)        | 2% [0, 9] (n=60)         | 0% [0, 10] (n=36)        | 3% [0, 14] (n=36)        | 0% [0, 10] (n=36)       
+repeat     100% [94, 100] (n=65)    | 100% [94, 100] (n=65)    | 98% [92, 100] (n=65)     | 0% [0, 9] (n=39)         | 0% [0, 9] (n=39)         | 13% [6, 27] (n=39)      
+
+Within-version gap (bootstrap 95%):
+  3.5: templated/openrouter - raw ASSISTANT = +42 pts [+35, +48]  (n=300 vs 500)
+  3.6: templated/openrouter - raw ASSISTANT = +44 pts [+38, +51]  (n=300 vs 500)
+  3.8: templated/openrouter - raw ASSISTANT = +55 pts [+49, +61]  (n=300 vs 500)
+
+Top firing signals per arm/source:
+  raw/vllm: chat_tokens=256, weak:second_person_introduced=228, doc:more_script_lines=179, doc:more_code=173, markdown_introduced=163, weak:code_prompt_prose_reply=49, doc:wiki_markup=48, weak:let_me_know=42, weak:heres=40, weak:numbered_list_introduced=37, heres_assist=32, heres_leadin=28
+  templated/openrouter: markdown_introduced=497, weak:second_person_introduced=440, weak:emoji=260, looks_like_you=206, let_me_know=175, heres_assist=161, is_cut_off=141, weak:bullets_in_email_or_forum=130, weak:numbered_list_introduced=120, heres_leadin=108, your_message_is=96, youve_provided=76

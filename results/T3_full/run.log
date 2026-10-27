@@ -1,0 +1,52 @@
+18:29:17 1800 cells total, 48 already in raw.jsonl, 1752 to run; harness spend before: $4.032; run budget $8.0; settings {'temperature': 0.6, 'top_p': 0.95, 'max_tokens': 8000, 'thinking': True, 'reasoning_effort': 'medium'}; provider=deepinfra; workers=8; MAX_TURNS=4
+18:29:17 projected first-turn cost (pilot-based, no cache credit): $5.69
+18:33:25   [turn1/pass1] 50/1752 done; run spend $0.184
+18:37:34   [turn1/pass1] 100/1752 done; run spend $0.392
+18:42:21   [turn1/pass1] 150/1752 done; run spend $0.640
+18:45:01   [turn1/pass1] 200/1752 done; run spend $0.757
+18:46:48   [turn1/pass1] 250/1752 done; run spend $0.857
+18:49:08   [turn1/pass1] 300/1752 done; run spend $0.982
+18:50:06   [turn1/pass1] 350/1752 done; run spend $1.031
+18:50:59   [turn1/pass1] 400/1752 done; run spend $1.118
+18:51:51   [turn1/pass1] 450/1752 done; run spend $1.170
+18:52:31   [turn1/pass1] 500/1752 done; run spend $1.214
+18:53:11   [turn1/pass1] 550/1752 done; run spend $1.257
+18:54:33   [turn1/pass1] 600/1752 done; run spend $1.346
+18:57:19   [turn1/pass1] 650/1752 done; run spend $1.589
+18:59:53   [turn1/pass1] 700/1752 done; run spend $1.829
+19:01:40   [turn1/pass1] 750/1752 done; run spend $2.031
+19:02:37   [turn1/pass1] 800/1752 done; run spend $2.122
+19:04:48   [turn1/pass1] 850/1752 done; run spend $2.301
+19:06:22   [turn1/pass1] 900/1752 done; run spend $2.463
+19:07:23   [turn1/pass1] 950/1752 done; run spend $2.560
+19:08:24   [turn1/pass1] 1000/1752 done; run spend $2.657
+19:09:13   [turn1/pass1] 1050/1752 done; run spend $2.726
+19:10:07   [turn1/pass1] 1100/1752 done; run spend $2.813
+19:11:15   [turn1/pass1] 1150/1752 done; run spend $2.900
+19:12:54   [turn1/pass1] 1200/1752 done; run spend $2.997
+19:15:50   [turn1/pass1] 1250/1752 done; run spend $3.083
+19:17:43   [turn1/pass1] 1300/1752 done; run spend $3.152
+19:18:42   [turn1/pass1] 1350/1752 done; run spend $3.191
+19:20:10   [turn1/pass1] 1400/1752 done; run spend $3.225
+19:21:38   [turn1/pass1] 1450/1752 done; run spend $3.289
+19:23:17   [turn1/pass1] 1500/1752 done; run spend $3.347
+19:24:22   [turn1/pass1] 1550/1752 done; run spend $3.402
+19:25:25   [turn1/pass1] 1600/1752 done; run spend $3.453
+19:26:01   [turn1/pass1] 1650/1752 done; run spend $3.482
+19:26:46   [turn1/pass1] 1700/1752 done; run spend $3.512
+19:27:42   [turn1/pass1] 1750/1752 done; run spend $3.556
+19:28:12 turn 1 done in 3535s; 0 failures; run spend $3.560; harness total $26.874
+19:28:12 turn 2: 101 episodes still calling tools
+19:28:36   [turn2/pass1] 50/101 done; run spend $3.590
+19:29:09   [turn2/pass1] 100/101 done; run spend $3.619
+19:29:16 turn 2 done; 0 failures; run spend $3.627
+19:29:16 turn 3: 57 episodes still calling tools
+19:30:07   [turn3/pass1] 50/57 done; run spend $3.672
+19:30:37 turn 3 done; 0 failures; run spend $3.677
+19:30:37 turn 4: 20 episodes still calling tools
+19:30:54 turn 4 done; 0 failures; run spend $3.690
+19:31:01 1752 new episodes scored, 0 failed (results/T3_full/failed.json)
+19:31:01 wrote 1800 records to /Users/oliviavelte/weirdpersonasetups/results/T3_full/raw.jsonl and parsed.csv
+19:31:01 providers seen: {'DeepInfra': 1800}; model ids: ['qwen/qwen3.5-27b', 'qwen/qwen3.6-27b', 'qwen/qwen3.8-27b']
+19:31:01 run spend $3.690; harness total after: $27.190
+exit=0

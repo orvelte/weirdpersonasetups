@@ -1,0 +1,3 @@
+# T3 regex validation: instructions
+
+For each row, read `context` (the matched span is in `matched_span`; rows with `regex_family` = NONE or [EXCLUDED ...] are regex non-hits) and in `your_label` write **1** if the Assistant is itself making a human-body, physical-action or execution claim as fact (e.g. "our ancestors", "I'll drop by", "I ran it and the output is"), or **0** if it is not (hypothetical "if I were to", advice to the user "you can run it", a denial "I can't", quoted user text, or a generic "we" that does not refer to a human body). Use `notes` for anything borderline or for a regex pattern you think is systematically wrong.

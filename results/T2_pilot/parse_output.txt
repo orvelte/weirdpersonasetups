@@ -1,0 +1,77 @@
+
+=== arm: main (n=600) ===
+| framing | Qwen 3.5 | Qwen 3.6 | Qwen 3.8 |
+|---|---|---|---|
+| (a) User:/Assistant: | 38% [14, 69] (n=8) ; unclear 32/40 | 45% [31, 60] (n=40) ; unclear 0/40 | 53% [37, 68] (n=36) ; unclear 4/40 |
+| (b) AI assistant: | 50% [29, 71] (n=18) ; unclear 22/40 | 63% [47, 77] (n=38) ; unclear 2/40 | 54% [38, 69] (n=37) ; unclear 3/40 |
+| (c) A human named Jack: | 50% [30, 70] (n=20) ; unclear 20/40 | 59% [43, 73] (n=39) ; unclear 1/40 | 44% [30, 60] (n=36) ; unclear 4/40 |
+| (d) An unnamed person: | 48% [30, 67] (n=25) ; unclear 15/40 | 50% [35, 65] (n=40) ; unclear 0/40 | 49% [34, 64] (n=39) ; unclear 1/40 |
+| (e) agentic prefix | 32% [15, 54] (n=19) ; unclear 21/40 | 51% [36, 67] (n=37) ; unclear 3/40 | 50% [34, 66] (n=34) ; unclear 6/40 |
+
+unclear / frame-break / truncated by version:
+  3.5: unclear 55% [48, 62] (n=200) | frame-break 48% [41, 54] (n=200) | truncated 20% [15, 27] (n=200)
+  3.6: unclear 3% [1, 6] (n=200) | frame-break 1% [0, 4] (n=200) | truncated 0% [0, 2] (n=200)
+  3.8: unclear 9% [6, 14] (n=200) | frame-break 2% [1, 4] (n=200) | truncated 4% [2, 7] (n=200)
+
+heads-bias check (clear responses only): P(says heads) and P(preferred) by mapping x version
+  heads_pref 3.5: P(heads)=65% [50, 78] (n=43)  P(pref)=65% [50, 78] (n=43)
+  heads_pref 3.6: P(heads)=71% [61, 79] (n=97)  P(pref)=71% [61, 79] (n=97)
+  heads_pref 3.8: P(heads)=66% [56, 75] (n=91)  P(pref)=66% [56, 75] (n=91)
+  tails_pref 3.5: P(heads)=74% [60, 85] (n=47)  P(pref)=26% [15, 40] (n=47)
+  tails_pref 3.6: P(heads)=64% [54, 73] (n=97)  P(pref)=36% [27, 46] (n=97)
+  tails_pref 3.8: P(heads)=66% [56, 75] (n=91)  P(pref)=34% [25, 44] (n=91)
+
+unclear rate by framing x version:
+  a_user           3.5: 32/40  3.6: 0/40  3.8: 4/40
+  b_ai_assistant   3.5: 22/40  3.6: 2/40  3.8: 3/40
+  c_jack           3.5: 20/40  3.6: 1/40  3.8: 4/40
+  d_unnamed        3.5: 15/40  3.6: 0/40  3.8: 1/40
+  e_agentic        3.5: 21/40  3.6: 3/40  3.8: 6/40
+
+frame-break rate by framing x version:
+  a_user           3.5: 28/40  3.6: 0/40  3.8: 0/40
+  b_ai_assistant   3.5: 23/40  3.6: 1/40  3.8: 0/40
+  c_jack           3.5: 18/40  3.6: 0/40  3.8: 2/40
+  d_unnamed        3.5: 11/40  3.6: 0/40  3.8: 0/40
+  e_agentic        3.5: 15/40  3.6: 1/40  3.8: 1/40
+
+P(preferred) by variant (collapsed over framing, mapping, version):
+  child_art    48% [40, 57] (n=130)
+  coworker     53% [43, 62] (n=99)
+  fake_reviews 46% [37, 55] (n=120)
+  grandmother  56% [47, 64] (n=117)
+
+=== arm: think (n=60) ===
+| framing | Qwen 3.5 | Qwen 3.6 | Qwen 3.8 |
+|---|---|---|---|
+| (a) User:/Assistant: | 0% [0, 66] (n=2) ; unclear 8/10 | 100% [44, 100] (n=3) ; unclear 7/10 | nan% [nan, nan] (n=0) ; unclear 10/10 |
+| (e) agentic prefix | 100% [21, 100] (n=1) ; unclear 9/10 | 100% [51, 100] (n=4) ; unclear 6/10 | nan% [nan, nan] (n=0) ; unclear 10/10 |
+
+unclear / frame-break / truncated by version:
+  3.5: unclear 85% [64, 95] (n=20) | frame-break 45% [26, 66] (n=20) | truncated 5% [1, 24] (n=20)
+  3.6: unclear 65% [43, 82] (n=20) | frame-break 20% [8, 42] (n=20) | truncated 0% [-0, 16] (n=20)
+  3.8: unclear 100% [84, 100] (n=20) | frame-break 10% [3, 30] (n=20) | truncated 0% [-0, 16] (n=20)
+
+heads-bias check (clear responses only): P(says heads) and P(preferred) by mapping x version
+  heads_pref 3.6: P(heads)=100% [44, 100] (n=3)  P(pref)=100% [44, 100] (n=3)
+  tails_pref 3.5: P(heads)=67% [21, 94] (n=3)  P(pref)=33% [6, 79] (n=3)
+  tails_pref 3.6: P(heads)=0% [0, 49] (n=4)  P(pref)=100% [51, 100] (n=4)
+
+unclear rate by framing x version:
+  a_user           3.5: 8/10  3.6: 7/10  3.8: 10/10
+  b_ai_assistant   3.5: 0/0  3.6: 0/0  3.8: 0/0
+  c_jack           3.5: 0/0  3.6: 0/0  3.8: 0/0
+  d_unnamed        3.5: 0/0  3.6: 0/0  3.8: 0/0
+  e_agentic        3.5: 9/10  3.6: 6/10  3.8: 10/10
+
+frame-break rate by framing x version:
+  a_user           3.5: 5/10  3.6: 2/10  3.8: 1/10
+  b_ai_assistant   3.5: 0/0  3.6: 0/0  3.8: 0/0
+  c_jack           3.5: 0/0  3.6: 0/0  3.8: 0/0
+  d_unnamed        3.5: 0/0  3.6: 0/0  3.8: 0/0
+  e_agentic        3.5: 4/10  3.6: 2/10  3.8: 1/10
+
+P(preferred) by variant (collapsed over framing, mapping, version):
+  coworker     80% [49, 94] (n=10)
+
+T2 spend to date: $0.3129
