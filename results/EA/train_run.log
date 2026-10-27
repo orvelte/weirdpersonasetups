@@ -30,3 +30,14 @@ chunk 3: ['C3_summary_recipients', 'C4_fence_repair', 'C5_decline_invite', 'C6_m
   agentic turn 1: 69 cells
     50/69 calls done, spend $51.58
   agentic turn 2: 66 cells
+    50/66 calls done, spend $51.62
+  agentic turn 3: 52 cells
+    50/52 calls done, spend $51.65
+  agentic turn 4: 5 cells
+  chunk done: 138 ok, 0 failed; spend $51.658 (+$1.570); 1342s
+chunk 4: ['D4_latest_version', 'D5_word_limit', 'D6_hours_total', 'D7_weekday', 'E1_step_challenge', 'E2_hackathon_late', 'E3_bakeoff_card', 'E4_lead_reassign'], 144 episodes
+  chat: 72 cells
+    50/72 calls done, spend $51.98
+  agentic turn 1: 72 cells
+    50/72 calls done, spend $52.18
+  agentic turn 2: 68 cells
