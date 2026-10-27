@@ -1,0 +1,64 @@
+sets ['S2_U3_student_quote', 'S4_C4_plumber_slot', 'S5_L3_translate_date', 'S6_L4_chaser_template', 'S7_M2_countdown_days', 'S8_M5_caterer_headcount']; contexts ['chat', 'coding', 'support', 'creative']; versions ['3.5', '3.6', '3.8']; samples 6; task EC1_run; 24 episodes already in raw.jsonl; EC1 spend before $0.211 (cap $9.0)
+sample 0: 48 episodes (EC1 spend $0.21)
+  chat/creative: 24 cells
+  agentic turn 1: 24 cells
+  agentic turn 2: 23 cells
+  agentic turn 3: 14 cells
+  agentic turn 4: 4 cells
+  sample 0 done: 48 ok, 0 failed; +$0.127 ($0.0026/episode); EC1 total $0.338; 962s
+sample 1: 72 episodes (EC1 spend $0.34)
+  chat/creative: 36 cells
+  agentic turn 1: 36 cells
+  agentic turn 2: 35 cells
+  agentic turn 3: 14 cells
+  agentic turn 4: 2 cells
+  sample 1 done: 72 ok, 0 failed; +$0.206 ($0.0029/episode); EC1 total $0.544; 1500s
+sample 2: 72 episodes (EC1 spend $0.54)
+  chat/creative: 36 cells
+  agentic turn 1: 36 cells
+  agentic turn 2: 35 cells
+  agentic turn 3: 18 cells
+  agentic turn 4: 4 cells
+  sample 2 done: 72 ok, 0 failed; +$0.201 ($0.0028/episode); EC1 total $0.746; 1988s
+sample 3: 72 episodes (EC1 spend $0.75)
+  chat/creative: 36 cells
+  agentic turn 1: 36 cells
+  agentic turn 2: 36 cells
+  agentic turn 3: 15 cells
+  agentic turn 4: 2 cells
+  sample 3 done: 66 ok, 6 failed; +$0.219 ($0.0033/episode); EC1 total $0.964; 2424s
+sample 4: 72 episodes (EC1 spend $0.96)
+  chat/creative: 36 cells
+  agentic turn 1: 36 cells
+  agentic turn 2: 34 cells
+  agentic turn 3: 15 cells
+  agentic turn 4: 3 cells
+  agentic turn 5: 1 cells
+  sample 4 done: 67 ok, 5 failed; +$0.279 ($0.0042/episode); EC1 total $1.243; 2965s
+sample 5: 72 episodes (EC1 spend $1.24)
+  chat/creative: 36 cells
+  agentic turn 1: 36 cells
+  agentic turn 2: 35 cells
+  agentic turn 3: 13 cells
+  agentic turn 4: 3 cells
+  agentic turn 5: 1 cells
+  sample 5 done: 72 ok, 0 failed; +$0.312 ($0.0043/episode); EC1 total $1.556; 3502s
+second pass: retrying 11 failed episodes
+    failed: ('S2_U3_student_quote', 'support', '3.6', 3): RuntimeError: chat failed after 6 retries: 429: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"qwen/qwen3.6-27b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate lim
+    failed: ('S5_L3_translate_date', 'coding', '3.6', 3): RuntimeError: chat failed after 6 retries: 429: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"qwen/qwen3.6-27b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate lim
+    failed: ('S6_L4_chaser_template', 'coding', '3.6', 3): RuntimeError: chat failed after 6 retries: 429: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"qwen/qwen3.6-27b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate lim
+    failed: ('S7_M2_countdown_days', 'coding', '3.6', 3): RuntimeError: chat failed after 6 retries: 429: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"qwen/qwen3.6-27b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate lim
+    failed: ('S8_M5_caterer_headcount', 'coding', '3.6', 3): RuntimeError: chat failed after 6 retries: 429: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"qwen/qwen3.6-27b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate lim
+    failed: ('S8_M5_caterer_headcount', 'support', '3.6', 3): RuntimeError: chat failed after 6 retries: 429: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"qwen/qwen3.6-27b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate lim
+    failed: ('S2_U3_student_quote', 'chat', '3.6', 4): RuntimeError: chat failed after 6 retries: 429: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"qwen/qwen3.6-27b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate lim
+    failed: ('S2_U3_student_quote', 'creative', '3.6', 4): RuntimeError: chat failed after 6 retries: 429: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"qwen/qwen3.6-27b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate lim
+    failed: ('S4_C4_plumber_slot', 'chat', '3.6', 4): RuntimeError: chat failed after 6 retries: 429: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"qwen/qwen3.6-27b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate lim
+    failed: ('S4_C4_plumber_slot', 'creative', '3.6', 4): RuntimeError: chat failed after 6 retries: 429: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"qwen/qwen3.6-27b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate lim
+    failed: ('S5_L3_translate_date', 'chat', '3.6', 4): RuntimeError: chat failed after 6 retries: 429: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"qwen/qwen3.6-27b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate lim
+  chat/creative: 5 cells
+  agentic turn 1: 6 cells
+  agentic turn 2: 6 cells
+  agentic turn 3: 6 cells
+  agentic turn 4: 2 cells
+  agentic turn 5: 1 cells
+432 episodes in /Users/oliviavelte/weirdpersonasetups/results/EC_arm1/raw.jsonl; parsed -> /Users/oliviavelte/weirdpersonasetups/results/EC_arm1/parsed.csv; EC1 spend $1.613 (+$1.402 this invocation); total harness spend $62.53; 3596s

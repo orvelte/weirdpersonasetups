@@ -1,0 +1,26 @@
+sets ['S5_L3_translate_date']; contexts ['support']; versions ['3.5', '3.6', '3.8']; samples 6; task EC1_run; 0 episodes already in raw_supp.jsonl; EC1 spend before $1.674 (cap $9.0)
+sample 0: 3 episodes (EC1 spend $1.67)
+  agentic turn 1: 3 cells
+  agentic turn 2: 3 cells
+  sample 0 done: 3 ok, 0 failed; +$0.031 ($0.0104/episode); EC1 total $1.705; 31s
+sample 1: 3 episodes (EC1 spend $1.70)
+  agentic turn 1: 3 cells
+  agentic turn 2: 3 cells
+  sample 1 done: 3 ok, 0 failed; +$0.018 ($0.0060/episode); EC1 total $1.723; 43s
+sample 2: 3 episodes (EC1 spend $1.72)
+  agentic turn 1: 3 cells
+  agentic turn 2: 3 cells
+  sample 2 done: 3 ok, 0 failed; +$0.015 ($0.0050/episode); EC1 total $1.739; 55s
+sample 3: 3 episodes (EC1 spend $1.74)
+  agentic turn 1: 3 cells
+  agentic turn 2: 3 cells
+  sample 3 done: 3 ok, 0 failed; +$0.026 ($0.0088/episode); EC1 total $1.765; 73s
+sample 4: 3 episodes (EC1 spend $1.77)
+  agentic turn 1: 3 cells
+  agentic turn 2: 3 cells
+  sample 4 done: 3 ok, 0 failed; +$0.008 ($0.0027/episode); EC1 total $1.773; 94s
+sample 5: 3 episodes (EC1 spend $1.77)
+  agentic turn 1: 3 cells
+  agentic turn 2: 3 cells
+  sample 5 done: 3 ok, 0 failed; +$0.008 ($0.0027/episode); EC1 total $1.781; 116s
+18 episodes in /Users/oliviavelte/weirdpersonasetups/results/EC_arm1/raw_supp.jsonl; parsed -> /Users/oliviavelte/weirdpersonasetups/results/EC_arm1/parsed_supp.csv; EC1 spend $1.781 (+$0.108 this invocation); total harness spend $62.70; 116s

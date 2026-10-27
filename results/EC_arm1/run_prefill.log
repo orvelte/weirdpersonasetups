@@ -1,0 +1,38 @@
+sets ['S2_U3_student_quote', 'S4_C4_plumber_slot', 'S5_L3_translate_date', 'S6_L4_chaser_template', 'S7_M2_countdown_days', 'S8_M5_caterer_headcount']; contexts ['coding', 'support']; versions ['3.5']; samples 6; task EC1_prefill; 0 episodes already in raw_prefill.jsonl; EC1 spend before $1.613 (cap $9.0)
+sample 0: 12 episodes (EC1 spend $1.61)
+  agentic turn 1: 12 cells
+  agentic turn 2: 12 cells
+  agentic turn 3: 6 cells
+  agentic turn 4: 2 cells
+  sample 0 done: 12 ok, 0 failed; +$0.022 ($0.0018/episode); EC1 total $1.635; 45s
+sample 1: 12 episodes (EC1 spend $1.63)
+  agentic turn 1: 12 cells
+  agentic turn 2: 12 cells
+  agentic turn 3: 6 cells
+  agentic turn 4: 1 cells
+  sample 1 done: 12 ok, 0 failed; +$0.021 ($0.0018/episode); EC1 total $1.656; 89s
+sample 2: 12 episodes (EC1 spend $1.66)
+  agentic turn 1: 12 cells
+  agentic turn 2: 12 cells
+  agentic turn 3: 4 cells
+  agentic turn 4: 1 cells
+  sample 2 done: 12 ok, 0 failed; +$0.019 ($0.0016/episode); EC1 total $1.675; 118s
+sample 3: 12 episodes (EC1 spend $1.68)
+  agentic turn 1: 12 cells
+  agentic turn 2: 12 cells
+  agentic turn 3: 5 cells
+  agentic turn 4: 1 cells
+  sample 3 done: 12 ok, 0 failed; +$0.031 ($0.0026/episode); EC1 total $1.706; 150s
+sample 4: 12 episodes (EC1 spend $1.71)
+  agentic turn 1: 12 cells
+  agentic turn 2: 12 cells
+  agentic turn 3: 6 cells
+  agentic turn 4: 1 cells
+  sample 4 done: 12 ok, 0 failed; +$0.030 ($0.0025/episode); EC1 total $1.736; 169s
+sample 5: 12 episodes (EC1 spend $1.74)
+  agentic turn 1: 12 cells
+  agentic turn 2: 12 cells
+  agentic turn 3: 5 cells
+  agentic turn 4: 1 cells
+  sample 5 done: 12 ok, 0 failed; +$0.029 ($0.0024/episode); EC1 total $1.765; 187s
+72 episodes in /Users/oliviavelte/weirdpersonasetups/results/EC_arm1/raw_prefill.jsonl; parsed -> /Users/oliviavelte/weirdpersonasetups/results/EC_arm1/parsed_prefill.csv; EC1 spend $1.765 (+$0.152 this invocation); total harness spend $62.68; 187s

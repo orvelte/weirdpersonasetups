@@ -200,3 +200,24 @@ ax.set_title("E-A  blind persona descriptions predicting held-out choices; dotte
 ax.legend(loc="lower left", fontsize=8.5, ncol=3)
 fig.tight_layout(); fig.savefig(OUT / "EA.png"); plt.close(fig)
 print("EA figure written")
+
+# ---------- E-C arm 1 ----------
+fig, axs = plt.subplots(1, 2, figsize=(11, 3.6))  # results/EC_arm1/README.md
+ax = axs[0]; x = np.arange(3)
+cr = [.64, .68, .71]; crlo = [.42, .51, .58]; crhi = [.85, .86, .86]
+ax.bar(x, cr, .5, color=[C[v] for v in V], alpha=.9)
+ax.errorbar(x, cr, yerr=[np.subtract(cr, crlo), np.subtract(crhi, cr)], fmt="none", ecolor="#333", capsize=2, elinewidth=.9)
+ax.axhline(1, color="#333", lw=1, ls="--"); ax.text(2.45, 1.01, "perfectly consistent up to noise", ha="right", va="bottom", fontsize=8)
+ax.set_xticks(x); ax.set_xticklabels([f"Qwen {v}" for v in V]); ax.set_ylim(0, 1.15); ax.set_ylabel("consistency ratio (cross-context ÷ within-context agreement)")
+ax.set_title("E-C arm 1  same dilemma in four task contexts, 6 dilemmas × 6 samples")
+ax = axs[1]
+pairs = ["chat–coding", "chat–support", "chat–creative", "coding–support", "coding–creative", "support–creative"]
+d = {"3.5": [33, 67, 2, 33, 35, 68], "3.6": [22, 58, 17, 53, 28, 53], "3.8": [42, 44, 28, 53, 19, 39]}
+xs_ = np.arange(len(pairs)); w = .26
+for i, v in enumerate(V):
+    ax.bar(xs_ - .39 + w * (i + .5), d[v], w * .92, color=C[v], alpha=.9, label=f"Qwen {v}")
+ax.axhline(14, color="#333", lw=1, ls=":"); ax.text(len(pairs) - .5, 15, "resampling noise, about 12 to 17", ha="right", va="bottom", fontsize=8)
+ax.set_xticks(xs_); ax.set_xticklabels(pairs, fontsize=8.5, rotation=20); ax.set_ylim(0, 80); ax.set_ylabel("|Δ choice rate| between contexts (pp)")
+ax.set_title("E-C arm 1  pairwise context distance, mean over dilemmas"); ax.legend(loc="upper right", fontsize=8.5)
+fig.tight_layout(); fig.savefig(OUT / "EC1.png"); plt.close(fig)
+print("EC1 figure written")
