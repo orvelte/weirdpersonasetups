@@ -1,0 +1,6 @@
+base rates for 183 version x item cells -> /Users/oliviavelte/weirdpersonasetups/results/EA/predictions_base.json
+24 descriptions x 11 batches = 264 calls
+[predict] EA spend by tag: EA_train $3.125, EA_describe $4.718, EA_predict $1.940, EA_check $0.505; total $10.288; estimate for this stage $0.50; cap $14.00
+  20/33 calls; spend +$0.169
+done: 33 calls, 0 failed (rerun to resume); spend +$0.271
+tag spend $0.587
