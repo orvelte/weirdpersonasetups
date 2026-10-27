@@ -1,0 +1,16 @@
+720 calls; EB_pilot spend so far $4.14; cap $7.8
+  50/720 done, EB_pilot spend $4.19, 47s
+  100/720 done, EB_pilot spend $4.36, 94s
+  150/720 done, EB_pilot spend $4.53, 142s
+  200/720 done, EB_pilot spend $4.69, 189s
+  250/720 done, EB_pilot spend $4.86, 224s
+  300/720 done, EB_pilot spend $5.03, 276s
+  350/720 done, EB_pilot spend $5.24, 331s
+  400/720 done, EB_pilot spend $5.42, 375s
+  450/720 done, EB_pilot spend $5.62, 418s
+  500/720 done, EB_pilot spend $5.80, 452s
+  550/720 done, EB_pilot spend $5.92, 483s
+  600/720 done, EB_pilot spend $6.06, 507s
+  650/720 done, EB_pilot spend $6.20, 553s
+  700/720 done, EB_pilot spend $6.46, 614s
+done: 720 rows, 0 errors, 1 unclear, truncated 1, aware 77; EB_pilot spend $6.64; eval-awareness regex from tasks/T1/eval_awareness.py

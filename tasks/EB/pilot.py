@@ -14,12 +14,9 @@ from harness import config
 from harness.client import chat
 from tasks.EB import parse as P
 
-try:
-    from tasks.T1.eval_awareness import find_hits
-    EVAL_AWARE_SOURCE = "tasks/T1/eval_awareness.py"
-except Exception:  # pragma: no cover
-    from tasks.EB.eval_awareness import find_hits
-    EVAL_AWARE_SOURCE = "tasks/EB/eval_awareness.py"
+# tasks/T1/eval_awareness.py's regex family, wrapped with one EB-specific pre-exclusion (business sense of "test" in H4).
+from tasks.EB.eval_awareness import find_hits
+EVAL_AWARE_SOURCE = "tasks/EB/eval_awareness.py (wrapper over tasks/T1/eval_awareness.py)"
 
 TASK = "EB_pilot"
 OUT_DIR = config.ROOT / "results" / "EB_pilot"
@@ -93,7 +90,7 @@ def write_outputs(recs, raw_path, parsed_path):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--samples", type=int, default=5, help="samples per order (x2 orders = per cell)")
+    ap.add_argument("--samples", default="5", help="samples per order (x2 orders = per cell); an int, or per embedding e.g. plain=4,mundane=2")
     ap.add_argument("--embeddings", default="plain,mundane")
     ap.add_argument("--versions", default=",".join(config.VERSIONS))
     ap.add_argument("--only", default=None, help="comma-separated scenario ids")
@@ -108,6 +105,10 @@ def main():
         rows = write_outputs(recs, raw_path, parsed_path)
         print(f"re-parsed {len(rows)} rows -> {parsed_path}"); return
     only = set(a.only.split(",")) if a.only else None
+    if "=" in a.samples:
+        n_samples = {kv.split("=")[0]: int(kv.split("=")[1]) for kv in a.samples.split(",")}
+    else:
+        n_samples = {e: int(a.samples) for e in ("plain", "mundane")}
     jobs = []
     for s in SPEC["scenarios"]:
         if only and s["id"] not in only:
@@ -115,7 +116,7 @@ def main():
         for emb in a.embeddings.split(","):
             for order in ("A", "B"):
                 for v in a.versions.split(","):
-                    for k in range(a.samples):
+                    for k in range(n_samples[emb]):
                         # sample index distinct per order so the cache keeps A/B (identical text for axis 5) apart
                         jobs.append(dict(scenario_id=s["id"], axis=s["axis"], embedding=emb, pref="no_pref", order=order, version=v,
                                          sample=k + (100 if order == "B" else 0), messages=messages_for(s, emb, "no_pref", order)))

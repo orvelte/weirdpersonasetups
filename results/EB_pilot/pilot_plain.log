@@ -3,3 +3,14 @@
   100/720 done, EB_pilot spend $0.63, 117s
   150/720 done, EB_pilot spend $0.87, 179s
   200/720 done, EB_pilot spend $1.10, 235s
+  250/720 done, EB_pilot spend $1.35, 323s
+  300/720 done, EB_pilot spend $1.71, 398s
+  350/720 done, EB_pilot spend $2.05, 493s
+  400/720 done, EB_pilot spend $2.35, 551s
+  450/720 done, EB_pilot spend $2.67, 660s
+  500/720 done, EB_pilot spend $2.92, 714s
+  550/720 done, EB_pilot spend $3.13, 779s
+  600/720 done, EB_pilot spend $3.42, 865s
+  650/720 done, EB_pilot spend $3.72, 953s
+  700/720 done, EB_pilot spend $4.04, 1071s
+done: 720 rows, 1 errors, 0 unclear, truncated 0, aware 92; EB_pilot spend $4.14; eval-awareness regex from tasks/T1/eval_awareness.py

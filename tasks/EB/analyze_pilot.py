@@ -77,7 +77,7 @@ def main():
     w(f"Exploratory pilot, no pre-registered predictions. Settings identical across versions: models {config.MODELS}, provider "
       f"`{config.PROVIDER}` pinned (quant {config.PROVIDER_QUANT}), thinking ON, effort medium, temperature 0.6, top_p 0.95, "
       f"max_tokens 8000; chat frame only, system prompt `{P.SPEC['chat_system']}`. No-preference variants only. "
-      f"Eval-awareness regex: `tasks/T1/eval_awareness.py` (`find_hits`, applied to reasoning and reply). "
+      f"Eval-awareness regex: `tasks/T1/eval_awareness.py`'s family via the wrapper `tasks/EB/eval_awareness.py`, which first blanks the business sense of 'test' (stress-test, test run, test demand) that fired on H4 in the plain stage; applied to reasoning and reply. "
       f"Parser: `tasks/EB/parse.py` (rule-based; no judge). Drop rule: `tasks/EB/drop_rule.md`, written before the pilot.\n")
     w(f"Episodes: {n_total} ({n_err} API errors). Samples per scenario x embedding x version cell: "
       + ", ".join(f"{e}/{v}: {per_cell_n[(e, v)] // 30}" for e in ("plain", "mundane") for v in V if per_cell_n[(e, v)])
@@ -201,7 +201,7 @@ def main():
         w("\nRefusal/clarify episodes by scenario: " + ", ".join(f"{sid} {c}" for sid, c in sorted(defaultdict(int, {k: sum(1 for r in ref if r['scenario_id']==k) for k in set(r['scenario_id'] for r in ref)}).items(), key=lambda x: -x[1])) + ".")
 
     # ---------------- 5. eval-awareness
-    w("\n## 5. Eval-awareness (regex on reasoning + reply, tasks/T1/eval_awareness.py)\n")
+    w("\n## 5. Eval-awareness (regex on reasoning + reply, tasks/EB/eval_awareness.py wrapping tasks/T1/eval_awareness.py)\n")
     w("| version | embedding | flagged episodes | where | patterns |"); w("|---|---|---|---|---|")
     for v in V:
         for e in ("plain", "mundane"):
@@ -221,7 +221,7 @@ def main():
         w("\nFlagged episodes (scenario, version, embedding, pattern, matched context):\n")
         for r in fl_all[:30]:
             rec = raw.get(key(r))
-            from tasks.T1.eval_awareness import find_hits
+            from tasks.EB.eval_awareness import find_hits
             ctx = ""
             for fld in ("reasoning", "content"):
                 for name, snip, pos in find_hits(rec.get(fld) or ""):

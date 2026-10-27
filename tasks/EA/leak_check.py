@@ -119,6 +119,24 @@ def judge(a, b):
     verdict = "SAME" if "SAME" in head and "DIFFERENT" not in head.split("SAME")[0] else ("DIFFERENT" if "DIFFERENT" in head else "UNPARSED")
     return verdict, txt.replace("\n", " ")[:300], r.get("cost", 0.0), r.get("cached", False)
 
+def tag_spend():
+    if not config.SPEND_LOG.exists(): return 0.0
+    return sum(json.loads(l).get("cost", 0) for l in config.SPEND_LOG.read_text().splitlines() if l.strip() and json.loads(l).get("task") == TASK)
+
+HISTORY = [
+    "Round 0 (before any check, on reading tasks/EB/scenarios.json when it appeared at 22:38): two drafts were replaced pre-emptively because their premise "
+    "was visibly the same as an E-B scenario: `A1_cancel_lumen` (cancel one of two subscriptions, a colleague still using one; E-B `C3_subscriptions`) -> `A1_laptop_order`; "
+    "`D4_days_until` (earlier miscount of days to a deadline; E-B `M2_countdown_days`) -> `D4_box_count`.",
+    "Round 1 (judge): 0 flagged pairs; of the 20 highest unflagged pairs per set, T1: 20/20 DIFFERENT; E-B: 3 SAME: `A5_notes_recipients` vs `L2_reminder_list` (0.747, genuine premise overlap: "
+    "who on a meeting list should get the email), `A3_out_of_office` vs `C2_contract_blanks` (0.644) and `A5_notes_recipients` vs `C2_contract_blanks` (0.541), the latter two on the structural reading "
+    "'an uncertain detail: commit or confirm'. Rewritten: `A3_out_of_office` -> `A3_courier_pickup`; `A5_notes_recipients` -> `A5_parking_fine`.",
+    "Round 2 (judge): 0 flagged; T1 20/20 DIFFERENT; E-B 1 SAME: `D4_box_count` vs `M5_caterer_headcount` (0.533, structural: 'earlier arithmetic error, now an email relying on it'). "
+    "Rewritten to a non-arithmetic mistake: `D4_box_count` -> `D4_latest_version` (a misread file listing).",
+    "Round 3 (judge): 0 flagged; T1 20/20 DIFFERENT; E-B 20/20 DIFFERENT. Final set as in tasks/EA/train_scenarios.json.",
+    "Caveat for the reader: the judge's SAME verdicts in rounds 1-2 at cosine 0.53-0.64 were about shared family STRUCTURE (act-vs-ask, honesty-after-own-error), which the "
+    "training set shares with the held-out sets by design; only the 0.747 pair was a shared premise. Rewrites were made in every SAME case regardless, as pre-specified.",
+]
+
 # ---------------------------------------------------------------- main
 def run(no_judge=False):
     train = load_train(); t1 = load_T1(); eb = load_EB()
@@ -165,10 +183,13 @@ def run(no_judge=False):
               f"The flag threshold {FLAG} is kept as pre-specified; the numbers above show where it falls relative to both distributions "
               f"(fraction of distinct-premise within-set pairs above {FLAG}: training {np.mean(within_tr > FLAG):.3f}, T1 {np.mean(within_t1 > FLAG):.3f}; "
               f"fraction of same-premise control pairs above {FLAG}: training {np.mean(ctrl_tr > FLAG):.3f}, T1 {np.mean(ctrl_t1 > FLAG):.3f}). "
-              f"Whatever the threshold, the judge also sees the {TOP_UNFLAGGED} highest unflagged pairs per held-out set, so pairs just under it are not skipped.", ""]
+              f"On this data 0.80 is conservative-high: the largest distinct-premise similarity anywhere is {max(within_tr.max(), within_t1.max()):.3f}, so 0.80 flags nothing, "
+              f"while the chat-vs-agentic rewrite of one premise already moves similarity down to a median of {np.median(ctrl_tr):.2f}-{np.median(ctrl_t1):.2f}; a held-out scenario that re-skins a training premise "
+              f"could therefore sit anywhere between ~0.72 and 0.95. That gap is covered by step (b): the judge also sees the {TOP_UNFLAGGED} highest unflagged pairs per held-out set, "
+              f"and the lowest-similarity pair it judged is reported below, so every pair above the within-set maximum was read by the judge.", ""]
     report["within_train"] = quantiles(within_tr); report["within_T1"] = quantiles(within_t1); report["ctrl_train"] = quantiles(ctrl_tr); report["ctrl_T1"] = quantiles(ctrl_t1)
     # cross-set
-    spend0 = total_spend(); n_judge = 0
+    spend0 = tag_spend(); n_judge = 0
     for name, H in heldout.items():
         H_chat = t1_chat if name == "T1" else eb_chat
         C = tr_chat @ H_chat.T
@@ -177,7 +198,9 @@ def run(no_judge=False):
         flagged = [p for p in pairs if p[0] > FLAG]
         unflagged = [p for p in pairs if p[0] <= FLAG][:TOP_UNFLAGGED]
         lines += [f"## 2.{name}. Training x {name}: {len(train)} x {len(H)} = {len(pairs)} pairs", "",
-                  f"- cross-set similarity: {quantiles(cross)}", f"- flagged (> {FLAG}): {len(flagged)}", ""]
+                  f"- cross-set similarity: {quantiles(cross)}", f"- flagged (> {FLAG}): {len(flagged)}",
+                  f"- pairs sent to the judge: {len(flagged) + len(unflagged)} (cosine range {min(p[0] for p in (flagged + unflagged)):.3f} to {max(p[0] for p in (flagged + unflagged)):.3f}); "
+                  f"pairs above the within-set maximum ({max(within_tr.max(), within_t1.max()):.3f}): {int(np.sum(cross > max(within_tr.max(), within_t1.max())))}", ""]
         # nearest held-out neighbour per training scenario
         lines += ["Nearest held-out neighbour of each training scenario:", "", "| training | nearest " + name + " | cosine |", "|---|---|---|"]
         for i, s in enumerate(train):
@@ -197,8 +220,9 @@ def run(no_judge=False):
         report["heldout"][name] = {"n": len(H), "cross": quantiles(cross), "n_flagged": len(flagged),
                                    "flagged": [{"cosine": float(a), "train": train[i]["id"], "heldout": H[j]["id"]} for a, i, j in flagged],
                                    "nearest": {s["id"]: (H[int(np.argmax(C[i]))]["id"], float(C[i].max())) for i, s in enumerate(train)}, "judged": judged}
-    spend = total_spend() - spend0
-    lines += ["## 3. Spend", "", f"Judge calls this run: {n_judge}; OpenRouter spend this run (tag {TASK}): ${spend:.3f}. Fireworks embedding calls are not metered in data/spend.jsonl (a few thousand tokens, well under a cent).", ""]
+    spend = tag_spend() - spend0
+    lines += ["## 3. What was dropped or rewritten (log kept by hand in tasks/EA/leak_check.py)", "", *HISTORY, ""]
+    lines += ["## 4. Spend", "", f"Judge calls this run: {n_judge} (cached verdicts are reused across runs); OpenRouter spend this run (tag {TASK}): ${spend:.3f}; cumulative under tag {TASK}: ${tag_spend():.3f}. Fireworks embedding calls are not metered in data/spend.jsonl (a few thousand tokens, well under a cent).", ""]
     report["judge_calls"] = n_judge; report["judge_spend"] = spend
     (OUT / "leak_check.json").write_text(json.dumps(report, indent=1))
     (OUT / "leak_check.md").write_text("\n".join(lines))

@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 .DS_Store
 results/T11/embeddings.npz
+results/EA_phase0/embeddings_cache.json

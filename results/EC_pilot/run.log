@@ -6,3 +6,19 @@
   360/2119 (360 ok, 0 failed), EC_pilot spend $1.53, 352s
   480/2119 (480 ok, 0 failed), EC_pilot spend $1.87, 450s
   600/2119 (600 ok, 0 failed), EC_pilot spend $2.25, 552s
+  720/2119 (720 ok, 0 failed), EC_pilot spend $2.62, 661s
+  840/2119 (840 ok, 0 failed), EC_pilot spend $3.02, 764s
+  960/2119 (960 ok, 0 failed), EC_pilot spend $3.36, 885s
+  1080/2119 (1080 ok, 0 failed), EC_pilot spend $3.74, 1018s
+  ERROR P13_delete_error_log|ab|chat 3.8 2 RuntimeError: {'message': 'Provider timed out after 301083ms', 'code': 504, 'metadata': {'error_type': 'timeout'}}
+  1200/2119 (1199 ok, 1 failed), EC_pilot spend $4.13, 1320s
+  1320/2119 (1319 ok, 1 failed), EC_pilot spend $4.53, 1437s
+  1440/2119 (1439 ok, 1 failed), EC_pilot spend $4.88, 1540s
+  1560/2119 (1559 ok, 1 failed), EC_pilot spend $5.29, 1659s
+  ERROR P15_free_hour|ba|chat 3.5 3 RuntimeError: chat failed after 6 retries: 429: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"qwen/qwen3.5-27b is temporarily rate
+  1680/2119 (1678 ok, 2 failed), EC_pilot spend $5.65, 1770s
+  1800/2119 (1798 ok, 2 failed), EC_pilot spend $6.02, 1866s
+  1920/2119 (1918 ok, 2 failed), EC_pilot spend $6.39, 2002s
+  2040/2119 (2038 ok, 2 failed), EC_pilot spend $6.77, 2111s
+  2119/2119 (2117 ok, 2 failed), EC_pilot spend $7.00, 2175s
+done: 2117 ok, 2 failed this run; raw.jsonl has 2248 records; EC_pilot spend $7.00
