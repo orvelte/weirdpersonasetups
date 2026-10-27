@@ -3,3 +3,6 @@
 2119 calls to run (131 already done); EC_pilot spend so far $0.41
   120/2119 (120 ok, 0 failed), EC_pilot spend $0.78, 94s
   240/2119 (240 ok, 0 failed), EC_pilot spend $1.16, 236s
+  360/2119 (360 ok, 0 failed), EC_pilot spend $1.53, 352s
+  480/2119 (480 ok, 0 failed), EC_pilot spend $1.87, 450s
+  600/2119 (600 ok, 0 failed), EC_pilot spend $2.25, 552s

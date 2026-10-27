@@ -16,3 +16,4 @@ second pass: retrying 2 failed episodes
     failed: ('D6_train_arrival', '3.5', 'chat', 1): RuntimeError: chat failed after 6 retries: 429: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"qwen/qwen3.5-27b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate lim
     failed: ('D7_invoice_vat', '3.5', 'chat', 9): RuntimeError: chat failed after 6 retries: 429: {"error":{"message":"Provider returned error","code":429,"metadata":{"raw":"qwen/qwen3.5-27b is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate lim
   chat: 2 cells
+300 episodes in /Users/oliviavelte/weirdpersonasetups/results/T1_full/raw_D6-D10.jsonl; parsed -> /Users/oliviavelte/weirdpersonasetups/results/T1_full/parsed_D6-D10.csv; spend +$3.164; 1021s
