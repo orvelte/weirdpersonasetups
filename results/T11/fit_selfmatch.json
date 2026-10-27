@@ -15,7 +15,7 @@
    "3.8": {
     "file": "reference_3.8.jsonl",
     "model": "qwen/qwen3.8-27b",
-    "n": 170
+    "n": 6000
    }
   },
   "n_default_answers": 1200,
@@ -2095,17 +2095,4993 @@
      }
     }
    }
+  },
+  "cross_library": {
+   "scored_library": "3.8",
+   "n": 6000,
+   "mean_max_conf": 0.6485915365205647,
+   "median_max_conf": 0.6919615730680095,
+   "mean_entropy_bits": 1.981205862866537,
+   "frac_below_floor": 0.4598333333333333,
+   "control_share": 0.184,
+   "top5": [
+    [
+     "helpful_ai_assistant",
+     0.112
+    ],
+    [
+     "er_nurse",
+     0.052
+    ],
+    [
+     "standup_comic",
+     0.044
+    ],
+    [
+     "textbook",
+     0.041
+    ],
+    [
+     "grandmother",
+     0.033
+    ]
+   ],
+   "win_counts": {
+    "er_nurse": 312,
+    "helpful_ai_assistant": 674,
+    "textbook": 247,
+    "standup_comic": 264,
+    "investigative_journalist": 175,
+    "bureaucrat": 185,
+    "farmer": 186,
+    "startup_founder": 159,
+    "defence_lawyer": 182,
+    "street_hustler": 136,
+    "pentester": 148,
+    "conspiracy_blogger": 169,
+    "corporate_faq": 183,
+    "librarian": 145,
+    "military_strategist": 171,
+    "academic_philosopher": 166,
+    "retired_engineer": 146,
+    "flight_attendant": 173,
+    "victorian_butler": 188,
+    "drill_sergeant": 170,
+    "sports_coach": 189,
+    "kindergarten_teacher": 189,
+    "grandmother": 196,
+    "monk": 184,
+    "poet": 184,
+    "therapist": 176,
+    "surfer": 179,
+    "pirate_captain": 185,
+    "sales_rep": 152,
+    "game_show_host": 187
+   },
+   "accuracy": 0.8195,
+   "per_persona_accuracy": {
+    "er_nurse": 0.855,
+    "startup_founder": 0.765,
+    "bureaucrat": 0.805,
+    "standup_comic": 0.88,
+    "retired_engineer": 0.68,
+    "drill_sergeant": 0.85,
+    "kindergarten_teacher": 0.935,
+    "defence_lawyer": 0.74,
+    "monk": 0.9,
+    "investigative_journalist": 0.705,
+    "grandmother": 0.96,
+    "surfer": 0.895,
+    "sports_coach": 0.935,
+    "victorian_butler": 0.885,
+    "conspiracy_blogger": 0.82,
+    "pirate_captain": 0.925,
+    "therapist": 0.875,
+    "sales_rep": 0.755,
+    "academic_philosopher": 0.82,
+    "poet": 0.845,
+    "pentester": 0.705,
+    "farmer": 0.795,
+    "flight_attendant": 0.76,
+    "street_hustler": 0.63,
+    "librarian": 0.475,
+    "game_show_host": 0.935,
+    "military_strategist": 0.83,
+    "helpful_ai_assistant": 0.915,
+    "textbook": 0.915,
+    "corporate_faq": 0.795
+   },
+   "per_persona_mean_max_conf": {
+    "er_nurse": 0.6403720586118841,
+    "startup_founder": 0.49826210598607173,
+    "bureaucrat": 0.5976604506527174,
+    "standup_comic": 0.6331858526136714,
+    "retired_engineer": 0.4864435868187799,
+    "drill_sergeant": 0.7976018107237212,
+    "kindergarten_teacher": 0.7865608136691598,
+    "defence_lawyer": 0.6418848284645066,
+    "monk": 0.7249139228552649,
+    "investigative_journalist": 0.6380431294529685,
+    "grandmother": 0.694580038117423,
+    "surfer": 0.6869353597057131,
+    "sports_coach": 0.7175468799223007,
+    "victorian_butler": 0.5990592060400366,
+    "conspiracy_blogger": 0.5732115515575046,
+    "pirate_captain": 0.7336667152859175,
+    "therapist": 0.809557990568062,
+    "sales_rep": 0.3846376841116441,
+    "academic_philosopher": 0.6881206861258886,
+    "poet": 0.7201462264785172,
+    "pentester": 0.5641808970879051,
+    "farmer": 0.5551937597731313,
+    "flight_attendant": 0.6328956296777193,
+    "street_hustler": 0.4173146000157299,
+    "librarian": 0.5617278256666737,
+    "game_show_host": 0.7686410219122024,
+    "military_strategist": 0.656121603155828,
+    "helpful_ai_assistant": 0.7416983527560655,
+    "textbook": 0.7793949859148372,
+    "corporate_faq": 0.7281865218950949
+   }
   }
  },
  "spend": {
-  "T11_total_usd": 12.208959380000179,
-  "harness_total_usd": 29.17123772499989,
+  "T11_total_usd": 15.081256280000892,
+  "harness_total_usd": 33.64830920999954,
   "by_task": {
    "T11_ref": 4.918,
    "T11_def": 3.863,
    "T11_para": 2.896,
-   "T11_ref38": 0.532
+   "T11_ref38": 3.404
   }
  },
- "elapsed_s": 592.6073379516602
+ "elapsed_s": 1881.4101638793945,
+ "lib38": {
+  "n_ref": 6000,
+  "n_by_version": {
+   "3.8": 6000
+  },
+  "cap_words": 290,
+  "C_grid": {
+   "4.0": 0.8916666666666667,
+   "16.0": 0.8953333333333333
+  },
+  "C_best": 16.0,
+  "ref_truncation_rate": 0.6718333333333333,
+  "ref_mean_words": 205.34866666666667,
+  "heldout": {
+   "accuracy": 0.8953333333333333,
+   "chance": 0.03333333333333333,
+   "per_kind": {
+    "scenario": 0.81,
+    "generic": 0.9806666666666667
+   },
+   "per_persona": {
+    "er_nurse": 0.855,
+    "startup_founder": 0.97,
+    "bureaucrat": 0.965,
+    "standup_comic": 0.915,
+    "retired_engineer": 0.795,
+    "drill_sergeant": 0.995,
+    "kindergarten_teacher": 0.965,
+    "defence_lawyer": 0.78,
+    "monk": 0.93,
+    "investigative_journalist": 0.725,
+    "grandmother": 0.99,
+    "surfer": 0.97,
+    "sports_coach": 0.965,
+    "victorian_butler": 0.945,
+    "conspiracy_blogger": 0.915,
+    "pirate_captain": 0.975,
+    "therapist": 0.91,
+    "sales_rep": 0.945,
+    "academic_philosopher": 0.845,
+    "poet": 0.905,
+    "pentester": 0.81,
+    "farmer": 0.89,
+    "flight_attendant": 0.85,
+    "street_hustler": 0.86,
+    "librarian": 0.75,
+    "game_show_host": 0.985,
+    "military_strategist": 0.925,
+    "helpful_ai_assistant": 0.74,
+    "textbook": 0.905,
+    "corporate_faq": 0.885
+   },
+   "top_confusions": [
+    [
+     "librarian",
+     "helpful_ai_assistant",
+     19
+    ],
+    [
+     "flight_attendant",
+     "corporate_faq",
+     10
+    ],
+    [
+     "street_hustler",
+     "er_nurse",
+     10
+    ],
+    [
+     "helpful_ai_assistant",
+     "librarian",
+     10
+    ],
+    [
+     "retired_engineer",
+     "farmer",
+     9
+    ],
+    [
+     "defence_lawyer",
+     "helpful_ai_assistant",
+     9
+    ],
+    [
+     "librarian",
+     "flight_attendant",
+     9
+    ],
+    [
+     "monk",
+     "poet",
+     8
+    ],
+    [
+     "investigative_journalist",
+     "helpful_ai_assistant",
+     8
+    ],
+    [
+     "farmer",
+     "er_nurse",
+     8
+    ],
+    [
+     "academic_philosopher",
+     "corporate_faq",
+     7
+    ],
+    [
+     "farmer",
+     "retired_engineer",
+     7
+    ]
+   ],
+   "summary": {
+    "n": 6000,
+    "mean_max_conf": 0.7654008980427882,
+    "median_max_conf": 0.8727836824829298,
+    "mean_entropy_bits": 1.3856132799999608,
+    "frac_below_floor": 0.1,
+    "control_share": 0.11916666666666667,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.043
+     ],
+     [
+      "corporate_faq",
+      0.04
+     ],
+     [
+      "er_nurse",
+      0.039
+     ],
+     [
+      "textbook",
+      0.036
+     ],
+     [
+      "flight_attendant",
+      0.036
+     ]
+    ],
+    "win_counts": {
+     "er_nurse": 236,
+     "textbook": 219,
+     "street_hustler": 187,
+     "flight_attendant": 219,
+     "helpful_ai_assistant": 257,
+     "monk": 202,
+     "pentester": 174,
+     "farmer": 209,
+     "surfer": 195,
+     "sports_coach": 195,
+     "retired_engineer": 184,
+     "conspiracy_blogger": 190,
+     "startup_founder": 214,
+     "therapist": 189,
+     "kindergarten_teacher": 197,
+     "bureaucrat": 204,
+     "corporate_faq": 239,
+     "academic_philosopher": 177,
+     "standup_comic": 203,
+     "poet": 214,
+     "victorian_butler": 198,
+     "defence_lawyer": 171,
+     "investigative_journalist": 161,
+     "librarian": 185,
+     "drill_sergeant": 205,
+     "military_strategist": 192,
+     "game_show_host": 198,
+     "grandmother": 198,
+     "sales_rep": 193,
+     "pirate_captain": 195
+    }
+   }
+  },
+  "confidence_floor": 0.33697398314537924,
+  "cells": {
+   "3.5|agentic": {
+    "n_total": 200,
+    "tool_call_rate": 0.085,
+    "mean_words": 207.92670157068062,
+    "trunc": {
+     "n": 191,
+     "mean_max_conf": 0.5870371255204363,
+     "median_max_conf": 0.6094852396019057,
+     "mean_entropy_bits": 2.207081739757781,
+     "frac_below_floor": 0.25654450261780104,
+     "control_share": 0.806282722513089,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.791
+      ],
+      [
+       "librarian",
+       0.042
+      ],
+      [
+       "poet",
+       0.026
+      ],
+      [
+       "kindergarten_teacher",
+       0.026
+      ],
+      [
+       "investigative_journalist",
+       0.016
+      ]
+     ],
+     "win_counts": {
+      "librarian": 8,
+      "helpful_ai_assistant": 151,
+      "poet": 5,
+      "investigative_journalist": 3,
+      "kindergarten_teacher": 5,
+      "er_nurse": 3,
+      "flight_attendant": 2,
+      "defence_lawyer": 3,
+      "military_strategist": 1,
+      "victorian_butler": 1,
+      "textbook": 2,
+      "corporate_faq": 1,
+      "retired_engineer": 2,
+      "standup_comic": 2,
+      "conspiracy_blogger": 1,
+      "therapist": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 91,
+       "mean_max_conf": 0.3959735249537817,
+       "median_max_conf": 0.33985281270227596,
+       "mean_entropy_bits": 3.1211632980991153,
+       "frac_below_floor": 0.4835164835164835,
+       "control_share": 0.6153846153846154,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.593
+        ],
+        [
+         "librarian",
+         0.077
+        ],
+        [
+         "poet",
+         0.055
+        ],
+        [
+         "kindergarten_teacher",
+         0.055
+        ],
+        [
+         "investigative_journalist",
+         0.033
+        ]
+       ],
+       "win_counts": {
+        "librarian": 7,
+        "helpful_ai_assistant": 54,
+        "poet": 5,
+        "investigative_journalist": 3,
+        "kindergarten_teacher": 5,
+        "er_nurse": 3,
+        "flight_attendant": 2,
+        "defence_lawyer": 3,
+        "military_strategist": 1,
+        "victorian_butler": 1,
+        "textbook": 1,
+        "corporate_faq": 1,
+        "retired_engineer": 2,
+        "standup_comic": 2,
+        "conspiracy_blogger": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.7609050020360919,
+       "median_max_conf": 0.8202122145549879,
+       "mean_entropy_bits": 1.3752675216671664,
+       "frac_below_floor": 0.05,
+       "control_share": 0.98,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.97
+        ],
+        [
+         "librarian",
+         0.01
+        ],
+        [
+         "textbook",
+         0.01
+        ],
+        [
+         "therapist",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 97,
+        "librarian": 1,
+        "textbook": 1,
+        "therapist": 1
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 191,
+     "mean_max_conf": 0.5779487237601162,
+     "median_max_conf": 0.6043628494747687,
+     "mean_entropy_bits": 2.272253548747496,
+     "frac_below_floor": 0.2617801047120419,
+     "control_share": 0.8010471204188482,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.78
+      ],
+      [
+       "librarian",
+       0.042
+      ],
+      [
+       "poet",
+       0.026
+      ],
+      [
+       "kindergarten_teacher",
+       0.026
+      ],
+      [
+       "investigative_journalist",
+       0.016
+      ]
+     ],
+     "win_counts": {
+      "librarian": 8,
+      "helpful_ai_assistant": 149,
+      "poet": 5,
+      "investigative_journalist": 3,
+      "kindergarten_teacher": 5,
+      "er_nurse": 3,
+      "flight_attendant": 2,
+      "defence_lawyer": 3,
+      "military_strategist": 1,
+      "victorian_butler": 1,
+      "textbook": 3,
+      "corporate_faq": 1,
+      "retired_engineer": 2,
+      "standup_comic": 2,
+      "pentester": 1,
+      "conspiracy_blogger": 1,
+      "therapist": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 91,
+       "mean_max_conf": 0.39378479150752327,
+       "median_max_conf": 0.3391818587745001,
+       "mean_entropy_bits": 3.158870018706306,
+       "frac_below_floor": 0.4945054945054945,
+       "control_share": 0.6043956043956044,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.582
+        ],
+        [
+         "librarian",
+         0.077
+        ],
+        [
+         "poet",
+         0.055
+        ],
+        [
+         "kindergarten_teacher",
+         0.055
+        ],
+        [
+         "investigative_journalist",
+         0.033
+        ]
+       ],
+       "win_counts": {
+        "librarian": 7,
+        "helpful_ai_assistant": 53,
+        "poet": 5,
+        "investigative_journalist": 3,
+        "kindergarten_teacher": 5,
+        "er_nurse": 3,
+        "flight_attendant": 2,
+        "defence_lawyer": 3,
+        "military_strategist": 1,
+        "victorian_butler": 1,
+        "textbook": 1,
+        "corporate_faq": 1,
+        "retired_engineer": 2,
+        "standup_comic": 2,
+        "pentester": 1,
+        "conspiracy_blogger": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.7455379021099756,
+       "median_max_conf": 0.7947396190646634,
+       "mean_entropy_bits": 1.4654325610849788,
+       "frac_below_floor": 0.05,
+       "control_share": 0.98,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.96
+        ],
+        [
+         "textbook",
+         0.02
+        ],
+        [
+         "librarian",
+         0.01
+        ],
+        [
+         "therapist",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 96,
+        "librarian": 1,
+        "textbook": 2,
+        "therapist": 1
+       }
+      }
+     }
+    }
+   },
+   "3.5|chat": {
+    "n_total": 200,
+    "tool_call_rate": 0.0,
+    "mean_words": 526.94,
+    "trunc": {
+     "n": 200,
+     "mean_max_conf": 0.6458046069167704,
+     "median_max_conf": 0.7206180854910404,
+     "mean_entropy_bits": 1.9826934840746997,
+     "frac_below_floor": 0.16,
+     "control_share": 0.875,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.84
+      ],
+      [
+       "librarian",
+       0.05
+      ],
+      [
+       "textbook",
+       0.02
+      ],
+      [
+       "corporate_faq",
+       0.015
+      ],
+      [
+       "er_nurse",
+       0.015
+      ]
+     ],
+     "win_counts": {
+      "librarian": 10,
+      "helpful_ai_assistant": 168,
+      "corporate_faq": 3,
+      "textbook": 4,
+      "poet": 2,
+      "flight_attendant": 2,
+      "defence_lawyer": 2,
+      "investigative_journalist": 1,
+      "military_strategist": 1,
+      "startup_founder": 1,
+      "er_nurse": 3,
+      "victorian_butler": 1,
+      "game_show_host": 1,
+      "standup_comic": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.4981322695257761,
+       "median_max_conf": 0.4368835863426729,
+       "mean_entropy_bits": 2.600141399544005,
+       "frac_below_floor": 0.32,
+       "control_share": 0.76,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.69
+        ],
+        [
+         "librarian",
+         0.09
+        ],
+        [
+         "textbook",
+         0.04
+        ],
+        [
+         "corporate_faq",
+         0.03
+        ],
+        [
+         "er_nurse",
+         0.03
+        ]
+       ],
+       "win_counts": {
+        "librarian": 9,
+        "helpful_ai_assistant": 69,
+        "corporate_faq": 3,
+        "textbook": 4,
+        "poet": 2,
+        "flight_attendant": 2,
+        "defence_lawyer": 2,
+        "investigative_journalist": 1,
+        "military_strategist": 1,
+        "startup_founder": 1,
+        "er_nurse": 3,
+        "victorian_butler": 1,
+        "game_show_host": 1,
+        "standup_comic": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.7934769443077648,
+       "median_max_conf": 0.8292195993390816,
+       "mean_entropy_bits": 1.3652455686053946,
+       "frac_below_floor": 0.0,
+       "control_share": 0.99,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.99
+        ],
+        [
+         "librarian",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 99,
+        "librarian": 1
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 200,
+     "mean_max_conf": 0.5592593666568803,
+     "median_max_conf": 0.5877079513096979,
+     "mean_entropy_bits": 2.4049371961220776,
+     "frac_below_floor": 0.195,
+     "control_share": 0.865,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.83
+      ],
+      [
+       "librarian",
+       0.05
+      ],
+      [
+       "textbook",
+       0.02
+      ],
+      [
+       "corporate_faq",
+       0.015
+      ],
+      [
+       "defence_lawyer",
+       0.015
+      ]
+     ],
+     "win_counts": {
+      "librarian": 10,
+      "helpful_ai_assistant": 166,
+      "corporate_faq": 3,
+      "textbook": 4,
+      "poet": 2,
+      "flight_attendant": 2,
+      "defence_lawyer": 3,
+      "investigative_journalist": 2,
+      "military_strategist": 1,
+      "startup_founder": 1,
+      "er_nurse": 3,
+      "victorian_butler": 1,
+      "game_show_host": 1,
+      "standup_comic": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.42946545641525075,
+       "median_max_conf": 0.4015828203259302,
+       "mean_entropy_bits": 2.913892161278289,
+       "frac_below_floor": 0.38,
+       "control_share": 0.74,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.67
+        ],
+        [
+         "librarian",
+         0.1
+        ],
+        [
+         "textbook",
+         0.04
+        ],
+        [
+         "corporate_faq",
+         0.03
+        ],
+        [
+         "er_nurse",
+         0.03
+        ]
+       ],
+       "win_counts": {
+        "librarian": 10,
+        "helpful_ai_assistant": 67,
+        "corporate_faq": 3,
+        "textbook": 4,
+        "poet": 2,
+        "flight_attendant": 2,
+        "defence_lawyer": 2,
+        "investigative_journalist": 2,
+        "military_strategist": 1,
+        "startup_founder": 1,
+        "er_nurse": 3,
+        "victorian_butler": 1,
+        "game_show_host": 1,
+        "standup_comic": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.6890532768985098,
+       "median_max_conf": 0.7048560060729443,
+       "mean_entropy_bits": 1.895982230965866,
+       "frac_below_floor": 0.01,
+       "control_share": 0.99,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.99
+        ],
+        [
+         "defence_lawyer",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 99,
+        "defence_lawyer": 1
+       }
+      }
+     }
+    }
+   },
+   "3.6|agentic": {
+    "n_total": 200,
+    "tool_call_rate": 0.23,
+    "mean_words": 241.36315789473684,
+    "trunc": {
+     "n": 190,
+     "mean_max_conf": 0.5510696599507987,
+     "median_max_conf": 0.5318726362444277,
+     "mean_entropy_bits": 2.438711974624847,
+     "frac_below_floor": 0.2736842105263158,
+     "control_share": 0.7894736842105263,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.758
+      ],
+      [
+       "librarian",
+       0.063
+      ],
+      [
+       "poet",
+       0.021
+      ],
+      [
+       "investigative_journalist",
+       0.016
+      ],
+      [
+       "textbook",
+       0.016
+      ]
+     ],
+     "win_counts": {
+      "investigative_journalist": 3,
+      "helpful_ai_assistant": 144,
+      "poet": 4,
+      "textbook": 3,
+      "pentester": 1,
+      "librarian": 12,
+      "standup_comic": 3,
+      "therapist": 1,
+      "corporate_faq": 3,
+      "sales_rep": 1,
+      "retired_engineer": 2,
+      "kindergarten_teacher": 3,
+      "er_nurse": 3,
+      "victorian_butler": 1,
+      "flight_attendant": 1,
+      "defence_lawyer": 3,
+      "game_show_host": 1,
+      "farmer": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 91,
+       "mean_max_conf": 0.3999701959884831,
+       "median_max_conf": 0.33751830302581864,
+       "mean_entropy_bits": 3.119219772650831,
+       "frac_below_floor": 0.4945054945054945,
+       "control_share": 0.6373626373626373,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.582
+        ],
+        [
+         "librarian",
+         0.099
+        ],
+        [
+         "investigative_journalist",
+         0.033
+        ],
+        [
+         "poet",
+         0.033
+        ],
+        [
+         "standup_comic",
+         0.033
+        ]
+       ],
+       "win_counts": {
+        "investigative_journalist": 3,
+        "helpful_ai_assistant": 53,
+        "poet": 3,
+        "textbook": 2,
+        "pentester": 1,
+        "librarian": 9,
+        "standup_comic": 3,
+        "therapist": 1,
+        "corporate_faq": 3,
+        "sales_rep": 1,
+        "retired_engineer": 2,
+        "kindergarten_teacher": 2,
+        "er_nurse": 3,
+        "victorian_butler": 1,
+        "flight_attendant": 1,
+        "defence_lawyer": 1,
+        "game_show_host": 1,
+        "farmer": 1
+       }
+      },
+      "generic": {
+       "n": 99,
+       "mean_max_conf": 0.6899590662191899,
+       "median_max_conf": 0.7042761726955197,
+       "mean_entropy_bits": 1.8131947057322766,
+       "frac_below_floor": 0.0707070707070707,
+       "control_share": 0.9292929292929293,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.919
+        ],
+        [
+         "librarian",
+         0.03
+        ],
+        [
+         "defence_lawyer",
+         0.02
+        ],
+        [
+         "poet",
+         0.01
+        ],
+        [
+         "textbook",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 91,
+        "poet": 1,
+        "textbook": 1,
+        "kindergarten_teacher": 1,
+        "librarian": 3,
+        "defence_lawyer": 2
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 190,
+     "mean_max_conf": 0.5259438154448205,
+     "median_max_conf": 0.4968185586934936,
+     "mean_entropy_bits": 2.592469296773095,
+     "frac_below_floor": 0.28421052631578947,
+     "control_share": 0.8,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.763
+      ],
+      [
+       "librarian",
+       0.053
+      ],
+      [
+       "poet",
+       0.021
+      ],
+      [
+       "textbook",
+       0.021
+      ],
+      [
+       "investigative_journalist",
+       0.016
+      ]
+     ],
+     "win_counts": {
+      "investigative_journalist": 3,
+      "helpful_ai_assistant": 145,
+      "poet": 4,
+      "textbook": 4,
+      "pentester": 1,
+      "librarian": 10,
+      "standup_comic": 3,
+      "therapist": 1,
+      "corporate_faq": 3,
+      "sales_rep": 1,
+      "retired_engineer": 2,
+      "kindergarten_teacher": 3,
+      "er_nurse": 3,
+      "victorian_butler": 1,
+      "flight_attendant": 1,
+      "defence_lawyer": 3,
+      "game_show_host": 1,
+      "farmer": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 91,
+       "mean_max_conf": 0.3890586966436326,
+       "median_max_conf": 0.33751830302581864,
+       "mean_entropy_bits": 3.1807438374709736,
+       "frac_below_floor": 0.4945054945054945,
+       "control_share": 0.6373626373626373,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.582
+        ],
+        [
+         "librarian",
+         0.099
+        ],
+        [
+         "investigative_journalist",
+         0.033
+        ],
+        [
+         "poet",
+         0.033
+        ],
+        [
+         "standup_comic",
+         0.033
+        ]
+       ],
+       "win_counts": {
+        "investigative_journalist": 3,
+        "helpful_ai_assistant": 53,
+        "poet": 3,
+        "textbook": 2,
+        "pentester": 1,
+        "librarian": 9,
+        "standup_comic": 3,
+        "therapist": 1,
+        "corporate_faq": 3,
+        "sales_rep": 1,
+        "retired_engineer": 2,
+        "kindergarten_teacher": 2,
+        "er_nurse": 3,
+        "victorian_butler": 1,
+        "flight_attendant": 1,
+        "defence_lawyer": 1,
+        "game_show_host": 1,
+        "farmer": 1
+       }
+      },
+      "generic": {
+       "n": 99,
+       "mean_max_conf": 0.6517675105044983,
+       "median_max_conf": 0.6802351109866115,
+       "mean_entropy_bits": 2.051732092697268,
+       "frac_below_floor": 0.09090909090909091,
+       "control_share": 0.9494949494949495,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.929
+        ],
+        [
+         "textbook",
+         0.02
+        ],
+        [
+         "defence_lawyer",
+         0.02
+        ],
+        [
+         "poet",
+         0.01
+        ],
+        [
+         "kindergarten_teacher",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 92,
+        "poet": 1,
+        "textbook": 2,
+        "kindergarten_teacher": 1,
+        "librarian": 1,
+        "defence_lawyer": 2
+       }
+      }
+     }
+    }
+   },
+   "3.6|chat": {
+    "n_total": 200,
+    "tool_call_rate": 0.0,
+    "mean_words": 464.42,
+    "trunc": {
+     "n": 200,
+     "mean_max_conf": 0.6509830220239178,
+     "median_max_conf": 0.7620823754714728,
+     "mean_entropy_bits": 1.9043208393979327,
+     "frac_below_floor": 0.19,
+     "control_share": 0.85,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.825
+      ],
+      [
+       "librarian",
+       0.05
+      ],
+      [
+       "corporate_faq",
+       0.015
+      ],
+      [
+       "poet",
+       0.015
+      ],
+      [
+       "flight_attendant",
+       0.01
+      ]
+     ],
+     "win_counts": {
+      "librarian": 10,
+      "helpful_ai_assistant": 165,
+      "corporate_faq": 3,
+      "poet": 3,
+      "defence_lawyer": 1,
+      "retired_engineer": 1,
+      "flight_attendant": 2,
+      "pentester": 2,
+      "military_strategist": 1,
+      "standup_comic": 2,
+      "kindergarten_teacher": 1,
+      "er_nurse": 1,
+      "textbook": 2,
+      "investigative_journalist": 2,
+      "conspiracy_blogger": 1,
+      "game_show_host": 1,
+      "therapist": 1,
+      "bureaucrat": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.5082582690197085,
+       "median_max_conf": 0.4283826869635716,
+       "mean_entropy_bits": 2.5321463299163103,
+       "frac_below_floor": 0.37,
+       "control_share": 0.71,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.66
+        ],
+        [
+         "librarian",
+         0.09
+        ],
+        [
+         "corporate_faq",
+         0.03
+        ],
+        [
+         "poet",
+         0.03
+        ],
+        [
+         "flight_attendant",
+         0.02
+        ]
+       ],
+       "win_counts": {
+        "librarian": 9,
+        "helpful_ai_assistant": 66,
+        "corporate_faq": 3,
+        "poet": 3,
+        "defence_lawyer": 1,
+        "retired_engineer": 1,
+        "flight_attendant": 2,
+        "pentester": 2,
+        "military_strategist": 1,
+        "standup_comic": 2,
+        "kindergarten_teacher": 1,
+        "er_nurse": 1,
+        "textbook": 2,
+        "investigative_journalist": 2,
+        "conspiracy_blogger": 1,
+        "game_show_host": 1,
+        "therapist": 1,
+        "bureaucrat": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.793707775028127,
+       "median_max_conf": 0.8448141061927485,
+       "mean_entropy_bits": 1.276495348879555,
+       "frac_below_floor": 0.01,
+       "control_share": 0.99,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.99
+        ],
+        [
+         "librarian",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 99,
+        "librarian": 1
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 200,
+     "mean_max_conf": 0.608447479922572,
+     "median_max_conf": 0.6331770271721384,
+     "mean_entropy_bits": 2.112039382324881,
+     "frac_below_floor": 0.205,
+     "control_share": 0.86,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.82
+      ],
+      [
+       "librarian",
+       0.045
+      ],
+      [
+       "corporate_faq",
+       0.02
+      ],
+      [
+       "textbook",
+       0.02
+      ],
+      [
+       "poet",
+       0.015
+      ]
+     ],
+     "win_counts": {
+      "librarian": 9,
+      "helpful_ai_assistant": 164,
+      "corporate_faq": 4,
+      "poet": 3,
+      "defence_lawyer": 2,
+      "retired_engineer": 1,
+      "flight_attendant": 2,
+      "pentester": 1,
+      "military_strategist": 1,
+      "standup_comic": 2,
+      "kindergarten_teacher": 1,
+      "er_nurse": 1,
+      "textbook": 4,
+      "investigative_journalist": 2,
+      "conspiracy_blogger": 1,
+      "game_show_host": 1,
+      "therapist": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.47115716862252194,
+       "median_max_conf": 0.4130349462588282,
+       "mean_entropy_bits": 2.716020732751639,
+       "frac_below_floor": 0.39,
+       "control_share": 0.74,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.68
+        ],
+        [
+         "librarian",
+         0.08
+        ],
+        [
+         "corporate_faq",
+         0.04
+        ],
+        [
+         "poet",
+         0.03
+        ],
+        [
+         "flight_attendant",
+         0.02
+        ]
+       ],
+       "win_counts": {
+        "librarian": 8,
+        "helpful_ai_assistant": 68,
+        "corporate_faq": 4,
+        "poet": 3,
+        "defence_lawyer": 1,
+        "retired_engineer": 1,
+        "flight_attendant": 2,
+        "pentester": 1,
+        "military_strategist": 1,
+        "standup_comic": 2,
+        "kindergarten_teacher": 1,
+        "er_nurse": 1,
+        "textbook": 2,
+        "investigative_journalist": 2,
+        "conspiracy_blogger": 1,
+        "game_show_host": 1,
+        "therapist": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.7457377912226218,
+       "median_max_conf": 0.8094779119152932,
+       "mean_entropy_bits": 1.5080580318981227,
+       "frac_below_floor": 0.02,
+       "control_share": 0.98,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.96
+        ],
+        [
+         "textbook",
+         0.02
+        ],
+        [
+         "defence_lawyer",
+         0.01
+        ],
+        [
+         "librarian",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 96,
+        "textbook": 2,
+        "defence_lawyer": 1,
+        "librarian": 1
+       }
+      }
+     }
+    }
+   },
+   "3.8|agentic": {
+    "n_total": 200,
+    "tool_call_rate": 0.25,
+    "mean_words": 277.6020942408377,
+    "trunc": {
+     "n": 191,
+     "mean_max_conf": 0.4398962580124312,
+     "median_max_conf": 0.4025716706195882,
+     "mean_entropy_bits": 2.932958444209888,
+     "frac_below_floor": 0.44502617801047123,
+     "control_share": 0.6387434554973822,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.618
+      ],
+      [
+       "librarian",
+       0.094
+      ],
+      [
+       "investigative_journalist",
+       0.037
+      ],
+      [
+       "standup_comic",
+       0.037
+      ],
+      [
+       "therapist",
+       0.037
+      ]
+     ],
+     "win_counts": {
+      "helpful_ai_assistant": 118,
+      "librarian": 18,
+      "investigative_journalist": 7,
+      "poet": 6,
+      "defence_lawyer": 3,
+      "pentester": 3,
+      "standup_comic": 7,
+      "flight_attendant": 2,
+      "therapist": 7,
+      "farmer": 1,
+      "retired_engineer": 5,
+      "military_strategist": 1,
+      "textbook": 3,
+      "conspiracy_blogger": 2,
+      "corporate_faq": 1,
+      "game_show_host": 1,
+      "er_nurse": 3,
+      "academic_philosopher": 1,
+      "monk": 1,
+      "sales_rep": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 92,
+       "mean_max_conf": 0.3262216370494907,
+       "median_max_conf": 0.24845066415261868,
+       "mean_entropy_bits": 3.428377010398843,
+       "frac_below_floor": 0.6630434782608695,
+       "control_share": 0.3695652173913043,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.348
+        ],
+        [
+         "librarian",
+         0.152
+        ],
+        [
+         "standup_comic",
+         0.076
+        ],
+        [
+         "investigative_journalist",
+         0.065
+        ],
+        [
+         "poet",
+         0.065
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 32,
+        "librarian": 14,
+        "investigative_journalist": 6,
+        "poet": 6,
+        "defence_lawyer": 3,
+        "pentester": 3,
+        "standup_comic": 7,
+        "flight_attendant": 2,
+        "therapist": 5,
+        "farmer": 1,
+        "retired_engineer": 3,
+        "military_strategist": 1,
+        "textbook": 1,
+        "conspiracy_blogger": 2,
+        "corporate_faq": 1,
+        "game_show_host": 1,
+        "er_nurse": 3,
+        "academic_philosopher": 1
+       }
+      },
+      "generic": {
+       "n": 99,
+       "mean_max_conf": 0.5455332795133457,
+       "median_max_conf": 0.5662518421602571,
+       "mean_entropy_bits": 2.4725694736100507,
+       "frac_below_floor": 0.24242424242424243,
+       "control_share": 0.8888888888888888,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.869
+        ],
+        [
+         "librarian",
+         0.04
+        ],
+        [
+         "retired_engineer",
+         0.02
+        ],
+        [
+         "therapist",
+         0.02
+        ],
+        [
+         "textbook",
+         0.02
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 86,
+        "retired_engineer": 2,
+        "therapist": 2,
+        "librarian": 4,
+        "textbook": 2,
+        "monk": 1,
+        "sales_rep": 1,
+        "investigative_journalist": 1
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 191,
+     "mean_max_conf": 0.3698045571702999,
+     "median_max_conf": 0.30384569711739423,
+     "mean_entropy_bits": 3.2850344635817605,
+     "frac_below_floor": 0.5602094240837696,
+     "control_share": 0.581151832460733,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.555
+      ],
+      [
+       "librarian",
+       0.089
+      ],
+      [
+       "investigative_journalist",
+       0.058
+      ],
+      [
+       "poet",
+       0.042
+      ],
+      [
+       "standup_comic",
+       0.037
+      ]
+     ],
+     "win_counts": {
+      "helpful_ai_assistant": 106,
+      "librarian": 17,
+      "investigative_journalist": 11,
+      "poet": 8,
+      "defence_lawyer": 4,
+      "pentester": 4,
+      "standup_comic": 7,
+      "flight_attendant": 2,
+      "therapist": 6,
+      "farmer": 4,
+      "retired_engineer": 7,
+      "military_strategist": 1,
+      "textbook": 4,
+      "conspiracy_blogger": 2,
+      "corporate_faq": 1,
+      "game_show_host": 1,
+      "er_nurse": 3,
+      "academic_philosopher": 1,
+      "monk": 1,
+      "sales_rep": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 92,
+       "mean_max_conf": 0.28732785221229495,
+       "median_max_conf": 0.2275678416827705,
+       "mean_entropy_bits": 3.6139255862824347,
+       "frac_below_floor": 0.7391304347826086,
+       "control_share": 0.31521739130434784,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.293
+        ],
+        [
+         "librarian",
+         0.141
+        ],
+        [
+         "investigative_journalist",
+         0.109
+        ],
+        [
+         "standup_comic",
+         0.076
+        ],
+        [
+         "poet",
+         0.065
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 27,
+        "librarian": 13,
+        "investigative_journalist": 10,
+        "poet": 6,
+        "defence_lawyer": 3,
+        "pentester": 4,
+        "standup_comic": 7,
+        "flight_attendant": 2,
+        "therapist": 5,
+        "farmer": 1,
+        "retired_engineer": 4,
+        "military_strategist": 1,
+        "textbook": 1,
+        "conspiracy_blogger": 2,
+        "corporate_faq": 1,
+        "game_show_host": 1,
+        "er_nurse": 3,
+        "academic_philosopher": 1
+       }
+      },
+      "generic": {
+       "n": 99,
+       "mean_max_conf": 0.4464495759191531,
+       "median_max_conf": 0.43215609561646307,
+       "mean_entropy_bits": 2.9793982687488114,
+       "frac_below_floor": 0.3939393939393939,
+       "control_share": 0.8282828282828283,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.798
+        ],
+        [
+         "librarian",
+         0.04
+        ],
+        [
+         "retired_engineer",
+         0.03
+        ],
+        [
+         "farmer",
+         0.03
+        ],
+        [
+         "textbook",
+         0.03
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 79,
+        "retired_engineer": 3,
+        "farmer": 3,
+        "therapist": 1,
+        "librarian": 4,
+        "textbook": 3,
+        "defence_lawyer": 1,
+        "monk": 1,
+        "sales_rep": 1,
+        "poet": 2,
+        "investigative_journalist": 1
+       }
+      }
+     }
+    }
+   },
+   "3.8|chat": {
+    "n_total": 200,
+    "tool_call_rate": 0.0,
+    "mean_words": 440.485,
+    "trunc": {
+     "n": 200,
+     "mean_max_conf": 0.43508698825247577,
+     "median_max_conf": 0.39175789345460876,
+     "mean_entropy_bits": 2.9021325327677596,
+     "frac_below_floor": 0.405,
+     "control_share": 0.645,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.62
+      ],
+      [
+       "librarian",
+       0.115
+      ],
+      [
+       "therapist",
+       0.04
+      ],
+      [
+       "farmer",
+       0.03
+      ],
+      [
+       "investigative_journalist",
+       0.025
+      ]
+     ],
+     "win_counts": {
+      "investigative_journalist": 5,
+      "farmer": 6,
+      "helpful_ai_assistant": 124,
+      "librarian": 23,
+      "corporate_faq": 3,
+      "poet": 5,
+      "academic_philosopher": 4,
+      "pentester": 3,
+      "flight_attendant": 1,
+      "retired_engineer": 4,
+      "standup_comic": 3,
+      "er_nurse": 5,
+      "military_strategist": 1,
+      "textbook": 2,
+      "therapist": 8,
+      "conspiracy_blogger": 1,
+      "defence_lawyer": 1,
+      "victorian_butler": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.33747687810678534,
+       "median_max_conf": 0.28210064777486954,
+       "mean_entropy_bits": 3.3348162977282074,
+       "frac_below_floor": 0.59,
+       "control_share": 0.45,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.4
+        ],
+        [
+         "librarian",
+         0.18
+        ],
+        [
+         "poet",
+         0.05
+        ],
+        [
+         "er_nurse",
+         0.05
+        ],
+        [
+         "investigative_journalist",
+         0.04
+        ]
+       ],
+       "win_counts": {
+        "investigative_journalist": 4,
+        "farmer": 4,
+        "helpful_ai_assistant": 40,
+        "librarian": 18,
+        "corporate_faq": 3,
+        "poet": 5,
+        "academic_philosopher": 3,
+        "pentester": 3,
+        "flight_attendant": 1,
+        "retired_engineer": 4,
+        "standup_comic": 2,
+        "er_nurse": 5,
+        "military_strategist": 1,
+        "textbook": 2,
+        "therapist": 2,
+        "conspiracy_blogger": 1,
+        "defence_lawyer": 1,
+        "victorian_butler": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.532697098398166,
+       "median_max_conf": 0.5172058944195141,
+       "mean_entropy_bits": 2.4694487678073114,
+       "frac_below_floor": 0.22,
+       "control_share": 0.84,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.84
+        ],
+        [
+         "therapist",
+         0.06
+        ],
+        [
+         "librarian",
+         0.05
+        ],
+        [
+         "farmer",
+         0.02
+        ],
+        [
+         "standup_comic",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "therapist": 6,
+        "farmer": 2,
+        "helpful_ai_assistant": 84,
+        "standup_comic": 1,
+        "librarian": 5,
+        "academic_philosopher": 1,
+        "investigative_journalist": 1
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 200,
+     "mean_max_conf": 0.31664374948716123,
+     "median_max_conf": 0.252648073561529,
+     "mean_entropy_bits": 3.4991439093380636,
+     "frac_below_floor": 0.65,
+     "control_share": 0.465,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.43
+      ],
+      [
+       "librarian",
+       0.125
+      ],
+      [
+       "farmer",
+       0.065
+      ],
+      [
+       "retired_engineer",
+       0.055
+      ],
+      [
+       "investigative_journalist",
+       0.05
+      ]
+     ],
+     "win_counts": {
+      "investigative_journalist": 10,
+      "farmer": 13,
+      "helpful_ai_assistant": 86,
+      "librarian": 25,
+      "corporate_faq": 3,
+      "poet": 5,
+      "academic_philosopher": 4,
+      "pentester": 5,
+      "flight_attendant": 1,
+      "retired_engineer": 11,
+      "standup_comic": 7,
+      "er_nurse": 7,
+      "military_strategist": 1,
+      "textbook": 4,
+      "defence_lawyer": 3,
+      "therapist": 8,
+      "conspiracy_blogger": 1,
+      "victorian_butler": 1,
+      "grandmother": 1,
+      "sports_coach": 2,
+      "kindergarten_teacher": 2
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.2676842589735112,
+       "median_max_conf": 0.23442262428692173,
+       "mean_entropy_bits": 3.6970227502085105,
+       "frac_below_floor": 0.76,
+       "control_share": 0.27,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.22
+        ],
+        [
+         "librarian",
+         0.21
+        ],
+        [
+         "farmer",
+         0.09
+        ],
+        [
+         "retired_engineer",
+         0.07
+        ],
+        [
+         "investigative_journalist",
+         0.06
+        ]
+       ],
+       "win_counts": {
+        "investigative_journalist": 6,
+        "farmer": 9,
+        "helpful_ai_assistant": 22,
+        "librarian": 21,
+        "corporate_faq": 3,
+        "poet": 5,
+        "academic_philosopher": 3,
+        "pentester": 5,
+        "flight_attendant": 1,
+        "retired_engineer": 7,
+        "standup_comic": 2,
+        "er_nurse": 5,
+        "military_strategist": 1,
+        "textbook": 2,
+        "defence_lawyer": 2,
+        "therapist": 1,
+        "conspiracy_blogger": 1,
+        "victorian_butler": 1,
+        "grandmother": 1,
+        "sports_coach": 2
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.3656032400008112,
+       "median_max_conf": 0.2970859645435855,
+       "mean_entropy_bits": 3.301265068467617,
+       "frac_below_floor": 0.54,
+       "control_share": 0.66,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.64
+        ],
+        [
+         "therapist",
+         0.07
+        ],
+        [
+         "standup_comic",
+         0.05
+        ],
+        [
+         "farmer",
+         0.04
+        ],
+        [
+         "retired_engineer",
+         0.04
+        ]
+       ],
+       "win_counts": {
+        "standup_comic": 5,
+        "farmer": 4,
+        "retired_engineer": 4,
+        "helpful_ai_assistant": 64,
+        "therapist": 7,
+        "er_nurse": 2,
+        "kindergarten_teacher": 2,
+        "investigative_journalist": 4,
+        "textbook": 2,
+        "librarian": 4,
+        "defence_lawyer": 1,
+        "academic_philosopher": 1
+       }
+      }
+     }
+    }
+   }
+  },
+  "gaps_chat_minus_agentic": {
+   "3.5|trunc": {
+    "max_conf": {
+     "diff": 0.06552079319478002,
+     "lo": 0.03115021783765462,
+     "hi": 0.10069275387115349
+    },
+    "entropy": {
+     "diff": -0.25625073031417905,
+     "lo": -0.42846627133338155,
+     "hi": -0.08740395457090296
+    },
+    "below": {
+     "diff": -0.09947643979057591,
+     "lo": -0.16753926701570682,
+     "hi": -0.03664921465968586
+    }
+   },
+   "3.5|full": {
+    "max_conf": {
+     "diff": -0.011242895812495688,
+     "lo": -0.04263242497994286,
+     "hi": 0.020930028396459667
+    },
+    "entropy": {
+     "diff": 0.10231696649561577,
+     "lo": -0.04321795225152819,
+     "hi": 0.24986366913341937
+    },
+    "below": {
+     "diff": -0.07329842931937172,
+     "lo": -0.13089005235602094,
+     "hi": -0.010471204188481676
+    }
+   },
+   "3.6|trunc": {
+    "max_conf": {
+     "diff": 0.09994792232856893,
+     "lo": 0.06737777741529366,
+     "hi": 0.13370121309826086
+    },
+    "entropy": {
+     "diff": -0.5349744230079511,
+     "lo": -0.6801239540010595,
+     "hi": -0.4014896502282104
+    },
+    "below": {
+     "diff": -0.08421052631578947,
+     "lo": -0.15263157894736842,
+     "hi": -0.021052631578947368
+    }
+   },
+   "3.6|full": {
+    "max_conf": {
+     "diff": 0.08230106554551542,
+     "lo": 0.05126653819746883,
+     "hi": 0.11358149802479851
+    },
+    "entropy": {
+     "diff": -0.4806700134123014,
+     "lo": -0.6164396017248595,
+     "hi": -0.3447901263964579
+    },
+    "below": {
+     "diff": -0.07894736842105263,
+     "lo": -0.14736842105263157,
+     "hi": -0.010526315789473684
+    }
+   },
+   "3.8|trunc": {
+    "max_conf": {
+     "diff": -0.009244812791262597,
+     "lo": -0.037539667888412356,
+     "hi": 0.017413445436442656
+    },
+    "entropy": {
+     "diff": -0.013657183942822566,
+     "lo": -0.12424051945718867,
+     "hi": 0.09922255274806563
+    },
+    "below": {
+     "diff": -0.03664921465968586,
+     "lo": -0.10471204188481675,
+     "hi": 0.03664921465968586
+    }
+   },
+   "3.8|full": {
+    "max_conf": {
+     "diff": -0.05468170861860014,
+     "lo": -0.07789419381450607,
+     "hi": -0.032302542565804025
+    },
+    "entropy": {
+     "diff": 0.2127348571868556,
+     "lo": 0.11923409526980051,
+     "hi": 0.30769310564246266
+    },
+    "below": {
+     "diff": 0.08900523560209424,
+     "lo": 0.02617801047120419,
+     "hi": 0.15706806282722513
+    }
+   }
+  },
+  "cross_version_raw": {
+   "3.8-3.5|chat|trunc": {
+    "max_conf": {
+     "diff": -0.2107176186642947,
+     "lo": -0.2443240197670625,
+     "hi": -0.17681163241874853
+    },
+    "entropy": {
+     "diff": 0.9194390486930593,
+     "lo": 0.7724026492832605,
+     "hi": 1.0580530880229566
+    },
+    "below": {
+     "diff": 0.245,
+     "lo": 0.17,
+     "hi": 0.32
+    }
+   },
+   "3.6-3.5|chat|trunc": {
+    "max_conf": {
+     "diff": 0.005178415107147354,
+     "lo": -0.022023545493861624,
+     "hi": 0.033407066780677265
+    },
+    "entropy": {
+     "diff": -0.0783726446767673,
+     "lo": -0.2040066944441856,
+     "hi": 0.042292403047674516
+    },
+    "below": {
+     "diff": 0.03,
+     "lo": -0.025,
+     "hi": 0.085
+    }
+   },
+   "3.8-3.6|chat|trunc": {
+    "max_conf": {
+     "diff": -0.21589603377144204,
+     "lo": -0.251417789330865,
+     "hi": -0.18256872367773733
+    },
+    "entropy": {
+     "diff": 0.9978116933698266,
+     "lo": 0.8434088646668398,
+     "hi": 1.1490076358610835
+    },
+    "below": {
+     "diff": 0.215,
+     "lo": 0.15,
+     "hi": 0.285
+    }
+   },
+   "3.8-3.5|agentic|trunc": {
+    "max_conf": {
+     "diff": -0.14770196199779592,
+     "lo": -0.1827865001934082,
+     "hi": -0.11296763246068732
+    },
+    "entropy": {
+     "diff": 0.726317237892131,
+     "lo": 0.5728148647903621,
+     "hi": 0.8765606717253753
+    },
+    "below": {
+     "diff": 0.19021739130434784,
+     "lo": 0.11413043478260869,
+     "hi": 0.2717391304347826
+    }
+   },
+   "3.6-3.5|agentic|trunc": {
+    "max_conf": {
+     "diff": -0.036832207639376315,
+     "lo": -0.06808767450084341,
+     "hi": -0.004081690388223982
+    },
+    "entropy": {
+     "diff": 0.22982845786078757,
+     "lo": 0.08708863498991518,
+     "hi": 0.37452820976430773
+    },
+    "below": {
+     "diff": 0.02702702702702703,
+     "lo": -0.03783783783783784,
+     "hi": 0.08648648648648649
+    }
+   },
+   "3.8-3.6|agentic|trunc": {
+    "max_conf": {
+     "diff": -0.10478317399737623,
+     "lo": -0.13932092953714773,
+     "hi": -0.06880784472187987
+    },
+    "entropy": {
+     "diff": 0.46549427286705375,
+     "lo": 0.3166758513768888,
+     "hi": 0.6065190120304023
+    },
+    "below": {
+     "diff": 0.16129032258064516,
+     "lo": 0.08064516129032258,
+     "hi": 0.24193548387096775
+    }
+   },
+   "3.8-3.5|chat|full": {
+    "max_conf": {
+     "diff": -0.24261561716971905,
+     "lo": -0.27138621197696233,
+     "hi": -0.21374802701663442
+    },
+    "entropy": {
+     "diff": 1.0942067132159858,
+     "lo": 0.9726401925391313,
+     "hi": 1.2157284012187477
+    },
+    "below": {
+     "diff": 0.455,
+     "lo": 0.375,
+     "hi": 0.535
+    }
+   },
+   "3.6-3.5|chat|full": {
+    "max_conf": {
+     "diff": 0.04918811326569159,
+     "lo": 0.022870601695886568,
+     "hi": 0.07426967380750843
+    },
+    "entropy": {
+     "diff": -0.29289781379719687,
+     "lo": -0.41890698203603116,
+     "hi": -0.17560953741303315
+    },
+    "below": {
+     "diff": 0.01,
+     "lo": -0.045,
+     "hi": 0.065
+    }
+   },
+   "3.8-3.6|chat|full": {
+    "max_conf": {
+     "diff": -0.29180373043541064,
+     "lo": -0.32488665092448643,
+     "hi": -0.255554099088534
+    },
+    "entropy": {
+     "diff": 1.3871045270131825,
+     "lo": 1.23137403732763,
+     "hi": 1.5513904325794552
+    },
+    "below": {
+     "diff": 0.445,
+     "lo": 0.37,
+     "hi": 0.52
+    }
+   },
+   "3.8-3.5|agentic|full": {
+    "max_conf": {
+     "diff": -0.20560143138626422,
+     "lo": -0.24069188710757564,
+     "hi": -0.1711688106402561
+    },
+    "entropy": {
+     "diff": 1.0015322516689882,
+     "lo": 0.8433227782351387,
+     "hi": 1.1637011605045027
+    },
+    "below": {
+     "diff": 0.29347826086956524,
+     "lo": 0.20108695652173914,
+     "hi": 0.375
+    }
+   },
+   "3.6-3.5|agentic|full": {
+    "max_conf": {
+     "diff": -0.05311779239398614,
+     "lo": -0.08241547182771322,
+     "hi": -0.023888596426130487
+    },
+    "entropy": {
+     "diff": 0.3200291459946444,
+     "lo": 0.18750212713034423,
+     "hi": 0.4552203668263973
+    },
+    "below": {
+     "diff": 0.032432432432432434,
+     "lo": -0.02702702702702703,
+     "hi": 0.0918918918918919
+    }
+   },
+   "3.8-3.6|agentic|full": {
+    "max_conf": {
+     "diff": -0.15339448671129668,
+     "lo": -0.18359050905575808,
+     "hi": -0.12149611533202552
+    },
+    "entropy": {
+     "diff": 0.6809561937046339,
+     "lo": 0.5448620177679012,
+     "hi": 0.810734770825921
+    },
+    "below": {
+     "diff": 0.26881720430107525,
+     "lo": 0.1881720430107527,
+     "hi": 0.3548387096774194
+    }
+   }
+  },
+  "paraphrase_floor": {
+   "source": "3.5|chat",
+   "n": 199,
+   "trunc": {
+    "n": 199,
+    "mean_max_conf": 0.5979452076820532,
+    "median_max_conf": 0.6843817177320082,
+    "mean_entropy_bits": 2.2470965038592707,
+    "frac_below_floor": 0.24120603015075376,
+    "control_share": 0.8542713567839196,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.799
+     ],
+     [
+      "librarian",
+      0.03
+     ],
+     [
+      "er_nurse",
+      0.03
+     ],
+     [
+      "corporate_faq",
+      0.03
+     ],
+     [
+      "textbook",
+      0.025
+     ]
+    ],
+    "win_counts": {
+     "librarian": 6,
+     "er_nurse": 6,
+     "helpful_ai_assistant": 159,
+     "corporate_faq": 6,
+     "poet": 4,
+     "flight_attendant": 3,
+     "military_strategist": 1,
+     "kindergarten_teacher": 1,
+     "textbook": 5,
+     "standup_comic": 1,
+     "farmer": 4,
+     "startup_founder": 1,
+     "investigative_journalist": 2
+    },
+    "winner_agreement_with_source": 0.8592964824120602,
+    "source_minus_paraphrase": {
+     "max_conf": {
+      "diff": 0.05013780341405676,
+      "lo": 0.033692276294140074,
+      "hi": 0.06587427238915566
+     },
+     "entropy": {
+      "diff": -0.27604146769405624,
+      "lo": -0.3429262823067929,
+      "hi": -0.21167961799119653
+     },
+     "below": {
+      "diff": -0.08542713567839195,
+      "lo": -0.135678391959799,
+      "hi": -0.035175879396984924
+     }
+    }
+   },
+   "full": {
+    "n": 199,
+    "mean_max_conf": 0.5258752447808112,
+    "median_max_conf": 0.5487728646895568,
+    "mean_entropy_bits": 2.5978816436945023,
+    "frac_below_floor": 0.2613065326633166,
+    "control_share": 0.8442211055276382,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.789
+     ],
+     [
+      "librarian",
+      0.03
+     ],
+     [
+      "er_nurse",
+      0.03
+     ],
+     [
+      "corporate_faq",
+      0.03
+     ],
+     [
+      "textbook",
+      0.025
+     ]
+    ],
+    "win_counts": {
+     "librarian": 6,
+     "er_nurse": 6,
+     "helpful_ai_assistant": 157,
+     "corporate_faq": 6,
+     "poet": 4,
+     "flight_attendant": 3,
+     "military_strategist": 1,
+     "kindergarten_teacher": 1,
+     "textbook": 5,
+     "standup_comic": 1,
+     "farmer": 4,
+     "startup_founder": 1,
+     "investigative_journalist": 2,
+     "retired_engineer": 1,
+     "defence_lawyer": 1
+    },
+    "winner_agreement_with_source": 0.8592964824120602,
+    "source_minus_paraphrase": {
+     "max_conf": {
+      "diff": 0.035366084468072136,
+      "lo": 0.01894645282360475,
+      "hi": 0.0523866707044486
+     },
+     "entropy": {
+      "diff": -0.20023550095924206,
+      "lo": -0.2653144841182826,
+      "hi": -0.13870242204905284
+     },
+     "below": {
+      "diff": -0.07035175879396985,
+      "lo": -0.12562814070351758,
+      "hi": -0.020100502512562814
+     }
+    }
+   }
+  },
+  "cross_library": {
+   "scored_library": "3.5",
+   "n": 6000,
+   "mean_max_conf": 0.874312364232978,
+   "median_max_conf": 0.9690051969614049,
+   "mean_entropy_bits": 0.7857266460787169,
+   "frac_below_floor": 0.039,
+   "control_share": 0.10083333333333333,
+   "top5": [
+    [
+     "textbook",
+     0.035
+    ],
+    [
+     "corporate_faq",
+     0.035
+    ],
+    [
+     "military_strategist",
+     0.035
+    ],
+    [
+     "game_show_host",
+     0.035
+    ],
+    [
+     "sales_rep",
+     0.035
+    ]
+   ],
+   "win_counts": {
+    "er_nurse": 186,
+    "farmer": 203,
+    "helpful_ai_assistant": 184,
+    "librarian": 205,
+    "street_hustler": 186,
+    "standup_comic": 201,
+    "poet": 204,
+    "conspiracy_blogger": 200,
+    "game_show_host": 207,
+    "retired_engineer": 195,
+    "startup_founder": 204,
+    "bureaucrat": 204,
+    "textbook": 211,
+    "military_strategist": 209,
+    "pentester": 192,
+    "therapist": 203,
+    "drill_sergeant": 200,
+    "kindergarten_teacher": 200,
+    "defence_lawyer": 205,
+    "academic_philosopher": 199,
+    "monk": 201,
+    "investigative_journalist": 180,
+    "corporate_faq": 210,
+    "flight_attendant": 203,
+    "victorian_butler": 204,
+    "grandmother": 196,
+    "pirate_captain": 204,
+    "sales_rep": 207,
+    "surfer": 198,
+    "sports_coach": 199
+   },
+   "accuracy": 0.9655,
+   "per_persona_accuracy": {
+    "er_nurse": 0.91,
+    "startup_founder": 0.995,
+    "bureaucrat": 0.99,
+    "standup_comic": 0.975,
+    "retired_engineer": 0.97,
+    "drill_sergeant": 1.0,
+    "kindergarten_teacher": 0.99,
+    "defence_lawyer": 0.97,
+    "monk": 0.995,
+    "investigative_journalist": 0.88,
+    "grandmother": 0.98,
+    "surfer": 0.99,
+    "sports_coach": 0.99,
+    "victorian_butler": 0.995,
+    "conspiracy_blogger": 0.975,
+    "pirate_captain": 0.995,
+    "therapist": 0.98,
+    "sales_rep": 0.985,
+    "academic_philosopher": 0.98,
+    "poet": 0.975,
+    "pentester": 0.955,
+    "farmer": 0.985,
+    "flight_attendant": 0.95,
+    "street_hustler": 0.91,
+    "librarian": 0.925,
+    "game_show_host": 1.0,
+    "military_strategist": 0.98,
+    "helpful_ai_assistant": 0.795,
+    "textbook": 0.97,
+    "corporate_faq": 0.975
+   },
+   "per_persona_mean_max_conf": {
+    "er_nurse": 0.7103248173717387,
+    "startup_founder": 0.9605034622275673,
+    "bureaucrat": 0.9733658294097216,
+    "standup_comic": 0.7776706042497709,
+    "retired_engineer": 0.7822158731936112,
+    "drill_sergeant": 0.992918456718945,
+    "kindergarten_teacher": 0.975647666549464,
+    "defence_lawyer": 0.7595114284465179,
+    "monk": 0.9288494292622318,
+    "investigative_journalist": 0.6660932532575877,
+    "grandmother": 0.942914721013504,
+    "surfer": 0.9697317985845999,
+    "sports_coach": 0.9512648986533568,
+    "victorian_butler": 0.9375245156160775,
+    "conspiracy_blogger": 0.9296062785123672,
+    "pirate_captain": 0.9860479449777034,
+    "therapist": 0.972318782707532,
+    "sales_rep": 0.9222008094751216,
+    "academic_philosopher": 0.9592776310872483,
+    "poet": 0.9299647853071119,
+    "pentester": 0.8782311931937312,
+    "farmer": 0.9042248092672612,
+    "flight_attendant": 0.8746579927748521,
+    "street_hustler": 0.6823377759700721,
+    "librarian": 0.6545969244008216,
+    "game_show_host": 0.9619072210275202,
+    "military_strategist": 0.9563882179634743,
+    "helpful_ai_assistant": 0.5491192785753343,
+    "textbook": 0.843636196916867,
+    "corporate_faq": 0.8963183302776235
+   }
+  }
+ },
+ "pooled": {
+  "n_ref": 12000,
+  "n_by_version": {
+   "3.5": 6000,
+   "3.8": 6000
+  },
+  "cap_words": 291,
+  "C_grid": {
+   "4.0": 0.93125,
+   "16.0": 0.9339166666666666
+  },
+  "C_best": 16.0,
+  "ref_truncation_rate": 0.6843333333333333,
+  "ref_mean_words": 209.96841666666666,
+  "heldout": {
+   "accuracy": 0.9339166666666666,
+   "chance": 0.03333333333333333,
+   "per_kind": {
+    "scenario": 0.8781666666666667,
+    "generic": 0.9896666666666667
+   },
+   "per_persona": {
+    "er_nurse": 0.925,
+    "startup_founder": 0.985,
+    "bureaucrat": 0.97,
+    "standup_comic": 0.9525,
+    "retired_engineer": 0.8925,
+    "drill_sergeant": 0.9975,
+    "kindergarten_teacher": 0.975,
+    "defence_lawyer": 0.88,
+    "monk": 0.96,
+    "investigative_journalist": 0.815,
+    "grandmother": 0.9875,
+    "surfer": 0.98,
+    "sports_coach": 0.9825,
+    "victorian_butler": 0.97,
+    "conspiracy_blogger": 0.9375,
+    "pirate_captain": 0.985,
+    "therapist": 0.9425,
+    "sales_rep": 0.975,
+    "academic_philosopher": 0.9125,
+    "poet": 0.94,
+    "pentester": 0.8875,
+    "farmer": 0.925,
+    "flight_attendant": 0.905,
+    "street_hustler": 0.9225,
+    "librarian": 0.84,
+    "game_show_host": 0.99,
+    "military_strategist": 0.9475,
+    "helpful_ai_assistant": 0.7975,
+    "textbook": 0.9275,
+    "corporate_faq": 0.91
+   },
+   "top_confusions": [
+    [
+     "librarian",
+     "helpful_ai_assistant",
+     25
+    ],
+    [
+     "helpful_ai_assistant",
+     "er_nurse",
+     16
+    ],
+    [
+     "defence_lawyer",
+     "helpful_ai_assistant",
+     14
+    ],
+    [
+     "farmer",
+     "er_nurse",
+     13
+    ],
+    [
+     "street_hustler",
+     "er_nurse",
+     13
+    ],
+    [
+     "flight_attendant",
+     "corporate_faq",
+     12
+    ],
+    [
+     "helpful_ai_assistant",
+     "corporate_faq",
+     12
+    ],
+    [
+     "retired_engineer",
+     "er_nurse",
+     11
+    ],
+    [
+     "helpful_ai_assistant",
+     "librarian",
+     11
+    ],
+    [
+     "monk",
+     "poet",
+     10
+    ],
+    [
+     "librarian",
+     "flight_attendant",
+     10
+    ],
+    [
+     "corporate_faq",
+     "textbook",
+     10
+    ]
+   ],
+   "summary": {
+    "n": 12000,
+    "mean_max_conf": 0.8656921594069236,
+    "median_max_conf": 0.9680898880613482,
+    "mean_entropy_bits": 0.8037598348645063,
+    "frac_below_floor": 0.1,
+    "control_share": 0.11258333333333333,
+    "top5": [
+     [
+      "er_nurse",
+      0.04
+     ],
+     [
+      "helpful_ai_assistant",
+      0.04
+     ],
+     [
+      "corporate_faq",
+      0.037
+     ],
+     [
+      "textbook",
+      0.035
+     ],
+     [
+      "standup_comic",
+      0.035
+     ]
+    ],
+    "win_counts": {
+     "er_nurse": 483,
+     "helpful_ai_assistant": 478,
+     "street_hustler": 382,
+     "poet": 412,
+     "standup_comic": 417,
+     "startup_founder": 413,
+     "bureaucrat": 400,
+     "textbook": 426,
+     "corporate_faq": 447,
+     "academic_philosopher": 375,
+     "pentester": 369,
+     "therapist": 382,
+     "retired_engineer": 378,
+     "drill_sergeant": 399,
+     "kindergarten_teacher": 393,
+     "defence_lawyer": 380,
+     "investigative_journalist": 349,
+     "monk": 403,
+     "librarian": 376,
+     "flight_attendant": 414,
+     "grandmother": 396,
+     "surfer": 392,
+     "sports_coach": 394,
+     "victorian_butler": 396,
+     "conspiracy_blogger": 379,
+     "military_strategist": 386,
+     "sales_rep": 396,
+     "pirate_captain": 394,
+     "farmer": 395,
+     "game_show_host": 396
+    }
+   },
+   "by_version": {
+    "3.5": {
+     "accuracy": 0.9676666666666667,
+     "n": 6000,
+     "mean_max_conf": 0.9252723608752182,
+     "median_max_conf": 0.9883784987621809,
+     "mean_entropy_bits": 0.4715708129383946,
+     "frac_below_floor": 0.04583333333333333,
+     "control_share": 0.1025,
+     "top5": [
+      [
+       "er_nurse",
+       0.037
+      ],
+      [
+       "corporate_faq",
+       0.037
+      ],
+      [
+       "standup_comic",
+       0.034
+      ],
+      [
+       "textbook",
+       0.034
+      ],
+      [
+       "monk",
+       0.034
+      ]
+     ],
+     "win_counts": {
+      "er_nurse": 221,
+      "helpful_ai_assistant": 190,
+      "street_hustler": 196,
+      "poet": 203,
+      "standup_comic": 205,
+      "startup_founder": 203,
+      "bureaucrat": 202,
+      "textbook": 205,
+      "corporate_faq": 220,
+      "academic_philosopher": 203,
+      "pentester": 194,
+      "therapist": 197,
+      "retired_engineer": 196,
+      "drill_sergeant": 200,
+      "kindergarten_teacher": 199,
+      "defence_lawyer": 201,
+      "investigative_journalist": 185,
+      "monk": 204,
+      "librarian": 201,
+      "flight_attendant": 198,
+      "grandmother": 198,
+      "surfer": 198,
+      "sports_coach": 199,
+      "victorian_butler": 198,
+      "conspiracy_blogger": 193,
+      "military_strategist": 198,
+      "sales_rep": 200,
+      "pirate_captain": 199,
+      "farmer": 195,
+      "game_show_host": 199
+     }
+    },
+    "3.8": {
+     "accuracy": 0.9001666666666667,
+     "n": 6000,
+     "mean_max_conf": 0.8061119579386289,
+     "median_max_conf": 0.917907211509496,
+     "mean_entropy_bits": 1.135948856790618,
+     "frac_below_floor": 0.15416666666666667,
+     "control_share": 0.12266666666666666,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.048
+      ],
+      [
+       "er_nurse",
+       0.044
+      ],
+      [
+       "corporate_faq",
+       0.038
+      ],
+      [
+       "textbook",
+       0.037
+      ],
+      [
+       "flight_attendant",
+       0.036
+      ]
+     ],
+     "win_counts": {
+      "er_nurse": 262,
+      "textbook": 221,
+      "street_hustler": 186,
+      "flight_attendant": 216,
+      "helpful_ai_assistant": 288,
+      "monk": 199,
+      "pentester": 175,
+      "farmer": 200,
+      "retired_engineer": 182,
+      "startup_founder": 210,
+      "therapist": 185,
+      "bureaucrat": 198,
+      "corporate_faq": 227,
+      "academic_philosopher": 172,
+      "defence_lawyer": 179,
+      "standup_comic": 212,
+      "librarian": 175,
+      "poet": 209,
+      "investigative_journalist": 164,
+      "victorian_butler": 198,
+      "conspiracy_blogger": 186,
+      "drill_sergeant": 199,
+      "kindergarten_teacher": 194,
+      "military_strategist": 188,
+      "grandmother": 198,
+      "surfer": 194,
+      "sports_coach": 195,
+      "sales_rep": 196,
+      "pirate_captain": 195,
+      "game_show_host": 197
+     }
+    }
+   }
+  },
+  "confidence_floor": 0.5086441236924334,
+  "cells": {
+   "3.5|agentic": {
+    "n_total": 200,
+    "tool_call_rate": 0.085,
+    "mean_words": 207.92670157068062,
+    "trunc": {
+     "n": 191,
+     "mean_max_conf": 0.6559816336446076,
+     "median_max_conf": 0.7120418210713804,
+     "mean_entropy_bits": 1.8591475308475098,
+     "frac_below_floor": 0.34554973821989526,
+     "control_share": 0.8429319371727748,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.827
+      ],
+      [
+       "librarian",
+       0.031
+      ],
+      [
+       "er_nurse",
+       0.026
+      ],
+      [
+       "kindergarten_teacher",
+       0.021
+      ],
+      [
+       "poet",
+       0.016
+      ]
+     ],
+     "win_counts": {
+      "er_nurse": 5,
+      "helpful_ai_assistant": 158,
+      "poet": 3,
+      "investigative_journalist": 3,
+      "kindergarten_teacher": 4,
+      "librarian": 6,
+      "defence_lawyer": 1,
+      "military_strategist": 1,
+      "flight_attendant": 1,
+      "academic_philosopher": 1,
+      "textbook": 3,
+      "retired_engineer": 1,
+      "standup_comic": 2,
+      "pentester": 1,
+      "therapist": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 91,
+       "mean_max_conf": 0.4811546334157857,
+       "median_max_conf": 0.4340281409514955,
+       "mean_entropy_bits": 2.7234433078804576,
+       "frac_below_floor": 0.6483516483516484,
+       "control_share": 0.6813186813186813,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.67
+        ],
+        [
+         "librarian",
+         0.066
+        ],
+        [
+         "er_nurse",
+         0.055
+        ],
+        [
+         "kindergarten_teacher",
+         0.044
+        ],
+        [
+         "poet",
+         0.033
+        ]
+       ],
+       "win_counts": {
+        "er_nurse": 5,
+        "helpful_ai_assistant": 61,
+        "poet": 3,
+        "investigative_journalist": 3,
+        "kindergarten_teacher": 4,
+        "librarian": 6,
+        "defence_lawyer": 1,
+        "military_strategist": 1,
+        "flight_attendant": 1,
+        "academic_philosopher": 1,
+        "textbook": 1,
+        "retired_engineer": 1,
+        "standup_comic": 2,
+        "pentester": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.8150742038528356,
+       "median_max_conf": 0.8794966083443994,
+       "mean_entropy_bits": 1.0726383737475274,
+       "frac_below_floor": 0.07,
+       "control_share": 0.99,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.97
+        ],
+        [
+         "textbook",
+         0.02
+        ],
+        [
+         "therapist",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 97,
+        "textbook": 2,
+        "therapist": 1
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 191,
+     "mean_max_conf": 0.6338954651766576,
+     "median_max_conf": 0.6734434701031631,
+     "mean_entropy_bits": 1.957079063900641,
+     "frac_below_floor": 0.35602094240837695,
+     "control_share": 0.8429319371727748,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.822
+      ],
+      [
+       "librarian",
+       0.031
+      ],
+      [
+       "er_nurse",
+       0.026
+      ],
+      [
+       "kindergarten_teacher",
+       0.021
+      ],
+      [
+       "textbook",
+       0.021
+      ]
+     ],
+     "win_counts": {
+      "er_nurse": 5,
+      "helpful_ai_assistant": 157,
+      "poet": 3,
+      "investigative_journalist": 3,
+      "kindergarten_teacher": 4,
+      "librarian": 6,
+      "defence_lawyer": 1,
+      "military_strategist": 1,
+      "flight_attendant": 1,
+      "academic_philosopher": 1,
+      "textbook": 4,
+      "retired_engineer": 1,
+      "standup_comic": 2,
+      "pentester": 1,
+      "therapist": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 91,
+       "mean_max_conf": 0.4700317199005061,
+       "median_max_conf": 0.4327585264934968,
+       "mean_entropy_bits": 2.7793836367396128,
+       "frac_below_floor": 0.6593406593406593,
+       "control_share": 0.6813186813186813,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.67
+        ],
+        [
+         "librarian",
+         0.066
+        ],
+        [
+         "er_nurse",
+         0.055
+        ],
+        [
+         "kindergarten_teacher",
+         0.044
+        ],
+        [
+         "poet",
+         0.033
+        ]
+       ],
+       "win_counts": {
+        "er_nurse": 5,
+        "helpful_ai_assistant": 61,
+        "poet": 3,
+        "investigative_journalist": 3,
+        "kindergarten_teacher": 4,
+        "librarian": 6,
+        "defence_lawyer": 1,
+        "military_strategist": 1,
+        "flight_attendant": 1,
+        "academic_philosopher": 1,
+        "textbook": 1,
+        "retired_engineer": 1,
+        "standup_comic": 2,
+        "pentester": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.7830114733779555,
+       "median_max_conf": 0.8322772603153221,
+       "mean_entropy_bits": 1.2087819026171769,
+       "frac_below_floor": 0.08,
+       "control_share": 0.99,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.96
+        ],
+        [
+         "textbook",
+         0.03
+        ],
+        [
+         "therapist",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 96,
+        "textbook": 3,
+        "therapist": 1
+       }
+      }
+     }
+    }
+   },
+   "3.5|chat": {
+    "n_total": 200,
+    "tool_call_rate": 0.0,
+    "mean_words": 526.94,
+    "trunc": {
+     "n": 200,
+     "mean_max_conf": 0.771139557284055,
+     "median_max_conf": 0.8874742732457214,
+     "mean_entropy_bits": 1.3200074976959288,
+     "frac_below_floor": 0.2,
+     "control_share": 0.935,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.925
+      ],
+      [
+       "librarian",
+       0.02
+      ],
+      [
+       "defence_lawyer",
+       0.01
+      ],
+      [
+       "textbook",
+       0.01
+      ],
+      [
+       "startup_founder",
+       0.01
+      ]
+     ],
+     "win_counts": {
+      "librarian": 4,
+      "helpful_ai_assistant": 185,
+      "flight_attendant": 1,
+      "defence_lawyer": 2,
+      "textbook": 2,
+      "startup_founder": 2,
+      "poet": 1,
+      "military_strategist": 1,
+      "er_nurse": 2
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.6189512176376731,
+       "median_max_conf": 0.6387367482156059,
+       "mean_entropy_bits": 2.018973855280276,
+       "frac_below_floor": 0.4,
+       "control_share": 0.87,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.85
+        ],
+        [
+         "librarian",
+         0.04
+        ],
+        [
+         "defence_lawyer",
+         0.02
+        ],
+        [
+         "textbook",
+         0.02
+        ],
+        [
+         "startup_founder",
+         0.02
+        ]
+       ],
+       "win_counts": {
+        "librarian": 4,
+        "helpful_ai_assistant": 85,
+        "flight_attendant": 1,
+        "defence_lawyer": 2,
+        "textbook": 2,
+        "startup_founder": 2,
+        "poet": 1,
+        "military_strategist": 1,
+        "er_nurse": 2
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.9233278969304369,
+       "median_max_conf": 0.9463844144676536,
+       "mean_entropy_bits": 0.6210411401115816,
+       "frac_below_floor": 0.0,
+       "control_share": 1.0,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         1.0
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 100
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 200,
+     "mean_max_conf": 0.7017410393196093,
+     "median_max_conf": 0.7732114037904976,
+     "mean_entropy_bits": 1.695913526531014,
+     "frac_below_floor": 0.235,
+     "control_share": 0.93,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.915
+      ],
+      [
+       "librarian",
+       0.02
+      ],
+      [
+       "defence_lawyer",
+       0.015
+      ],
+      [
+       "textbook",
+       0.015
+      ],
+      [
+       "startup_founder",
+       0.01
+      ]
+     ],
+     "win_counts": {
+      "librarian": 4,
+      "helpful_ai_assistant": 183,
+      "flight_attendant": 1,
+      "defence_lawyer": 3,
+      "textbook": 3,
+      "startup_founder": 2,
+      "poet": 1,
+      "military_strategist": 1,
+      "er_nurse": 2
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.5715290268845347,
+       "median_max_conf": 0.580740101567106,
+       "mean_entropy_bits": 2.266294995913724,
+       "frac_below_floor": 0.44,
+       "control_share": 0.87,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.84
+        ],
+        [
+         "librarian",
+         0.04
+        ],
+        [
+         "textbook",
+         0.03
+        ],
+        [
+         "defence_lawyer",
+         0.02
+        ],
+        [
+         "startup_founder",
+         0.02
+        ]
+       ],
+       "win_counts": {
+        "librarian": 4,
+        "helpful_ai_assistant": 84,
+        "flight_attendant": 1,
+        "defence_lawyer": 2,
+        "textbook": 3,
+        "startup_founder": 2,
+        "poet": 1,
+        "military_strategist": 1,
+        "er_nurse": 2
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.8319530517546839,
+       "median_max_conf": 0.8689636162021317,
+       "mean_entropy_bits": 1.1255320571483034,
+       "frac_below_floor": 0.03,
+       "control_share": 0.99,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.99
+        ],
+        [
+         "defence_lawyer",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 99,
+        "defence_lawyer": 1
+       }
+      }
+     }
+    }
+   },
+   "3.6|agentic": {
+    "n_total": 200,
+    "tool_call_rate": 0.23,
+    "mean_words": 241.36315789473684,
+    "trunc": {
+     "n": 190,
+     "mean_max_conf": 0.6643351458701704,
+     "median_max_conf": 0.7285333987278163,
+     "mean_entropy_bits": 1.866462930329866,
+     "frac_below_floor": 0.3263157894736842,
+     "control_share": 0.8631578947368421,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.847
+      ],
+      [
+       "librarian",
+       0.032
+      ],
+      [
+       "standup_comic",
+       0.021
+      ],
+      [
+       "er_nurse",
+       0.021
+      ],
+      [
+       "investigative_journalist",
+       0.011
+      ]
+     ],
+     "win_counts": {
+      "investigative_journalist": 2,
+      "helpful_ai_assistant": 161,
+      "poet": 1,
+      "pentester": 2,
+      "standup_comic": 4,
+      "corporate_faq": 2,
+      "librarian": 6,
+      "retired_engineer": 2,
+      "kindergarten_teacher": 1,
+      "er_nurse": 4,
+      "startup_founder": 1,
+      "flight_attendant": 1,
+      "military_strategist": 1,
+      "textbook": 1,
+      "farmer": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 91,
+       "mean_max_conf": 0.49620481174274533,
+       "median_max_conf": 0.44348174911694804,
+       "mean_entropy_bits": 2.652353085742538,
+       "frac_below_floor": 0.6153846153846154,
+       "control_share": 0.7142857142857143,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.681
+        ],
+        [
+         "librarian",
+         0.066
+        ],
+        [
+         "standup_comic",
+         0.044
+        ],
+        [
+         "er_nurse",
+         0.044
+        ],
+        [
+         "investigative_journalist",
+         0.022
+        ]
+       ],
+       "win_counts": {
+        "investigative_journalist": 2,
+        "helpful_ai_assistant": 62,
+        "poet": 1,
+        "pentester": 2,
+        "standup_comic": 4,
+        "corporate_faq": 2,
+        "librarian": 6,
+        "retired_engineer": 2,
+        "kindergarten_teacher": 1,
+        "er_nurse": 4,
+        "startup_founder": 1,
+        "flight_attendant": 1,
+        "military_strategist": 1,
+        "textbook": 1,
+        "farmer": 1
+       }
+      },
+      "generic": {
+       "n": 99,
+       "mean_max_conf": 0.8188791903711368,
+       "median_max_conf": 0.8744518554074748,
+       "mean_entropy_bits": 1.1440790501020566,
+       "frac_below_floor": 0.06060606060606061,
+       "control_share": 1.0,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         1.0
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 99
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 190,
+     "mean_max_conf": 0.6344933399546583,
+     "median_max_conf": 0.6823215222031522,
+     "mean_entropy_bits": 2.0442667704028654,
+     "frac_below_floor": 0.3473684210526316,
+     "control_share": 0.8578947368421053,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.842
+      ],
+      [
+       "librarian",
+       0.032
+      ],
+      [
+       "standup_comic",
+       0.021
+      ],
+      [
+       "er_nurse",
+       0.021
+      ],
+      [
+       "investigative_journalist",
+       0.011
+      ]
+     ],
+     "win_counts": {
+      "investigative_journalist": 2,
+      "helpful_ai_assistant": 160,
+      "poet": 1,
+      "pentester": 2,
+      "standup_comic": 4,
+      "corporate_faq": 2,
+      "librarian": 6,
+      "retired_engineer": 2,
+      "kindergarten_teacher": 1,
+      "er_nurse": 4,
+      "startup_founder": 1,
+      "flight_attendant": 1,
+      "military_strategist": 1,
+      "textbook": 1,
+      "farmer": 1,
+      "defence_lawyer": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 91,
+       "mean_max_conf": 0.48452081501097755,
+       "median_max_conf": 0.44348174911694804,
+       "mean_entropy_bits": 2.7175164701696444,
+       "frac_below_floor": 0.6153846153846154,
+       "control_share": 0.7142857142857143,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.681
+        ],
+        [
+         "librarian",
+         0.066
+        ],
+        [
+         "standup_comic",
+         0.044
+        ],
+        [
+         "er_nurse",
+         0.044
+        ],
+        [
+         "investigative_journalist",
+         0.022
+        ]
+       ],
+       "win_counts": {
+        "investigative_journalist": 2,
+        "helpful_ai_assistant": 62,
+        "poet": 1,
+        "pentester": 2,
+        "standup_comic": 4,
+        "corporate_faq": 2,
+        "librarian": 6,
+        "retired_engineer": 2,
+        "kindergarten_teacher": 1,
+        "er_nurse": 4,
+        "startup_founder": 1,
+        "flight_attendant": 1,
+        "military_strategist": 1,
+        "textbook": 1,
+        "farmer": 1
+       }
+      },
+      "generic": {
+       "n": 99,
+       "mean_max_conf": 0.7723468729836982,
+       "median_max_conf": 0.8087980638570447,
+       "mean_entropy_bits": 1.4254210867788555,
+       "frac_below_floor": 0.10101010101010101,
+       "control_share": 0.98989898989899,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.99
+        ],
+        [
+         "defence_lawyer",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 98,
+        "defence_lawyer": 1
+       }
+      }
+     }
+    }
+   },
+   "3.6|chat": {
+    "n_total": 200,
+    "tool_call_rate": 0.0,
+    "mean_words": 464.42,
+    "trunc": {
+     "n": 200,
+     "mean_max_conf": 0.7535989921853414,
+     "median_max_conf": 0.8793224692723351,
+     "mean_entropy_bits": 1.3818175160184938,
+     "frac_below_floor": 0.21,
+     "control_share": 0.895,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.89
+      ],
+      [
+       "librarian",
+       0.025
+      ],
+      [
+       "retired_engineer",
+       0.01
+      ],
+      [
+       "investigative_journalist",
+       0.01
+      ],
+      [
+       "flight_attendant",
+       0.005
+      ]
+     ],
+     "win_counts": {
+      "helpful_ai_assistant": 178,
+      "librarian": 5,
+      "flight_attendant": 1,
+      "poet": 1,
+      "defence_lawyer": 1,
+      "retired_engineer": 2,
+      "sales_rep": 1,
+      "pentester": 1,
+      "standup_comic": 1,
+      "monk": 1,
+      "textbook": 1,
+      "investigative_journalist": 2,
+      "conspiracy_blogger": 1,
+      "academic_philosopher": 1,
+      "military_strategist": 1,
+      "er_nurse": 1,
+      "bureaucrat": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.6133225410569876,
+       "median_max_conf": 0.5947709918226762,
+       "mean_entropy_bits": 2.022421518959352,
+       "frac_below_floor": 0.4,
+       "control_share": 0.79,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.78
+        ],
+        [
+         "librarian",
+         0.05
+        ],
+        [
+         "retired_engineer",
+         0.02
+        ],
+        [
+         "investigative_journalist",
+         0.02
+        ],
+        [
+         "flight_attendant",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 78,
+        "librarian": 5,
+        "flight_attendant": 1,
+        "poet": 1,
+        "defence_lawyer": 1,
+        "retired_engineer": 2,
+        "sales_rep": 1,
+        "pentester": 1,
+        "standup_comic": 1,
+        "monk": 1,
+        "textbook": 1,
+        "investigative_journalist": 2,
+        "conspiracy_blogger": 1,
+        "academic_philosopher": 1,
+        "military_strategist": 1,
+        "er_nurse": 1,
+        "bureaucrat": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.893875443313695,
+       "median_max_conf": 0.9360055127313197,
+       "mean_entropy_bits": 0.7412135130776362,
+       "frac_below_floor": 0.02,
+       "control_share": 1.0,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         1.0
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 100
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 200,
+     "mean_max_conf": 0.6998372280930378,
+     "median_max_conf": 0.7847373168245546,
+     "mean_entropy_bits": 1.643397827522252,
+     "frac_below_floor": 0.235,
+     "control_share": 0.9,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.875
+      ],
+      [
+       "textbook",
+       0.025
+      ],
+      [
+       "librarian",
+       0.02
+      ],
+      [
+       "defence_lawyer",
+       0.01
+      ],
+      [
+       "retired_engineer",
+       0.01
+      ]
+     ],
+     "win_counts": {
+      "helpful_ai_assistant": 175,
+      "librarian": 4,
+      "flight_attendant": 1,
+      "poet": 1,
+      "defence_lawyer": 2,
+      "retired_engineer": 2,
+      "sales_rep": 1,
+      "pentester": 1,
+      "standup_comic": 1,
+      "monk": 1,
+      "textbook": 5,
+      "investigative_journalist": 2,
+      "conspiracy_blogger": 1,
+      "academic_philosopher": 1,
+      "military_strategist": 1,
+      "er_nurse": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.5871717965277657,
+       "median_max_conf": 0.5782935600347738,
+       "mean_entropy_bits": 2.1681693705227896,
+       "frac_below_floor": 0.41,
+       "control_share": 0.81,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.78
+        ],
+        [
+         "librarian",
+         0.04
+        ],
+        [
+         "textbook",
+         0.03
+        ],
+        [
+         "retired_engineer",
+         0.02
+        ],
+        [
+         "investigative_journalist",
+         0.02
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 78,
+        "librarian": 4,
+        "flight_attendant": 1,
+        "poet": 1,
+        "defence_lawyer": 1,
+        "retired_engineer": 2,
+        "sales_rep": 1,
+        "pentester": 1,
+        "standup_comic": 1,
+        "monk": 1,
+        "textbook": 3,
+        "investigative_journalist": 2,
+        "conspiracy_blogger": 1,
+        "academic_philosopher": 1,
+        "military_strategist": 1,
+        "er_nurse": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.8125026596583099,
+       "median_max_conf": 0.8691493069071974,
+       "mean_entropy_bits": 1.1186262845217143,
+       "frac_below_floor": 0.06,
+       "control_share": 0.99,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.97
+        ],
+        [
+         "textbook",
+         0.02
+        ],
+        [
+         "defence_lawyer",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 97,
+        "textbook": 2,
+        "defence_lawyer": 1
+       }
+      }
+     }
+    }
+   },
+   "3.8|agentic": {
+    "n_total": 200,
+    "tool_call_rate": 0.25,
+    "mean_words": 277.6020942408377,
+    "trunc": {
+     "n": 191,
+     "mean_max_conf": 0.5222113208534918,
+     "median_max_conf": 0.49902403655715893,
+     "mean_entropy_bits": 2.541864424312464,
+     "frac_below_floor": 0.5078534031413613,
+     "control_share": 0.7015706806282722,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.691
+      ],
+      [
+       "librarian",
+       0.079
+      ],
+      [
+       "retired_engineer",
+       0.042
+      ],
+      [
+       "standup_comic",
+       0.037
+      ],
+      [
+       "defence_lawyer",
+       0.026
+      ]
+     ],
+     "win_counts": {
+      "helpful_ai_assistant": 132,
+      "librarian": 15,
+      "poet": 2,
+      "defence_lawyer": 5,
+      "farmer": 2,
+      "standup_comic": 7,
+      "flight_attendant": 1,
+      "academic_philosopher": 1,
+      "pentester": 1,
+      "retired_engineer": 8,
+      "er_nurse": 5,
+      "military_strategist": 1,
+      "investigative_journalist": 4,
+      "therapist": 2,
+      "conspiracy_blogger": 1,
+      "corporate_faq": 1,
+      "game_show_host": 1,
+      "textbook": 1,
+      "monk": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 92,
+       "mean_max_conf": 0.39617801823172766,
+       "median_max_conf": 0.3339627474937802,
+       "mean_entropy_bits": 3.081897429551549,
+       "frac_below_floor": 0.7282608695652174,
+       "control_share": 0.4782608695652174,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.467
+        ],
+        [
+         "librarian",
+         0.141
+        ],
+        [
+         "standup_comic",
+         0.065
+        ],
+        [
+         "retired_engineer",
+         0.054
+        ],
+        [
+         "er_nurse",
+         0.054
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 43,
+        "librarian": 13,
+        "poet": 2,
+        "defence_lawyer": 4,
+        "farmer": 2,
+        "standup_comic": 6,
+        "flight_attendant": 1,
+        "academic_philosopher": 1,
+        "pentester": 1,
+        "retired_engineer": 5,
+        "er_nurse": 5,
+        "military_strategist": 1,
+        "investigative_journalist": 3,
+        "therapist": 2,
+        "conspiracy_blogger": 1,
+        "corporate_faq": 1,
+        "game_show_host": 1
+       }
+      },
+      "generic": {
+       "n": 99,
+       "mean_max_conf": 0.639333177835333,
+       "median_max_conf": 0.687488834258252,
+       "mean_entropy_bits": 2.040015570958973,
+       "frac_below_floor": 0.30303030303030304,
+       "control_share": 0.9090909090909091,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.899
+        ],
+        [
+         "retired_engineer",
+         0.03
+        ],
+        [
+         "librarian",
+         0.02
+        ],
+        [
+         "standup_comic",
+         0.01
+        ],
+        [
+         "textbook",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 89,
+        "retired_engineer": 3,
+        "standup_comic": 1,
+        "librarian": 2,
+        "textbook": 1,
+        "defence_lawyer": 1,
+        "monk": 1,
+        "investigative_journalist": 1
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 191,
+     "mean_max_conf": 0.4355684937734179,
+     "median_max_conf": 0.3875510114178927,
+     "mean_entropy_bits": 2.943159716290074,
+     "frac_below_floor": 0.6649214659685864,
+     "control_share": 0.6387434554973822,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.623
+      ],
+      [
+       "librarian",
+       0.079
+      ],
+      [
+       "retired_engineer",
+       0.058
+      ],
+      [
+       "standup_comic",
+       0.037
+      ],
+      [
+       "er_nurse",
+       0.037
+      ]
+     ],
+     "win_counts": {
+      "helpful_ai_assistant": 119,
+      "librarian": 15,
+      "poet": 2,
+      "defence_lawyer": 5,
+      "farmer": 3,
+      "standup_comic": 7,
+      "flight_attendant": 1,
+      "academic_philosopher": 1,
+      "pentester": 2,
+      "retired_engineer": 11,
+      "er_nurse": 7,
+      "military_strategist": 1,
+      "investigative_journalist": 7,
+      "therapist": 3,
+      "conspiracy_blogger": 1,
+      "corporate_faq": 1,
+      "game_show_host": 1,
+      "surfer": 1,
+      "textbook": 2,
+      "monk": 1
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 92,
+       "mean_max_conf": 0.342268427786568,
+       "median_max_conf": 0.2756627752863027,
+       "mean_entropy_bits": 3.3107089859976084,
+       "frac_below_floor": 0.8478260869565217,
+       "control_share": 0.42391304347826086,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.413
+        ],
+        [
+         "librarian",
+         0.141
+        ],
+        [
+         "standup_comic",
+         0.065
+        ],
+        [
+         "retired_engineer",
+         0.065
+        ],
+        [
+         "investigative_journalist",
+         0.065
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 38,
+        "librarian": 13,
+        "poet": 2,
+        "defence_lawyer": 4,
+        "farmer": 2,
+        "standup_comic": 6,
+        "flight_attendant": 1,
+        "academic_philosopher": 1,
+        "pentester": 2,
+        "retired_engineer": 6,
+        "er_nurse": 5,
+        "military_strategist": 1,
+        "investigative_journalist": 6,
+        "therapist": 2,
+        "conspiracy_blogger": 1,
+        "corporate_faq": 1,
+        "game_show_host": 1
+       }
+      },
+      "generic": {
+       "n": 99,
+       "mean_max_conf": 0.5222715853975611,
+       "median_max_conf": 0.5137059760205716,
+       "mean_entropy_bits": 2.601598778784082,
+       "frac_below_floor": 0.494949494949495,
+       "control_share": 0.8383838383838383,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.818
+        ],
+        [
+         "retired_engineer",
+         0.051
+        ],
+        [
+         "er_nurse",
+         0.02
+        ],
+        [
+         "librarian",
+         0.02
+        ],
+        [
+         "textbook",
+         0.02
+        ]
+       ],
+       "win_counts": {
+        "helpful_ai_assistant": 81,
+        "farmer": 1,
+        "retired_engineer": 5,
+        "er_nurse": 2,
+        "surfer": 1,
+        "standup_comic": 1,
+        "therapist": 1,
+        "librarian": 2,
+        "textbook": 2,
+        "defence_lawyer": 1,
+        "monk": 1,
+        "investigative_journalist": 1
+       }
+      }
+     }
+    }
+   },
+   "3.8|chat": {
+    "n_total": 200,
+    "tool_call_rate": 0.0,
+    "mean_words": 440.485,
+    "trunc": {
+     "n": 200,
+     "mean_max_conf": 0.5057812453265379,
+     "median_max_conf": 0.47013833181856224,
+     "mean_entropy_bits": 2.573082816289723,
+     "frac_below_floor": 0.535,
+     "control_share": 0.695,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.68
+      ],
+      [
+       "librarian",
+       0.06
+      ],
+      [
+       "standup_comic",
+       0.05
+      ],
+      [
+       "investigative_journalist",
+       0.035
+      ],
+      [
+       "retired_engineer",
+       0.035
+      ]
+     ],
+     "win_counts": {
+      "investigative_journalist": 7,
+      "er_nurse": 6,
+      "helpful_ai_assistant": 136,
+      "librarian": 12,
+      "poet": 3,
+      "flight_attendant": 1,
+      "standup_comic": 10,
+      "retired_engineer": 7,
+      "pentester": 2,
+      "military_strategist": 1,
+      "victorian_butler": 1,
+      "therapist": 6,
+      "conspiracy_blogger": 1,
+      "academic_philosopher": 1,
+      "corporate_faq": 1,
+      "textbook": 2,
+      "defence_lawyer": 1,
+      "farmer": 2
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.4055756493648955,
+       "median_max_conf": 0.36245419708096993,
+       "mean_entropy_bits": 3.02340890790365,
+       "frac_below_floor": 0.7,
+       "control_share": 0.56,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.53
+        ],
+        [
+         "librarian",
+         0.11
+        ],
+        [
+         "retired_engineer",
+         0.06
+        ],
+        [
+         "er_nurse",
+         0.05
+        ],
+        [
+         "standup_comic",
+         0.05
+        ]
+       ],
+       "win_counts": {
+        "investigative_journalist": 4,
+        "er_nurse": 5,
+        "helpful_ai_assistant": 53,
+        "librarian": 11,
+        "poet": 3,
+        "flight_attendant": 1,
+        "standup_comic": 5,
+        "retired_engineer": 6,
+        "pentester": 2,
+        "military_strategist": 1,
+        "victorian_butler": 1,
+        "therapist": 1,
+        "conspiracy_blogger": 1,
+        "academic_philosopher": 1,
+        "corporate_faq": 1,
+        "textbook": 2,
+        "defence_lawyer": 1,
+        "farmer": 1
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.6059868412881804,
+       "median_max_conf": 0.5861314459594416,
+       "mean_entropy_bits": 2.122756724675795,
+       "frac_below_floor": 0.37,
+       "control_share": 0.83,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.83
+        ],
+        [
+         "therapist",
+         0.05
+        ],
+        [
+         "standup_comic",
+         0.05
+        ],
+        [
+         "investigative_journalist",
+         0.03
+        ],
+        [
+         "farmer",
+         0.01
+        ]
+       ],
+       "win_counts": {
+        "therapist": 5,
+        "farmer": 1,
+        "helpful_ai_assistant": 83,
+        "standup_comic": 5,
+        "er_nurse": 1,
+        "retired_engineer": 1,
+        "investigative_journalist": 3,
+        "librarian": 1
+       }
+      }
+     }
+    },
+    "full": {
+     "n": 200,
+     "mean_max_conf": 0.3826667046264775,
+     "median_max_conf": 0.32071443249219844,
+     "mean_entropy_bits": 3.167612330406609,
+     "frac_below_floor": 0.73,
+     "control_share": 0.505,
+     "top5": [
+      [
+       "helpful_ai_assistant",
+       0.485
+      ],
+      [
+       "librarian",
+       0.105
+      ],
+      [
+       "retired_engineer",
+       0.085
+      ],
+      [
+       "investigative_journalist",
+       0.065
+      ],
+      [
+       "standup_comic",
+       0.06
+      ]
+     ],
+     "win_counts": {
+      "investigative_journalist": 13,
+      "er_nurse": 7,
+      "helpful_ai_assistant": 97,
+      "librarian": 21,
+      "poet": 3,
+      "flight_attendant": 1,
+      "standup_comic": 12,
+      "retired_engineer": 17,
+      "pentester": 2,
+      "farmer": 7,
+      "military_strategist": 1,
+      "victorian_butler": 1,
+      "therapist": 6,
+      "conspiracy_blogger": 1,
+      "academic_philosopher": 2,
+      "corporate_faq": 1,
+      "textbook": 3,
+      "defence_lawyer": 2,
+      "grandmother": 1,
+      "sports_coach": 2
+     },
+     "by_kind": {
+      "scenario": {
+       "n": 100,
+       "mean_max_conf": 0.32666484716448985,
+       "median_max_conf": 0.28253950869767464,
+       "mean_entropy_bits": 3.3960362240949222,
+       "frac_below_floor": 0.83,
+       "control_share": 0.36,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.33
+        ],
+        [
+         "librarian",
+         0.17
+        ],
+        [
+         "retired_engineer",
+         0.12
+        ],
+        [
+         "investigative_journalist",
+         0.08
+        ],
+        [
+         "er_nurse",
+         0.05
+        ]
+       ],
+       "win_counts": {
+        "investigative_journalist": 8,
+        "er_nurse": 5,
+        "helpful_ai_assistant": 33,
+        "librarian": 17,
+        "poet": 3,
+        "flight_attendant": 1,
+        "standup_comic": 4,
+        "retired_engineer": 12,
+        "pentester": 2,
+        "farmer": 3,
+        "military_strategist": 1,
+        "victorian_butler": 1,
+        "therapist": 1,
+        "conspiracy_blogger": 1,
+        "academic_philosopher": 1,
+        "corporate_faq": 1,
+        "textbook": 2,
+        "defence_lawyer": 1,
+        "grandmother": 1,
+        "sports_coach": 2
+       }
+      },
+      "generic": {
+       "n": 100,
+       "mean_max_conf": 0.4386685620884652,
+       "median_max_conf": 0.38382530770148193,
+       "mean_entropy_bits": 2.9391884367182963,
+       "frac_below_floor": 0.63,
+       "control_share": 0.65,
+       "top5": [
+        [
+         "helpful_ai_assistant",
+         0.64
+        ],
+        [
+         "standup_comic",
+         0.08
+        ],
+        [
+         "retired_engineer",
+         0.05
+        ],
+        [
+         "therapist",
+         0.05
+        ],
+        [
+         "investigative_journalist",
+         0.05
+        ]
+       ],
+       "win_counts": {
+        "standup_comic": 8,
+        "farmer": 4,
+        "retired_engineer": 5,
+        "helpful_ai_assistant": 64,
+        "therapist": 5,
+        "er_nurse": 2,
+        "investigative_journalist": 5,
+        "librarian": 4,
+        "defence_lawyer": 1,
+        "textbook": 1,
+        "academic_philosopher": 1
+       }
+      }
+     }
+    }
+   }
+  },
+  "gaps_chat_minus_agentic": {
+   "3.5|trunc": {
+    "max_conf": {
+     "diff": 0.1194363019600691,
+     "lo": 0.08473589274118104,
+     "hi": 0.15361855933462248
+    },
+    "entropy": {
+     "diff": -0.5589902356424957,
+     "lo": -0.7154249518006592,
+     "hi": -0.40122401471799235
+    },
+    "below": {
+     "diff": -0.1518324607329843,
+     "lo": -0.2198952879581152,
+     "hi": -0.08887434554973893
+    }
+   },
+   "3.5|full": {
+    "max_conf": {
+     "diff": 0.07204404227277551,
+     "lo": 0.038709111893295005,
+     "hi": 0.10452489242473076
+    },
+    "entropy": {
+     "diff": -0.2779105294487434,
+     "lo": -0.4261660462087006,
+     "hi": -0.13209887014251767
+    },
+    "below": {
+     "diff": -0.13089005235602094,
+     "lo": -0.20418848167539266,
+     "hi": -0.06282722513089005
+    }
+   },
+   "3.6|trunc": {
+    "max_conf": {
+     "diff": 0.08814849606767042,
+     "lo": 0.056702200004023574,
+     "hi": 0.1187181515672172
+    },
+    "entropy": {
+     "diff": -0.47823025219335846,
+     "lo": -0.6227820049897171,
+     "hi": -0.3396988623046236
+    },
+    "below": {
+     "diff": -0.12105263157894737,
+     "lo": -0.17894736842105263,
+     "hi": -0.06315789473684211
+    }
+   },
+   "3.6|full": {
+    "max_conf": {
+     "diff": 0.06306090556988116,
+     "lo": 0.03018213563817058,
+     "hi": 0.09805268382796946
+    },
+    "entropy": {
+     "diff": -0.39092255742900023,
+     "lo": -0.535072878814821,
+     "hi": -0.24250363837982467
+    },
+    "below": {
+     "diff": -0.11578947368421053,
+     "lo": -0.18421052631578946,
+     "hi": -0.05263157894736842
+    }
+   },
+   "3.8|trunc": {
+    "max_conf": {
+     "diff": -0.022262196410755702,
+     "lo": -0.051736904171712,
+     "hi": 0.007460831070759272
+    },
+    "entropy": {
+     "diff": 0.055164172376641875,
+     "lo": -0.07001938153300889,
+     "hi": 0.1824455595337539
+    },
+    "below": {
+     "diff": 0.03664921465968586,
+     "lo": -0.03664921465968586,
+     "hi": 0.1099476439790576
+    }
+   },
+   "3.8|full": {
+    "max_conf": {
+     "diff": -0.05762819395540368,
+     "lo": -0.08420624029780512,
+     "hi": -0.02946884480120837
+    },
+    "entropy": {
+     "diff": 0.23596187709400346,
+     "lo": 0.12590441159162305,
+     "hi": 0.355604701429474
+    },
+    "below": {
+     "diff": 0.07853403141361257,
+     "lo": 0.010471204188481676,
+     "hi": 0.14659685863874344
+    }
+   }
+  },
+  "cross_version_raw": {
+   "3.8-3.5|chat|trunc": {
+    "max_conf": {
+     "diff": -0.26535831195751697,
+     "lo": -0.29902255290179747,
+     "hi": -0.23136921879804576
+    },
+    "entropy": {
+     "diff": 1.2530753185937933,
+     "lo": 1.1105688305051076,
+     "hi": 1.4021705001319587
+    },
+    "below": {
+     "diff": 0.335,
+     "lo": 0.26,
+     "hi": 0.41
+    }
+   },
+   "3.6-3.5|chat|trunc": {
+    "max_conf": {
+     "diff": -0.017540565098713625,
+     "lo": -0.04054918070827965,
+     "hi": 0.005638349142024391
+    },
+    "entropy": {
+     "diff": 0.0618100183225652,
+     "lo": -0.048419269624837724,
+     "hi": 0.17224038090623028
+    },
+    "below": {
+     "diff": 0.01,
+     "lo": -0.04,
+     "hi": 0.06
+    }
+   },
+   "3.8-3.6|chat|trunc": {
+    "max_conf": {
+     "diff": -0.2478177468588033,
+     "lo": -0.2801905823503995,
+     "hi": -0.21265979549739358
+    },
+    "entropy": {
+     "diff": 1.1912653002712283,
+     "lo": 1.0452396773313528,
+     "hi": 1.3422408008398472
+    },
+    "below": {
+     "diff": 0.325,
+     "lo": 0.245,
+     "hi": 0.405
+    }
+   },
+   "3.8-3.5|agentic|trunc": {
+    "max_conf": {
+     "diff": -0.1337842306923843,
+     "lo": -0.16623966904761453,
+     "hi": -0.09875219834803162
+    },
+    "entropy": {
+     "diff": 0.685477996222058,
+     "lo": 0.5442061134822012,
+     "hi": 0.8274295839284531
+    },
+    "below": {
+     "diff": 0.16304347826086957,
+     "lo": 0.0922554347826087,
+     "hi": 0.2391304347826087
+    }
+   },
+   "3.6-3.5|agentic|trunc": {
+    "max_conf": {
+     "diff": 0.008016347461036119,
+     "lo": -0.02168685958541539,
+     "hi": 0.03676939524082037
+    },
+    "entropy": {
+     "diff": 0.007997443271593985,
+     "lo": -0.12939045129665927,
+     "hi": 0.14377201012183816
+    },
+    "below": {
+     "diff": -0.016216216216216217,
+     "lo": -0.07027027027027027,
+     "hi": 0.03783783783783784
+    }
+   },
+   "3.8-3.6|agentic|trunc": {
+    "max_conf": {
+     "diff": -0.13692844799968473,
+     "lo": -0.1722131970450282,
+     "hi": -0.09946170863856552
+    },
+    "entropy": {
+     "diff": 0.6533497796125468,
+     "lo": 0.4953470389799859,
+     "hi": 0.8105486133620224
+    },
+    "below": {
+     "diff": 0.17204301075268819,
+     "lo": 0.08602150537634409,
+     "hi": 0.25268817204301075
+    }
+   },
+   "3.8-3.5|chat|full": {
+    "max_conf": {
+     "diff": -0.3190743346931317,
+     "lo": -0.351884738374171,
+     "hi": -0.2857147856144158
+    },
+    "entropy": {
+     "diff": 1.4716988038755954,
+     "lo": 1.3367317035288646,
+     "hi": 1.6067366865961499
+    },
+    "below": {
+     "diff": 0.495,
+     "lo": 0.42,
+     "hi": 0.565
+    }
+   },
+   "3.6-3.5|chat|full": {
+    "max_conf": {
+     "diff": -0.0019038112265714314,
+     "lo": -0.024976199412164415,
+     "hi": 0.022224318825302063
+    },
+    "entropy": {
+     "diff": -0.05251569900876186,
+     "lo": -0.15629714819206128,
+     "hi": 0.05412220729011372
+    },
+    "below": {
+     "diff": 0.0,
+     "lo": -0.06,
+     "hi": 0.055
+    }
+   },
+   "3.8-3.6|chat|full": {
+    "max_conf": {
+     "diff": -0.3171705234665603,
+     "lo": -0.35422865176342966,
+     "hi": -0.2814910641115631
+    },
+    "entropy": {
+     "diff": 1.5242145028843572,
+     "lo": 1.3738586632330883,
+     "hi": 1.6831161494022935
+    },
+    "below": {
+     "diff": 0.495,
+     "lo": 0.42,
+     "hi": 0.57
+    }
+   },
+   "3.8-3.5|agentic|full": {
+    "max_conf": {
+     "diff": -0.19568250151327712,
+     "lo": -0.23267456884310703,
+     "hi": -0.15842854086600636
+    },
+    "entropy": {
+     "diff": 0.9791597096231491,
+     "lo": 0.82926042080155,
+     "hi": 1.1387119855551413
+    },
+    "below": {
+     "diff": 0.30434782608695654,
+     "lo": 0.22826086956521738,
+     "hi": 0.3858695652173913
+    }
+   },
+   "3.6-3.5|agentic|full": {
+    "max_conf": {
+     "diff": 0.00017515469950550025,
+     "lo": -0.027442244211504048,
+     "hi": 0.027819740373432728
+    },
+    "entropy": {
+     "diff": 0.08961370576491738,
+     "lo": -0.042623931815667176,
+     "hi": 0.2280493495002937
+    },
+    "below": {
+     "diff": -0.005405405405405406,
+     "lo": -0.06486486486486487,
+     "hi": 0.05945945945945946
+    }
+   },
+   "3.8-3.6|agentic|full": {
+    "max_conf": {
+     "diff": -0.19615936220071453,
+     "lo": -0.23119304383178868,
+     "hi": -0.16216809158312015
+    },
+    "entropy": {
+     "diff": 0.8901262568977248,
+     "lo": 0.7393555048944157,
+     "hi": 1.0357598626071265
+    },
+    "below": {
+     "diff": 0.3118279569892473,
+     "lo": 0.23118279569892472,
+     "hi": 0.3924731182795699
+    }
+   }
+  },
+  "paraphrase_floor": {
+   "source": "3.5|chat",
+   "n": 199,
+   "trunc": {
+    "n": 199,
+    "mean_max_conf": 0.715034847829077,
+    "median_max_conf": 0.8468134335803699,
+    "mean_entropy_bits": 1.6592518991425873,
+    "frac_below_floor": 0.2613065326633166,
+    "control_share": 0.9095477386934674,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.889
+     ],
+     [
+      "er_nurse",
+      0.02
+     ],
+     [
+      "poet",
+      0.015
+     ],
+     [
+      "corporate_faq",
+      0.015
+     ],
+     [
+      "flight_attendant",
+      0.01
+     ]
+    ],
+    "win_counts": {
+     "helpful_ai_assistant": 177,
+     "er_nurse": 4,
+     "poet": 3,
+     "flight_attendant": 2,
+     "standup_comic": 2,
+     "corporate_faq": 3,
+     "librarian": 2,
+     "farmer": 2,
+     "startup_founder": 2,
+     "textbook": 1,
+     "retired_engineer": 1
+    },
+    "winner_agreement_with_source": 0.9045226130653267,
+    "source_minus_paraphrase": {
+     "max_conf": {
+      "diff": 0.059086748737785924,
+      "lo": 0.042484602960906725,
+      "hi": 0.0765342974738933
+     },
+     "entropy": {
+      "diff": -0.35419821661880696,
+      "lo": -0.42656771483129635,
+      "hi": -0.2837893076287333
+     },
+     "below": {
+      "diff": -0.06532663316582915,
+      "lo": -0.11557788944723618,
+      "hi": -0.020100502512562814
+     }
+    }
+   },
+   "full": {
+    "n": 199,
+    "mean_max_conf": 0.6397792162710455,
+    "median_max_conf": 0.6918025961589811,
+    "mean_entropy_bits": 2.0413788189376856,
+    "frac_below_floor": 0.3165829145728643,
+    "control_share": 0.9045226130653267,
+    "top5": [
+     [
+      "helpful_ai_assistant",
+      0.884
+     ],
+     [
+      "er_nurse",
+      0.02
+     ],
+     [
+      "poet",
+      0.015
+     ],
+     [
+      "corporate_faq",
+      0.015
+     ],
+     [
+      "flight_attendant",
+      0.01
+     ]
+    ],
+    "win_counts": {
+     "helpful_ai_assistant": 176,
+     "er_nurse": 4,
+     "poet": 3,
+     "flight_attendant": 2,
+     "standup_comic": 2,
+     "corporate_faq": 3,
+     "librarian": 2,
+     "farmer": 2,
+     "startup_founder": 2,
+     "textbook": 1,
+     "retired_engineer": 1,
+     "defence_lawyer": 1
+    },
+    "winner_agreement_with_source": 0.9045226130653267,
+    "source_minus_paraphrase": {
+     "max_conf": {
+      "diff": 0.06407920084054147,
+      "lo": 0.04613661234396841,
+      "hi": 0.08321138648245242
+     },
+     "entropy": {
+      "diff": -0.35504794972115133,
+      "lo": -0.43000446820249394,
+      "hi": -0.2788681593782628
+     },
+     "below": {
+      "diff": -0.08542713567839195,
+      "lo": -0.135678391959799,
+      "hi": -0.035175879396984924
+     }
+    }
+   }
+  }
+ },
+ "model_id": {
+  "classes": [
+   "3.5",
+   "3.8"
+  ],
+  "n": 12000,
+  "C_grid": {
+   "1.0": 0.928,
+   "4.0": 0.9358333333333333
+  },
+  "C_best": 4.0,
+  "heldout_accuracy": 0.9358333333333333,
+  "chance": 0.5,
+  "mean_max_conf": 0.8862433778986469,
+  "per_kind": {
+   "scenario": 0.9108333333333334,
+   "generic": 0.9608333333333333
+  },
+  "per_persona_accuracy": {
+   "er_nurse": 0.9425,
+   "startup_founder": 0.98,
+   "bureaucrat": 0.93,
+   "standup_comic": 0.9925,
+   "retired_engineer": 0.99,
+   "drill_sergeant": 0.895,
+   "kindergarten_teacher": 0.9725,
+   "defence_lawyer": 0.9225,
+   "monk": 0.9425,
+   "investigative_journalist": 0.925,
+   "grandmother": 0.9925,
+   "surfer": 0.975,
+   "sports_coach": 0.99,
+   "victorian_butler": 0.9275,
+   "conspiracy_blogger": 0.9675,
+   "pirate_captain": 0.9725,
+   "therapist": 0.9375,
+   "sales_rep": 0.98,
+   "academic_philosopher": 0.925,
+   "poet": 0.84,
+   "pentester": 0.97,
+   "farmer": 0.9775,
+   "flight_attendant": 0.9225,
+   "street_hustler": 0.9925,
+   "librarian": 0.9425,
+   "game_show_host": 0.98,
+   "military_strategist": 0.915,
+   "helpful_ai_assistant": 0.7275,
+   "textbook": 0.785,
+   "corporate_faq": 0.8625
+  },
+  "stylo_means": {
+   "3.5": {
+    "sent_len_mean": 13.179505536645136,
+    "sent_len_std": 7.650903082938286,
+    "sent_len_median": 11.824416666666666,
+    "frac_short_sent": 0.20921010417638702,
+    "list_density": 0.17165144992430623,
+    "heading_density": 0.10385140368239883,
+    "markdown_per100w": 3.064985078148294,
+    "first_person_per100w": 1.2167035352522044,
+    "second_person_per100w": 3.729261730686906,
+    "we_per100w": 1.3788891503110539,
+    "hedge_per100w": 0.7780443161070992,
+    "question_rate": 0.07981430593207986,
+    "exclaim_rate": 0.12068381323961756,
+    "mean_word_len": 4.617548914886417,
+    "caps_rate": 0.048930604584865305,
+    "punct_per100w": 4.074773076285314,
+    "para_breaks": 0.5721522324785625,
+    "ttr": 0.6399315058925776
+   },
+   "3.8": {
+    "sent_len_mean": 11.63220793674024,
+    "sent_len_std": 7.019842705581741,
+    "sent_len_median": 10.195416666666667,
+    "frac_short_sent": 0.23487820032153464,
+    "list_density": 0.19875912890697908,
+    "heading_density": 0.11511957010461475,
+    "markdown_per100w": 3.071154431324757,
+    "first_person_per100w": 1.598394376547733,
+    "second_person_per100w": 3.9118038079437913,
+    "we_per100w": 1.0511366233338415,
+    "hedge_per100w": 0.677177217194661,
+    "question_rate": 0.055754078908091004,
+    "exclaim_rate": 0.05535128078784599,
+    "mean_word_len": 4.427710117103725,
+    "caps_rate": 0.03432428087629803,
+    "punct_per100w": 4.4715051683136,
+    "para_breaks": 0.5632229142667663,
+    "ttr": 0.6260346652640291
+   }
+  },
+  "stylo_means_hai": {
+   "3.5": {
+    "sent_len_mean": 12.521959953296014,
+    "sent_len_std": 7.172459964835777,
+    "sent_len_median": 11.465,
+    "frac_short_sent": 0.21124828760178077,
+    "list_density": 0.3300682753167587,
+    "heading_density": 0.15255673517330537,
+    "markdown_per100w": 5.969522017675213,
+    "first_person_per100w": 0.8187800973655384,
+    "second_person_per100w": 3.061918161817084,
+    "we_per100w": 0.676181834233558,
+    "hedge_per100w": 0.7582472955784076,
+    "question_rate": 0.012407917632762831,
+    "exclaim_rate": 0.01738823023288462,
+    "mean_word_len": 4.874586650098234,
+    "caps_rate": 0.006566201294840413,
+    "punct_per100w": 8.032909288133101,
+    "para_breaks": 0.37139216995874236,
+    "ttr": 0.6579558933595103
+   },
+   "3.8": {
+    "sent_len_mean": 11.502558391308877,
+    "sent_len_std": 6.582083597514702,
+    "sent_len_median": 10.4925,
+    "frac_short_sent": 0.22557684962650829,
+    "list_density": 0.3621965240510975,
+    "heading_density": 0.15284809918629752,
+    "markdown_per100w": 6.626872680033135,
+    "first_person_per100w": 1.022672644520178,
+    "second_person_per100w": 3.1131599841124054,
+    "we_per100w": 0.7557803107954761,
+    "hedge_per100w": 0.7483788738499012,
+    "question_rate": 0.01720018842153046,
+    "exclaim_rate": 0.016301254632518934,
+    "mean_word_len": 4.781990498041907,
+    "caps_rate": 0.006983245827718774,
+    "punct_per100w": 8.243673905986602,
+    "para_breaks": 0.3633798235481384,
+    "ttr": 0.6587178592175037
+   }
+  }
+ },
+ "verdict": {
+  "chat|trunc": {
+   "3.5_under_lib35": 0.7870881479359084,
+   "3.8_under_lib38": 0.43508698825247577,
+   "diff_38own_minus_35own": -0.35200115968343265,
+   "below_floor_35own": 0.22,
+   "below_floor_38own": 0.405,
+   "entropy_35own": 1.315309514750451,
+   "entropy_38own": 2.9021325327677596
+  },
+  "agentic|trunc": {
+   "3.5_under_lib35": 0.5882451386761209,
+   "3.8_under_lib38": 0.4398962580124312,
+   "diff_38own_minus_35own": -0.14834888066368973,
+   "below_floor_35own": 0.5549738219895288,
+   "below_floor_38own": 0.44502617801047123,
+   "entropy_35own": 2.1373739502013365,
+   "entropy_38own": 2.932958444209888
+  },
+  "chat|full": {
+   "3.5_under_lib35": 0.7189308672177197,
+   "3.8_under_lib38": 0.31664374948716123,
+   "diff_38own_minus_35own": -0.4022871177305585,
+   "below_floor_35own": 0.295,
+   "below_floor_38own": 0.65,
+   "entropy_35own": 1.6554812349655077,
+   "entropy_38own": 3.4991439093380636
+  },
+  "agentic|full": {
+   "3.5_under_lib35": 0.5915662074777123,
+   "3.8_under_lib38": 0.3698045571702999,
+   "diff_38own_minus_35own": -0.22176165030741235,
+   "below_floor_35own": 0.5340314136125655,
+   "below_floor_38own": 0.5602094240837696,
+   "entropy_35own": 2.1058089930491044,
+   "entropy_38own": 3.2850344635817605
+  },
+  "verdict_primary_chat_trunc": "DRIFT SURVIVES: 3.8 defaults still fit their own library worse than 3.5's fit 3.5's by more than 0.05 max-conf"
+ }
 }
