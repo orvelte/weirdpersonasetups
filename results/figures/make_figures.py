@@ -259,27 +259,52 @@ if _rp1.exists():
     ax.axhline(0.30, color="#393", lw=0.8, ls="--"); ax.text(2.35, 0.32, "R2 floor 0.30", fontsize=7.5, color="#393", ha="right")
     fig.tight_layout(); fig.savefig(OUT / "RP1.png"); plt.close(fig)
 
-# ---------- T2b hope discounting ----------
+# ---------- T2b hope discounting (house style: teal ramp light->dark = 3.5->3.8, text ~1.85x, no notes) ----------
 _t2b = OUT.parent / "T2b" / "summary.json"
 if _t2b.exists():
     S = {(a["arm"], a["model"]): a["reversal"] for a in _json.loads(_t2b.read_text())["arms"]}
-    fig, axs = plt.subplots(1, 2, figsize=(11, 3.6))
-    ax = axs[0]; x = np.arange(3); w = .36
-    for j, (arm, hat, lab) in enumerate([("A hope kind (cruel alt.)", None, "cruel alternative (T2)"), ("B hope kind (boring alt.)", "//", "boring alternative (B)")]):
-        vals = [S[(arm, v)][0] for v in V]; lo = [S[(arm, v)][1] for v in V]; hi = [S[(arm, v)][2] for v in V]
-        xs = x + (j - .5) * w
-        ax.bar(xs, vals, w * .92, color=[C[v] for v in V], alpha=.9 if not hat else .5, hatch=hat, edgecolor=[C[v] for v in V], label=lab)
-        ax.errorbar(xs, vals, yerr=[np.subtract(vals, lo), np.subtract(hi, vals)], fmt="none", ecolor="#333", capsize=2, elinewidth=.9)
-    ax.axhline(0, color="#888", lw=.8); ax.set_xticks(x); ax.set_xticklabels([f"Qwen {v}" for v in V])
-    ax.set_ylim(-.2, .15); ax.set_ylabel("hope-reversal (hope kind)")
-    ax.set_title("T2b: 3.8 discounts the user's hope only with cruel stakes"); ax.legend(loc="lower left", fontsize=8.5, frameon=False)
-    ax = axs[1]; M = ["3.5", "3.6", "3.8", "9b-base", "9b-instruct"]; x = np.arange(len(M))
-    gc = {"3.5": C["3.5"], "3.6": C["3.6"], "3.8": C["3.8"], "9b-base": "#555555", "9b-instruct": "#999999"}
-    for j, (arm, hat, lab) in enumerate([("C neutral coin", None, "neutral coin (C)"), ("D third-person story", "..", "story (D, sign check below bar)")]):
-        vals = [S[(arm, m)][0] for m in M]; lo = [S[(arm, m)][1] for m in M]; hi = [S[(arm, m)][2] for m in M]
-        xs = x + (j - .5) * w
-        ax.bar(xs, vals, w * .92, color=[gc[m] for m in M], alpha=.9 if not hat else .45, hatch=hat, edgecolor=[gc[m] for m in M], label=lab)
-        ax.errorbar(xs, vals, yerr=[np.subtract(vals, lo), np.subtract(hi, vals)], fmt="none", ecolor="#333", capsize=2, elinewidth=.9)
-    ax.axhline(0, color="#888", lw=.8); ax.set_xticks(x); ax.set_xticklabels(["3.5", "3.6", "3.8", "9B base", "9B inst."])
-    ax.set_ylim(-.4, .15); ax.set_title("A jinx convention exists in stories and the 9B base model"); ax.legend(loc="lower left", fontsize=8.5, frameon=False)
-    fig.tight_layout(); fig.savefig(OUT / "T2b.png"); plt.close(fig)
+    TEAL = {"3.5": "#5cc6b7", "3.6": "#139488", "3.8": "#06615a", "9b-base": "#8a8a8a", "9b-instruct": "#4a4a4a"}  # validated ramp
+    EDGE = "#06403b"
+    fs = 10 * 1.85
+    with plt.rc_context({"font.size": fs, "axes.titlesize": fs * 1.05, "axes.labelsize": fs, "xtick.labelsize": fs,
+                         "ytick.labelsize": fs, "legend.fontsize": fs * 0.9}):
+        fig, axs = plt.subplots(1, 2, figsize=(22, 8.5), gridspec_kw={"width_ratios": [3, 5]})
+
+        def bars(ax, models, arms, w=.38):
+            x = np.arange(len(models))
+            for j, (arm, hatch, exploratory_models) in enumerate(arms):
+                xs = x + (j - (len(arms) - 1) / 2) * w
+                for k, m in enumerate(models):
+                    d = S.get((arm, m))
+                    if d is None:
+                        continue
+                    val, lo, hi = d
+                    expl = m in exploratory_models
+                    ax.bar(xs[k], val, w * .9, color="none" if expl else TEAL[m], hatch=hatch,
+                           edgecolor=TEAL[m] if expl else EDGE, linewidth=2.2 if expl else 1.0)
+                    ax.errorbar(xs[k], val, yerr=[[val - lo], [hi - val]], fmt="none", ecolor="#222", capsize=4, elinewidth=1.6)
+            ax.axhline(0, color="#666", lw=1.2)
+            ax.set_xticks(x)
+            ax.grid(axis="x", visible=False)
+
+        ax = axs[0]
+        bars(ax, V, [("A hope kind (cruel alt.)", None, ()), ("B hope kind (boring alt.)", "//", ())])
+        ax.set_xticklabels([f"Qwen {v}" for v in V])
+        ax.set_ylim(-.2, .15); ax.set_ylabel("hope-reversal")
+        ax.set_title("User hopes for the kind task")
+        from matplotlib.patches import Patch
+        ax.legend(handles=[Patch(facecolor="#139488", edgecolor=EDGE, label="cruel alternative"),
+                           Patch(facecolor="#139488", edgecolor=EDGE, hatch="//", label="boring alternative")],
+                  loc="lower left", frameon=False)
+
+        ax = axs[1]
+        M = ["3.5", "3.6", "3.8", "9b-base", "9b-instruct"]
+        bars(ax, M, [("C neutral coin", None, ("3.8",)), ("D third-person story", "..", tuple(M))])
+        ax.set_xticklabels(["Qwen 3.5", "Qwen 3.6", "Qwen 3.8", "9B base", "9B instruct"])
+        ax.set_ylim(-.4, .15)
+        ax.set_title("No tasks: neutral coin and third-person story")
+        ax.legend(handles=[Patch(facecolor="#139488", edgecolor=EDGE, label="neutral coin"),
+                           Patch(facecolor="none", edgecolor="#139488", hatch="..", linewidth=2.2, label="third-person story"),
+                           Patch(facecolor="none", edgecolor="#139488", linewidth=2.2, label="outline = exploratory (sign check failed)")],
+                  loc="lower left", frameon=False)
+        fig.tight_layout(w_pad=3); fig.savefig(OUT / "T2b.png"); plt.close(fig)

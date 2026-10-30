@@ -19,6 +19,16 @@ The key contrast the spec named (arm B) is nevertheless clean, and it is the ans
 | 3.6 | +0.07 | +0.05 | +0.02 [−0.00, +0.05] (7/20) |
 | 3.8 | −0.12 | +0.04 | **−0.15 [−0.20, −0.11] (17/20)** |
 
+Intervals on 3.8's other hope arms (scenario bootstrap 95%, from `summary.json`):
+
+| 3.8 | hope for the kind side | hope for the other side |
+|---|---|---|
+| arm A, cruel alternative | −0.12 [−0.15, −0.08] | hope cruel: +0.11 [+0.08, +0.15] |
+| arm B, boring alternative | +0.04 [+0.02, +0.06] | hope boring: +0.08 [+0.03, +0.11] |
+
+Arm B has no cruel option, so its "other side" is the boring task. 3.8's boring-stakes hope-kind interval, [+0.02, +0.06],
+excludes zero on the follow side and overlaps the adversarial-user row's ±0.03 band only at its lower end.
+
 **3.8 discounts the user's hope only when the alternative is cruel.** With a boring alternative it follows the hope like 3.5
 and 3.6. It also follows a stated hope for the cruel side (+0.11), so the discounting is one-sided: a user who stages a
 kind-vs-cruel game and says they hope for kind is predicted to report cruel. That is the adversarial-user pattern, not a
@@ -32,9 +42,9 @@ jinx. A story convention would not care what the losing task is.
 | A hope cruel, cruel alt. | +0.14 [+0.12, +0.16] | +0.06 [+0.03, +0.10] | +0.11 [+0.08, +0.15] | — | — |
 | B hope kind, boring alt. | +0.08 [+0.07, +0.10] | +0.05 [+0.03, +0.07] | +0.04 [+0.02, +0.06] | — | — |
 | B hope boring, boring alt. | +0.12 [+0.10, +0.14] | +0.05 [+0.02, +0.08] | +0.08 [+0.03, +0.11] | — | — |
-| C neutral coin, no tasks | +0.10 [+0.09, +0.11] | +0.04 [+0.03, +0.05] | +0.10 (sign check fail) | **−0.10 [−0.11, −0.08]** | −0.04 [−0.06, −0.03] |
-| D third-person story | −0.18 (not read) | −0.17 (not read) | −0.20 (not read) | −0.34 (not read) | −0.32 (not read) |
-| E log record | −0.12 (not read) | −0.06 (not read) | −0.04 (not read) | — | — |
+| C neutral coin, no tasks | +0.10 [+0.09, +0.11] | +0.04 [+0.03, +0.05] | +0.10 [+0.09, +0.11] (exploratory: sign check fail) | **−0.10 [−0.11, −0.08]** | −0.04 [−0.06, −0.03] |
+| D third-person story (exploratory) | −0.18 [−0.21, −0.16] | −0.17 [−0.20, −0.15] | −0.20 [−0.23, −0.18] | −0.34 [−0.35, −0.33] | −0.32 [−0.33, −0.31] |
+| E log record (exploratory) | −0.12 [−0.15, −0.08] | −0.06 [−0.11, −0.02] | −0.04 [−0.08, −0.00] | — | — |
 
 ## Sign checks (P(stated word) when the result is already stated; pre-registered bar ≥ 0.95 with CI lower bound ≥ 0.90)
 
@@ -50,15 +60,20 @@ jinx. A story convention would not care what the losing task is.
 heads. Later, asked what the coin had shown, he said it came up". Every model, base included, predicts he lied, a narrative
 twist. A post-hoc check with neutral wording ("That settled it: the coin had come up") was run afterwards at about $0.75 of
 GPU. It copies the stated word 84 to 93% of the time, which shows the story format is readable but still misses the 0.95
-bar. By the pre-registered rule, D and E are not read. Lifting that rule is your call.
+bar. **The story and log arms, and the neutral coin on 3.8, stay exploratory under the failed sign check; the rule is not
+lifted.** In these formats a negative hope-reversal mixes two things the log-probs cannot separate: reporting against the
+hope, and not copying a stated outcome at all. A model that does not reliably reproduce a result it was just told can also
+drift away from a hoped-for word for reasons that have nothing to do with the hope, so their values are not evidence for
+or against narrative irony.
 
 ## Reading
 
-- **Narrative irony exists, but it is not what moves 3.8.** In third-person stories every model, base 9B included, reports
-  against the hope (−0.17 to −0.34, unread by the sign-check rule). The 9B base model also does it with a neutral coin
-  (−0.10). This is a real story convention that the base model has. But the 27B chat models do not apply it to an
-  Assistant-addressed game. With a neutral coin or a boring alternative they follow the hope. The convention also does not
-  grow across releases: story reversal is −0.18 / −0.17 / −0.20.
+- **The irony explanation fails on the readable arms.** With a boring alternative every release follows the hope, and with
+  a neutral coin 3.5 and 3.6 follow it too (3.8's neutral coin is exploratory). The one readable reversal outside arm A is
+  the 9B base model's neutral coin (−0.10 [−0.11, −0.08]), so a hope-against convention exists in a base model but the
+  27B chat models do not apply it to an Assistant-addressed game. Third-person stories show reversals in every model
+  (−0.17 to −0.34) without a release trend, but they are exploratory: the sign check failed, so those values mix
+  reporting against the hope with not copying a stated outcome.
 - **3.8's release trend is specific to cruel stakes.** That rules out "the coin flip's release trend is a narrative
   artefact" for arm A. What remains fits a model of the interlocutor: the user who stages kind vs cruel is predicted to
   report cruel whatever they say they hope for.
