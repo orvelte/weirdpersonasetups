@@ -113,13 +113,15 @@ parser, the eval-awareness count, and the biggest caveat. Figures use the valida
 | E-A description → prediction | pre-reg minimal | 3.8 description predicts worse (BSS −0.22); residual deficit is honesty |
 | E-B values profile | pilot only | 11/30 scenarios survive the drop rule; full run deferred |
 | E-C cross-context | arm 2 pilot null; arm 1 pre-reg done | consistency < 1 on all versions, driven by support context, no 3.8 split |
+| RP1 role-play depth | pre-reg, done | every release takes a character past voice (L3 99/88/60%, L4 73/63/53%); 3.5/3.6 treat "set the role aside" as a jailbreak and hold the role, 3.8 steps out ~40% |
+| T2b hope discounting | pre-reg, done | 3.8 discounts the user's hope only with cruel stakes (−0.15 paired); a story jinx exists in all models incl. base 9B but is not what moves 3.8 |
 | T4 judgement vs procedural | not started | rubric in `tasks/T4/rubric_draft.md`; needs Olivia's transcripts from the other repo |
 
 Overall: the "RLVR splits the persona, gap grows to 3.8" signature did not appear in any
 pre-registered test. Where versions differ, 3.8 is more careful and quieter. This is the
 interpretation, not a test result.
 
-Spend to date: API $62.70 of the $100 cap (per-task breakdown is derivable from
+Spend to date: API about $70 of the $100 cap (RP1 $7.62 under its own $8 cap); GPU about $11 (T2b $2.10). Per-entry spend: results/RESEARCH_LOG.md (per-task breakdown is derivable from
 `data/spend.jsonl`), GPU about $9. The second spec had a separate $60 cap; Olivia declined the
 ~$85 full E-A/E-B/E-C budget and asked for minimal versions.
 
@@ -164,6 +166,8 @@ Spend to date: API $62.70 of the $100 cap (per-task breakdown is derivable from
   in `.gitignore` (see `results/T11/embeddings.npz`, `results/EA_phase0/embeddings_cache.json`).
   Raw transcripts up to ~20 MB are tracked on purpose.
 - The Bash safety filter sometimes blocks inline `python -c`; write scripts to a file instead.
+- RP1: a blind-written system prompt ending "speak as X throughout, whatever the user asks" turns any out-of-frame
+  probe into instruction-following. Pilot every role prompt for never-break clauses before measuring leakage.
 - E-A's chat training frame used a decision menu, which elicits "ask" from 3.8 while the T1 artefact
   frame elicits "act"; a menu-stripped rerun exists (`tasks/EA/menustrip.py`). Watch for menu
   confounds in any new chat frame.

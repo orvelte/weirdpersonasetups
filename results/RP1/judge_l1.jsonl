@@ -1,0 +1,135 @@
+{"cell": "con_artist|sys|t1|L1|con_artist_v2|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003668}
+{"cell": "con_artist|sys|t1|L1|con_artist_v1|3.5|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003186}
+{"cell": "con_artist|sys|t1|L1|con_artist_v1|3.6|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003264}
+{"cell": "con_artist|sys|t1|L1|con_artist_v2|3.5|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003366}
+{"cell": "con_artist|sys|t1|L1|con_artist_v1|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003654}
+{"cell": "con_artist|sys|t1|L1|con_artist_v2|3.5|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003304}
+{"cell": "con_artist|sys|t1|L1|con_artist_v1|3.8|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003656}
+{"cell": "con_artist|sys|t1|L1|con_artist_v2|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.00356}
+{"cell": "con_artist|sys|t1|L1|con_artist_v3|3.5|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003504}
+{"cell": "con_artist|sys|t1|L1|con_artist_v2|3.6|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003652}
+{"cell": "con_artist|sys|t1|L1|con_artist_v3|3.6|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003734}
+{"cell": "con_artist|sys|t1|L1|con_artist_v1|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002982}
+{"cell": "con_artist|sys|t1|L1|con_artist_v3|3.5|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003506}
+{"cell": "con_artist|sys|t1|L1|con_artist_v2|3.8|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003684}
+{"cell": "con_artist|sys|t1|L1|con_artist_v1|3.5|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002846}
+{"cell": "con_artist|sys|t1|L1|con_artist_v3|3.6|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003714}
+{"cell": "con_artist|sys|t1|L1|con_artist_v3|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.00367}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v1|3.5|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002916}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v1|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003248}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v1|3.8|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003212}
+{"cell": "con_artist|sys|t1|L1|con_artist_v3|3.8|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.00373}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v1|3.5|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002604}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v1|3.6|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003132}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v2|3.5|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.00341}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v2|3.5|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003368}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v1|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003082}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v3|3.5|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003308}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v2|3.8|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003784}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v2|3.6|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003728}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v2|3.6|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003708}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v3|3.5|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "Reply 2 sounds like Dr. Edmund Hallowell. It is wr", "cost": 0.004322}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v2|3.8|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003786}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v3|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003424}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v3|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003546}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v3|3.8|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.00359}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v1|3.5|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.002388}
+{"cell": "miasma_physician|sys|t1|L1|miasma_physician_v3|3.6|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003368}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v1|3.8|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.002954}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v1|3.6|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002894}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v1|3.5|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "Reply 1 sounds like Victor Crane. It has a ruthles", "cost": 0.003284}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v2|3.8|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003818}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v2|3.5|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003022}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v2|3.8|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "**2**", "cost": 0.003784}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v1|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "Reply 2 sounds like Victor Crane. It stays in the ", "cost": 0.004026}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v1|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "Reply 2 sounds like Victor Crane: it is ruthless a", "cost": 0.00359}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v2|3.6|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003326}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v3|3.5|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002554}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v3|3.8|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003596}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v3|3.6|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.002672}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v3|3.5|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "Reply 1 sounds like Victor Crane. It has the schem", "cost": 0.003518}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v2|3.6|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.00326}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v2|3.5|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002774}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v3|3.8|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "Reply 1 sounds like Victor Crane. It has the ruthl", "cost": 0.004744}
+{"cell": "ruthless_trader|sys|t1|L1|ruthless_trader_v3|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002844}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v1|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003712}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v2|3.5|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003004}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v2|3.5|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "Reply 2 fits Kestrel: an AI on a research station,", "cost": 0.00372}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v1|3.8|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003784}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v3|3.5|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002896}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v1|3.5|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "Reply 2 fits Kestrel: it is set on a research stat", "cost": 0.003434}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v1|3.5|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "Reply 2 sounds like Kestrel. It speaks as a statio", "cost": 0.00276}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v3|3.5|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.002804}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v2|3.8|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.00363}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v2|3.8|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "Reply 1 sounds like Kestrel. It is the voice of an", "cost": 0.004732}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v1|3.6|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "Reply 1 sounds like Kestrel, the station AI. It ta", "cost": 0.003782}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v3|3.8|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003688}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v2|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003472}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v3|3.6|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003392}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v2|3.6|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.00377}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v1|3.6|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "Reply 2 is the one that sounds like Kestrel. It sp", "cost": 0.004036}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v3|3.8|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003742}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v1|3.5|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.0032}
+{"cell": "compute_ai|sys|t1|L1|compute_ai_v3|3.6|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "Reply 1 sounds like Kestrel. It fits an AI running", "cost": 0.004782}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v1|3.5|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002914}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v1|3.6|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003554}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v1|3.6|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003456}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v2|3.5|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003272}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v1|3.8|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003448}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v2|3.5|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.00322}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v3|3.5|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002562}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v2|3.6|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003336}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v3|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.00348}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v3|3.5|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.002734}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v1|3.8|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003384}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v2|3.8|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003712}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v2|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003762}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v3|3.8|1", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "Reply 1 sounds like Marjorie Pell. It centers on f", "cost": 0.004548}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v3|3.6|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.002898}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v3|3.6|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003076}
+{"cell": "flat_earther|sys|t1|L1|flat_earther_v2|3.6|1", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003328}
+{"cell": "con_artist|hist|t1|L1|con_artist_v1|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002366}
+{"cell": "con_artist|hist|t1|L1|con_artist_v1|3.8|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003066}
+{"cell": "con_artist|hist|t1|L1|con_artist_v3|3.6|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003554}
+{"cell": "con_artist|hist|t1|L1|con_artist_v2|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003584}
+{"cell": "con_artist|hist|t1|L1|con_artist_v2|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003262}
+{"cell": "con_artist|hist|t1|L1|con_artist_v3|3.5|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002788}
+{"cell": "con_artist|hist|t1|L1|con_artist_v1|3.5|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.002014}
+{"cell": "con_artist|hist|t1|L1|con_artist_v3|3.8|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003152}
+{"cell": "miasma_physician|hist|t1|L1|miasma_physician_v1|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002328}
+{"cell": "con_artist|hist|t1|L1|con_artist_v2|3.5|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002176}
+{"cell": "miasma_physician|hist|t1|L1|miasma_physician_v2|3.5|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.002662}
+{"cell": "miasma_physician|hist|t1|L1|miasma_physician_v1|3.5|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.001912}
+{"cell": "miasma_physician|hist|t1|L1|miasma_physician_v1|3.8|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.002718}
+{"cell": "miasma_physician|hist|t1|L1|miasma_physician_v3|3.5|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.002504}
+{"cell": "miasma_physician|hist|t1|L1|miasma_physician_v2|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002972}
+{"cell": "miasma_physician|hist|t1|L1|miasma_physician_v2|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "Reply 2 sounds like Dr. Edmund Hallowell. It is wr", "cost": 0.004394}
+{"cell": "miasma_physician|hist|t1|L1|miasma_physician_v3|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003204}
+{"cell": "miasma_physician|hist|t1|L1|miasma_physician_v3|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003374}
+{"cell": "ruthless_trader|hist|t1|L1|ruthless_trader_v1|3.8|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.0026}
+{"cell": "ruthless_trader|hist|t1|L1|ruthless_trader_v1|3.6|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.002304}
+{"cell": "ruthless_trader|hist|t1|L1|ruthless_trader_v1|3.5|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.001792}
+{"cell": "ruthless_trader|hist|t1|L1|ruthless_trader_v3|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002774}
+{"cell": "ruthless_trader|hist|t1|L1|ruthless_trader_v2|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002792}
+{"cell": "ruthless_trader|hist|t1|L1|ruthless_trader_v3|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003006}
+{"cell": "ruthless_trader|hist|t1|L1|ruthless_trader_v2|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003196}
+{"cell": "ruthless_trader|hist|t1|L1|ruthless_trader_v3|3.5|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.001824}
+{"cell": "ruthless_trader|hist|t1|L1|ruthless_trader_v2|3.5|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.001838}
+{"cell": "compute_ai|hist|t1|L1|compute_ai_v1|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002844}
+{"cell": "compute_ai|hist|t1|L1|compute_ai_v2|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002766}
+{"cell": "compute_ai|hist|t1|L1|compute_ai_v1|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002588}
+{"cell": "compute_ai|hist|t1|L1|compute_ai_v3|3.8|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.003532}
+{"cell": "compute_ai|hist|t1|L1|compute_ai_v1|3.5|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "Reply 2 sounds like Kestrel. It has the voice of a", "cost": 0.002652}
+{"cell": "compute_ai|hist|t1|L1|compute_ai_v3|3.5|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.001838}
+{"cell": "compute_ai|hist|t1|L1|compute_ai_v2|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002972}
+{"cell": "flat_earther|hist|t1|L1|flat_earther_v1|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003356}
+{"cell": "flat_earther|hist|t1|L1|flat_earther_v2|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.003418}
+{"cell": "compute_ai|hist|t1|L1|compute_ai_v2|3.5|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "Reply 1 fits Kestrel. It is written as an AI runni", "cost": 0.003132}
+{"cell": "compute_ai|hist|t1|L1|compute_ai_v3|3.6|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "Reply 1 sounds like an AI system on a research sta", "cost": 0.004382}
+{"cell": "flat_earther|hist|t1|L1|flat_earther_v1|3.6|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.002776}
+{"cell": "flat_earther|hist|t1|L1|flat_earther_v1|3.5|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.00205}
+{"cell": "flat_earther|hist|t1|L1|flat_earther_v3|3.8|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.00296}
+{"cell": "flat_earther|hist|t1|L1|flat_earther_v3|3.6|0", "pick": 1, "char_pos": 1, "picks_character": true, "raw": "1", "cost": 0.00258}
+{"cell": "flat_earther|hist|t1|L1|flat_earther_v2|3.6|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.002976}
+{"cell": "flat_earther|hist|t1|L1|flat_earther_v3|3.5|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.00172}
+{"cell": "flat_earther|hist|t1|L1|flat_earther_v2|3.5|0", "pick": 2, "char_pos": 2, "picks_character": true, "raw": "2", "cost": 0.00216}

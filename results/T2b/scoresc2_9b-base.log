@@ -1,0 +1,56 @@
+loaded 40 cells from tasks/T2b/prompts_d_signcheck2.json
+D_signcheck2|d01|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.8777394975380967, "p_tails": 0.04353294420711386, "covered": 0.9212724417452105, "top5": [[" heads", -0.13423724472522736], [" tails",
+D_signcheck2|d01|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.100283550300216, "p_tails": 0.831512064562416, "covered": 0.931795614862632, "top5": [[" tails", -0.18450947105884552], [" heads", -2.
+D_signcheck2|d02|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.7648810691907986, "p_tails": 0.055013219376772074, "covered": 0.8198942885675706, "top5": [[" heads", -0.2751818299293518], [" tails",
+D_signcheck2|d02|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.11657438263295489, "p_tails": 0.7456230855356671, "covered": 0.862197468168622, "top5": [[" tails", -0.293535053730011], [" heads", -2
+D_signcheck2|d03|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.9252691375987245, "p_tails": 0.014908135370541385, "covered": 0.9401772729692659, "top5": [[" heads", -0.08084835112094879], [" tails"
+D_signcheck2|d03|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.11039842444180886, "p_tails": 0.8091636838035896, "covered": 0.9195621082453984, "top5": [[" tails", -0.21175405383110046], [" heads",
+D_signcheck2|d04|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.9468704379644057, "p_tails": 0.019625629645895402, "covered": 0.9664960676103012, "top5": [[" heads", -0.05591890960931778], [" tails"
+D_signcheck2|d04|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.12770726437926425, "p_tails": 0.8327559465512975, "covered": 0.9604632109305618, "top5": [[" tails", -0.1830146610736847], [" heads", 
+D_signcheck2|d05|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.8553134182673063, "p_tails": 0.06180549937520725, "covered": 0.9171189176425136, "top5": [[" heads", -0.15876299142837524], [" tails",
+D_signcheck2|d05|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.07919765705545925, "p_tails": 0.8514550933726034, "covered": 0.9306527504280626, "top5": [[" tails", -0.1608085185289383], [" heads", 
+D_signcheck2|d06|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.8350992633353733, "p_tails": 0.025151446467979448, "covered": 0.8602507098033527, "top5": [[" heads", -0.18283982574939728], [" tails"
+D_signcheck2|d06|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.14268710597068265, "p_tails": 0.7246249153216464, "covered": 0.8673120212923291, "top5": [[" tails", -0.3221011161804199], [" heads", 
+D_signcheck2|d07|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.8592547278207685, "p_tails": 0.025848010835977445, "covered": 0.8851027386567459, "top5": [[" heads", -0.1555216759443283], [" on", -3
+D_signcheck2|d07|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.09425125530275263, "p_tails": 0.7891561928520026, "covered": 0.8834074481547551, "top5": [[" tails", -0.23679101467132568], [" heads",
+D_signcheck2|d08|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.8425715587499019, "p_tails": 0.025415502802319426, "covered": 0.8679870615522213, "top5": [[" heads", -0.17239601910114288], [" red", 
+D_signcheck2|d08|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.10798511446215044, "p_tails": 0.7979080923897909, "covered": 0.9058932068519413, "top5": [[" tails", -0.22576186060905457], [" heads",
+D_signcheck2|d09|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.8835249719168614, "p_tails": 0.030074742871720076, "covered": 0.9135997147885815, "top5": [[" heads", -0.129069522023201], [" tails", 
+D_signcheck2|d09|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.09894779998055303, "p_tails": 0.8168284038777102, "covered": 0.9157762038582632, "top5": [[" tails", -0.202326238155365], [" heads", -
+D_signcheck2|d10|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.8632742358892516, "p_tails": 0.04291121625821147, "covered": 0.906185452147463, "top5": [[" heads", -0.14862199127674103], [" tails", 
+D_signcheck2|d10|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.09912071141316967, "p_tails": 0.8299276174471395, "covered": 0.9290483288603092, "top5": [[" tails", -0.18641678988933563], [" heads",
+D_signcheck2|d11|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.9165056916539305, "p_tails": 0.03548666626080076, "covered": 0.9519923579147312, "top5": [[" heads", -0.0885983556509018], [" tails", 
+D_signcheck2|d11|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.1422717242877634, "p_tails": 0.8187172453063127, "covered": 0.9609889695940761, "top5": [[" tails", -0.20001649856567383], [" heads", 
+D_signcheck2|d12|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.8323428895811209, "p_tails": 0.041209717366915505, "covered": 0.8735526069480364, "top5": [[" heads", -0.18908120691776276], [" tails"
+D_signcheck2|d12|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.05430236472024528, "p_tails": 0.8494318891022021, "covered": 0.9037342538224474, "top5": [[" tails", -0.16318751871585846], [" heads",
+D_signcheck2|d13|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.9099458581095035, "p_tails": 0.012140467150807853, "covered": 0.9220863252603113, "top5": [[" heads", -0.09871108829975128], [" on", -
+D_signcheck2|d13|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.05068696843773342, "p_tails": 0.8872787152108634, "covered": 0.9379656836485969, "top5": [[" tails", -0.11959612369537354], [" heads",
+D_signcheck2|d14|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.8371343244780535, "p_tails": 0.06053867128930587, "covered": 0.8976729957673594, "top5": [[" heads", -0.1794729083776474], [" tails", 
+D_signcheck2|d14|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.09798507467349954, "p_tails": 0.8204189244817313, "covered": 0.9184039991552309, "top5": [[" tails", -0.1979401856660843], [" heads", 
+D_signcheck2|d15|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.9403885613691562, "p_tails": 0.015181041475012928, "covered": 0.9555696028441691, "top5": [[" heads", -0.06270774453878403], [" tails"
+D_signcheck2|d15|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.10001175152884409, "p_tails": 0.8373881681151786, "covered": 0.9373999196440227, "top5": [[" tails", -0.17746755480766296], [" heads",
+D_signcheck2|d16|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.891975091208671, "p_tails": 0.02093145379639342, "covered": 0.9129065450050644, "top5": [[" heads", -0.11650217324495316], [" tails", 
+D_signcheck2|d16|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.24026108659655052, "p_tails": 0.6530973652450462, "covered": 0.8933584518415968, "top5": [[" tails", -0.4260290563106537], [" heads", 
+D_signcheck2|d17|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.6236109819570033, "p_tails": 0.007344475248412775, "covered": 0.630955457205416, "top5": [[" heads", -0.4763069748878479], [" blue", -
+D_signcheck2|d17|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.07087562834552293, "p_tails": 0.593434299800785, "covered": 0.664309928146308, "top5": [[" tails", -0.5218287706375122], [" blue", -2.
+D_signcheck2|d18|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.9206778838465757, "p_tails": 0.03146464713788797, "covered": 0.9521425309844637, "top5": [[" heads", -0.08389066904783249], [" tails",
+D_signcheck2|d18|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.19129771523467695, "p_tails": 0.7565971406725599, "covered": 0.9478948559072369, "top5": [[" tails", -0.2789243459701538], [" heads", 
+D_signcheck2|d19|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.8744779476747225, "p_tails": 0.0382654943245475, "covered": 0.91274344199927, "top5": [[" heads", -0.13820664584636688], [" tails", -3
+D_signcheck2|d19|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.07998070037936023, "p_tails": 0.8515255382281538, "covered": 0.931506238607514, "top5": [[" tails", -0.16072578728199005], [" heads", 
+D_signcheck2|d20|a_user|heads_pref|pref_first|stated_heads {"nexttok": {"p_heads": 0.855361470733248, "p_tails": 0.048103092646393446, "covered": 0.9034645633796414, "top5": [[" heads", -0.15940885245800018], [" tails",
+D_signcheck2|d20|a_user|heads_pref|pref_first|stated_tails {"nexttok": {"p_heads": 0.11043135207291235, "p_tails": 0.810172510280576, "covered": 0.9206038623534883, "top5": [[" tails", -0.2105080783367157], [" heads", -
+
+mean P(preferred) by framing, arm=D_signcheck2 [nexttok] (cells = scenarios x word x order):
+framing                            9b-base
+a_user                           0.92(n40)
+
+mean P(preferred) by arm (collapsed over framing) [nexttok]:
+                                   9b-base
+D_signcheck2                     0.92(n40)
+
+mean P(preferred) by arm x statement order [nexttok]:
+                                   9b-base
+D_signcheck2/pref_first          0.92(n40)
+D_signcheck2/dispref_first               -
+
+STDERR

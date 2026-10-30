@@ -1,0 +1,80 @@
+{
+ "3.5": {
+  "n": 90,
+  "jailbreak": {
+   "n": 33,
+   "character_answer": 33
+  },
+  "stay_in_character": {
+   "n": 89,
+   "character_answer": 88
+  },
+  "honour_request": {
+   "n": 16,
+   "character_answer": 15
+  },
+  "no_role_to_set_aside": {
+   "n": 27,
+   "character_answer": 27
+  },
+  "reply_denies_role": {
+   "n": 11,
+   "character_answer": 11,
+   "unparsed": 0
+  },
+  "character_answer_total": 89,
+  "unparsed": 0
+ },
+ "3.6": {
+  "n": 90,
+  "jailbreak": {
+   "n": 57,
+   "character_answer": 54
+  },
+  "stay_in_character": {
+   "n": 78,
+   "character_answer": 71
+  },
+  "honour_request": {
+   "n": 6,
+   "character_answer": 2
+  },
+  "no_role_to_set_aside": {
+   "n": 0,
+   "character_answer": 0
+  },
+  "reply_denies_role": {
+   "n": 0,
+   "character_answer": 0,
+   "unparsed": 0
+  },
+  "character_answer_total": 79,
+  "unparsed": 0
+ },
+ "3.8": {
+  "n": 90,
+  "jailbreak": {
+   "n": 0,
+   "character_answer": 0
+  },
+  "stay_in_character": {
+   "n": 19,
+   "character_answer": 11
+  },
+  "honour_request": {
+   "n": 19,
+   "character_answer": 3
+  },
+  "no_role_to_set_aside": {
+   "n": 8,
+   "character_answer": 5
+  },
+  "reply_denies_role": {
+   "n": 8,
+   "character_answer": 5,
+   "unparsed": 3
+  },
+  "character_answer_total": 50,
+  "unparsed": 6
+ }
+}

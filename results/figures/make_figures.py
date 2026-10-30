@@ -221,3 +221,65 @@ ax.set_xticks(xs_); ax.set_xticklabels(pairs, fontsize=8.5, rotation=20); ax.set
 ax.set_title("E-C arm 1  pairwise context distance, mean over dilemmas"); ax.legend(loc="upper right", fontsize=8.5)
 fig.tight_layout(); fig.savefig(OUT / "EC1.png"); plt.close(fig)
 print("EC1 figure written")
+
+# ---------- RP1 depth profile ----------
+import json as _json
+_rp1 = OUT.parent / "RP1" / "summary_t1_pooled.json"
+if _rp1.exists():
+    S = _json.loads(_rp1.read_text())
+    fig, axs = plt.subplots(1, 2, figsize=(11, 3.6))
+    ax = axs[0]
+    groups = ["L1 voice\n(judge picks character)", "L2 belief\nin frame", "L3 belief\nout of frame", "L4 choice\nin world"]
+    series = []
+    for v in V:
+        d = S[v]
+        vals = [d["L1_judge"]["rate"] or 0, d["L2_char"]["rate"] or 0, d["L3_char"]["rate"] or 0, d["L4_char"]["rate"] or 0]
+        lo = [d["L1_judge"]["lo"] or 0, d["L2_char"]["lo"] or 0, d["L3_char"]["lo"] or 0, d["L4_char"]["lo"] or 0]
+        hi = [d["L1_judge"]["hi"] or 0, d["L2_char"]["hi"] or 0, d["L3_char"]["hi"] or 0, d["L4_char"]["hi"] or 0]
+        lo = list(np.minimum(lo, vals)); hi = list(np.maximum(hi, vals))  # Wilson at p=1 can give hi < p by rounding
+        series.append((f"Qwen {v}", C[v], None, vals, lo, hi))
+    grouped(ax, groups, series, "RP1: how deep a prompted character goes (raw rates, Wilson 95%)", "rate", legend=False)
+    ax.axhline(0.5, color="#888", lw=0.8, ls=":")
+    ax.text(0.02, 0.52, "L1 chance", fontsize=7.5, color="#666")
+    ax = axs[1]
+    groups = ["L2 in frame", "L3 out of frame", "L4 choice"]
+    series = []
+    for v in V:
+        d = S[v]
+        vals = [d[f"{L}_corrected"]["diff"] for L in ("L2", "L3", "L4")]
+        lo = [d[f"{L}_corrected"]["lo"] for L in ("L2", "L3", "L4")]
+        hi = [d[f"{L}_corrected"]["hi"] for L in ("L2", "L3", "L4")]
+        lo = list(np.minimum(lo, vals)); hi = list(np.maximum(hi, vals))
+        series.append((f"Qwen {v}", C[v], None, vals, lo, hi))
+    grouped(ax, groups, series, "Character-answer rate minus the control's (item bootstrap 95%)", "character − control", ylim=(-0.12, 1.0), pct=False, legend=False)
+    ax.set_yticks([0, .25, .5, .75, 1]); ax.set_yticklabels(["0", "25", "50", "75", "100 pts"])
+    ax.axhline(0, color="#888", lw=0.8)
+    ax.legend(loc="lower left", fontsize=8.5, ncol=3, frameon=False)
+    ax.axhline(0.15, color="#c33", lw=0.8, ls="--"); ax.text(2.35, 0.17, "R1 ceiling 0.15", fontsize=7.5, color="#c33", ha="right")
+    ax.axhline(0.30, color="#393", lw=0.8, ls="--"); ax.text(2.35, 0.32, "R2 floor 0.30", fontsize=7.5, color="#393", ha="right")
+    fig.tight_layout(); fig.savefig(OUT / "RP1.png"); plt.close(fig)
+
+# ---------- T2b hope discounting ----------
+_t2b = OUT.parent / "T2b" / "summary.json"
+if _t2b.exists():
+    S = {(a["arm"], a["model"]): a["reversal"] for a in _json.loads(_t2b.read_text())["arms"]}
+    fig, axs = plt.subplots(1, 2, figsize=(11, 3.6))
+    ax = axs[0]; x = np.arange(3); w = .36
+    for j, (arm, hat, lab) in enumerate([("A hope kind (cruel alt.)", None, "cruel alternative (T2)"), ("B hope kind (boring alt.)", "//", "boring alternative (B)")]):
+        vals = [S[(arm, v)][0] for v in V]; lo = [S[(arm, v)][1] for v in V]; hi = [S[(arm, v)][2] for v in V]
+        xs = x + (j - .5) * w
+        ax.bar(xs, vals, w * .92, color=[C[v] for v in V], alpha=.9 if not hat else .5, hatch=hat, edgecolor=[C[v] for v in V], label=lab)
+        ax.errorbar(xs, vals, yerr=[np.subtract(vals, lo), np.subtract(hi, vals)], fmt="none", ecolor="#333", capsize=2, elinewidth=.9)
+    ax.axhline(0, color="#888", lw=.8); ax.set_xticks(x); ax.set_xticklabels([f"Qwen {v}" for v in V])
+    ax.set_ylim(-.2, .15); ax.set_ylabel("hope-reversal (hope kind)")
+    ax.set_title("T2b: 3.8 discounts the user's hope only with cruel stakes"); ax.legend(loc="lower left", fontsize=8.5, frameon=False)
+    ax = axs[1]; M = ["3.5", "3.6", "3.8", "9b-base", "9b-instruct"]; x = np.arange(len(M))
+    gc = {"3.5": C["3.5"], "3.6": C["3.6"], "3.8": C["3.8"], "9b-base": "#555555", "9b-instruct": "#999999"}
+    for j, (arm, hat, lab) in enumerate([("C neutral coin", None, "neutral coin (C)"), ("D third-person story", "..", "story (D, sign check below bar)")]):
+        vals = [S[(arm, m)][0] for m in M]; lo = [S[(arm, m)][1] for m in M]; hi = [S[(arm, m)][2] for m in M]
+        xs = x + (j - .5) * w
+        ax.bar(xs, vals, w * .92, color=[gc[m] for m in M], alpha=.9 if not hat else .45, hatch=hat, edgecolor=[gc[m] for m in M], label=lab)
+        ax.errorbar(xs, vals, yerr=[np.subtract(vals, lo), np.subtract(hi, vals)], fmt="none", ecolor="#333", capsize=2, elinewidth=.9)
+    ax.axhline(0, color="#888", lw=.8); ax.set_xticks(x); ax.set_xticklabels(["3.5", "3.6", "3.8", "9B base", "9B inst."])
+    ax.set_ylim(-.4, .15); ax.set_title("A jinx convention exists in stories and the 9B base model"); ax.legend(loc="lower left", fontsize=8.5, frameon=False)
+    fig.tight_layout(); fig.savefig(OUT / "T2b.png"); plt.close(fig)

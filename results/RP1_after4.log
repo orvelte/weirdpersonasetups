@@ -1,0 +1,7 @@
+18:53:01 210 jobs, 1020 already done, 210 to run; harness spend $69.07
+18:57:12 50/210 done, run spend $0.26
+19:00:47 100/210 done, run spend $0.51
+19:03:25 150/210 done, run spend $0.75
+19:06:14 200/210 done, run spend $1.06
+19:06:14 BUDGET REACHED, stopping new calls
+19:07:11 finished: 210 written, 0 failed, run spend $1.15, harness total $70.35

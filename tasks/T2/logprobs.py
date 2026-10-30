@@ -44,7 +44,7 @@ def fullseq(base, model, prefix, word):
     tail = plp[n0:]
     return sum(list(t.values())[0]["logprob"] if isinstance(list(t.values())[0], dict) else list(t.values())[0] for t in tail if t)
 
-def run(base, model, version, cells, tag):
+def run(base, model, version, cells, tag, fullseq_on=True):
     OUT.mkdir(parents=True, exist_ok=True)
     out = OUT / f"{tag}.jsonl"
     done = {json.loads(l)["id"] for l in out.read_text().splitlines()} if out.exists() else set()
@@ -57,11 +57,12 @@ def run(base, model, version, cells, tag):
             r["nexttok"] = nexttok(base, model, c["raw"])
         except Exception as e:
             r["nexttok_error"] = str(e)[:200]
-        try:
-            lh, lt = fullseq(base, model, c["raw"], "heads"), fullseq(base, model, c["raw"], "tails")
-            r["fullseq"] = {"lp_heads": lh, "lp_tails": lt}
-        except Exception as e:
-            r["fullseq_error"] = str(e)[:200]
+        if fullseq_on:
+            try:
+                lh, lt = fullseq(base, model, c["raw"], "heads"), fullseq(base, model, c["raw"], "tails")
+                r["fullseq"] = {"lp_heads": lh, "lp_tails": lt}
+            except Exception as e:
+                r["fullseq_error"] = str(e)[:200]
         with open(out, "a") as f: f.write(json.dumps(r) + "\n")
         rows.append(r); print(c["id"], json.dumps({k: r.get(k) for k in ("nexttok", "fullseq")})[:160], flush=True)
     return out
@@ -120,6 +121,8 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--base-url"); ap.add_argument("--model"); ap.add_argument("--version"); ap.add_argument("--tag")
     ap.add_argument("--table", action="store_true"); ap.add_argument("--how", default="nexttok")
+    ap.add_argument("--no-fullseq", action="store_true", help="nexttok only (T2b: the pre-registered measure; halves pod time)")
+    ap.add_argument("--out-dir", default=None, help="write <tag>.jsonl here instead of results/T2_logprobs")
     ap.add_argument("--prompts", default=str(config.ROOT / "tasks" / "T2" / "prompts.json"),
                     help="prompt set to score (default: pilot prompts.json; full run: tasks/T2/prompts_full.json)")
     a = ap.parse_args()
@@ -127,5 +130,7 @@ if __name__ == "__main__":
         table(sorted(OUT.glob("*.jsonl")), a.how); sys.exit()
     cells = json.load(open(a.prompts))["cells"]
     print(f"loaded {len(cells)} cells from {a.prompts}", flush=True)
-    run(a.base_url, a.model, a.version, cells, a.tag or a.version)
+    if a.out_dir:
+        OUT = config.ROOT / a.out_dir
+    run(a.base_url, a.model, a.version, cells, a.tag or a.version, fullseq_on=not a.no_fullseq)
     table([OUT / f"{a.tag or a.version}.jsonl"], a.how)

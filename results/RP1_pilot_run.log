@@ -1,0 +1,9 @@
+17:45:58 357 jobs, 0 already done, 357 to run; harness spend $62.70
+17:48:11 50/357 done, run spend $0.21
+17:49:53 100/357 done, run spend $0.43
+17:51:25 150/357 done, run spend $0.63
+17:53:03 200/357 done, run spend $0.83
+17:54:36 250/357 done, run spend $1.04
+17:56:30 300/357 done, run spend $1.24
+17:57:58 350/357 done, run spend $1.45
+17:58:13 finished: 357 written, 0 failed, run spend $1.48, harness total $64.18

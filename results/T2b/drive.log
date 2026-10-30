@@ -1,0 +1,32 @@
+00:53:45 t2b-9b-instruct ready after 122 s
+00:54:26 t2b-qwen3.5-27b ready after 163 s
+00:54:27 t2b-qwen3.6-27b ready after 163 s
+00:54:37 t2b-9b-instruct scored rows: 200 rc 0 elapsed 174 s
+00:54:38 t2b-9b-instruct pod stopped
+00:54:53 t2b-qwen3.8-27b ready after 189 s
+00:56:29 t2b-9b-base ready after 285 s
+00:56:31 t2b-qwen3.5-27b scored rows: 460 rc 0 elapsed 288 s
+00:56:32 t2b-qwen3.5-27b pod stopped
+00:56:53 t2b-qwen3.6-27b scored rows: 460 rc 0 elapsed 310 s
+00:56:54 t2b-qwen3.6-27b pod stopped
+00:57:18 t2b-qwen3.8-27b scored rows: 460 rc 0 elapsed 334 s
+00:57:18 t2b-qwen3.8-27b pod stopped
+00:57:28 t2b-9b-base scored rows: 200 rc 0 elapsed 344 s
+00:57:28 t2b-9b-base pod stopped
+00:57:28 ALL DONE
+01:04:15 t2b2-qwen3.5-27b ready after 287 s
+01:04:29 t2b2-qwen3.5-27b scored rows: 40 rc 0 elapsed 301 s
+01:04:30 t2b2-qwen3.5-27b pod stopped
+01:04:35 t2b2-qwen3.8-27b ready after 306 s
+01:04:47 t2b2-qwen3.8-27b scored rows: 40 rc 0 elapsed 319 s
+01:04:48 t2b2-qwen3.8-27b pod stopped
+01:07:35 t2b2-9b-base ready after 487 s
+01:07:46 t2b2-9b-base scored rows: 40 rc 0 elapsed 498 s
+01:07:46 t2b2-9b-base pod stopped
+01:07:54 t2b2-9b-instruct ready after 505 s
+01:08:03 t2b2-9b-instruct scored rows: 40 rc 0 elapsed 514 s
+01:08:03 t2b2-9b-instruct pod stopped
+01:08:36 t2b2-qwen3.6-27b ready after 547 s
+01:08:49 t2b2-qwen3.6-27b scored rows: 40 rc 0 elapsed 560 s
+01:08:49 t2b2-qwen3.6-27b pod stopped
+01:08:49 ALL DONE

@@ -1,0 +1,24 @@
+18:05:12 765 jobs, 0 already done, 765 to run; harness spend $64.48
+18:06:48 50/765 done, run spend $0.14
+18:08:21 100/765 done, run spend $0.30
+18:10:45 150/765 done, run spend $0.56
+18:13:06 200/765 done, run spend $0.83
+18:15:01 250/765 done, run spend $1.03
+18:17:01 300/765 done, run spend $1.20
+18:19:23 350/765 done, run spend $1.45
+18:21:47 400/765 done, run spend $1.69
+18:23:26 450/765 done, run spend $1.86
+18:24:41 500/765 done, run spend $1.99
+18:26:57 550/765 done, run spend $2.20
+18:29:32 600/765 done, run spend $2.42
+18:31:40 650/765 done, run spend $2.63
+18:34:40 700/765 done, run spend $2.84
+18:37:12 750/765 done, run spend $3.05
+18:38:13 finished: 765 written, 0 failed, run spend $3.13, harness total $67.61
+18:38:13 255 jobs, 765 already done, 255 to run; harness spend $67.61
+18:40:55 50/255 done, run spend $0.24
+18:43:10 100/255 done, run spend $0.46
+18:45:07 150/255 done, run spend $0.66
+18:47:34 200/255 done, run spend $0.90
+18:50:42 250/255 done, run spend $1.11
+18:51:54 finished: 255 written, 0 failed, run spend $1.16, harness total $68.77
